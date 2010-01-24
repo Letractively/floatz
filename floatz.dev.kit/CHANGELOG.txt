@@ -1,0 +1,25 @@
+VERSION 1.0.1
+=============
+
+floatz.form.css
+* CHANGED Replacing all styles that where directly bound to input, select and textarea (e.g. input.flz_mandatory to .flz_mandatory)
+* CHANGED Reworking file and section comments
+ 
+floatz.layout.css
+* CHANGED Removing duplication of .flz_clear
+* CHANGED Reworking file and section comments
+
+floatz.layout.center.css
+* CHANGED Reworking file and section comments
+
+floatz.layout.liquid.css
+* CHANGED Reworking file and section comments
+
+floatz.layout.nav.css
+* CHANGED Reworking file and section comments
+
+floatz.layout.reset.css
+* CHANGED Reworking file and section comments
+
+floatz.layout.reset.meyer.css
+* CHANGED Reworking file and section comments
