@@ -1,0 +1,383 @@
+/*****************************************************************************************
+ * floatz.nav.css
+ * ---------------------------------------------------------------------------------------
+ * Contains navigational elements: simple list navigation, top navigation, breadcrumb 
+ * navigation, toolbar navigation, horizontal menu navigation, vertical menu navigation
+ * and tabbed menu navigation
+ *
+ * Note: all menu items use a.selected while tabmenu uses li.selected. Latter is not 
+ * possible, though it is inconsistent, because IE would not correctly use the li.selected
+ * style (everything after or within the li.selected class will get the same style)
+ *
+ * @project       floatz CSS Framework
+ * @version       1.0.1
+ * @see           http://code.google.com/p/floatz/
+ * @author        Harald Humml
+ * @copyright     Copyright (c) 1998-2010 by :humml:design
+ * @link          http://design.humml.eu/toolbox/floatz
+ * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
+ * @lastmodified  2009-05-17
+ */
+
+/**
+ * ---------------------------------------------------------------------------------------
+ * @section       Simple list navigation
+ *
+ * Simple list navigation element, thats the base for the derived top, breadcrumb and 
+ * toolbar navigation elements (see next section). Simple list navigation and derived 
+ * elements do not need an extra surrounding DIV tag, thus can be used directly with UL. 
+ */
+
+.flz_listnav {
+   background-color: inherit;
+   padding: 0.5em 1em;
+   margin: 0;              /* because of IE 6 that shows a margin at the bottom of .listnav */
+}
+.flz_listnav ul {
+   display: inline;
+}
+.flz_listnav li {
+   display: inline;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+.flz_listnav a {
+   text-decoration: none;   
+}
+
+/* default navigation item */
+.flz_listnav a:link {
+}
+
+/* visited navigation item */
+.flz_listnav a:visited {
+   color: inherit;
+}
+
+/* focused or hovered navigation item */
+.flz_listnav a:focus,
+.flz_listnav a:hover {
+   text-decoration: underline;
+}
+
+/* active (clicked) navigation item */
+.flz_listnav a:active {
+   color: inherit;
+}
+
+/* selected navigation item */
+.flz_listnav .flz_selected {
+   color: inherit;
+   font-weight: bold;
+}
+
+/* focused or hovered selected navigation item */
+.flz_listnav a.flz_selected:focus,
+.flz_listnav a.flz_selected:hover {
+   color: inherit;
+}
+
+/* active (clicked) selected navigation item */
+.flz_listnav a.flz_selected:active {
+   color: inherit;
+}
+
+/**
+ * ---------------------------------------------------------------------------------------
+ * @section       Advanced list navigation (advanced)
+ *
+ * Top, breadcrumb and toolbar navigation elements. These classes are derived from simple
+ * list navigation, thus the class definitions have to be used in combination (e.g. 
+ * class="listnav breadcrumb" for breadcrum navigation.
+ */
+
+.flz_breadcrumb,
+.flz_toolbar,
+.flz_topnav {
+   position: absolute;
+   top: 0;
+   z-index: 3;
+}
+
+.flz_breadcrumb {
+   left: 0;   
+}
+.flz_toolbar, 
+.flz_topnav {
+   right: 0;
+}
+
+/**
+ * ---------------------------------------------------------------------------------------
+ * @section       Horizontal menu navigation
+ *
+ * Horizontal menu navigation element. Needs a surrounding DIV tag that uses hmenu.
+ */
+
+.flz_hmenu {
+   float: left;
+   width: 100%;
+}
+
+.flz_hmenu ul {
+   float: right;
+   margin: 0;
+   padding: 0;
+}
+
+.flz_hmenu li {
+   float: left; 
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+.flz_hmenu li a {
+   background-color: inherit;
+   border-left: 1px solid #000;
+   display: block;
+   text-decoration: none;
+   padding: 0.25em 1em;
+}
+
+/* default menu item */
+.flz_hmenu a:link {
+}
+
+/* visited menu item */
+.flz_hmenu a:visited {
+   color: inherit;
+}
+
+/* focused or hovered menu item */
+.flz_hmenu a:focus,
+.flz_hmenu a:hover {
+   background-color: #ddd;
+   color: inherit;
+}
+
+/* active (clicked) menu item */
+.flz_hmenu a:active {
+   background-color: #ddd;
+   color: inherit;
+}
+
+/* selected menu item */
+.flz_hmenu .flz_selected {
+   background-color: #fff;
+   font-weight: bold;
+   color: inherit;
+}
+
+/* focused or hovered selected menu item */
+.flz_hmenu a.flz_selected:focus,
+.flz_hmenu a.flz_selected:hover {
+   background-color: #ddd;
+   color: inherit;
+}
+
+/* active (clicked) selected menu item */
+.flz_hmenu a.flz_selected:active {
+   background-color: #bbb;
+   color: inherit;
+}
+
+/**
+ * ---------------------------------------------------------------------------------------
+ * @section       Vertical menu navigation
+ *
+ * Vertical menu navigation element that supports 5 menu levels (including the 1st). Needs 
+ * a surrounding DIV tag that uses vmenu.
+ */
+ 
+.flz_vmenu {
+}
+
+.flz_vmenu ul {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+}
+ 
+.flz_vmenu li {
+   float: left;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+}
+
+.flz_vmenu li a {
+   background-color: inherit;
+   display: block;
+   padding: 0.25em 1em;
+   text-decoration: none;
+   border-bottom: 1px solid #000;
+}
+
+.flz_vmenu li ul li a {
+   background-color: inherit;
+   padding-left: 2em;
+}
+
+.flz_vmenu li ul li ul li a {
+   background-color: inherit;
+   padding-left: 3em;
+}
+
+.flz_vmenu li ul li ul li ul li a {
+   background-color: inherit;
+   padding-left: 4em;
+}
+
+.flz_vmenu li ul li ul li ul li ul li a {
+   background-color: inherit;
+   padding-left: 5em;
+}
+
+/* default menu item */
+.flz_vmenu a:link {
+}
+
+/* visited menu item */
+.flz_vmenu a:visited {
+   color: inherit;
+}
+
+/* focused or hovered menu item */
+.flz_vmenu a:focus,
+.flz_vmenu a:hover {
+   background-color: #ddd;
+   color: inherit;
+}
+
+/* active (clicked) menu item */
+.flz_vmenu a:active {
+   background-color: #ddd;
+   color: inherit;
+}
+
+/* selected menu item */
+.flz_vmenu .flz_selected {
+   background-color: #fff;
+   color: inherit;
+   font-weight: bold;
+}
+
+/* focused or hovered selected menu item */
+.flz_vmenu a.flz_selected:focus,
+.flz_vmenu a.flz_selected:hover {
+   background-color: #ddd;
+   color: inherit;
+}
+
+/* active (clicked) selected menu item */
+.flz_vmenu a.flz_selected:active {
+   background-color: #bbb;
+   color: inherit;
+}
+
+/**
+ * ---------------------------------------------------------------------------------------
+ * @section       Horizontal Tabbed Menu
+ *
+ * Tab menu navigation element. Needs a surrounding DIV tag that uses tabmenu.
+ */
+
+/* menu container (background image acts as horizontal separator line) */
+.flz_tabmenu {
+   float: left;
+   width: 100%;   
+}
+
+/* menu list container */
+.flz_tabmenu ul {
+   margin: 0;
+   padding: 0;
+}
+
+/* menu item (list element as closing part of the sliding door) */
+.flz_tabmenu li {
+   background:url(images/tab_right.gif) no-repeat right top;
+   float: left; 
+   list-style-type: none;
+   margin: 0 1px;
+   padding: 0;
+}
+
+/* menu item (hyperlink element as opening part of sliding door)*/
+.flz_tabmenu a {
+   background:url(images/tab_left.gif) no-repeat left top;
+   display: block;
+   text-decoration: none;
+   padding: 0.25em 1em;
+}
+
+/* default menu item */
+.flz_tabmenu a:link {
+}
+
+/* visited menu item */
+.flz_tabmenu a:visited {
+   color: inherit;
+}
+
+/* hovered menu item (hyperlink element as opening part of the sliding doors) */
+.flz_tabmenu a:hover {
+   background: transparent url(images/tab_left_hover.gif) no-repeat left top;
+}
+
+/* reset hovered menu item in IE <= 6 only with underline effect, because li:hover already is not supported */
+* html .flz_tabmenu a:hover {
+   background:url(images/tab_left.gif) no-repeat left top;
+   text-decoration: underline;
+}
+
+/* active and focus menu item (focus and active is not supported for li, thus underline for hyperlinks are used)*/
+.flz_tabmenu a:focus,
+.flz_tabmenu a:active {
+   color: inherit;
+   text-decoration: underline;
+}
+
+/* hovered menu item (list element as closing part of the sliding doors) */
+.flz_tabmenu li:hover {
+   background: transparent url(images/tab_right_hover.gif) no-repeat right top;
+}
+
+/* selected menu item (list element as closing part of the sliding door) */
+.flz_tabmenu li.flz_selected {
+   background: transparent url(images/tab_right_selected.gif) no-repeat right top;
+}
+
+/* selected menu item (hyperlink element as opening part of sliding door)*/
+.flz_tabmenu li.flz_selected a {
+   background: transparent url(images/tab_left_selected.gif) no-repeat left top;
+   color: inherit;   
+   font-weight: bold;
+}
+
+/* focused or hovered selected menu item (hyperlink element as opening part of the sliding doors) */
+.flz_tabmenu li.flz_selected a:hover {
+   background: transparent url(images/tab_left_hover.gif) no-repeat left top;
+   color: inherit;
+}
+
+/* reset hovered selected menu item in IE <= 6 only with underline effect, because li:hover already is not supported */
+* html .flz_tabmenu li.flz_selected a:hover {
+   background:url(images/tab_left_selected.gif) no-repeat left top;
+   text-decoration: underline;
+}
+
+/* focused or hovered selected menu item (list element as closing part of the sliding doors) */
+.flz_tabmenu li:hover.flz_selected {
+   background: transparent url(images/tab_right_hover.gif) no-repeat right top;
+}
+
+/* focus and active (clicked) selected menu item */
+.flz_tabmenu li.flz_selected a:focus,
+.flz_tabmenu li.flz_selected a:active{
+   color: inherit;
+   text-decoration: underline;
+}
