@@ -1,0 +1,19 @@
+*{font-family:Verdana, Arial;font-size:1em;line-height:1.5em;}
+address{font-style:normal;}
+sub{vertical-align:sub;font-size:0.8em;}
+sup{vertical-align:super;font-size:0.8em;}
+* html sub,* html sup{font-size:1em;}
+*:first-child+html sub,*:first-child+html sup{font-size:1em;}
+body{background-color:#fff;color:#000;font-family:"Microsoft Sans Serif";font-size:0.85em;}
+h1{font-size:2em;}
+h2{font-size:1.8em;}
+h3{font-size:1.6em;}
+h4{font-size:1.4em;}
+h5{font-size:1.2em;}
+h6{font-size:1.0em;}
+ul li{list-style-type:disc;margin-left:2.8em;}
+ol li{list-style-type:decimal;margin-left:2.8em;}
+* html ol li{margin-left:1.5em;}
+a,a:active,a:focus,a:link,a:hover,a:visited{color:#000;}
+a img{border:0px;}
+p,h1,h2,h3,h4,h5,h6,address,blockquote,ul,ol,dl,pre{clear:both;}
