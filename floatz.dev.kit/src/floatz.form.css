@@ -10,7 +10,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-01-18
+ * @lastmodified  2010-01-25
  */
 
 /**
@@ -36,6 +36,12 @@ select,
 textarea {
    margin: 0.25em 0;
    vertical-align: middle;
+}
+
+/* Add border to get same visual appearance to all input elements */
+select,
+textarea {
+   border: 1px solid #000;
 }
 
 /* Clears floats for fieldsets and forms */
@@ -91,6 +97,7 @@ fieldset {
 /* Textbox */
 .flz_textbox {
    background-color: fff;
+   border: 1px solid #000;
 }
 
 /* Button - changes paddings for buttons as well as wrong padding behaviour 
