@@ -23,3 +23,9 @@ floatz.layout.reset.css
 
 floatz.layout.reset.meyer.css
 * CHANGED Reworking file and section comments
+
+VERSION 1.1.0
+=============
+
+floatz.form.css
+* CHANGED Adding border to flz_textbox, select and textarea to get same baseline of visual appearance

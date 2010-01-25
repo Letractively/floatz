@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+   <head>
+      <title>floatz - form test</title>
+      <meta http-equiv="content-type" content="text/html; CHARSET=iso-8859-1" />
+      <meta http-equiv="content-script-type" content="text/javascript" />
+      <meta http-equiv="content-style-type" content="text/css" />
+      <meta http-equiv="content-language" content="en" />
+      <meta name="author" content="" />
+      <meta name="robots" content="index,follow" />
+      <meta name="description" content="" />
+      <link rel="stylesheet" type="text/css" href="styles/demo.css" />
+      <style type="text/css">
+      </style>
+   </head>
+   <body>
+      <!-- page container -->
+      <div id="flz_page">
+         <div class="flz_box flz_r50">
+            <div class="flz_spacer">
+               <form class="flz_blockform" action="" method="post">
+                  <fieldset id="fieldset1">
+                     <legend>Fieldset 1</legend>
+                     <label for="textbox1">Textbox</label>
+                     <input id="textbox1" class="flz_textbox" type="text" value="Lorem ipsum dolor sit amed" />
+                     <label for="textbox2">Mandatory Textbox*</label>
+                     <input id="textbox2" class="flz_textbox flz_mandatory" type="text" value="Lorem ipsum dolor sit amed" />
+                     <label for="textbox3">Readonly Textbox</label>
+                     <input id="textbox3" class="flz_textbox flz_readonly" type="text" readonly="readonly" value="Lorem ipsum dolor sit amed" />
+                  </fieldset>
+                  <fieldset id="fieldset2">
+                     <legend>Fieldset 2</legend>
+                     <label for="textarea1">Textarea</label>
+                     <textarea id="textarea1" cols="1" rows="3">Lorem ipsum dolor sit amed</textarea>
+                     <label for="textarea2">Mandatory Textarea*</label>
+                     <textarea id="textarea2" class="flz_mandatory" cols="1" rows="3">Lorem ipsum dolor sit amed</textarea>
+                     <label for="textarea3">Readonly Textarea</label>
+                     <textarea id="textarea3" class="flz_readonly" cols="1" rows="3" readonly="readonly">Lorem ipsum dolor sit amed</textarea>
+                  </fieldset>
+                  <fieldset id="fieldset3">
+                     <legend>Fieldset 3</legend>
+                     <label for="selectbox1">Selectbox</label>
+                     <select id="selectbox1">
+                        <option>Choice 1</option>
+                        <option selected="selected">Choice 2</option>
+                        <option>Choice 3</option>
+                     </select>
+                     <label for="selectbox2">Mandatory Selectbox*</label>
+                     <select id="selectbox2" class="flz_mandatory">
+                        <option>Choice 1</option>
+                        <option selected="selected">Choice 2</option>
+                        <option>Choice 3</option>
+                     </select>
+                     <label for="selectbox3">Readonly Selectbox</label>
+                     <select id="selectbox3" class="flz_readonly" disabled="disabled">
+                        <option>Choice 1</option>
+                        <option selected="selected">Choice 2</option>
+                        <option>Choice 3</option>
+                     </select>
+                  </fieldset>
+                  <fieldset id="fieldset4">
+                     <legend>Fieldset 4</legend>
+                     <label for="radiobutton1">RadioButton 1</label>
+                     <input id="radiobutton1" type="radio" class="flz_radio" name="radiogroup1" />
+                     <label for="radiobutton2">RadioButton 2</label>
+                     <input id="radiobutton2" type="radio" class="flz_radio" name="radiogroup1" checked="checked" />
+                     <label for="radiobutton3">Mandatory RadioButton</label>
+                     <input id="radiobutton3" type="radio" class="flz_radio flz_mandatory" name="radiogroup1" />
+                     <label for="radiobutton4">Readonly RadioButton</label>
+                     <input id="radiobutton4" type="radio" class="flz_radio" name="radiogroup1" disabled="disabled" />
+                  </fieldset>
+                  <fieldset id="fieldset5">
+                     <legend>Fieldset 5</legend>
+                     <label for="radiobutton5" class="flz_inline">RadioButton 1</label>
+                     <input id="radiobutton5" type="radio" class="flz_radio flz_inline" name="radiogroup2" />
+                     <label for="radiobutton6" class="flz_inline">RadioButton 2</label>
+                     <input id="radiobutton6" type="radio" class="flz_radio flz_inline" name="radiogroup2" checked="checked" />
+                     <label for="radiobutton7" class="flz_inline">Mandatory RadioButton</label>
+                     <input id="radiobutton7" type="radio" class="flz_radio flz_inline flz_mandatory" name="radiogroup2" />
+                     <label for="radiobutton8" class="flz_inline">Readonly RadioButton</label>
+                     <input id="radiobutton8" type="radio" class="flz_radio flz_inline flz_readonly" name="radiogroup2" disabled="disabled" />
+                  </fieldset>
+                  <fieldset id="fieldset6">
+                     <legend>Fieldset 6</legend>
+                     <input id="radiobutton9" type="radio" class="flz_radio flz_inline" name="radiogroup3" />
+                     <label for="radiobutton9" class="flz_inline">RadioButton 1</label>
+                     <input id="radiobutton10" type="radio" class="flz_radio flz_inline" name="radiogroup3" checked="checked" />
+                     <label for="radiobutton10" class="flz_inline">RadioButton 2</label>
+                     <input id="radiobutton11" type="radio" class="flz_radio flz_inline flz_mandatory" name="radiogroup3" />
+                     <label for="radiobutton11" class="flz_inline">Mandatory RadioButton</label>
+                     <input id="radiobutton12" type="radio" class="flz_radio flz_inline flz_readonly" name="radiogroup3" disabled="disabled" />
+                     <label for="radiobutton12" class="flz_inline">Readonly RadioButton</label>
+                  </fieldset>
+                  <fieldset id="fieldset7">
+                     <legend>Fieldset 7</legend>
+                     <label for="checkbox1">Checkbox 1</label>
+                     <input id="checkbox1" class="flz_checkbox" type="checkbox" />
+                     <label for="checkbox2">Checkbox 2</label>
+                     <input id="checkbox2" class="flz_checkbox" type="checkbox" checked="checked" />
+                     <label for="checkbox3">Mandatory Checkbox</label>
+                     <input id="checkbox3" class="flz_checkbox flz_mandatory" type="checkbox" />
+                     <label for="checkbox4">Readonly Checkbox</label>
+                     <input id="checkbox4" class="flz_checkbox flz_readonly" type="checkbox" disabled="disabled" />
+                  </fieldset>
+                  <fieldset id="fieldset8">
+                     <legend>Fieldset 8</legend>
+                     <label for="checkbox5" class="flz_inline">Checkbox 1</label>
+                     <input id="checkbox5" class="flz_checkbox flz_inline" type="checkbox" />
+                     <label for="checkbox6" class="flz_inline">Checkbox 2</label>
+                     <input id="checkbox6" class="flz_checkbox flz_inline" type="checkbox" checked="checked" />
+                     <label for="checkbox7" class="flz_inline">Mandatory Checkbox</label>
+                     <input id="checkbox7" class="flz_checkbox flz_inline flz_mandatory" type="checkbox" />
+                     <label for="checkbox8" class="flz_inline">Readonly Checkbox</label>
+                     <input id="checkbox8" class="flz_checkbox flz_inline flz_readonly" type="checkbox" disabled="disabled" />
+                  </fieldset>
+                  <fieldset id="fieldset9">
+                     <legend>Fieldset 9</legend>
+                     <input id="checkbox9" class="flz_checkbox flz_inline" type="checkbox" />
+                     <label for="checkbox9" class="flz_inline">Checkbox 1</label>
+                     <input id="checkbox10" class="flz_checkbox flz_inline" type="checkbox" checked="checked" />
+                     <label for="checkbox10" class="flz_inline">Checkbox 2</label>
+                     <input id="checkbox11" class="flz_checkbox flz_inline flz_mandatory" type="checkbox" />
+                     <label for="checkbox11" class="flz_inline">Mandatory Checkbox</label>
+                     <input id="checkbox12" class="flz_checkbox flz_inline flz_readonly" type="checkbox" disabled="disabled" />
+                     <label for="checkbox12" class="flz_inline">Readonly Checkbox</label>
+                  </fieldset>
+
+                  <input id="button1" class="flz_button" type="button" value="Button" />
+                  <input id="button2" class="flz_button" type="button" value="Readonly Button" disabled="disabled" />
+               </form>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
