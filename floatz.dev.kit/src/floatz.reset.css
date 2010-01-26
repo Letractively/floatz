@@ -12,7 +12,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2009-06-17
+ * @lastmodified  2010-01-26
  */
 
 /**
@@ -23,8 +23,7 @@
 /* Sets defaults for all elements */
 * {
    font-family: Verdana, Arial;
-   font-size: 1em;
-   line-height: 1.5em;
+   font-size: 100%;	/* Set input elements to same font-size as in meyer reset */
 }
 
 /* Corrects behaviour of some default elements (because of meyer reset) */
@@ -57,7 +56,7 @@ body {
    background-color: #fff;
    color: #000;
    font-family: "Microsoft Sans Serif";
-   font-size: 0.85em;
+   /*font-size: 0.85em;*/
 }
 
 /* Sets font-sizes for headers */

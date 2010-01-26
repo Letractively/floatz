@@ -29,3 +29,7 @@ VERSION 1.1.0
 
 floatz.form.css
 * CHANGED Adding border to flz_textbox, select and textarea to get same baseline of visual appearance
+
+floatz.reset.css
+* FIXED Issue 5 Text of input field slips under visible area at the bottom of the input field
+        Remvoing
