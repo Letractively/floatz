@@ -17,7 +17,7 @@
  * Original version
  * ----------------
  * @verson        1.0.0
- * @lastmodified  2008-02-12
+ * @lastmodified  2009-01-26
  * @see           http://www.meyerweb.com/
  * @author        Eric Meyer
  *
@@ -38,7 +38,8 @@ fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
    background: transparent;
 }
 body {
-   line-height: 1;
+/* line-height: 1; */      
+   line-height: auto;   /* Changed due to cut off characters in labels */
 }
 ol, ul {
    list-style: none;
