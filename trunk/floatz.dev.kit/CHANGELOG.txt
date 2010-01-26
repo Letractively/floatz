@@ -32,4 +32,4 @@ floatz.form.css
 
 floatz.reset.css
 * FIXED Issue 5 Text of input field slips under visible area at the bottom of the input field
-        Remvoing
+        Removing line-height and adding same font-size as in meyer CSS for global defaults on *
