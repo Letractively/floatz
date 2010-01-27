@@ -1,13 +1,6 @@
-#Frequently asked questions
+Last Update: January 26th, 2010
 
-= Introduction =
+#summary
 
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+=Form Layout=
+== Why is the image in flz_combifield aligned with input field? ==
