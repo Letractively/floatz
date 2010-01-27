@@ -10,47 +10,8 @@
       <meta name="robots" content="index,follow" />
       <meta name="description" content="" />
       <link rel="stylesheet" type="text/css" href="styles/demo.css" />
+      <!--<link rel="stylesheet" type="text/css" href="../src/debug/floatz.layout.debug.css" />-->
       <style type="text/css">
-         .mytag1 {
-            border: 1px dotted blue;
-         }
-         
-/*         .flz_lsubspacer_mrmc_top {
-            background-color: #666fff;
-         }
-
-         .flz_msubspacer_mrmc_top {
-            background-color: #777fff;
-         }
-
-         .flz_rsubspacer_mrmc_top {
-            background-color: #888fff;
-         }
-                  
-         .flz_lsubspacer_mrmc_mid {
-            background-color: #999fff;
-         }
-
-         .flz_msubspacer_mrmc_mid {
-            background-color: #aaafff;
-         }
-
-         .flz_rsubspacer_mrmc_mid {
-            background-color: #bbbfff;
-         }
-
-         .flz_lsubspacer_mrmc_bottom {
-            background-color: #cccfff;
-         }
-
-         .flz_msubspacer_mrmc_bottom {
-            background-color: #dddfff;
-         }
-
-         .flz_rsubspacer_mrmc_bottom {
-            background-color: #eeefff;
-         }
-*/
       </style>
    </head>
    <body>
@@ -63,8 +24,8 @@
                   <label for="textbox1">Textbox</label>
                   <input id="textbox1" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
 
-                  <label for="textbox2">Textbox</label>
-                  <div class="flz_relative">
+                  <div class="flz_box flz_relative">
+                     <label for="textbox2">Textbox</label>
                      <div class="flz_combifield">
                         <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
                      </div>
@@ -99,45 +60,45 @@
                      <input id="button1" class="flz_button" type="button" value="Button" />
                      <input id="button2" class="flz_button" type="button" value="Button" />
                   </div>
-                  
+
                   <h1>Two column form</h1>
                   <div class="flz_box flz_l50">
                      <div class="flz_lsubspacer">
                         <label for="textbox1">Textbox</label>
                         <input id="textbox1" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
-   
-                        <label for="textbox2">Textbox</label>
-                        <div class="flz_relative">
+
+                        <div class="flz_box flz_relative">
+                           <label for="textbox2">Textbox</label>
                            <div class="flz_combifield">
                               <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
                            </div>
                            <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
                         </div>
-   
+
                         <input id="radiobutton1" type="radio" class="flz_radio flz_inline" name="radiogroup1" />
                         <label for="radiobutton1" class="flz_inline">RadioButton 1</label>
                         <input id="radiobutton2" type="radio" class="flz_radio flz_inline" name="radiogroup1" />
                         <label for="radiobutton2" class="flz_inline">RadioButton 1</label>
                         <input id="radiobutton3" type="radio" class="flz_radio flz_inline" name="radiogroup1" />
                         <label for="radiobutton3" class="flz_inline">RadioButton 1</label>
-      
+
                         <label for="textarea1">Textarea</label>
                         <textarea id="textarea1" cols="1" rows="3">Lorem ipsum dolor sit amed</textarea>
-      
+
                         <label for="selectbox1">Selectbox</label>
                         <select id="selectbox1">
                            <option>Choice 1</option>
                            <option selected="selected">Choice 2</option>
                            <option>Choice 3</option>
                         </select>
-      
+
                         <input id="checkbox1" class="flz_checkbox flz_inline" type="checkbox" />
                         <label for="checkbox1" class="flz_inline">Checkbox 1</label>
                         <input id="checkbox2" class="flz_checkbox flz_inline" type="checkbox" />
                         <label for="checkbox2" class="flz_inline">Checkbox 1</label>
                         <input id="checkbox3" class="flz_checkbox flz_inline" type="checkbox" />
                         <label for="checkbox3" class="flz_inline">Checkbox 1</label>
-      
+
                         <div class="flz_clear">
                            <input id="button1" class="flz_button" type="button" value="Button" />
                            <input id="button2" class="flz_button" type="button" value="Button" />
@@ -170,8 +131,8 @@
                         <input id="radiobutton3" type="radio" class="flz_radio flz_inline" name="radiogroup1" />
                         <label for="radiobutton3" class="flz_inline">RadioButton 1</label>
 
-                        <label for="textbox2">Textbox</label>
-                        <div class="flz_relative">
+                        <div class="flz_box flz_relative">
+                           <label for="textbox2">Textbox</label>
                            <div class="flz_combifield">
                               <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
                            </div>
@@ -180,7 +141,7 @@
 
                         <label for="textbox1">Textbox</label>
                         <input id="textbox1" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
-      
+
                         <div class="flz_clear">
                            <input id="button1" class="flz_button" type="button" value="Button" />
                            <input id="button2" class="flz_button" type="button" value="Button" />
@@ -193,39 +154,39 @@
                      <div class="flz_lsubspacer">
                         <label for="textbox1">Textbox</label>
                         <input id="textbox1" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
-   
-                        <label for="textbox2">Textbox</label>
-                        <div class="flz_relative">
+
+                        <div class="flz_box flz_relative">
+                           <label for="textbox2">Textbox</label>
                            <div class="flz_combifield">
                               <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
                            </div>
                            <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
                         </div>
-   
+
                         <input id="radiobutton1" type="radio" class="flz_radio flz_inline" name="radiogroup1" />
                         <label for="radiobutton1" class="flz_inline">RadioButton 1</label>
                         <input id="radiobutton2" type="radio" class="flz_radio flz_inline" name="radiogroup1" />
                         <label for="radiobutton2" class="flz_inline">RadioButton 1</label>
                         <input id="radiobutton3" type="radio" class="flz_radio flz_inline" name="radiogroup1" />
                         <label for="radiobutton3" class="flz_inline">RadioButton 1</label>
-      
+
                         <label for="textarea1">Textarea</label>
                         <textarea id="textarea1" cols="1" rows="3">Lorem ipsum dolor sit amed</textarea>
-      
+
                         <label for="selectbox1">Selectbox</label>
                         <select id="selectbox1">
                            <option>Choice 1</option>
                            <option selected="selected">Choice 2</option>
                            <option>Choice 3</option>
                         </select>
-      
+
                         <input id="checkbox1" class="flz_checkbox flz_inline" type="checkbox" />
                         <label for="checkbox1" class="flz_inline">Checkbox 1</label>
                         <input id="checkbox2" class="flz_checkbox flz_inline" type="checkbox" />
                         <label for="checkbox2" class="flz_inline">Checkbox 1</label>
                         <input id="checkbox3" class="flz_checkbox flz_inline" type="checkbox" />
                         <label for="checkbox3" class="flz_inline">Checkbox 1</label>
-      
+
                         <div class="flz_clear">
                            <input id="button1" class="flz_button" type="button" value="Button" />
                            <input id="button2" class="flz_button" type="button" value="Button" />
@@ -258,8 +219,8 @@
                         <input id="radiobutton3" type="radio" class="flz_radio flz_inline" name="radiogroup1" />
                         <label for="radiobutton3" class="flz_inline">RadioButton 1</label>
 
-                        <label for="textbox2">Textbox</label>
-                        <div class="flz_relative">
+                        <div class="flz_box flz_relative">
+                           <label for="textbox2">Textbox</label>
                            <div class="flz_combifield">
                               <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
                            </div>
@@ -268,7 +229,7 @@
 
                         <label for="textbox1">Textbox</label>
                         <input id="textbox1" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
-      
+
                         <div class="flz_clear">
                            <input id="button1" class="flz_button" type="button" value="Button" />
                            <input id="button2" class="flz_button" type="button" value="Button" />
@@ -279,39 +240,39 @@
                      <div class="flz_rsubspacer">
                         <label for="textbox1">Textbox</label>
                         <input id="textbox1" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
-   
-                        <label for="textbox2">Textbox</label>
-                        <div class="flz_relative">
+
+                        <div class="flz_box flz_relative">
+                           <label for="textbox2">Textbox</label>
                            <div class="flz_combifield">
                               <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
                            </div>
                            <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
                         </div>
-   
+
                         <input id="radiobutton1" type="radio" class="flz_radio flz_inline" name="radiogroup1" />
                         <label for="radiobutton1" class="flz_inline">RadioButton 1</label>
                         <input id="radiobutton2" type="radio" class="flz_radio flz_inline" name="radiogroup1" />
                         <label for="radiobutton2" class="flz_inline">RadioButton 1</label>
                         <input id="radiobutton3" type="radio" class="flz_radio flz_inline" name="radiogroup1" />
                         <label for="radiobutton3" class="flz_inline">RadioButton 1</label>
-      
+
                         <label for="textarea1">Textarea</label>
                         <textarea id="textarea1" cols="1" rows="3">Lorem ipsum dolor sit amed</textarea>
-      
+
                         <label for="selectbox1">Selectbox</label>
                         <select id="selectbox1">
                            <option>Choice 1</option>
                            <option selected="selected">Choice 2</option>
                            <option>Choice 3</option>
                         </select>
-      
+
                         <input id="checkbox1" class="flz_checkbox flz_inline" type="checkbox" />
                         <label for="checkbox1" class="flz_inline">Checkbox 1</label>
                         <input id="checkbox2" class="flz_checkbox flz_inline" type="checkbox" />
                         <label for="checkbox2" class="flz_inline">Checkbox 1</label>
                         <input id="checkbox3" class="flz_checkbox flz_inline" type="checkbox" />
                         <label for="checkbox3" class="flz_inline">Checkbox 1</label>
-      
+
                         <div class="flz_clear">
                            <input id="button1" class="flz_button" type="button" value="Button" />
                            <input id="button2" class="flz_button" type="button" value="Button" />
@@ -343,8 +304,8 @@
                   </div>
                   <div class="flz_box flz_m33">
                      <div class="flz_msubspacer_mrmc_mid">
-                        <label for="textbox2">Textbox</label>
-                        <div class="flz_relative">
+                        <div class="flz_box flz_relative">
+                           <label for="textbox2">Textbox</label>
                            <div class="flz_combifield">
                               <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
                            </div>
@@ -381,8 +342,8 @@
                         </div>
                         <div class="flz_box flz_r50">
                            <div class="flz_rsubspacer_mrmc_top">
-                              <label for="textbox2">Textbox</label>
-                              <div class="flz_relative">
+                              <div class="flz_box flz_relative">
+                                 <label for="textbox2">Textbox</label>
                                  <div class="flz_combifield">
                                     <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
                                  </div>
@@ -403,8 +364,8 @@
                         </div>
                         <div class="flz_box flz_m33">
                            <div class="flz_msubspacer_mrmc_top">
-                              <label for="textbox2">Textbox</label>
-                              <div class="flz_relative">
+                              <div class="flz_box flz_relative">
+                                 <label for="textbox2">Textbox</label>
                                  <div class="flz_combifield">
                                     <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
                                  </div>
@@ -457,8 +418,8 @@
                   </div>
                   <div class="flz_box flz_r25">
                      <div class="flz_rsubspacer_mrmc_bottom">
-                        <label for="textbox2">Textbox</label>
-                        <div class="flz_relative">
+                        <div class="flz_box flz_relative">
+                           <label for="textbox2">Textbox</label>
                            <div class="flz_combifield">
                               <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
                            </div>
@@ -466,7 +427,7 @@
                         </div>
                      </div>
                   </div>
-               </form>               
+               </form>
             </div>
          </div>
       </div>
