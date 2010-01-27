@@ -6,11 +6,40 @@ Last Update: January 26th, 2010
 
 ==flz_combifield==
 
+===Why is the image not visible or somewhere else but not beside the input field?===
+
+Maybe you have missed to add *flz_relative* to the surrounding *div*. In that case the image will be absolut positioned within an outer relative position container.
+
+Wrong code: *flz_relative* is missing
+
+{{{
+   <div class="flz_box">
+      <label for="textbox2">Textbox</label>
+      <div class="flz_combifield">
+         <input id="textbox2" type="text" class="flz_textbox" />
+      </div>
+      <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
+  </div>
+}}}
+
+Correct code: *flz_relative* is added to surrounding *div*
+
+{{{
+   <div class="flz_box flz_relative">
+      <label for="textbox2">Textbox</label>
+      <div class="flz_combifield">
+         <input id="textbox2" type="text" class="flz_textbox" />
+      </div>
+      <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
+  </div>
+}}}
+
+
 ===Why is the image not aligned with the input field?===
 
 Maybe you have missed the *flz_box* in the surrounding *div*. In this case the image after the input field is not correctly aligned with the bottom of the input field. 
 
-Wrong code: *flz_box* is missing.
+Wrong code: *flz_box* is missing
 
 {{{
    <div class="flz_relative">
