@@ -1,6 +1,63 @@
 Last Update: January 26th, 2010
 
-#summary
+<wiki:toc max_depth="3" />
 
 =Form Layout=
-== Why is the image in flz_combifield aligned with input field? ==
+
+==flz_combifield==
+
+===Why is the image not aligned with the input field?===
+
+Maybe you have missed the *flz_box* in the surrounding *div*. In this case the image after the input field is not correctly aligned with the bottom of the input field. 
+
+Wrong code: The *flz_box* is missing.
+
+{{{
+   <div class="flz_relative">
+      <label for="textbox2">Textbox</label>
+      <div class="flz_combifield">
+         <input id="textbox2" type="text" class="flz_textbox" />
+      </div>
+      <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
+  </div>
+}}}
+
+Correct code: *flz_box* is added to the surrounding *div*
+
+{{{
+   <div class="flz_box flz_relative">
+      <label for="textbox2">Textbox</label>
+      <div class="flz_combifield">
+         <input id="textbox2" type="text" class="flz_textbox" />
+      </div>
+      <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
+  </div>
+}}}
+
+===Why is the textbox not correctly aligned with others in the same row?===
+
+Maybe the *label* tag is not on the correct position within the markup. In that case the *label* is aligned correctly with others in the same row, while the textbox slips a little bit below the other textboxes.
+
+Wrong code: the *label* tag is outside of the *div* marked with *flz_combifield*
+
+{{{
+   <div class="flz_box flz_relative">
+      <label for="textbox2">Textbox</label>
+      <div class="flz_combifield">
+         <input id="textbox2" type="text" class="flz_textbox" />
+      </div>
+      <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
+  </div>
+}}}
+
+Correct code: the *label* is placed within the *div* marked with *flz_combifield*
+
+{{{
+   <div class="flz_box flz_relative">
+      <div class="flz_combifield">
+         <label for="textbox2">Textbox</label>
+         <input id="textbox2" type="text" class="flz_textbox" />
+      </div>
+      <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
+  </div>
+}}}
