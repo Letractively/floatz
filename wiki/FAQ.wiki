@@ -10,7 +10,7 @@ Last Update: January 26th, 2010
 
 Maybe you have missed the *flz_box* in the surrounding *div*. In this case the image after the input field is not correctly aligned with the bottom of the input field. 
 
-Wrong code: The *flz_box* is missing.
+Wrong code: *flz_box* is missing.
 
 {{{
    <div class="flz_relative">
