@@ -1,0 +1,78 @@
+/*****************************************************************************************
+ * floatz.layout.debug.css
+ * ---------------------------------------------------------------------------------------
+ * Debug CSS for layout elements
+ *
+ * @project       floatz CSS Framework
+ * @version       1.1.0
+ * @see           http://code.google.com/p/floatz/
+ * @author        Harald Humml
+ * @copyright     Copyright (c) 1998-2010 by :humml:design
+ * @link          http://design.humml.eu/toolbox/floatz
+ * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
+ * @lastmodified  2010-01-26
+ */
+
+.flz_subspacer {
+   background-color: #000fff;
+}
+
+.flz_lsubspacer {
+   background-color: #222fff;
+}
+
+.flz_msubspacer {
+   background-color: #444fff;
+}
+
+.flz_rsubspacer {
+   background-color: #666fff;
+}
+
+.flz_subspacer_mrsc_top {
+   background-color: #888fff;
+}
+
+.flz_subspacer_mrsc_mid {
+   background-color: #aaafff;
+}
+
+.flz_subspacer_mrsc_bottom {
+   background-color: #cccfff;
+}
+
+.flz_lsubspacer_mrmc_top {
+   background-color: #000999;
+}
+
+.flz_msubspacer_mrmc_top {
+   background-color: #333999;
+}
+
+.flz_rsubspacer_mrmc_top {
+   background-color: #666999;
+}
+
+.flz_lsubspacer_mrmc_mid {
+   background-color: #888999;
+}
+
+.flz_msubspacer_mrmc_mid {
+   background-color: #aaa999;
+}
+
+.flz_rsubspacer_mrmc_mid {
+   background-color: #ccc999;
+}
+
+.flz_lsubspacer_mrmc_bottom {
+   background-color: #eee999;
+}
+
+.flz_msubspacer_mrmc_bottom {
+   background-color: #fffaaa;
+}
+
+.flz_rsubspacer_mrmc_bottom {
+   background-color: #fffbbb;
+}

@@ -28,11 +28,38 @@ VERSION 1.1.0
 =============
 
 floatz.form.css
-* CHANGED Adding border to flz_textbox, select and textarea to get same baseline of visual appearance
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+CHANGE   -        Adding border to flz_textbox, select and textarea to get same baseline of visual appearance
+-------------------------------------------------------------------------------------------------------------
+FIX      7        Different FIELDSET handling in floatz for IE 5.5,6,7 does not work with IE8
+                  Fixed by adding specific corrections with IE8 hack
+-------------------------------------------------------------------------------------------------------------                  
 
 floatz.reset.css
-* FIX Issue 5 Text of input field slips under visible area at the bottom of the input field
-      Removing line-height and adding same font-size as in meyer CSS for global defaults on *
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+CHANGE   -        Text of input field slips under visible area at the bottom of the input field
+                  Removing line-height and adding same font-size as in meyer CSS for global defaults on
+-------------------------------------------------------------------------------------------------------------
 
 floatz.reset.meyer.css
-* FIX Changed line-height: 1 to auto due to cropped labels (e.g. y, p, j, ...)
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+FIX      5        Text of input field slips under visible area at the bottom of the input field
+                  Changed line-height: 1 to auto due to cropped labels (e.g. y, p, j, ...)
+-------------------------------------------------------------------------------------------------------------
+
+floatz.dev.kit
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+NEW      -        Adding test page test.baseline.form.simple.html to \tests
+-------------------------------------------------------------------------------------------------------------
+NEW      -        Adding test page test.baseline.form.complex.html to \tests
+-------------------------------------------------------------------------------------------------------------
+NEW      -        Adding debug CSS floatz.layout.debug.css to \src\debug
+-------------------------------------------------------------------------------------------------------------

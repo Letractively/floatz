@@ -10,7 +10,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-01-25
+ * @lastmodified  2010-01-27
  */
 
 /**
@@ -50,41 +50,92 @@ form {
    clear: both;
 }
 
-/* Sets border styles (because of meyer reset), paddings and encloses floating boxes within 
-   fieldset using overflow method (hidden is necessary for Opera <= 8.5) */
+/**
+ * Sets border styles (because of meyer reset), paddings and encloses floating boxes 
+ * within fieldset using overflow method
+ */
 fieldset {
    border: 1px solid #000;
-   overflow: hidden;
    padding: 1em;
 }
 
-/* Corrects wrong padding behaviour of fieldset in IE 5+, 6 and 7 using star hack and first 
-   child star hack. Margin-top corrects additional padding of legend - see below */
+/**
+ * @affected Opera <= 8.5
+ */
+fieldset {
+   overflow: hidden; /* Opera <= 8.5 */
+}
+
+/**
+ * @workaround Wrong padding behaviour of fieldset in IE.
+ * @affected IE 5, 6
+ */
+
 * html fieldset {
    padding: 0 1em 1em 1em;
-   margin-top: -1em;
+   margin-top: -1em; /* Margin-top corrects additional padding of legend - see below */
 }
+
+/**
+ * @workaround Wrong padding behaviour of fieldset in IE.
+ * @affected IE 7
+ */
 *:first-child+html fieldset {
    padding: 0 1em 1em 1em;
 }
 
-/* Changes color as well as padding behaviour of legend within fieldset for IE 5+, 6 and 7 
-   using star hack and first child star hack */
+/**
+ * @workaround Wrong padding behaviour of fieldset in IE. (hack works only with one 
+ * setting per element)
+ * @affected IE 8
+ */
+fieldset {
+   padding /*\**/: 0 1em 1em 1em \9
+}
+
+/**
+ * Change color of fieldset
+ * @affected IE 5, 6
+ */
 * html fieldset legend {
    color: #000;
 }
+/**
+ * @workaround Wrong padding behaviour of fieldset in IE
+ * @affected IE 5, 6
+ */
 * html legend {
    margin-left: -0.5em;
    padding-top: 1em;
    padding-bottom: 1em;
    padding-left: 0;
 }
+
+/**
+ * @workaround Wrong padding behaviour of fieldset in IE
+ * @affected IE 7
+ */
 *:first-child+html legend {
    margin-left: -0.5em;
    margin-top: -1em;
    padding-top: 1em;
    padding-bottom: 1em;
    padding-left: 0;
+}
+
+/**
+ * @workaround Wrong padding behaviour of fieldset in IE (hack works only with one 
+ * setting per element)
+ * @affected IE 8
+ */
+legend {
+   margin-top /*\**/: -1em \9
+}
+legend {
+   padding-top /*\**/: 1em \9
+}
+legend {
+   padding-bottom /*\**/: 1em \9
 }
 
 /**
