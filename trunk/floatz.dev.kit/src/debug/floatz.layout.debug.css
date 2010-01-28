@@ -13,66 +13,139 @@
  * @lastmodified  2010-01-26
  */
 
+.flz_spacer {
+   background-color: #FF3399;
+   border: 1px dotted #000;
+}
+
+.flz_spacer_mrsc_top {
+   background-color: #FF3333;
+   border: 1px dotted #000;
+}
+.flz_spacer_mrsc_mid {
+   background-color: #FF9933;
+   border: 1px dotted #000;
+}
+.flz_spacer_mrsc_bottom {
+   background-color: #FFFF33;
+   border: 1px dotted #000;
+}
+
+.flz_lspacer {
+   background-color: #FF33FF;
+   border: 1px dotted #000;
+}
+.flz_mspacer {
+   background-color: #F5007A;
+   border: 1px dotted #000;
+}
+.flz_rspacer {
+   background-color: #B8005C;
+   border: 1px dotted #000;
+}
+
+.flz_lspacer_mrmc_top {
+   background-color: #99FF33;
+   border: 1px dotted #000;
+}         
+.flz_mspacer_mrmc_top {
+   background-color: #9933FF;
+   border: 1px dotted #000;
+}         
+.flz_rspacer_mrmc_top {
+   background-color: #00B85C;
+   border: 1px dotted #000;
+}
+.flz_lspacer_mrmc_mid {
+   background-color: #00F57A;
+   border: 1px dotted #000;
+}         
+.flz_mspacer_mrmc_mid {
+   background-color: #33FF33;
+   border: 1px dotted #000;
+}         
+.flz_rspacer_mrmc_mid {
+   background-color: #3333FF;
+   border: 1px dotted #000;
+}
+.flz_lspacer_mrmc_bottom {
+   background-color: #3399FF;
+   border: 1px dotted #000;
+}         
+.flz_mspacer_mrmc_bottom {
+   background-color: #33FFFF;
+   border: 1px dotted #000;
+}         
+.flz_rspacer_mrmc_bottom {
+   background-color: #33FF99;
+   border: 1px dotted #000;
+}
+
+
 .flz_subspacer {
-   background-color: #000fff;
-}
-
-.flz_lsubspacer {
-   background-color: #222fff;
-}
-
-.flz_msubspacer {
-   background-color: #444fff;
-}
-
-.flz_rsubspacer {
-   background-color: #666fff;
+   background-color: #FF3399;
+   border: 1px dotted #000;
 }
 
 .flz_subspacer_mrsc_top {
-   background-color: #888fff;
+   background-color: #FF3333;
+   border: 1px dotted #000;
 }
-
 .flz_subspacer_mrsc_mid {
-   background-color: #aaafff;
+   background-color: #FF9933;
+   border: 1px dotted #000;
+}
+.flz_subspacer_mrsc_bottom {
+   background-color: #FFFF33;
+   border: 1px dotted #000;
 }
 
-.flz_subspacer_mrsc_bottom {
-   background-color: #cccfff;
+.flz_lsubspacer {
+   background-color: #FF33FF;
+   border: 1px dotted #000;
+}
+.flz_msubspacer {
+   background-color: #F5007A;
+   border: 1px dotted #000;
+}
+.flz_rsubspacer {
+   background-color: #B8005C;
+   border: 1px dotted #000;
 }
 
 .flz_lsubspacer_mrmc_top {
-   background-color: #000999;
-}
-
+   background-color: #99FF33;
+   border: 1px dotted #000;
+}         
 .flz_msubspacer_mrmc_top {
-   background-color: #333999;
-}
-
+   background-color: #9933FF;
+   border: 1px dotted #000;
+}         
 .flz_rsubspacer_mrmc_top {
-   background-color: #666999;
+   background-color: #00B85C;
+   border: 1px dotted #000;
 }
-
 .flz_lsubspacer_mrmc_mid {
-   background-color: #888999;
-}
-
+   background-color: #00F57A;
+   border: 1px dotted #000;
+}         
 .flz_msubspacer_mrmc_mid {
-   background-color: #aaa999;
-}
-
+   background-color: #33FF33;
+   border: 1px dotted #000;
+}         
 .flz_rsubspacer_mrmc_mid {
-   background-color: #ccc999;
+   background-color: #3333FF;
+   border: 1px dotted #000;
 }
-
 .flz_lsubspacer_mrmc_bottom {
-   background-color: #eee999;
-}
-
+   background-color: #3399FF;
+   border: 1px dotted #000;
+}         
 .flz_msubspacer_mrmc_bottom {
-   background-color: #fffaaa;
-}
-
+   background-color: #33FFFF;
+   border: 1px dotted #000;
+}         
 .flz_rsubspacer_mrmc_bottom {
-   background-color: #fffbbb;
+   background-color: #33FF99;
+   border: 1px dotted #000;
 }
