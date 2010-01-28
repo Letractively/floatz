@@ -1,4 +1,4 @@
-#summary Frequently asked questions
+summary Frequently asked questions
 
 Last Update: January 26th, 2010
 
@@ -10,85 +10,66 @@ Last Update: January 26th, 2010
 
 ===Why is the image not visible or somewhere else but not beside the input field?===
 
-Maybe you have missed to add *flz_relative* to the surrounding *div*. In that case the image will be absolut positioned within an outer relative position container.
+Maybe you have missed to add *flz_relative* to the surrounding *flz_box*. In that case the image will be absolut positioned within an outer relative positioned container.
 
 Wrong code: *flz_relative* is missing
 
 {{{
-   <div class="flz_box">
-      <label for="textbox2">Textbox</label>
+<div class="flz_box flz_r25">
+   <div class="flz_rsubspacer_mrmc_bottom">
       <div class="flz_combifield">
-         <input id="textbox2" type="text" class="flz_textbox" />
+         <label for="textbox2">Textbox</label>
+         <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
       </div>
       <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
-  </div>
+   </div>
+</div>
 }}}
 
-Correct code: *flz_relative* is added to surrounding *div*
+Correct code: *flz_relative* is added to surrounding *flz_box*
 
 {{{
-   <div class="flz_box flz_relative">
-      <label for="textbox2">Textbox</label>
+<div class="flz_box flz_r25 flz_relative">
+   <div class="flz_rsubspacer_mrmc_bottom">
       <div class="flz_combifield">
-         <input id="textbox2" type="text" class="flz_textbox" />
+         <label for="textbox2">Textbox</label>
+         <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
       </div>
       <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
-  </div>
-}}}
-
-
-===Why is the image not aligned with the input field?===
-
-Maybe you have missed the *flz_box* in the surrounding *div*. In this case the image after the input field is not correctly aligned with the bottom of the input field. 
-
-Wrong code: *flz_box* is missing
-
-{{{
-   <div class="flz_relative">
-      <label for="textbox2">Textbox</label>
-      <div class="flz_combifield">
-         <input id="textbox2" type="text" class="flz_textbox" />
-      </div>
-      <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
-  </div>
-}}}
-
-Correct code: *flz_box* is added to the surrounding *div*
-
-{{{
-   <div class="flz_box flz_relative">
-      <label for="textbox2">Textbox</label>
-      <div class="flz_combifield">
-         <input id="textbox2" type="text" class="flz_textbox" />
-      </div>
-      <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
-  </div>
+   </div>
+</div>
 }}}
 
 ===Why is the textbox not correctly aligned with others in the same row?===
 
-Maybe the *label* tag is not on the correct position within the markup. In that case the *label* is aligned correctly with others in the same row, while the textbox slips a little bit below the other textboxes.
+Maybe you have added an additional *flz_box* to enclose the *flz_combifield*. In that case the textbox and image slip down in all versions of IE while it works in all other browsers. The solution is, to omit the additional *flz_box* and then everything works fine  - in all browsers.
 
-Wrong code: the *label* tag is outside of the *div* marked with *flz_combifield*
+Wrong code: an additional *flz_box* is added to wrap *flz_combifield*
 
 {{{
-   <div class="flz_box flz_relative">
-      <label for="textbox2">Textbox</label>
-      <div class="flz_combifield">
-         <input id="textbox2" type="text" class="flz_textbox" />
+<div class="flz_box flz_r25">
+   <div class="flz_rsubspacer_mrmc_bottom">
+      <div class="flz_box flz_relative">
+         <div class="flz_combifield">
+            <label for="textbox2">Textbox</label>
+            <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
+         </div>
+         <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
       </div>
-      <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
-  </div>
+   </div>
+</div>
 }}}
 
-Correct code: the *label* is placed within the *div* marked with *flz_combifield*
+Correct code: the outer *flz_box* is used as container for the *flz_combifield*
 
 {{{
-   <div class="flz_box flz_relative">
+<div class="flz_box flz_r25 flz_relative">
+   <div class="flz_rsubspacer_mrmc_bottom">
       <div class="flz_combifield">
          <label for="textbox2">Textbox</label>
-         <input id="textbox2" type="text" class="flz_textbox" />
+         <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
       </div>
       <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
-  </div>
+   </div>
+</div>
 }}}
