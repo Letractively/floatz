@@ -10,7 +10,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-01-27
+ * @lastmodified  2010-01-30
  */
 
 /**
@@ -34,7 +34,7 @@ input,
 label, 
 select, 
 textarea {
-   margin: 0.25em 0;
+   margin-bottom: 0.25em;
    vertical-align: middle;
 }
 
