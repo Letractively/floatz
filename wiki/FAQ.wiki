@@ -35,37 +35,3 @@ Correct code: *flz_relative* is added to surrounding *flz_box*
    <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
 </div>
 }}}
-
-===Why is the textbox not correctly aligned with others in the same row?===
-
-Maybe you have added an additional *flz_box* to enclose the *flz_combifield*. In that case the textbox and image slip down in all versions of IE while it works in all other browsers. The solution is, to omit the additional *flz_box* and then everything works fine  - in all browsers.
-
-Wrong code: an additional *flz_box* is added to wrap *flz_combifield*
-
-{{{
-<div class="flz_box flz_r25">
-   <div class="flz_rsubspacer_mrmc_bottom">
-      <div class="flz_box flz_relative">
-         <div class="flz_combifield">
-            <label for="textbox2">Textbox</label>
-            <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
-         </div>
-         <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
-      </div>
-   </div>
-</div>
-}}}
-
-Correct code: the outer *flz_box* is used as container for the *flz_combifield*
-
-{{{
-<div class="flz_box flz_r25 flz_relative">
-   <div class="flz_rsubspacer_mrmc_bottom">
-      <div class="flz_combifield">
-         <label for="textbox2">Textbox</label>
-         <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
-      </div>
-      <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
-   </div>
-</div>
-}}}
