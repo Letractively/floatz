@@ -15,28 +15,24 @@ Maybe you have missed to add *flz_relative* to the surrounding *flz_box*. In tha
 Wrong code: *flz_relative* is missing
 
 {{{
-<div class="flz_box flz_r25">
-   <div class="flz_rsubspacer_mrmc_bottom">
-      <div class="flz_combifield">
-         <label for="textbox2">Textbox</label>
-         <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
-      </div>
-      <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
+<div class="flz_box">
+   <label for="textbox2">Textbox</label>
+   <div class="flz_combifield">
+      <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" 
    </div>
+   <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
 </div>
 }}}
 
 Correct code: *flz_relative* is added to surrounding *flz_box*
 
 {{{
-<div class="flz_box flz_r25 flz_relative">
-   <div class="flz_rsubspacer_mrmc_bottom">
-      <div class="flz_combifield">
-         <label for="textbox2">Textbox</label>
-         <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" />
-      </div>
-      <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
+<div class="flz_box flz_relative">
+   <label for="textbox2">Textbox</label>
+   <div class="flz_combifield">
+      <input id="textbox2" type="text" class="flz_textbox" value="Lorem ipsum dolor sit amed" 
    </div>
+   <a href="#"><img class="flz_combifield" src="images/datepicker.gif" alt=""/></a>
 </div>
 }}}
 
