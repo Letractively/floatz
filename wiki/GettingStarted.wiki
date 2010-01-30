@@ -1,1 +1,3 @@
 #summary All you need to know to get started with floatz
+
+Note: this document is still under construction
