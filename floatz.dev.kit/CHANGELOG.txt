@@ -35,6 +35,12 @@ CHANGE   -        Adding border to flz_textbox, select and textarea to get same 
 -------------------------------------------------------------------------------------------------------------
 FIX      7        Different FIELDSET handling in floatz for IE 5.5,6,7 does not work with IE8
                   Fixed by adding specific corrections with IE8 hack
+-------------------------------------------------------------------------------------------------------------
+FIX      12       Image in flz_combifield is not correctly aligned in all spacers
+                  Setting padding-top only for labels and inputs (see comment in issue tracker)
+-------------------------------------------------------------------------------------------------------------
+FIX      9        Button height in IE is different to other browsers
+                  Adjusting visual appearance for all browsers. Using browser specific hacks for IE.
 -------------------------------------------------------------------------------------------------------------                  
 
 floatz.reset.css

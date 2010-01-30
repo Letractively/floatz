@@ -151,18 +151,43 @@ legend {
    border: 1px solid #000;
 }
 
-/* Button - changes paddings for buttons as well as wrong padding behaviour 
-   of IE 5+, 6 and 7 using star hack and first child star hack */
+/* Button  */
 .flz_button {
-   padding: 0.1em 0.3em;
+   padding: 0.25em 0.35em;
 }
+
+/**
+ * @workaround Omit too much left/right padding in IE
+ * @affected IE 5+, 6
+ */
 * html .flz_button {
    overflow: visible;
-   width: 1;            /* to collapse table cell arround button */
+   padding: 0.25em 0.5em;
 }
+
+/**
+ * @workaround Omit too much left/right padding in IE
+ * @affected IE 7
+ */
 *:first-child+html .flz_button {
    overflow: visible;
-   width: 1;            /* to collapse table cell arround button */
+   padding: 0.25em 0.5em;
+}
+
+/**
+ * @workaround Collapse tabele cell around button
+ * @affected IE 5+, 6
+ */
+* html .flz_button {
+   width: 1;
+}
+
+/**
+ * @workaround Collapse tabele cell around button
+ * @affected IE 7
+ */
+*:first-child+html .flz_button {
+   width: 1;
 }
 
 /* Radio button */
