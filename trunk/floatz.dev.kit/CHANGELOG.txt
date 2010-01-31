@@ -56,7 +56,7 @@ floatz.nav.css
 Type     Issue    Description
 -------------------------------------------------------------------------------------------------------------
 CHANGE   1        Use CSS sprite image for flz_tabmenu
-                  Removing all images and replacing it with tab_menu.gif sprite image. Chaning name of 
+                  Removing all images and replacing it with tab_menu.gif sprite image. Changing name of 
                   flz_tabmenu to flz_htabmenu and preparing it to use CSS sprite image.
 -------------------------------------------------------------------------------------------------------------
 
