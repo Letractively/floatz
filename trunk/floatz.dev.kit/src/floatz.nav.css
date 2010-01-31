@@ -10,13 +10,13 @@
  * style (everything after or within the li.selected class will get the same style)
  *
  * @project       floatz CSS Framework
- * @version       1.0.1
+ * @version       1.1.0
  * @see           http://code.google.com/p/floatz/
  * @author        Harald Humml
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2009-05-17
+ * @lastmodified  2009-01-31
  */
 
 /**
@@ -282,102 +282,106 @@
  * ---------------------------------------------------------------------------------------
  * @section       Horizontal Tabbed Menu
  *
- * Tab menu navigation element. Needs a surrounding DIV tag that uses tabmenu.
+ * Horizontal tab menu navigation element. Needs a surrounding DIV tag using flz_htabmenu.
  */
 
 /* menu container (background image acts as horizontal separator line) */
-.flz_tabmenu {
+.flz_htabmenu {
    float: left;
-   width: 100%;   
+   width: 100%;
 }
 
 /* menu list container */
-.flz_tabmenu ul {
+.flz_htabmenu ul {
    margin: 0;
    padding: 0;
 }
 
 /* menu item (list element as closing part of the sliding door) */
-.flz_tabmenu li {
-   background:url(images/tab_right.gif) no-repeat right top;
-   float: left; 
+.flz_htabmenu li {
+   background:url(images/tab_menu.gif) no-repeat left top;
+   float: left;
    list-style-type: none;
    margin: 0 1px;
-   padding: 0;
+   padding: 0 0 0 0.5em;
 }
 
 /* menu item (hyperlink element as opening part of sliding door)*/
-.flz_tabmenu a {
-   background:url(images/tab_left.gif) no-repeat left top;
+.flz_htabmenu a {
+   background:url(images/tab_menu.gif) no-repeat right top;
    display: block;
    text-decoration: none;
-   padding: 0.25em 1em;
+   padding: 0.25em 1em 0.25em 0.5em;  /* last one reduced at padding of LI */
 }
 
 /* default menu item */
-.flz_tabmenu a:link {
+.flz_htabmenu a:link {
 }
 
 /* visited menu item */
-.flz_tabmenu a:visited {
+.flz_htabmenu a:visited {
    color: inherit;
 }
 
 /* hovered menu item (hyperlink element as opening part of the sliding doors) */
-.flz_tabmenu a:hover {
-   background: transparent url(images/tab_left_hover.gif) no-repeat left top;
+.flz_htabmenu a:hover {
+   background:url(images/tab_menu.gif) no-repeat 100% -100px;
 }
 
-/* reset hovered menu item in IE <= 6 only with underline effect, because li:hover already is not supported */
-* html .flz_tabmenu a:hover {
-   background:url(images/tab_left.gif) no-repeat left top;
+/**
+ * @workaround Using underline effect for hovered menu item, because li:hover ist not supported
+ * @affected IE 5, 6
+ */
+* html .flz_htabmenu a:hover {
    text-decoration: underline;
 }
 
 /* active and focus menu item (focus and active is not supported for li, thus underline for hyperlinks are used)*/
-.flz_tabmenu a:focus,
-.flz_tabmenu a:active {
+.flz_htabmenu a:focus,
+.flz_htabmenu a:active {
    color: inherit;
    text-decoration: underline;
 }
 
 /* hovered menu item (list element as closing part of the sliding doors) */
-.flz_tabmenu li:hover {
-   background: transparent url(images/tab_right_hover.gif) no-repeat right top;
+.flz_htabmenu li:hover {
+   background:url(images/tab_menu.gif) no-repeat 0 -100px;
 }
 
 /* selected menu item (list element as closing part of the sliding door) */
-.flz_tabmenu li.flz_selected {
-   background: transparent url(images/tab_right_selected.gif) no-repeat right top;
+.flz_htabmenu li.flz_selected {
+   background:url(images/tab_menu.gif) no-repeat 0 -200px;
 }
 
 /* selected menu item (hyperlink element as opening part of sliding door)*/
-.flz_tabmenu li.flz_selected a {
-   background: transparent url(images/tab_left_selected.gif) no-repeat left top;
-   color: inherit;   
+.flz_htabmenu li.flz_selected a {
+   background:url(images/tab_menu.gif) no-repeat 100% -200px;
+   color: inherit;
    font-weight: bold;
 }
 
 /* focused or hovered selected menu item (hyperlink element as opening part of the sliding doors) */
-.flz_tabmenu li.flz_selected a:hover {
-   background: transparent url(images/tab_left_hover.gif) no-repeat left top;
+.flz_htabmenu li.flz_selected a:hover {
+   background:url(images/tab_menu.gif) no-repeat 100% -100px;
    color: inherit;
 }
 
-/* reset hovered selected menu item in IE <= 6 only with underline effect, because li:hover already is not supported */
-* html .flz_tabmenu li.flz_selected a:hover {
-   background:url(images/tab_left_selected.gif) no-repeat left top;
+/**
+ * @workaround Using underline effect for hovered menu item, because li:hover ist not supported
+ * @affected IE 5, 6
+ */
+* html .flz_htabmenu li.flz_selected a:hover {
    text-decoration: underline;
 }
 
 /* focused or hovered selected menu item (list element as closing part of the sliding doors) */
-.flz_tabmenu li:hover.flz_selected {
-   background: transparent url(images/tab_right_hover.gif) no-repeat right top;
+.flz_htabmenu li:hover.flz_selected {
+   background:url(images/tab_menu.gif) no-repeat 0 -100px;
 }
 
 /* focus and active (clicked) selected menu item */
-.flz_tabmenu li.flz_selected a:focus,
-.flz_tabmenu li.flz_selected a:active{
+.flz_htabmenu li.flz_selected a:focus,
+.flz_htabmenu li.flz_selected a:active{
    color: inherit;
    text-decoration: underline;
 }
