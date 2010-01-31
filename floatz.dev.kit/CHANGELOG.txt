@@ -51,6 +51,15 @@ CHANGE   -        Text of input field slips under visible area at the bottom of 
                   Removing line-height and adding same font-size as in meyer CSS for global defaults on
 -------------------------------------------------------------------------------------------------------------
 
+floatz.nav.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+CHANGE   1        Use CSS sprite image for flz_tabmenu
+                  Removing all images and replacing it with tab_menu.gif sprite image. Chaning name of 
+                  flz_tabmenu to flz_htabmenu and preparing it to use CSS sprite image.
+-------------------------------------------------------------------------------------------------------------
+
 floatz.reset.meyer.css
 =============================================================================================================
 Type     Issue    Description
@@ -68,4 +77,8 @@ NEW      -        Adding test page test.baseline.form.simple.html to \tests
 NEW      -        Adding test page test.baseline.form.complex.html to \tests
 -------------------------------------------------------------------------------------------------------------
 NEW      -        Adding debug CSS floatz.layout.debug.css to \src\debug
+-------------------------------------------------------------------------------------------------------------
+NEW      -        Adding test page test.baseline.spacer.html to \tests
+-------------------------------------------------------------------------------------------------------------
+NEW      -        Adding test page test.baseline.subspacer.html to \tests
 -------------------------------------------------------------------------------------------------------------
