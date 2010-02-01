@@ -16,7 +16,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2009-01-31
+ * @lastmodified  2009-02-01
  */
 
 /**
@@ -324,15 +324,17 @@
 }
 
 /* hovered menu item (hyperlink element as opening part of the sliding doors) */
-.flz_htabmenu a:hover {
+.flz_htabmenu a:hover,
+.flz_htabmenu li:hover a {
    background:url(images/tab_menu.gif) no-repeat 100% -100px;
 }
 
 /**
- * @workaround Using underline effect for hovered menu item, because li:hover ist not supported
+ * @workaround Reset sprite image with hovered menu item, because li:hover ist not supported in IE <= 6
  * @affected IE 5, 6
  */
 * html .flz_htabmenu a:hover {
+   background:url(images/tab_menu.gif) no-repeat right top;
    text-decoration: underline;
 }
 
@@ -361,16 +363,18 @@
 }
 
 /* focused or hovered selected menu item (hyperlink element as opening part of the sliding doors) */
-.flz_htabmenu li.flz_selected a:hover {
+.flz_htabmenu li.flz_selected a:hover,
+.flz_htabmenu li:hover.flz_selected a {
    background:url(images/tab_menu.gif) no-repeat 100% -100px;
    color: inherit;
 }
 
 /**
- * @workaround Using underline effect for hovered menu item, because li:hover ist not supported
+ * @workaround Reset sprite image with hovered menu item, because li:hover ist not supported in IE <= 6
  * @affected IE 5, 6
  */
 * html .flz_htabmenu li.flz_selected a:hover {
+   background:url(images/tab_menu.gif) no-repeat 100% -200px;
    text-decoration: underline;
 }
 
