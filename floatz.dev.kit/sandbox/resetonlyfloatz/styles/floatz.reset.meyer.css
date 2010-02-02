@@ -1,0 +1,80 @@
+/*****************************************************************************************
+ * floatz.reset.meyer.css
+ * ---------------------------------------------------------------------------------------
+ * From the orignal description: smooths out many browser inconsistencies by explicitly 
+ * assigning values to things like element margins and padding, forcing all elements to 
+ * have the same font size, and so on. You can find resets in most CSS frameworks, and 
+ * they're a great starting point for creating your own "baseline" styles. 
+ *
+ * @project       floatz CSS Framework
+ * @version       1.1.0
+ * @see           http://code.google.com/p/floatz/
+ * @author        Harald Humml
+ * @link          http://design.humml.eu/toolbox/floatz
+ * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
+ * @lastmodified  2009-08-09
+ *
+ * Original version
+ * ----------------
+ * @verson        1.0.0
+ * @lastmodified  2009-01-26
+ * @see           http://www.meyerweb.com/
+ * @author        Eric Meyer
+ *
+ * @see           http://www.meyerweb.com/
+ * @see           http://dgibson.net/blog/article.cfm/articleid=11/CSS-Overcoming-background-transparent-In-IE
+ * @see           http://dgibson.net/blog/article.cfm/articleid=10/Meyers-CSS-Reset-v1-0-Doesnt-Play-Well-With-IE
+ */
+
+#flz_page html, body #flz_page, #flz_page div, #flz_page span, #flz_page applet, #flz_page object, #flz_page iframe, #flz_page h1, #flz_page h2, 
+#flz_page h3, #flz_page h4, #flz_page h5, #flz_page h6, #flz_page p, #flz_page blockquote, #flz_page pre, #flz_page a, #flz_page abbr, #flz_page acronym, 
+#flz_page address, #flz_page big, #flz_page cite, #flz_page code, #flz_page del, #flz_page dfn, #flz_page em, #flz_page font, #flz_page img, #flz_page ins, 
+#flz_page kbd, #flz_page q, #flz_page s, #flz_page samp, #flz_page small, #flz_page strike, #flz_page strong, #flz_page sub, #flz_page sup, #flz_page tt, 
+#flz_page var, #flz_page b, #flz_page u, #flz_page i, #flz_page center, #flz_page dl, #flz_page dt, #flz_page dd, #flz_page ol, #flz_page ul, #flz_page li,
+#flz_page fieldset, #flz_page form, #flz_page label, #flz_page legend, #flz_page table, #flz_page caption, #flz_page tbody, #flz_page tfoot, #flz_page thead,
+#flz_page tr, #flz_page th, #flz_page td {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   font-size: 100%;
+   vertical-align: baseline;
+   background: transparent;
+}
+body #flz_page {
+/* line-height: 1; */      
+   line-height: auto;   /* Changed due to cut off characters in labels */
+}
+#flz_page ol, #flz_page ul {
+   list-style: none;
+}
+
+#flz_page blockquote, #flz_page q {
+   quotes: none;
+}
+
+/* not used because it leads to a left space in Safari and Google Chrome
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}*/
+
+/* remember to define focus styles! */
+#flz_page  :focus {
+   outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+#flz_page ins {
+   text-decoration: none;
+}
+#flz_page del {
+   text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+#flz_page table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
