@@ -16,7 +16,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2009-02-01
+ * @lastmodified  2010-02-02
  */
 
 /**
@@ -67,19 +67,19 @@
 }
 
 /* selected navigation item */
-.flz_listnav .flz_selected {
+.flz_listnav li.flz_selected {
    color: inherit;
    font-weight: bold;
 }
 
 /* focused or hovered selected navigation item */
-.flz_listnav a.flz_selected:focus,
-.flz_listnav a.flz_selected:hover {
+.flz_listnav li.flz_selected a:focus,
+.flz_listnav li.flz_selected a:hover {
    color: inherit;
 }
 
 /* active (clicked) selected navigation item */
-.flz_listnav a.flz_selected:active {
+.flz_listnav li.flz_selected a:active {
    color: inherit;
 }
 
@@ -97,7 +97,6 @@
 .flz_topnav {
    position: absolute;
    top: 0;
-   z-index: 3;
 }
 
 .flz_breadcrumb {
@@ -164,21 +163,21 @@
 }
 
 /* selected menu item */
-.flz_hmenu .flz_selected {
+.flz_hmenu li.flz_selected {
    background-color: #fff;
    font-weight: bold;
    color: inherit;
 }
 
 /* focused or hovered selected menu item */
-.flz_hmenu a.flz_selected:focus,
-.flz_hmenu a.flz_selected:hover {
+.flz_hmenu li.flz_selected a:focus,
+.flz_hmenu li.flz_selected a:hover {
    background-color: #ddd;
    color: inherit;
 }
 
 /* active (clicked) selected menu item */
-.flz_hmenu a.flz_selected:active {
+.flz_hmenu li.flz_selected a:active {
    background-color: #bbb;
    color: inherit;
 }
@@ -258,22 +257,32 @@
    color: inherit;
 }
 
-/* selected menu item */
-.flz_vmenu .flz_selected {
+/* Selected menu item */
+.flz_vmenu li.flz_selected > a {
    background-color: #fff;
    color: inherit;
    font-weight: bold;
 }
 
-/* focused or hovered selected menu item */
-.flz_vmenu a.flz_selected:focus,
-.flz_vmenu a.flz_selected:hover {
+/**
+ * Selected menu item
+ * @workaround Simulate child selector to highlight only first A within LI
+ * @affected IE 5, 6
+ */
+* html .flz_vmenu li.flz_selected a {
+  background-color: expression(/flz_selected/.test(this.parentNode.className)? "#fff" : "inherit");
+  font-weight: expression(/flz_selected/.test(this.parentNode.className)? "bold" : "normal");
+}
+
+/* Focused or hovered selected menu item */
+.flz_vmenu li.flz_selected a:focus,
+.flz_vmenu li.flz_selected a:hover {
    background-color: #ddd;
    color: inherit;
 }
 
 /* active (clicked) selected menu item */
-.flz_vmenu a.flz_selected:active {
+.flz_vmenu li.flz_selected a:active {
    background-color: #bbb;
    color: inherit;
 }

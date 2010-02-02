@@ -10,7 +10,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2009-05-17
+ * @lastmodified  2010-02-02
  */
 
 /**
@@ -18,14 +18,12 @@
  * @section       Page container (overloaded)
  * @app-base_css  fluidfloatz.layout.css
  *
- * Adds fluid layout and min-width (default 1024x768) support to page container. Changes
- * z-index regarding the min-width IE workaround.
+ * Adds fluid layout and min-width (default 1024x768) support to page container.
  */
 
 #flz_page {
    min-width: 985px;
    width: 100%;
-   z-index: 1;
 }
 
 /**
@@ -45,50 +43,9 @@
    border-left: 985px solid #fff;   /* must be same as #page width */
    position: relative;
    float: left;
-   z-index: 2;
 }
 * html #flz_minwidthcontent {
    margin-left: -960px;             /* must be 25px less (!) than #page width */
    position: relative;
    float: left;
-   z-index: 3;
 }
-
-/**
- * ---------------------------------------------------------------------------------------
- * @section       Layout container (overloaded)
- * @app-base_css  fluidfloatz.layout.css
- *
- * Changes z-index order of layout container regarding min-width workaround in IE
- */
-
-.flz_box {
-   z-index: 4;
-}
-
-/**
- * ---------------------------------------------------------------------------------------
- * @section       Advanced list navigation (overloaded)
- * app-base_css   fluidfloatz.nav.css
- *
- * Changes z-index order of list navigation elements regarding min-width workaround in IE
- */
-
-.flz_breadcrumb,
-.flz_toolbar,
-.flz_topnav {
-   z-index: 5;
-}
-
-/**
- * ---------------------------------------------------------------------------------------
- * @section       Combi form field (overloaded)
- * app-base_css   fluidfloatz.form.css
- *
- * Changes z-index order of combifield form elements regarding min-width workaround in IE
- */
-
-span.flz_combifield, 
-img.flz_combifield {
-   z-index: 5;
-} 
