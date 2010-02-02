@@ -42,6 +42,49 @@ FIX      12       Image in flz_combifield is not correctly aligned in all spacer
 FIX      9        Button height in IE is different to other browsers
                   Adjusting visual appearance for all browsers. Using browser specific hacks for IE.
 -------------------------------------------------------------------------------------------------------------                  
+FIX      6        Hidden dialog and suggestion boxes in GWT because of z-index.
+                  Removing all occurences of z-index.
+-------------------------------------------------------------------------------------------------------------
+
+floatz.layout.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+FIX      6        Hidden dialog and suggestion boxes in GWT because of z-index.
+                  Removing all occurences of z-index.
+-------------------------------------------------------------------------------------------------------------
+
+floatz.layout.center.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+FIX      6        Hidden dialog and suggestion boxes in GWT because of z-index.
+                  Removing all occurences of z-index.
+-------------------------------------------------------------------------------------------------------------
+
+floatz.layout.liquid.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+FIX      6        Hidden dialog and suggestion boxes in GWT because of z-index.
+                  Removing all occurences of z-index.
+-------------------------------------------------------------------------------------------------------------
+
+floatz.nav.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+CHANGE   1        Usin CSS sprite image for flz_tabmenu
+                  Removing all images and replacing it with tab_menu.gif sprite image. Changing name of 
+                  flz_tabmenu to flz_htabmenu and preparing it to use CSS sprite image.
+-------------------------------------------------------------------------------------------------------------
+CHANGE   13       Use flz_selected only for LI tags
+                  Changing styles to use flz_selected with LI an not with A for consistency with 
+                  flz_htabmenu. Adding workaround to support nested child selector in IE 5,6 for flz_vmenu.
+-------------------------------------------------------------------------------------------------------------
+FIX      6        Hidden dialog and suggestion boxes in GWT because of z-index.
+                  Removing all occurences of z-index.
+-------------------------------------------------------------------------------------------------------------
 
 floatz.reset.css
 =============================================================================================================
@@ -50,14 +93,7 @@ Type     Issue    Description
 CHANGE   -        Text of input field slips under visible area at the bottom of the input field
                   Removing line-height and adding same font-size as in meyer CSS for global defaults on
 -------------------------------------------------------------------------------------------------------------
-
-floatz.nav.css
-=============================================================================================================
-Type     Issue    Description
--------------------------------------------------------------------------------------------------------------
-CHANGE   1        Use CSS sprite image for flz_tabmenu
-                  Removing all images and replacing it with tab_menu.gif sprite image. Changing name of 
-                  flz_tabmenu to flz_htabmenu and preparing it to use CSS sprite image.
+CHANGE   -        Removing style for address that overrides meyer reset
 -------------------------------------------------------------------------------------------------------------
 
 floatz.reset.meyer.css

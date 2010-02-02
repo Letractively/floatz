@@ -10,7 +10,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2009-06-07
+ * @lastmodified  2010-02-02
  */
 
 /**
@@ -37,7 +37,6 @@
    float: none;                     /* Reset default floating */
    margin: 0 auto;                  /* For all standard browsers incl. IE 7 */
    overflow: hidden;                /* encloses inner containers (all non-IE browsers, "auto" does not work for Netscape 7, 8) */
-   z-index: 1;
 }
 * html #flz_page {
    text-align: left;                /* Only for IE < 7 */

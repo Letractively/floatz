@@ -10,7 +10,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2009-11-05
+ * @lastmodified  2010-02-02
  */
 
 /**
@@ -26,7 +26,6 @@
    float: left;
    position: relative;
    width: 985px;
-   z-index: 1;
 }
 
 /**
@@ -44,7 +43,6 @@
    clear: none;
    float: left;
    width: 100%;
-   z-index: 2;
 }
 
 /**

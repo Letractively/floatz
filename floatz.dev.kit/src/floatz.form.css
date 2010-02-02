@@ -10,7 +10,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-01-30
+ * @lastmodified  2010-02-02
  */
 
 /**
@@ -274,5 +274,4 @@ img.flz_combifield {
    position: absolute;
    bottom: 0.25em;
    right: 0;
-   z-index: 3;
 } 
