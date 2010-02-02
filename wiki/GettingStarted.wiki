@@ -1,3 +1,4 @@
 #summary All you need to know to get started with floatz
 
-Note: this document is still under construction
+*Note: this document will be finished during release of version 1.1.0. 
+In the meantime, have a look at the test pages of the development kit in the trunk of the source code repository.*
