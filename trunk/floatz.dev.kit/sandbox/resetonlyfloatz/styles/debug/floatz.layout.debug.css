@@ -1,0 +1,57 @@
+/*****************************************************************************************
+ * floatz.layout.debug.css
+ * ---------------------------------------------------------------------------------------
+ * Debug CSS for layout elements
+ *
+ * @project       floatz CSS Framework
+ * @version       1.1.0
+ * @see           http://code.google.com/p/floatz/
+ * @author        Harald Humml
+ * @copyright     Copyright (c) 1998-2010 by :humml:design
+ * @link          http://design.humml.eu/toolbox/floatz
+ * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
+ * @lastmodified  2010-01-26
+ */
+
+#flz_page .flz_spacer {
+   background-color: #222fff;
+   border: 1px dotted #000;
+}
+
+#flz_page .flz_lspacer, #flz_page .flz_mspacer, #flz_page .flz_rspacer {
+   background-color: #444fff;
+   border: 1px dotted #000;
+}
+
+#flz_page .flz_spacer_mrsc_top, #flz_page .flz_spacer_mrsc_mid, #flz_page .flz_spacer_mrsc_bottom {
+   background-color: #666fff;
+   border: 1px dotted #000;
+}
+
+#flz_page .flz_lspacer_mrmc_top, #flz_page .flz_mspacer_mrmc_top, #flz_page .flz_rspacer_mrmc_top, #flz_page .flz_lspacer_mrmc_mid, 
+#flz_page .flz_mspacer_mrmc_mid, #flz_page .flz_rspacer_mrmc_mid, #flz_page .flz_lspacer_mrmc_bottom, #flz_page .flz_mspacer_mrmc_bottom, 
+#flz_page .flz_rspacer_mrmc_bottom {
+   background-color: #888fff;
+   border: 1px dotted #000;
+}
+
+#flz_page .flz_subspacer {
+   border: 1px dotted #000;
+}
+
+#flz_page .flz_lsubspacer, #flz_page .flz_msubspacer, #flz_page .flz_rsubspacer {
+   background-color: #aaafff;
+   border: 1px dotted #000;
+}
+
+#flz_page .flz_subspacer_mrsc_top, #flz_page .flz_subspacer_mrsc_mid, #flz_page .flz_subspacer_mrsc_bottom {
+   background-color: #cccfff;
+   border: 1px dotted #000;
+}
+
+#flz_page .flz_lsubspacer_mrmc_top, #flz_page .flz_msubspacer_mrmc_top, #flz_page .flz_rsubspacer_mrmc_top, #flz_page .flz_lsubspacer_mrmc_mid,
+#flz_page .flz_msubspacer_mrmc_mid, #flz_page .flz_rsubspacer_mrmc_mid, #flz_page .flz_lsubspacer_mrmc_bottom, #flz_page .flz_msubspacer_mrmc_bottom,
+#flz_page .flz_rsubspacer_mrmc_bottom {
+   background-color: #eeefff;
+   border: 1px dotted #000;
+}
