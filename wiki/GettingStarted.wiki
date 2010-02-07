@@ -1,4 +1,67 @@
 #summary All you need to know to get started with floatz
+Last Update: February 7th, 2010
 
-*Note: this document will be finished during release of version 1.1.0. 
-In the meantime, have a look at the test pages of the development kit in the trunk of the source code repository.*
+<wiki:toc max_depth="1" />
+
+=Step 1 - Download=
+First of all you have to download floatz from http://code.google.com/p/floatz/. The latest version is offered directly on the project home under "featured downloads" on the right side of the page. Alternatively check [http://code.google.com/p/floatz/downloads/list download] if you are interested in an other version.
+
+   ----
+   Note: floatz is available in two separate download packages: `floatz.<version>.zip` and `floatz.dev.kit.<version>.zip` The first package is thought for production use and contains only what is really necessary. The second package contains additional files that are only interesting during development phase. The current tutorial considers only the production package. See WhatsInside for more information.
+   ----
+
+=Step 2 - Install=
+Installation is pretty easy. Only unzip the downloaded file into a desired folder on your computer (e.g. into `C:\Program Files\floatz`). During installation, a separate subfolder is created, that contains also the version number of floatz (e.g. `C:\Program Files\floatz\floatz.1.0.1`).
+
+=Step 3 - Prepare=
+Before you can start using floatz, you have to prepare your project environment. 
+
+   * Create a project folder (e.g. `C:\Projects\MyProject`) 
+   * Create your projects CSS folder (e.g. `C:\Projects\MyProject\styles`)
+   * Copy floatz from its installation directory (see above) into your project CSS folder (e.g. `C:\Projects\MyProject\styles\floatz.1.0.1`)
+   * Create your projects stylesheet within your projects CSS folder (e.g. `C:\Projects\MyProject\styles\MyProject.css`) and add the following lines to it
+   
+   {{{ 
+      /* Framework specific styles */
+      @import url(floatz.1.0.1/floatz.css)
+
+      /* Project specific styles */
+   }}}
+
+   * Create your project start page (e.g. `C:\Projects\MyProject\index.html` and link to your project stylesheet.
+
+   {{{
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+         <html xmlns="http://www.w3.org/1999/xhtml" >
+            <head>
+               <title>MyProject</title>
+               <meta http-equiv="content-type" content="text/html; CHARSET=UTF-8" />
+               <meta http-equiv="content-script-type" content="text/javascript" />
+               <meta http-equiv="content-style-type" content="text/css" />
+               <meta http-equiv="content-language" content="en" />
+               <meta name="author" content="" />
+               <meta name="robots" content="index,follow" />
+               <meta name="description" content="" />
+               <link rel="stylesheet" type="text/css" href="styles/MyProject.css" />
+            </head>
+            <body>
+               <!-- page container -->
+               <div id="flz_page">
+                   Hello World!
+               </div>
+            </body>
+         </html>
+   }}}
+
+Now your project environment is up an running and you can start layouting your web pages using floatz.
+
+=Step 4 - Use=
+
+The following information will be provided continuously. So please stay tuned.
+
+   * Layout Templates
+   * Tutorials
+   * Examples & Showcases
+   * Element Reference
+
+For now, please have a look at the [http://code.google.com/p/floatz/source/browse/#svn/trunk/floatz.dev.kit/tests test pages] that are part of the floatz development kit in version 1.1.0, that is currently under development. They are currently not really sexy, but are showing the usage and some of the basic concepts of floatz. In the [http://code.google.com/p/floatz/source/browse/#svn/trunk/floatz.dev.kit/doc documentation folder] you will furthermore find a [http://code.google.com/p/floatz/source/browse/trunk/floatz.dev.kit/doc/floatz%20cheat%20sheet.pdf cheat sheet] that describes the basic layout elements of floatz.
