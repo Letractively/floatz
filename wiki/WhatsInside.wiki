@@ -1,4 +1,4 @@
-#summary All you need to know to get started with floatz
+#summary What's inside the different floatz packages
 Last Update: February 7th, 2010
 
 <wiki:toc max_depth="2" />
@@ -10,7 +10,7 @@ floatz is made up of the following modules / files. The *load order* column indi
 || *Load Order* || *Set* || *Module* || *Description* ||
 || 0 || Optional || floatz.css || Loads all floatz modules in the correct order ||
 || 1 || Core || floatz.reset.meyer.css || Basic reset styles to get a common baseline for all browsers ||
-|| 2 || Core || [#floatz.reset.css floatz.reset.css] || Extends basic reset styles for floatz ||
+|| 2 || Core || floatz.reset.css || Extends basic reset styles for floatz ||
 || 3 || Core || floatz.layout.css || Basic styles for layouting pages, content and web forms ||
 || 4 || Optional || floatz.form.css || Styles for build web forms ||
 || 5 || Optional || floatz.nav.css || Styles for creating navigation elements ||
