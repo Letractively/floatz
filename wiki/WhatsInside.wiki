@@ -1,4 +1,5 @@
 #summary What's inside the different floatz packages
+#labels Featured
 Last Update: February 7th, 2010
 
 <wiki:toc max_depth="2" />
