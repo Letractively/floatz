@@ -4,5 +4,3 @@
 @import url(floatz.layout.css);
 @import url(floatz.form.css);
 @import url(floatz.nav.css);
-/* Remove for fixed layout or replace with floatz.layout.center.css for centered layout */
-@import url(floatz.layout.liquid.css);
