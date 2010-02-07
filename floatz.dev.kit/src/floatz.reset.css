@@ -12,7 +12,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-01-26
+ * @lastmodified  2010-02-07
  */
 
 /**
@@ -26,25 +26,39 @@
    font-size: 100%;  /* Set input elements to same font-size as in meyer reset */
 }
 
-/* Corrects behaviour of some default elements (because of meyer reset) */
+/* Corrects meyer reset */
 sub {
    vertical-align: sub;
    font-size: 0.8em;
 }
-
 sup {
    vertical-align: super;
    font-size: 0.8em;
 }
-
-/* Corrects sub and sup especially for IE 5+, 6 and 7 (because of meyer reset) */
+/*
+ * Corrects meyer reset
+ * @affected IE 5+, 6
+ */
 * html sub, 
 * html sup {
    font-size: 1em;
 }
+/*
+ * Corrects meyer reset
+ * @affected IE 7
+ */
 *:first-child+html sub, 
 *:first-child+html sup {
    font-size: 1em;
+}
+
+/**
+ * Corrects meyer reset for accessibility & usability reasons. Each navigable element
+ * should show if it has the keyboard focus. Each navigable element should be highlighted
+ * if it gets keyboard focus.
+ */
+:focus {
+   outline: 1px dotted #000;
 }
 
 /* Sets defaults within body */

@@ -16,8 +16,29 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-02-02
+ * @lastmodified  2010-02-07
  */
+
+/**
+ * ---------------------------------------------------------------------------------------
+ * @section       Skiplink navigation
+ *
+ * Skip navigation style for accessibility improvments. Skip navigation hyperlinks must be
+ * used within a DIV element. The skip navigation items will only be visible for users of
+ * screen readers or if the skip links get keyboard focus.
+ */
+
+/**/
+.flz_skiplink a {
+   left: 0;
+   position: absolute;
+   top: -500px;
+}
+
+.flz_skiplink a:active,
+.flz_skiplink a:focus {
+   position: static;
+}
 
 /**
  * ---------------------------------------------------------------------------------------
