@@ -12,6 +12,9 @@
       <link rel="stylesheet" type="text/css" href="styles/demo.css" />
       <link rel="stylesheet" type="text/css" href="../src/floatz.layout.center.css" />
       <!-- <link rel="stylesheet" type="text/css" href="../src/debug/floatz.layout.debug.css" /> -->
+      <script type="text/javascript" src="../src/scripts/jquery-1.4.1.min.js"></script>
+      <script type="text/javascript" src="../src/scripts/floatz.js"></script>
+      <script type="text/javascript" src="scripts/demo.js"></script>
       <style type="text/css">
          body {
             background-color: #efefef;
@@ -55,7 +58,7 @@
          </div>
          <!-- menu container -->
          <div class="flz_box mymenu">
-            <a id="menu" />
+            <a id="menu" class="flz_anchor" />
             <div class="flz_box flz_hmenu">
                <ul>
                   <li class="flz_selected"><a href="#">Menu 1</a></li>
@@ -67,7 +70,7 @@
          </div>
          <!-- sidebar container -->
          <div class="flz_box mysidebar flz_l25">
-            <a id="submenu" />
+            <a id="submenu" class="flz_anchor" />
             <div class="flz_box flz_vmenu">
                <ul>
                   <li class="flz_selected"><a href="#">Menu 1</a>
@@ -100,7 +103,7 @@
          </div>
          <!-- content container -->
          <div class="flz_box mycontent flz_r75 flz_relative">
-            <a id="content" />
+            <a id="content" class="flz_anchor" />
             <ul class="flz_listnav flz_breadcrumb">
                <li class="flz_selected"><a href="#">Item 1</a> &gt;</li>
                <li><a href="#">Item 2</a> &gt;</li>
