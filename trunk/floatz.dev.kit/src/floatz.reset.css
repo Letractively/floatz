@@ -22,7 +22,7 @@
 
 /* Sets defaults for all elements */
 * {
-   font-family: Verdana, Arial;
+   font-family: "Arial";
    font-size: 100%;  /* Set input elements to same font-size as in meyer reset */
 }
 
@@ -57,7 +57,7 @@ sup {
  * should show if it has the keyboard focus. Each navigable element should be highlighted
  * if it gets keyboard focus.
  */
-:focus {
+a:focus {
    outline: 1px dotted #000;
 }
 
@@ -65,8 +65,8 @@ sup {
 body { 
    background-color: #fff;
    color: #000;
-   font-family: "Microsoft Sans Serif";
-   /*font-size: 0.85em;*/
+   font-family: "Arial";
+   font-size: 0.85em;
 }
 
 /* Sets font-sizes for headers */

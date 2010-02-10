@@ -16,7 +16,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-02-07
+ * @lastmodified  2010-02-10
  */
 
 /**
@@ -28,16 +28,41 @@
  * screen readers or if the skip links get keyboard focus.
  */
 
-/**/
-.flz_skiplink a {
+.flz_skipnav a {
    left: 0;
+/*   height: 1px;
+   overflow: hidden;*/
    position: absolute;
    top: -500px;
+   /*width: 1px;*/
 }
 
-.flz_skiplink a:active,
-.flz_skiplink a:focus {
+.flz_skipnav a:active,
+.flz_skipnav a:focus {
+   /*height: auto;
+   overflow: visible;*/
    position: static;
+   /*width: auto;*/
+}
+
+/**
+ * Highlight active skiplink
+ * @workaround Outline does not work for skiplink in IE
+ * @cssfor IE 7
+ * @affected IE 7
+ */
+:first-child+html .flz_skipnav a:active {
+   border: 1px dotted #000;
+}
+
+/**
+ * Highlight active skiplink
+ * @workaround Outline does not work for skiplink in IE
+ * @cssfor IE 5, 6
+ * @affected IE 5, 6
+ */
+* html .flz_skipnav a:active {
+   border: 1px dotted #000;
 }
 
 /**

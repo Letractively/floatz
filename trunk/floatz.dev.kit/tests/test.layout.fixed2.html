@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
    <head>
-      <title>floatz - Test page for center page layout</title>
+      <title>floatz - Test page for fixed page layout</title>
       <meta http-equiv="content-type" content="text/html; CHARSET=iso-8859-1" />
       <meta http-equiv="content-script-type" content="text/javascript" />
       <meta http-equiv="content-style-type" content="text/css" />
@@ -10,7 +10,6 @@
       <meta name="robots" content="index,follow" />
       <meta name="description" content="" />
       <link rel="stylesheet" type="text/css" href="styles/demo.css" />
-      <link rel="stylesheet" type="text/css" href="../src/floatz.layout.center.css" />
       <!-- <link rel="stylesheet" type="text/css" href="../src/debug/floatz.layout.debug.css" /> -->
       <style type="text/css">
          body {
@@ -32,16 +31,37 @@
          .myfooter {
             height: 2em;
          }
+         
       </style>
+      <script>
+         /**
+          * Set keyboard focus to element by id.
+          * Remark: tabindex must be set to -1 to make this work (IE 5,6, Chrome)
+          */
+         function focusSkiplinkAnchor(id) {
+
+            // Only execute when using Webkit based browser (e.g. Chrome, Safari)
+            if( navigator.userAgent.toLowerCase().indexOf('webkit') > -1 ) {
+               var element = document.getElementById(id);
+               if (element != null ) {
+                  element.focus();
+                  return false;
+               }
+            }
+
+            // Default behaviour if id not found or other browser than Webkit
+            return true;
+         }
+      </script>
    </head>
    <body>
       <!-- page container -->
       <div id="flz_page">
          <!-- skiplink navigation -->
          <div class="flz_skipnav">
-            <a href="#menu">Skip to menu</a>
-            <a href="#submenu">Skip to submenu</a>
-            <a href="#content">Skip to content</a>
+            <a href="#menu" onclick="return focusSkiplinkAnchor('menu')">Skip to menu</a>
+            <a href="#submenu" onclick="return focusSkiplinkAnchor('submenu')">Skip to submenu</a>
+            <a href="#content" onclick="return focusSkiplinkAnchor('content')">Skip to content</a>
          </div>
          <!-- header container -->
          <div class="flz_box flz_relative myheader">
@@ -55,7 +75,7 @@
          </div>
          <!-- menu container -->
          <div class="flz_box mymenu">
-            <a id="menu" />
+            <a id="menu" tabindex="-1" />
             <div class="flz_box flz_hmenu">
                <ul>
                   <li class="flz_selected"><a href="#">Menu 1</a></li>
@@ -67,7 +87,7 @@
          </div>
          <!-- sidebar container -->
          <div class="flz_box mysidebar flz_l25">
-            <a id="submenu" />
+            <a id="submenu" tabindex="-1" />
             <div class="flz_box flz_vmenu">
                <ul>
                   <li class="flz_selected"><a href="#">Menu 1</a>
@@ -100,7 +120,7 @@
          </div>
          <!-- content container -->
          <div class="flz_box mycontent flz_r75 flz_relative">
-            <a id="content" />
+            <a id="content" tabindex="-1" />
             <ul class="flz_listnav flz_breadcrumb">
                <li class="flz_selected"><a href="#">Item 1</a> &gt;</li>
                <li><a href="#">Item 2</a> &gt;</li>

@@ -86,7 +86,7 @@ FIX      6        Hidden dialog and suggestion boxes in GWT because of z-index.
                   Removing all occurences of z-index.
 -------------------------------------------------------------------------------------------------------------
 NEW      15       Add skip link for improving accessibility
-                  Added .flz_skiplink for use with DIV element. All hyperlinks within this DIV element are
+                  Added .flz_skipnav for use with DIV element. All hyperlinks within this DIV element are
                   only visible for users of screen readers. If they get keyboard focus (e.g. navigation via
                   tabulator key) the also get visible for screen users.
 -------------------------------------------------------------------------------------------------------------                  
@@ -100,8 +100,10 @@ CHANGE   -        Text of input field slips under visible area at the bottom of 
 -------------------------------------------------------------------------------------------------------------
 CHANGE   -        Removing style for address that overrides meyer reset
 -------------------------------------------------------------------------------------------------------------
-CHANGE   -        Activating outline for :focus (that was originally reset in meyer css) for accessibiliy & 
+CHANGE   -        Activating outline for a:focus (that was originally reset in meyer css) for accessibiliy & 
                   usability reasons.Each navigable element should be highlighted if it gets keyboard focus.
+-------------------------------------------------------------------------------------------------------------
+CHANGE   -        Adding "Arial" as common font for all elements.
 -------------------------------------------------------------------------------------------------------------
 
 floatz.reset.meyer.css
