@@ -122,3 +122,12 @@ NEW      -        Adding test diverse pages to \tests
 -------------------------------------------------------------------------------------------------------------
 NEW      -        Adding debug CSS floatz.layout.debug.css to \src\debug
 -------------------------------------------------------------------------------------------------------------
+
+Misc
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+NEW      15       Add skip link for improving accessibility
+                  Adding src/scripts/floatz.js and src/scripts/jquery1.4.1.js to floatz
+                  This is the only available solution to move keyboard focus in Chrome, Safari and Opera
+-------------------------------------------------------------------------------------------------------------
