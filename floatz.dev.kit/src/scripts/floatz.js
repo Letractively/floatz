@@ -34,7 +34,7 @@ var floatz = {
     * 
     * Adds click event handlers to all skip links within flz_skipnav. The click event
     * handler sets the focus on skip link anchors when user clicks on skip link. This
-    * works only if every skip link anchor has tabindex="-1" set.
+    * works only if every skip link anchor also has tabindex set to -1.
     *
     * @affected Chrome, Safari (Webkit), Opera
     * @since 1.1.0
@@ -45,7 +45,7 @@ var floatz = {
       if ($.browser.webkit || $.browser.opera) {
    
          // Add click event handler for all hyperlinks within flz_skipnav
-         $("div.flz_skipnav a").click(function(){
+         $(".flz_skipnav a").click(function(){
    
             // Set focus to skiplink anchor by parsing anchor id from skiplink's href
             // when user clicks on skip link
@@ -59,16 +59,16 @@ var floatz = {
     *
     * Automatically adds tabindex attribute to every skip link anchor that is 
     * annotated with class flz_anchor. This is mandatory for setting focus on 
-    * skip link anchors.
+    * skip link anchors (IE without javascript, Webkit & Opera only javascript)
     *
-    * @affected Chrome, Safari (Webkit), Opera
+    * @affected IE <= 7, Chrome, Safari (Webkit), Opera
     * @since 1.1.0
     */
    initSkiplinkAnchors : function() {
    
       // Check if webkit or opera browser
-      if ($.browser.webkit || $.browser.opera) {
-         
+      if ($.browser.webkit || $.browser.opera || ($.browser.msie && $.browser.version <= 7.0)) {
+                 
          // Add tabindex attribute to all elements with class flz_anchor
          $("a.flz_anchor").attr("tabindex", "-1");
          

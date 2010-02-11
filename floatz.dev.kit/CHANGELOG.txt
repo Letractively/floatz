@@ -85,10 +85,11 @@ CHANGE   13       Use flz_selected only for LI tags
 FIX      6        Hidden dialog and suggestion boxes in GWT because of z-index.
                   Removing all occurences of z-index.
 -------------------------------------------------------------------------------------------------------------
-NEW      15       Add skip link for improving accessibility
-                  Added .flz_skipnav for use with DIV element. All hyperlinks within this DIV element are
-                  only visible for users of screen readers. If they get keyboard focus (e.g. navigation via
-                  tabulator key) the also get visible for screen users.
+NEW      15       Add skip link navigation for improving accessibility
+                  Added .flz_skipnav as skiplink container, .flz_skiplink for skiplinks, .flz_anchor for
+                  skiplink targets. All hyperlinks with flz_skiplink are only visible to users of screen
+                  readers. If they get keyboard focus (e.g. navigation via TAB key) they also get visible
+                  for screen users.
 -------------------------------------------------------------------------------------------------------------                  
 
 floatz.reset.css
@@ -121,11 +122,6 @@ Type     Issue    Description
 NEW      -        Adding test diverse pages to \tests
 -------------------------------------------------------------------------------------------------------------
 NEW      -        Adding debug CSS floatz.layout.debug.css to \src\debug
--------------------------------------------------------------------------------------------------------------
-
-Misc
-=============================================================================================================
-Type     Issue    Description
 -------------------------------------------------------------------------------------------------------------
 NEW      15       Add skip link for improving accessibility
                   Adding src/scripts/floatz.js and src/scripts/jquery1.4.1.js to floatz
