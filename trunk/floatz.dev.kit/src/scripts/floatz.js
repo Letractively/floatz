@@ -11,7 +11,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-02-11
+ * @lastmodified  2010-02-13
  */
 
 var floatz = {
@@ -61,13 +61,13 @@ var floatz = {
     * annotated with class flz_anchor. This is mandatory for setting focus on 
     * skip link anchors (IE without javascript, Webkit & Opera only javascript)
     *
-    * @affected IE <= 7, Chrome, Safari (Webkit), Opera
+    * @affected IE, Chrome, Safari (Webkit), Opera
     * @since 1.1.0
     */
    initSkiplinkAnchors : function() {
    
       // Check if webkit or opera browser
-      if ($.browser.webkit || $.browser.opera || ($.browser.msie && $.browser.version <= 7.0)) {
+      if ($.browser.webkit || $.browser.opera || $.browser.msie) {
                  
          // Add tabindex attribute to all elements with class flz_anchor
          $("a.flz_anchor").attr("tabindex", "-1");
