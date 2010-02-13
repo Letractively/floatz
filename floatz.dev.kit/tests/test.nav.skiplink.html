@@ -30,10 +30,14 @@
          .mycontent h1, .mycontent h2, .mycontent p, .mycontent ul {
             margin-bottom: 1em;
          }
+         
+         .mycontent .backtotop {
+            padding: 1em 0;
+         }
   
          .myfooter {
             height: 2em;
-         }         
+         }        
       </style>
    </head>
    <body>
@@ -57,7 +61,7 @@
          </div>
          <!-- menu container -->
          <div class="flz_box mymenu">
-            <a id="menu" class="flz_anchor" />
+            <a id="menu" class="flz_anchor"></a>
             <div class="flz_box flz_hmenu">
                <ul>
                   <li class="flz_selected"><a href="#">Menu 1</a></li>
@@ -69,7 +73,7 @@
          </div>
          <!-- sidebar container -->
          <div class="flz_box mysidebar flz_l25">
-            <a id="submenu" class="flz_anchor" />
+            <a id="submenu" class="flz_anchor"></a>
             <div class="flz_box flz_vmenu">
                <ul>
                   <li class="flz_selected"><a href="#">Menu 1</a>
@@ -102,7 +106,7 @@
          </div>
          <!-- content container -->
          <div class="flz_box mycontent flz_r75 flz_relative">
-            <a id="content" class="flz_anchor" />
+            <a id="content" class="flz_anchor"></a>
             <ul class="flz_listnav flz_breadcrumb">
                <li class="flz_selected"><a href="#">Item 1</a> &gt;</li>
                <li><a href="#">Item 2</a> &gt;</li>
@@ -110,6 +114,7 @@
                <li><a href="#">Item 4</a></li>
             </ul>
             <div class="flz_spacer">
+               <a id="top" class="flz_anchor"></a>
                <h1>Lorem ipsum</h1>
                <p>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -121,7 +126,7 @@
                   <li><a href="#loremipsum3">Lorem ipsum 3</a></li>
                   <li><a href="#loremipsum4">Lorem ipsum 4</a></li>
                </ul>
-               <a id="loremipsum1" class="flz_anchor" />
+               <a id="loremipsum1" class="flz_anchor"></a>
                <h2>Lorem ipsum 1</h2>
                <div class="flz_box flz_l50">
                   <div class="flz_lsubspacer">
@@ -133,7 +138,10 @@
                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                   </div>
                </div>
-               <a id="loremipsum2" class="flz_anchor" />
+               <div class="flz_box flz_skipnav backtotop">
+                  <a href="#top">Back to top</a>
+               </div>
+               <a id="loremipsum2" class="flz_anchor"></a>
                <h2>Lorem ipsum 2</h2>
                <div class="flz_box flz_l50">
                   <div class="flz_lsubspacer">
@@ -145,7 +153,10 @@
                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                   </div>
                </div>
-               <a id="loremipsum3" class="flz_anchor" />
+               <div class="flz_box flz_skipnav backtotop">
+                  <a href="#top">Back to top</a>
+               </div>
+               <a id="loremipsum3" class="flz_anchor"></a>
                <h2>Lorem ipsum 3</h2>
                <div class="flz_box flz_l50">
                   <div class="flz_lsubspacer">
@@ -157,7 +168,10 @@
                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                   </div>
                </div>
-               <a id="loremipsum4" class="flz_anchor" />
+               <div class="flz_box flz_skipnav backtotop">
+                  <a href="#top">Back to top</a>
+               </div>
+               <a id="loremipsum4" class="flz_anchor"></a>
                <h2>Lorem ipsum 4</h2>
                <div class="flz_box flz_l50">
                   <div class="flz_lsubspacer">
@@ -168,6 +182,9 @@
                   <div class="flz_rsubspacer">
                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                   </div>
+               </div>
+               <div class="flz_box flz_skipnav backtotop">
+                  <a href="#top">Back to top</a>
                </div>
             </div>
          </div>
