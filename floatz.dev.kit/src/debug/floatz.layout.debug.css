@@ -54,3 +54,101 @@
    background-color: #eeefff;
    border: 1px dotted #000;
 }
+
+.flz_r100 {
+   background-color: #111;
+   color: #fff;
+}
+
+.flz_l90, .flz_r90 {
+   background-color: #222;
+   color: #fff;            
+}
+
+.flz_l80, .flz_r80 {
+   background-color: #333;
+   color: #fff;            
+}
+
+.flz_l75, .flz_r75 {
+   background-color: #444;
+   color: #fff;            
+}
+
+.flz_l66, .flz_r66 {
+   background-color: #555;
+   color: #fff;            
+}
+
+.flz_l60, .flz_r60 {
+   background-color: #666;
+   color: #fff;            
+}
+
+.flz_l50 {
+   background-color: #777;
+   color: #fff;            
+}
+.flz_r50 {
+   background-color: #888;
+   color: #fff;            
+}
+
+.flz_l40 {
+   background-color: #999;
+   color: #fff;            
+}
+.flz_m40 {
+   background-color: #aaa;
+   color: #fff;            
+}
+.flz_r40 {
+   background-color: #bbb;
+   color: #fff;            
+}
+
+.flz_l33 {
+   background-color: #ccc
+}
+.flz_m33 {
+   background-color: #ddd;
+}
+.flz_r33 {
+   background-color: #eee;
+}
+
+.flz_l25 {
+   background-color: #111fff;
+   color: #fff;            
+}
+.flz_m25 {
+   background-color: #333fff;
+   color: #fff;            
+}
+.flz_r25 {
+   background-color: #444fff;
+   color: #fff;            
+}
+
+.flz_l20 {
+   background-color: #666fff;
+   color: #fff;            
+}
+.flz_m20 {
+   background-color: #888fff;
+   color: #fff;            
+}
+.flz_r20 {
+   background-color: #aaafff;
+   color: #fff;            
+}
+
+.flz_l10 {
+   background-color: #bbbfff;
+}
+.flz_m10 {
+   background-color: #cccfff;
+}
+.flz_r10 {
+   background-color: #dddfff;
+}

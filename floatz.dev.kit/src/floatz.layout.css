@@ -10,7 +10,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-02-02
+ * @lastmodified  2010-02-16
  */
 
 /**
@@ -26,6 +26,24 @@
    float: left;
    position: relative;
    width: 985px;
+}
+/**
+ * @workaround Remove visible overflow that causes horizontal scrollbar in liquid mode that
+ *             are caused by sub-pixel bug correction in certain circumstances
+ * @cssfor IE 5, 6
+ * @affected IE 5, 6
+ */
+* html #flz_page {
+   overflow: hidden;
+}
+/**
+ * @workaround Remove visible overflow that causes horizontal scrollbar in liquid mode that
+ *             are caused by sub-pixel bug correction in certain circumstances
+ * @cssfor IE 7
+ * @affected IE 7
+ */
+*:first-child+html #flz_page {
+   overflow: hidden;
 }
 
 /**
@@ -311,6 +329,8 @@
  * ---------------------------------------------------------------------------------------
  * @section       Layouters
  * @see           http://www.positioniseverything.net/explorer/dup-characters.html
+ *                http://ejohn.org/blog/sub-pixel-problems-in-css/ 
+ *                http://jacksleight.com/old/blog/2008/01/20/ie-floated-columns-totaling-100-percent-bug
  *
  * Layouters provide auto calculated widths (based on percentages) for layout and spacing 
  * containers. To avoid duplicated character bug and wrapping of floated containers in IE 
@@ -376,7 +396,6 @@
 }
 
 /* Addresses IE 5+ and 6 using star hack */
-* html .flz_r10, 
 * html .flz_r20, 
 * html .flz_r25, 
 * html .flz_r40, 
@@ -390,9 +409,12 @@
 * html .flz_r100 {
    margin-right: -3px;
 }
+/* See: http://jacksleight.com/old/blog/2008/01/20/ie-floated-columns-totaling-100-percent-bug */
+* html .flz_r10 {
+   margin-right: -5px;
+}
 
 /* Addresses IE 7 using first child star hack */
-*:first-child+html .flz_r10, 
 *:first-child+html .flz_r20, 
 *:first-child+html .flz_r25, 
 *:first-child+html .flz_r40, 
@@ -405,6 +427,10 @@
 *:first-child+html .flz_r90, 
 *:first-child+html .flz_r100 {
    margin-right: -3px;
+}
+/* See: http://jacksleight.com/old/blog/2008/01/20/ie-floated-columns-totaling-100-percent-bug */
+*:first-child+html .flz_r10 {
+   margin-right: -5px;
 }
 
 /**
