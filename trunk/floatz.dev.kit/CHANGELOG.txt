@@ -53,6 +53,13 @@ Type     Issue    Description
 FIX      6        Hidden dialog and suggestion boxes in GWT because of z-index.
                   Removing all occurences of z-index.
 -------------------------------------------------------------------------------------------------------------
+CHANGE   -        Adding margin-right: -5px for flz_r10 (otherwise box wraps to next line, as observed in
+                  tests/test.layout.layouter.html. See 
+                  http://jacksleight.com/old/blog/2008/01/20/ie-floated-columns-totaling-100-percent-bug
+-------------------------------------------------------------------------------------------------------------
+CHANGE   -        Adding overflow: hidden to flz_page for IE5, 6, 7 that is caused by corrections of width
+                  to solve sub-pixel-bug.
+-------------------------------------------------------------------------------------------------------------
 
 floatz.layout.center.css
 =============================================================================================================
