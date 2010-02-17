@@ -1,6 +1,0 @@
-C:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\shrink\src\shrink\bin\Debug\shrink.exe
-C:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\shrink\src\shrink\bin\Debug\shrink.pdb
-C:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\shrink\src\shrink\obj\Debug\ResolveAssemblyReference.cache
-C:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\shrink\src\shrink\obj\Debug\shrink.exe
-C:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\shrink\src\shrink\obj\Debug\shrink.pdb
-c:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\shrink\src\shrink\bin\Debug\shrink.exe.config
