@@ -136,7 +136,7 @@ namespace eu.humml.floatz.shrink {
       /// </summary>
       /// <param name="action"></param>
       /// <param name="msg"></param>
-      static public void ShowInlineMessage(Action action, String msg) {
+      static private void ShowInlineMessage(Action action, String msg) {
          if (!action.SilentMode) {
             Console.Write(msg);
          }
@@ -147,7 +147,7 @@ namespace eu.humml.floatz.shrink {
       /// </summary>
       /// <param name="action"></param>
       /// <param name="msg"></param>
-      static public void ShowMessage(Action action, String msg) {
+      static private void ShowMessage(Action action, String msg) {
          if (!action.SilentMode) {
             Console.WriteLine(msg);
          }
@@ -157,7 +157,7 @@ namespace eu.humml.floatz.shrink {
       /// Show newline message
       /// </summary>
       /// <param name="action"></param>
-      static public void ShowNewline(Action action) {
+      static private void ShowNewline(Action action) {
          ShowMessage(action, "");
       }
 
@@ -165,7 +165,7 @@ namespace eu.humml.floatz.shrink {
       /// Show error message with new line
       /// </summary>
       /// <param name="msg"></param>
-      static public void ShowErrorMessage(Action action, String msg) {
+      static private void ShowErrorMessage(Action action, String msg) {
          ShowMessage(action, String.Format("> ERROR - {0}", msg));
       }
 
@@ -174,14 +174,73 @@ namespace eu.humml.floatz.shrink {
       /// </summary>
       /// <param name="action"></param>
       static private void ShrinkFiles(Action action) {
+         StreamWriter writer = null;
+         FileInfo tempFile = null;
          int shrinkCount = 0;
          
          // Get list of files that should be shrinked
          string[] files = GetFileList(action);
          if (files != null) {
+
+            // Prepare target file for merging
+            /*if (action.OutputFile != null) {
+               tempFile = new FileInfo(action.OutputFile);
+               if (! File.Exists(tempFile.FullName)) {
+               }
+            }*/
+
             foreach (String file in files) {
-               if (ShrinkFile(action, new FileInfo(file))) {
-                  shrinkCount += 1;
+               FileInfo sourceFile = new FileInfo(file);
+
+               try {
+                  // Show message
+                  ShowInlineMessage(action, String.Format("Shrinking {0}", sourceFile));
+
+                  // Create temporary file
+                  tempFile = new FileInfo(String.Format("{0}.temp", sourceFile.FullName));
+                  writer = File.CreateText(tempFile.FullName);
+
+                  // Shrink file
+                  ShrinkFile(action, sourceFile, writer);
+
+                  // Closed writer
+                  writer.Close();
+
+                  // Create backup file, override original with temporary file
+                  if (!File.Exists(String.Format("{0}.bak", sourceFile.FullName))) {
+
+                     // Show statistic information for file
+                     ShowInlineMessage(action, String.Format(" from {0:0.00} KB to {1:0.00} KB (-{2:0}%)",
+                        sourceFile.Length / 1024.0, tempFile.Length / 1024.0, (sourceFile.Length - tempFile.Length) * 100 / sourceFile.Length));
+                     ShowNewline(action);
+
+                     // Backup original file, replace original with new file, delete new file
+                     File.Replace(tempFile.FullName, sourceFile.FullName, String.Format("{0}.bak", action.NoBackup ? null : sourceFile.FullName));
+
+                     // Increase counter for shrinked files
+                     shrinkCount += 1;
+                  } else {
+                     // Show error message if backup still exists
+                     ShowNewline(action);
+                     ShowErrorMessage(action, String.Format("Backup file still exists. Shrink of {0} aborted.", sourceFile.Name));
+                  }
+
+               } 
+               // Exception handling for each file
+               catch (Exception ex) {
+                  // Show error message
+                  ShowNewline(action);
+                  ShowErrorMessage(action, ex.Message);
+
+                  // Close writer for temporary target file
+                  if (writer != null) {
+                     writer.Close();
+                  }
+
+                  // Delete temporary target file if exists
+                  if (tempFile != null && File.Exists(tempFile.FullName)) {
+                     File.Delete(tempFile.FullName);
+                  }
                }
             }
 
@@ -200,117 +259,63 @@ namespace eu.humml.floatz.shrink {
       /// </remarks>
       /// <param name="action"></param>
       /// <param name="sourceFile"></param>
-      static private bool ShrinkFile(Action action, FileInfo sourceFile) {
+      static private void ShrinkFile(Action action, FileInfo file, StreamWriter writer) {
          bool multiLineComment = false;
-         StreamWriter writer = null;
-         FileInfo tempFile = null;
-         bool shrinked = false;
          String newLine = null;
          String line = null;
 
-         try {
-            // Show message
-            ShowInlineMessage(action, String.Format("Shrinking {0}", sourceFile));
+         // Read all lines from original file
+         string[] lines = File.ReadAllLines(file.FullName);
 
-            // Create temporary file
-            tempFile = new FileInfo(String.Format("{0}.temp", sourceFile.FullName));
-            writer = File.CreateText(tempFile.FullName);
+         // Shrink lines of code
+         for (int i = 0; i < lines.Length; i++) {
+            line = lines[i].Trim();
 
-            // Read all lines from original file
-            string[] lines = File.ReadAllLines(sourceFile.FullName);
-
-            // Shrink lines of code
-            for (int i = 0; i < lines.Length; i++) {
-               line = lines[i].Trim();
-
-               // Single comment line
-               if (line.StartsWith("//") || ( line.StartsWith("/*") && line.EndsWith("*/"))) {
-                  WriteCommentLine(action, writer, line);
-               }
+            // Single comment line
+            if (line.StartsWith("//") || (line.StartsWith("/*") && line.EndsWith("*/"))) {
+               WriteCommentLine(action, writer, line);
+            }
                // Multi line comment start
-               else if (line.StartsWith("/*")) {
-                  WriteCommentLine(action, writer, line);
-                  multiLineComment = true; 
-               }
+            else if (line.StartsWith("/*")) {
+               WriteCommentLine(action, writer, line);
+               multiLineComment = true;
+            }
                // Multi line comment end
-               else if (multiLineComment && line.EndsWith("*/")) {
-                  WriteCommentLine(action, writer, line);
-                  multiLineComment = false;
-               }
+            else if (multiLineComment && line.EndsWith("*/")) {
+               WriteCommentLine(action, writer, line);
+               multiLineComment = false;
+            }
                // Part of multi line comment
-               else if (action.KeepComments && multiLineComment) {
-                  WriteCommentLine(action, writer, line);
-               }
+            else if (action.KeepComments && multiLineComment) {
+               WriteCommentLine(action, writer, line);
+            }
                // Code lines
-               else if (!multiLineComment) {
-                  if (line.Length > 0) {
+            else if (!multiLineComment) {
+               if (line.Length > 0) {
 
-                     // Inline comment at end of code
-                     // Sample: floatz.init(); // Init floatz
-                     int commentPos = line.LastIndexOf("//");
-                     if (! action.KeepComments && commentPos != -1) {
-                        newLine = ShrinkCode(line.Substring(0, commentPos));
-                     }
-                     // Inline comment at end of code II
-                     // Sample: overflow: hidden; /* Opera <= 8.5 */
-                     else if (!action.KeepComments && line.EndsWith("*/")) {
-                        newLine = ShrinkCode(line.Substring(0, line.LastIndexOf("/*")));
-                     }
+                  // Single line comment at end of code line
+                  int commentPos = line.LastIndexOf("//");
+                  if (!action.KeepComments && commentPos != -1) {
+                     newLine = ShrinkLine(line.Substring(0, commentPos));
+                  }
+                     // Multiline comment at end of code line
+                  else if (!action.KeepComments && line.EndsWith("*/")) {
+                     newLine = ShrinkLine(line.Substring(0, line.LastIndexOf("/*")));
+                  }
                      // Non commenting lines
-                     else {
-                        newLine = ShrinkCode(line);
-                     }
+                  else {
+                     newLine = ShrinkLine(line);
+                  }
 
-                     // Write line into stream
-                     if (newLine.EndsWith("}")) {
-                        WriteCodeLine(action, writer, newLine);
-                     } else {
-                        writer.Write(newLine);
-                     }
+                  // Write line into stream
+                  if (newLine.EndsWith("}")) {
+                     WriteCodeLine(action, writer, newLine);
+                  } else {
+                     writer.Write(newLine);
                   }
                }
             }
-
-            // Closed writer
-            writer.Close();
-
-            // Create backup file, override original with temporary file
-            if (!File.Exists(String.Format("{0}.bak", sourceFile.FullName))) {
-
-               // Show statistic information for file
-               ShowInlineMessage(action, String.Format(" from {0:0.00} KB to {1:0.00} KB (-{2:0}%)",
-                  sourceFile.Length / 1024.0, tempFile.Length / 1024.0, (sourceFile.Length - tempFile.Length) * 100 / sourceFile.Length));
-               ShowNewline(action);
-
-               // Backup original file, replace original with new file, delete new file
-               File.Replace(tempFile.FullName, sourceFile.FullName, String.Format("{0}.bak", action.NoBackup ? null : sourceFile.FullName));
-
-               // Set shrinked state
-               shrinked = true;
-            } 
-            else {
-               // Show error message if backup still exists
-               ShowNewline(action);
-               ShowErrorMessage(action, String.Format("Backup file still exists. Shrink of {0} aborted.", sourceFile.Name));
-            }
-         } 
-         catch (Exception ex) {
-            // Show error message
-            ShowNewline(action);
-            ShowErrorMessage(action, ex.Message);
-
-            // Close writer for temporary target file
-            if (writer != null) {
-               writer.Close();
-            }
-
-            // Delete temporary target file if exists
-            if (tempFile != null && File.Exists(tempFile.FullName)) {
-               File.Delete(tempFile.FullName);
-            }
          }
-
-         return shrinked;
       }
 
       /// <summary>
@@ -318,7 +323,7 @@ namespace eu.humml.floatz.shrink {
       /// </summary>
       /// <param name="code"></param>
       /// <returns></returns>
-      static private String ShrinkCode(String code) {
+      static private String ShrinkLine(String code) {
          return code.Trim()
                     .Replace(" :", ":")
                     .Replace(": ", ":")

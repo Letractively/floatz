@@ -10,3 +10,9 @@ c:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\shrink\src\obj\Debug\shrink.
 c:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\shrink\src\bin\Debug\shrink.exe
 c:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\shrink\src\bin\Debug\shrink.pdb
 c:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\shrink\src\obj\Debug\ResolveAssemblyReference.cache
+c:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\src\bin\Debug\shrink.exe.config
+c:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\src\obj\Debug\shrink.exe
+c:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\src\obj\Debug\shrink.pdb
+c:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\src\bin\Debug\shrink.exe
+c:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\src\bin\Debug\shrink.pdb
+c:\Daten\Projekte\floatz\trunk\floatz.dev.kit\tools\src\obj\Debug\ResolveAssemblyReference.cache
