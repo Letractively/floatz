@@ -10,7 +10,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-02-26
+ * @lastmodified  2010-02-27
  */
 
 /**
@@ -146,34 +146,51 @@ legend {
  */
 
 /* Textbox */
-.flz_textbox {
+.flz_form input[type="text"] {
    background-color: fff;
    border: 1px solid #000;
+   display: block;
+   width: 99.4%;
+}
+/**
+ * @workaround Differentiate input type text
+ * @affected IE 5, 6
+ */
+* html .flz_textbox {
+   background-color: fff;
+   border: 1px solid #000;
+   display: block;
+   width: 99.4%;
 }
 
 /* Button  */
-.flz_button {
+.flz_form input[type="button"],
+.flz_form input[type="submit"] {
    padding: 0.25em 0.35em;
 }
-
 /**
- * @workaround Omit too much left/right padding in IE
- * @affected IE 5+, 6
+ * @workaround Differentiate input type button, submit
+ * @affected IE 5, 6
+ */
+* html .flz_button {
+   padding: 0.25em 0.35em;
+}
+/**
+ * @workaround Omit too much left/right padding
+ * @affected IE 5, 6
  */
 * html .flz_button {
    overflow: visible;
    padding: 0.25em 0.5em;
 }
-
 /**
- * @workaround Omit too much left/right padding in IE
+ * @workaround Omit too much left/right padding
  * @affected IE 7
  */
 *:first-child+html .flz_button {
    overflow: visible;
    padding: 0.25em 0.5em;
 }
-
 /**
  * @workaround Collapse tabele cell around button
  * @affected IE 5+, 6
@@ -181,21 +198,12 @@ legend {
 * html .flz_button {
    width: 1;
 }
-
 /**
  * @workaround Collapse table cell around button
  * @affected IE 7
  */
 *:first-child+html .flz_button {
    width: 1;
-}
-
-/* Radio button */
-.flz_radio {
-}
-
-/* Checkbox */
-.flz_checkbox {
 }
 
 /* Marker for mandatory fields */
@@ -209,56 +217,45 @@ legend {
    color: #aaa;
 }
 
-/* Block form element marker class */
-.flz_form label, 
+/* Label, Selectbox */
+.flz_form label,
 .flz_form select {
    display: block;
    width: 100%;
 }
-.flz_form input {
-   display: block;
-   width: 99.4%;
-}
+
+/* Textarea */
 .flz_form textarea {
    display: block;
    width: 99.4%;
 }
 
-/* Resets width for button, checkbox and radio marker classes to auto */
-.flz_form .flz_button, 
-.flz_form .flz_checkbox, 
-.flz_form .flz_radio {
+/* Label in combination with checkbox or radio should be inline */
+.flz_form input[type="checkbox"] + label,
+.flz_form input[type="radio"] + label {
+   display: inline;
    width: auto;
 }
+/**
+ * Label in combination with checkbox or radio should be inline
+ * @workaround Handle situations when label comes before radiobutton, checkbox and to
+ *             support inline labels in combination with checkbox in IE 5, 6
+ * @affected all browsers
+ */
 
-/* Resets display for button, checkbox and radio marker classes within blocked forms to 
-   inline. For checkboxes and radios, this is necessary to support background color of <span> 
-   for mandatory fields in Firefox, Google Chrome and Apple Safari (see also class mandatory) */
-
-.flz_form .flz_button, 
-.flz_form .flz_checkbox, 
-.flz_form .flz_radio {
-   display: inline;
-}
-
-/* Corrects margins for all input fields and textareas within blocked forms for IE 5+ and 6.
-   These corrections must be reset for buttons marker class. */
-* html .flz_form input, 
-* html .flz_form textarea {
-   margin-right: -10px;
-}
-* html .flz_form .flz_button {
-   margin-right: 0;
-}
-/* Inline marker class to convert blocked to inline elements within blocked form */
+/* Separate inline class (for IE 5,6 and when label comes before radiobutton, checkbox) */
 .flz_form .flz_inline {
    display: inline;
-   margin: 0.25em 0;
    width: auto;
 }
-.flz_form .flz_radio .flz_inline, 
-.flz_form .flz_checkbox .flz_inline {
-   margin-right: 0.25em;   
+   
+/**
+ * @workaround Correct margins of input type text and textareas within blocked forms
+ * @affected IE 5, 6
+ */
+* html .flz_textbox, 
+* html .flz_form textarea {
+   margin-right: -10px;
 }
 
 /* Combifield marker classes to combine fields with images in one line (e.g. date field with 
