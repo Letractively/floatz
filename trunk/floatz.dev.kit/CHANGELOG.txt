@@ -45,6 +45,8 @@ FIX      9        Button height in IE is different to other browsers
 FIX      6        Hidden dialog and suggestion boxes in GWT because of z-index.
                   Removing all occurences of z-index.
 -------------------------------------------------------------------------------------------------------------
+CHANGE   -        Renaming flz_blockform to flz_form
+-------------------------------------------------------------------------------------------------------------
 
 floatz.layout.css
 =============================================================================================================
