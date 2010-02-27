@@ -10,7 +10,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-02-02
+ * @lastmodified  2010-02-26
  */
 
 /**
@@ -183,7 +183,7 @@ legend {
 }
 
 /**
- * @workaround Collapse tabele cell around button
+ * @workaround Collapse table cell around button
  * @affected IE 7
  */
 *:first-child+html .flz_button {
@@ -210,24 +210,24 @@ legend {
 }
 
 /* Block form element marker class */
-.flz_blockform label, 
-.flz_blockform select {
+.flz_form label, 
+.flz_form select {
    display: block;
    width: 100%;
 }
-.flz_blockform input {
+.flz_form input {
    display: block;
    width: 99.4%;
 }
-.flz_blockform textarea {
+.flz_form textarea {
    display: block;
    width: 99.4%;
 }
 
 /* Resets width for button, checkbox and radio marker classes to auto */
-.flz_blockform .flz_button, 
-.flz_blockform .flz_checkbox, 
-.flz_blockform .flz_radio {
+.flz_form .flz_button, 
+.flz_form .flz_checkbox, 
+.flz_form .flz_radio {
    width: auto;
 }
 
@@ -235,29 +235,29 @@ legend {
    inline. For checkboxes and radios, this is necessary to support background color of <span> 
    for mandatory fields in Firefox, Google Chrome and Apple Safari (see also class mandatory) */
 
-.flz_blockform .flz_button, 
-.flz_blockform .flz_checkbox, 
-.flz_blockform .flz_radio {
+.flz_form .flz_button, 
+.flz_form .flz_checkbox, 
+.flz_form .flz_radio {
    display: inline;
 }
 
 /* Corrects margins for all input fields and textareas within blocked forms for IE 5+ and 6.
    These corrections must be reset for buttons marker class. */
-* html .flz_blockform input, 
-* html .flz_blockform textarea {
+* html .flz_form input, 
+* html .flz_form textarea {
    margin-right: -10px;
 }
-* html .flz_blockform .flz_button {
+* html .flz_form .flz_button {
    margin-right: 0;
 }
 /* Inline marker class to convert blocked to inline elements within blocked form */
-.flz_blockform .flz_inline {
+.flz_form .flz_inline {
    display: inline;
    margin: 0.25em 0;
    width: auto;
 }
-.flz_blockform .flz_radio .flz_inline, 
-.flz_blockform .flz_checkbox .flz_inline {
+.flz_form .flz_radio .flz_inline, 
+.flz_form .flz_checkbox .flz_inline {
    margin-right: 0.25em;   
 }
 
