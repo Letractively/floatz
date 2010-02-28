@@ -15,6 +15,6 @@
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <StartArguments>floatz.form.css /l</StartArguments>
+    <StartArguments>/p:floatz.fixed.profile /o:floatz.fixed.css</StartArguments>
   </PropertyGroup>
 </Project>
