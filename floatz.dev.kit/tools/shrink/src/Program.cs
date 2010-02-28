@@ -20,14 +20,14 @@ namespace eu.humml.floatz.shrink {
          ShowSplashScreen(action);
 
          // Handle actions
-         switch(action.Type) {
-            case Action.ACTION_HELP :
+         switch (action.Type) {
+            case Action.ACTION_HELP:
                ShowHelpScreen(action);
                break;
-            case Action.ACTION_SHRINK :
+            case Action.ACTION_SHRINK:
                ShrinkFiles(action);
                break;
-         }         
+         }       
       }
 
       /// <summary>
@@ -38,37 +38,41 @@ namespace eu.humml.floatz.shrink {
          Action action = new Action();
 
          // If not arguments are available, switch to help action
-         if(args.Length == 0) {
+         if (args.Length == 0) {
             action.Type = Action.ACTION_HELP;
          }
          else {
             // Determine processing information from arguments
-            foreach(String arg in args) {
-               switch(arg.ToLower()) {
-                  case "/c" :
+            foreach (String arg in args) {
+               switch (arg.ToLower()) {
+                  case "/c":
                      action.KeepComments = true;
                      break;
                   case "/h":
                      action.Type = Action.ACTION_HELP;
                      break;
-                  case "/l" :
+                  case "/l":
                      action.KeepLineBreaks = true;
                      break;
-                  case "/n" :
+                  case "/n":
                      action.NoBackup = true;
                      break;
-                  case "/s" :
+                  case "/s":
                      action.SilentMode = true;
                      break;
-                  default :
+                  default:
                      if (arg.StartsWith("/e:")) {
                         action.Encoding = arg.Substring(arg.LastIndexOf(":") + 1);
-                     } else if (arg.StartsWith("/o:")) {
+                     }
+                     else if (arg.StartsWith("/o:")) {
                         action.OutputFile = arg.Substring(arg.LastIndexOf(":") + 1);
-                     } else if (arg.StartsWith("/p:")) {
+                        action.NoBackup = true;
+                     }
+                     else if (arg.StartsWith("/p:")) {
                         action.Profile = arg.Substring(arg.LastIndexOf(":") + 1);
-                        action.Type = Action.ACTION_SHRINK;                     
-                     } else {
+                        action.Type = Action.ACTION_SHRINK;
+                     }
+                     else {
                         action.Files = arg;
                         action.Type = Action.ACTION_SHRINK;
                      }
@@ -170,83 +174,201 @@ namespace eu.humml.floatz.shrink {
       }
 
       /// <summary>
-      /// Shrink and (optionally) merge files
+      /// 
       /// </summary>
       /// <param name="action"></param>
       static private void ShrinkFiles(Action action) {
+         StreamWriter mergeWriter = null;
          StreamWriter writer = null;
-         FileInfo tempFile = null;
+         FileInfo sourceFile = null;
          int shrinkCount = 0;
-         
+
          // Get list of files that should be shrinked
          string[] files = GetFileList(action);
          if (files != null) {
-
-            // Prepare target file for merging
-            /*if (action.OutputFile != null) {
-               tempFile = new FileInfo(action.OutputFile);
-               if (! File.Exists(tempFile.FullName)) {
+            try {
+               // Prepare output stream for file merge
+               mergeWriter = PrepareMergeStream(action);
+               if (mergeWriter != null) {
+                  ShowMessage(action, String.Format("Merging into {0}", action.OutputFile));
                }
-            }*/
 
-            foreach (String file in files) {
-               FileInfo sourceFile = new FileInfo(file);
+               // Shrink all files in list
+               foreach (String file in files) {
 
-               try {
-                  // Show message
+                  // Indicate file that is shrinked
+                  sourceFile = new FileInfo(file);
                   ShowInlineMessage(action, String.Format("Shrinking {0}", sourceFile));
 
-                  // Create temporary file
-                  tempFile = new FileInfo(String.Format("{0}.temp", sourceFile.FullName));
-                  writer = File.CreateText(tempFile.FullName);
+                  // Prepare output streams
+                  writer = PrepareShrinkStream(action, writer, sourceFile);
 
-                  // Shrink file
+                  // Shrink file into output stream
                   ShrinkFile(action, sourceFile, writer);
 
-                  // Closed writer
-                  writer.Close();
-
-                  // Create backup file, override original with temporary file
-                  if (!File.Exists(String.Format("{0}.bak", sourceFile.FullName))) {
-
-                     // Show statistic information for file
-                     ShowInlineMessage(action, String.Format(" from {0:0.00} KB to {1:0.00} KB (-{2:0}%)",
-                        sourceFile.Length / 1024.0, tempFile.Length / 1024.0, (sourceFile.Length - tempFile.Length) * 100 / sourceFile.Length));
-                     ShowNewline(action);
-
-                     // Backup original file, replace original with new file, delete new file
-                     File.Replace(tempFile.FullName, sourceFile.FullName, String.Format("{0}.bak", action.NoBackup ? null : sourceFile.FullName));
+                  // Refinish output stream
+                  if (RefinishShrinkStream(action, writer, mergeWriter, sourceFile)) {
 
                      // Increase counter for shrinked files
                      shrinkCount += 1;
-                  } else {
-                     // Show error message if backup still exists
-                     ShowNewline(action);
-                     ShowErrorMessage(action, String.Format("Backup file still exists. Shrink of {0} aborted.", sourceFile.Name));
-                  }
-
-               } 
-               // Exception handling for each file
-               catch (Exception ex) {
-                  // Show error message
-                  ShowNewline(action);
-                  ShowErrorMessage(action, ex.Message);
-
-                  // Close writer for temporary target file
-                  if (writer != null) {
-                     writer.Close();
-                  }
-
-                  // Delete temporary target file if exists
-                  if (tempFile != null && File.Exists(tempFile.FullName)) {
-                     File.Delete(tempFile.FullName);
                   }
                }
-            }
 
-            // Show summary
+               // Refinish merge output stream
+               if (shrinkCount > 0) {
+                  RefinishMergeStream(action, mergeWriter);
+               }
+            }
+            // Handle exceptions
+            catch (Exception ex) {
+               ShowNewline(action);
+               ShowErrorMessage(action, ex.Message);
+
+               // Close merge writer
+               if (mergeWriter != null) {
+                  writer.Close();
+               }
+
+               // Close shrink writer
+               if (writer != null) {
+                  writer.Close();
+               }
+
+               // Delete temp files
+               CleanTempFiles(action, sourceFile);
+            }
+         }
+
+         // Show summary
+         ShowNewline(action);
+         ShowMessage(action, String.Format("{0} from {1} files shrinked.", shrinkCount, files != null ? files.Length : 0));
+      }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="action"></param>
+      /// <returns></returns>
+      static private StreamWriter PrepareMergeStream(Action action) {
+
+         // Prepare output stream for shrink with merge
+         if (!String.IsNullOrEmpty(action.OutputFile)) {
+            FileInfo tempFile = new FileInfo(action.OutputFile);
+            return File.CreateText(tempFile.FullName);
+         }
+
+         return null;
+      }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="action"></param>
+      /// <param name="mergeWriter"></param>
+      static private void RefinishMergeStream(Action action, StreamWriter mergeWriter) {
+
+         // Close output stream
+         if (mergeWriter != null) {
+            mergeWriter.Close();
+         }
+      }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="action"></param>
+      /// <param name="writer"></param>
+      /// <param name="sourceFile"></param>
+      /// <returns></returns>
+      static private StreamWriter PrepareShrinkStream(Action action, StreamWriter writer, FileInfo sourceFile) {
+
+         // Prepare output stream for file shrink
+         FileInfo tempFile = null;
+         tempFile = GetTempFileInfo(sourceFile);
+         return File.CreateText(tempFile.FullName);
+      }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="action"></param>
+      /// <param name="writer"></param>
+      /// <param name="mergeWriter"></param>
+      /// <param name="sourceFile"></param>
+      /// <returns></returns>
+      static private bool RefinishShrinkStream(Action action, StreamWriter writer, StreamWriter mergeWriter, FileInfo sourceFile) {
+         FileInfo tempFile;
+
+         // Close output stream
+         writer.Close();
+
+         // Merge from temp file
+         if (mergeWriter != null) {
+            tempFile = GetTempFileInfo(sourceFile);
+            mergeWriter.Write(File.ReadAllText(tempFile.FullName));
+         }
+
+         // If not merging, the backup file should not already exist
+         if (mergeWriter != null || !File.Exists(String.Format("{0}.bak", sourceFile.FullName))) {
+
+            // Show statistic information for file
+            tempFile = GetTempFileInfo(sourceFile);
+            ShowInlineMessage(action, String.Format(" from {0:0.00} KB to {1:0.00} KB (-{2:0}%)",
+               sourceFile.Length / 1024.0, tempFile.Length / 1024.0, (sourceFile.Length - tempFile.Length) * 100 / sourceFile.Length));
             ShowNewline(action);
-            ShowMessage(action, String.Format("{0} from {1} files shrinked.", shrinkCount, files.Length));
+
+            // If merging, delete temporary shrink file
+            if (mergeWriter != null) {
+               File.Delete(tempFile.FullName);
+            }
+            // If not merging, backup original file, replace original with shrink file, delete shrink file
+            else {
+               File.Replace(tempFile.FullName, sourceFile.FullName, action.NoBackup ? null : String.Format("{0}.bak", sourceFile.FullName));
+            }
+         }
+         // Handle situation when backup still exists
+         else {
+            // Delete temp files
+            CleanTempFiles(action, sourceFile);
+
+            // Show error message
+            ShowNewline(action);
+            ShowErrorMessage(action, String.Format("Backup file still exists. Shrink of {0} aborted.", sourceFile.Name));
+            return false;
+         }
+
+         return true;
+      }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="sourceFile"></param>
+      /// <returns></returns>
+      static private FileInfo GetTempFileInfo(FileInfo sourceFile) {
+         return new FileInfo(String.Format("{0}.temp", sourceFile.FullName));
+      }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="action"></param>
+      /// <param name="sourceFile"></param>
+      static private void CleanTempFiles(Action action, FileInfo sourceFile) {
+         FileInfo tempFile;
+
+         // Delete merge file
+         if (!String.IsNullOrEmpty(action.OutputFile)) {
+            tempFile = new FileInfo(action.OutputFile);
+            if (File.Exists(tempFile.FullName)) {
+               File.Delete(tempFile.FullName);
+            }
+         }
+
+         // Delete temporary shrink file
+         tempFile = GetTempFileInfo(sourceFile);
+         if (tempFile != null && File.Exists(tempFile.FullName)) {
+            File.Delete(tempFile.FullName);
          }
       }
 
