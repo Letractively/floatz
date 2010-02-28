@@ -139,3 +139,6 @@ NEW      15       Add skip link for improving accessibility
                   Adding src/scripts/floatz.js and src/scripts/jquery1.4.1.js to floatz
                   This is the only available solution to move keyboard focus in Chrome, Safari and Opera
 -------------------------------------------------------------------------------------------------------------
+NEW      3        Combine production CSS files to only one CSS file and shrink remove CR/LFs
+                  Adding shrink tool to tools/shrink and profiles to build one-file-versions of floatz.
+-------------------------------------------------------------------------------------------------------------
