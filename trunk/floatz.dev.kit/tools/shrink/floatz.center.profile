@@ -1,6 +1,6 @@
-floatz.reset.meyer.css
-floatz.reset.css
-floatz.layout.css
-floatz.layout.center.css
-floatz.nav.css
-floatz.form.css
+../../src/floatz.reset.meyer.css
+../../src/floatz.reset.css
+../../src/floatz.layout.css
+../../src/floatz.layout.center.css
+../../src/floatz.nav.css
+../../src/floatz.form.css

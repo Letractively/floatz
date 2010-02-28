@@ -6,12 +6,12 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Shrink")]
-[assembly: AssemblyDescription("Floatz CSS Shrinker")]
+[assembly: AssemblyTitle("Floatz CSS Shrinker")]
+[assembly: AssemblyDescription("CSS Shrinker")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany(":humml:design")]
 [assembly: AssemblyProduct("Floatz")]
-[assembly: AssemblyCopyright("Copyright ©  2008-2010 by :humml:design")]
+[assembly: AssemblyCopyright("Copyright (c) 2008-2010 by :humml:design")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
