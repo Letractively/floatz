@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Collections;
+using System.Reflection;
 
 namespace eu.humml.floatz.shrink {
    /// <summary>
    /// 
    /// </summary>
    class Program {
-   
+
+      /// <summary>
+      /// Application startup method
+      /// </summary>
+      /// <param name="args"></param>
       static void Main(string[] args) {
 
          // Parse arguments
@@ -90,10 +95,14 @@ namespace eu.humml.floatz.shrink {
       static private void ShowSplashScreen(Action action) {
          if (!action.SilentMode) {
             Console.WriteLine("");
-            Console.WriteLine("---------------------------------------------------");
-            Console.WriteLine("floatz CSS Framework - CSS and Javascript Shrinker");
-            Console.WriteLine("Copyright (c) 2008-2010 by :humml:design");
-            Console.WriteLine("---------------------------------------------------");
+            Console.WriteLine("----------------------------------------");
+            Console.WriteLine(String.Format("{0} {1}, Version {2}",  
+               AssemblyInfo.Product,
+               AssemblyInfo.Description, 
+               AssemblyInfo.Version));
+            Console.WriteLine(String.Format("{0}", 
+               AssemblyInfo.Copyright));
+            Console.WriteLine("----------------------------------------");
             Console.WriteLine("");
          }
       }
@@ -242,6 +251,70 @@ namespace eu.humml.floatz.shrink {
          // Show summary
          ShowNewline(action);
          ShowMessage(action, String.Format("{0} from {1} files shrinked.", shrinkCount, files != null ? files.Length : 0));
+      }
+
+      /// <summary>
+      /// Read files from directory or from given profile
+      /// </summary>
+      /// <param name="action"></param>
+      /// <returns></returns>
+      static private string[] GetFileList(Action action) {
+         string[] fileList = null;
+         bool error = false;
+
+         try {
+            // Read files from directory
+            if (action.Files != null) {
+               fileList = Directory.GetFiles(
+                  Path.GetDirectoryName(action.Files).Length > 0 ? Path.GetDirectoryName(action.Files) : @".\",
+                  Path.GetFileName(action.Files));
+
+               // Show error message, if no files are found
+               if (fileList.Length == 0) {
+                  ShowErrorMessage(action, String.Format("No files found for {0}", action.Files));
+                  error = true;
+               }
+
+               // Read files from profile
+            }
+            else if (action.Profile != null) {
+               ArrayList files = new ArrayList();
+
+               // Read file list from profile
+               string[] lines = File.ReadAllLines(action.Profile);
+               foreach (String file in lines) {
+
+                  // Ignore empty lines
+                  if (file.Trim().Length == 0) {
+                     continue;
+                     // Check if file exists and add it to file list
+                  }
+                  else if (File.Exists(file)) {
+                     files.Add(file);
+                     // Show error message if file does not exist
+                  }
+                  else {
+                     ShowErrorMessage(action, String.Format("File in profile {0} does not exist: {1}", action.Profile, file));
+                     error = true;
+                  }
+               }
+
+               // Convert Arraylist to string[]
+               fileList = (string[])files.ToArray(typeof(string));
+
+               // Show error message, if no files are found
+               if (!error && fileList.Length == 0) {
+                  ShowErrorMessage(action, String.Format("No file from profile {0} found", action.Profile));
+                  error = true;
+               }
+            }
+         }
+         catch (Exception ex) {
+            ShowErrorMessage(action, ex.Message);
+         }
+
+         // Return file list
+         return error ? null : fileList;
       }
 
       /// <summary>
@@ -477,67 +550,6 @@ namespace eu.humml.floatz.shrink {
          } else {
             writer.Write(code);
          }
-      }
-
-      /// <summary>
-      /// Read files from directory or from given profile
-      /// </summary>
-      /// <param name="action"></param>
-      /// <returns></returns>
-      static private string[] GetFileList(Action action) {
-         string[] fileList = null;
-         bool error = false;
-
-         try {
-            // Read files from directory
-            if (action.Files != null) {
-               fileList = Directory.GetFiles(
-                  Path.GetDirectoryName(action.Files).Length > 0 ? Path.GetDirectoryName(action.Files) : @".\" , 
-                  Path.GetFileName(action.Files));
-
-               // Show error message, if no files are found
-               if (fileList.Length == 0) {
-                  ShowErrorMessage(action, String.Format("No files found for {0}", action.Files));
-                  error = true;
-               }
-
-            // Read files from profile
-            } else if (action.Profile != null) {
-               ArrayList files = new ArrayList();
-
-               // Read file list from profile
-               string[] lines = File.ReadAllLines(action.Profile);
-               foreach (String file in lines) {
-
-                  // Ignore empty lines
-                  if (file.Trim().Length == 0) {
-                     continue;
-                  // Check if file exists and add it to file list
-                  } else if (File.Exists(file)) {
-                     files.Add(file);
-                  // Show error message if file does not exist
-                  } else {
-                     ShowErrorMessage(action, String.Format("File in profile {0} does not exist: {1}", action.Profile, file));
-                     error = true;
-                  }
-               }
-
-               // Convert Arraylist to string[]
-               fileList = (string[])files.ToArray(typeof(string));
-
-               // Show error message, if no files are found
-               if (! error && fileList.Length == 0) {
-                  ShowErrorMessage(action, String.Format("No file from profile {0} found", action.Profile));
-                  error = true;
-               }
-            }
-         } 
-         catch (Exception ex) {
-            ShowErrorMessage(action, ex.Message);
-         }
-
-         // Return file list
-         return error ? null : fileList;
       }
    }
 }

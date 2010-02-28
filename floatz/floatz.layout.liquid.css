@@ -1,6 +1,0 @@
-#flz_page{min-width:985px;width:100%;z-index:1;}
-* html #flz_minwidth{position:relative;float:left;z-index:2;}
-* html #flz_minwidthcontent{position:relative;float:left;z-index:3;}
-.flz_box{z-index:4;}
-.flz_breadcrumb,.flz_toolbar,.flz_topnav{z-index:5;}
-span.flz_combifield,img.flz_combifield{z-index:5;}
