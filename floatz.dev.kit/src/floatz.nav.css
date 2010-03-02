@@ -16,7 +16,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-02-11
+ * @lastmodified  2010-03-02
  */
 
 /**
@@ -347,47 +347,67 @@ a:focus.flz_skiplink {
  */
 
 /* menu container (background image acts as horizontal separator line) */
-.flz_htabmenu {
+.flz_htabmenu,
+.flz_htabmenu_bottom {
    float: left;
    width: 100%;
 }
 
 /* menu list container */
-.flz_htabmenu ul {
+.flz_htabmenu ul,
+.flz_htabmenu_bottom {
    margin: 0;
    padding: 0;
 }
 
 /* menu item (list element as closing part of the sliding door) */
-.flz_htabmenu li {
-   background:url(images/tab_menu.gif) no-repeat left top;
+.flz_htabmenu li,
+.flz_htabmenu_bottom li {
    float: left;
    list-style-type: none;
    margin: 0 1px;
    padding: 0 0 0 0.5em;
 }
+.flz_htabmenu li {
+   background:url(images/htabmenu.gif) no-repeat left top;
+}
+.flz_htabmenu_bottom li {
+   background:url(images/htabmenu_bottom_inactive.gif) no-repeat left bottom;
+}
 
 /* menu item (hyperlink element as opening part of sliding door)*/
-.flz_htabmenu a {
-   background:url(images/tab_menu.gif) no-repeat right top;
+.flz_htabmenu a,
+.flz_htabmenu_bottom a{
    display: block;
    text-decoration: none;
    padding: 0.25em 1em 0.25em 0.5em;  /* last one reduced at padding of LI */
 }
+.flz_htabmenu a {
+   background:url(images/htabmenu.gif) no-repeat right top;
+}
+.flz_htabmenu_bottom a{
+   background:url(images/htabmenu_bottom_inactive.gif) no-repeat right bottom;
+}
 
 /* default menu item */
-.flz_htabmenu a:link {
+.flz_htabmenu a:link, 
+.flz_htabmenu_bottom a:link {
 }
 
 /* visited menu item */
-.flz_htabmenu a:visited {
+.flz_htabmenu a:visited,
+.flz_htabmenu_bottom a:visited {
    color: inherit;
 }
 
 /* hovered menu item (hyperlink element as opening part of the sliding doors) */
 .flz_htabmenu a:hover,
 .flz_htabmenu li:hover a {
-   background:url(images/tab_menu.gif) no-repeat 100% -100px;
+   background:url(images/htabmenu.gif) no-repeat right -100px;
+}
+.flz_htabmenu_bottom a:hover,
+.flz_htabmenu_bottom li:hover a {
+   background:url(images/htabmenu_bottom_hover.gif) no-repeat right bottom;
 }
 
 /**
@@ -395,30 +415,47 @@ a:focus.flz_skiplink {
  * @affected IE 5, 6
  */
 * html .flz_htabmenu a:hover {
-   background:url(images/tab_menu.gif) no-repeat right top;
+   background:url(images/htabmenu.gif) no-repeat right top;
+   text-decoration: underline;
+}
+* html .flz_htabmenu_bottom a:hover {
+   background:url(images/htabmenu_bottom_inactive.gif) no-repeat right bottom;
    text-decoration: underline;
 }
 
 /* active and focus menu item (focus and active is not supported for li, thus underline for hyperlinks are used)*/
 .flz_htabmenu a:focus,
-.flz_htabmenu a:active {
+.flz_htabmenu a:active,
+.flz_htabmenu_bottom a:focus,
+.flz_htabmenu_bottom a:active {
    color: inherit;
    text-decoration: underline;
 }
 
 /* hovered menu item (list element as closing part of the sliding doors) */
 .flz_htabmenu li:hover {
-   background:url(images/tab_menu.gif) no-repeat 0 -100px;
+   background:url(images/htabmenu.gif) no-repeat left -100px;
+}
+.flz_htabmenu_bottom li:hover {
+   background:url(images/htabmenu_bottom_hover.gif) no-repeat left bottom;
 }
 
 /* selected menu item (list element as closing part of the sliding door) */
 .flz_htabmenu li.flz_selected {
-   background:url(images/tab_menu.gif) no-repeat 0 -200px;
+   background:url(images/htabmenu.gif) no-repeat left -200px;
+}
+.flz_htabmenu_bottom li.flz_selected {
+   background:url(images/htabmenu_bottom_active.gif) no-repeat left bottom;
 }
 
 /* selected menu item (hyperlink element as opening part of sliding door)*/
 .flz_htabmenu li.flz_selected a {
-   background:url(images/tab_menu.gif) no-repeat 100% -200px;
+   background:url(images/htabmenu.gif) no-repeat right -200px;
+   color: inherit;
+   font-weight: bold;
+}
+.flz_htabmenu_bottom li.flz_selected a {
+   background:url(images/htabmenu_bottom_active.gif) no-repeat right bottom;
    color: inherit;
    font-weight: bold;
 }
@@ -426,7 +463,12 @@ a:focus.flz_skiplink {
 /* focused or hovered selected menu item (hyperlink element as opening part of the sliding doors) */
 .flz_htabmenu li.flz_selected a:hover,
 .flz_htabmenu li:hover.flz_selected a {
-   background:url(images/tab_menu.gif) no-repeat 100% -100px;
+   background:url(images/htabmenu.gif) no-repeat right -100px;
+   color: inherit;
+}
+.flz_htabmenu_bottom li.flz_selected a:hover,
+.flz_htabmenu_bottom li:hover.flz_selected a {
+   background:url(images/htabmenu_bottom_hover.gif) no-repeat right bottom;
    color: inherit;
 }
 
@@ -435,18 +477,27 @@ a:focus.flz_skiplink {
  * @affected IE 5, 6
  */
 * html .flz_htabmenu li.flz_selected a:hover {
-   background:url(images/tab_menu.gif) no-repeat 100% -200px;
+   background:url(images/htabmenu.gif) no-repeat right -200px;
+   text-decoration: underline;
+}
+* html .flz_htabmenu_bottom li.flz_selected a:hover {
+   background:url(images/htabmenu_bottom_active.gif) no-repeat right bottom;
    text-decoration: underline;
 }
 
 /* focused or hovered selected menu item (list element as closing part of the sliding doors) */
 .flz_htabmenu li:hover.flz_selected {
-   background:url(images/tab_menu.gif) no-repeat 0 -100px;
+   background:url(images/htabmenu.gif) no-repeat left -100px;
+}
+.flz_htabmenu_bottom li:hover.flz_selected {
+   background:url(images/htabmenu_bottom_hover.gif) no-repeat left bottom;
 }
 
 /* focus and active (clicked) selected menu item */
 .flz_htabmenu li.flz_selected a:focus,
-.flz_htabmenu li.flz_selected a:active{
+.flz_htabmenu li.flz_selected a:active,
+.flz_htabmenu_bottom li.flz_selected a:focus,
+.flz_htabmenu_bottom li.flz_selected a:active {
    color: inherit;
    text-decoration: underline;
 }
