@@ -103,6 +103,10 @@ NEW      15       Add skip link navigation for improving accessibility
                   readers. If they get keyboard focus (e.g. navigation via TAB key) they also get visible
                   for screen users.
 -------------------------------------------------------------------------------------------------------------                  
+CHANGE   1        Renaming sprite image for flz_htabmenu.
+-------------------------------------------------------------------------------------------------------------                  
+NEW      2        Adding flz_htabmenu_bottom for bottom aligned horizontal tabmenu.
+-------------------------------------------------------------------------------------------------------------
 
 floatz.reset.css
 =============================================================================================================
