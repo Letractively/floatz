@@ -16,7 +16,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-03-02
+ * @lastmodified  2010-03-04
  */
 
 /**
@@ -189,7 +189,7 @@ a:focus.flz_skiplink {
    border-left: 1px solid #000;
    display: block;
    text-decoration: none;
-   padding: 0.25em 1em;
+   padding: 0.5em 1em;
 }
 
 /* default menu item */
@@ -262,7 +262,7 @@ a:focus.flz_skiplink {
 .flz_vmenu li a {
    background-color: inherit;
    display: block;
-   padding: 0.25em 1em;
+   padding: 0.5em 1em;
    text-decoration: none;
    border-bottom: 1px solid #000;
 }
@@ -380,7 +380,7 @@ a:focus.flz_skiplink {
 .flz_htabmenu_bottom a{
    display: block;
    text-decoration: none;
-   padding: 0.25em 1em 0.25em 0.5em;  /* last one reduced at padding of LI */
+   padding: 0.5em 1em 0.5em 0.5em;  /* last one reduced at padding of LI */
 }
 .flz_htabmenu a {
    background:url(images/htabmenu.gif) no-repeat right top;
