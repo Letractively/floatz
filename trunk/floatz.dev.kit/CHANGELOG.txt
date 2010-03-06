@@ -149,3 +149,8 @@ NEW      15       Add skip link for improving accessibility
 NEW      3        Combine production CSS files to only one CSS file and shrink remove CR/LFs
                   Adding shrink tool to tools/shrink and profiles to build one-file-versions of floatz.
 -------------------------------------------------------------------------------------------------------------
+NEW      -        Adding \templates for the following layouts (nav,content,sidebar) 010, 011, 110, 111
+-------------------------------------------------------------------------------------------------------------
+NEW      -        Adding build.bat to \tools for creating shrinked version of floatz and for updating
+                  all templates
+-------------------------------------------------------------------------------------------------------------
