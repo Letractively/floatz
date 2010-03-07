@@ -61,3 +61,9 @@ The following items have been removed.
 || floatz.reset.css || CHANGE || - || Removing style for ADDRESS that overrides meyer reset ||
 
 =Version 1.0.1=
+
+==Changed==
+
+|| Module || Type || Issue || Description ||
+|| floatz.form.css || CHANGE || - || Replacing all styles that where directly bound to input, select and textarea (e.g. input.flz_mandatory to .flz_mandatory) ||
+|| floatz.layout.css || CHANGE || - || Removing duplicate of .flz_clear ||
