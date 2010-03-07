@@ -1,13 +1,8 @@
-#summary One-sentence summary of this page.
+#summary Provides some information what has been changed in each version
+Last Update: March 7th, 2010
 
-= Introduction =
+   ----
+   Note: this wiki page already covers the new version 1.1.0 that's currently in beta stadium.
+   ----
 
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+<wiki:toc max_depth="1" />
