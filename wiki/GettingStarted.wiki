@@ -5,7 +5,7 @@ Last Update: February 7th, 2010
 <wiki:toc max_depth="1" />
 
 =Step 1 - Download=
-First of all you have to download floatz from http://code.google.com/p/floatz/. The latest version is offered directly on the project home under "featured downloads" on the right side of the page. Alternatively check [http://code.google.com/p/floatz/downloads/list download] if you are interested in an other version.
+First of all you have to download floatz from http://code.google.com/p/floatz/. The latest version is offered directly on the project home under "featured downloads" on the right side of the page. Alternatively check the [http://code.google.com/p/floatz/downloads/list downloads section] if you are interested in an other version.
 
    ----
    Note: floatz is available in two separate download packages: `floatz.<version>.zip` and `floatz.dev.kit.<version>.zip` The first package is thought for production use and contains only what is really necessary. The second package contains additional files that are only interesting during development phase. The current tutorial considers only the production package. See WhatsInside for more information.
