@@ -13,9 +13,10 @@ Last Update: March 7th, 2010
 
 Version 1.1.0 is a minor feature release as well as a larger maintenance release, that fixes some bugs. The highlights are:
 
-   * Shrinked and merged floatz CSS file to reduce bandwidth
+   * Shrinked and merged floatz CSS file to reduce bandwidth and HTTP requests
+   * Use of CSS sprites images to reduce HTTP requests
    * New skiplink navigation for accessibility
-   * New horizontal bottom-aligned tabbed menu
+   * New horizontal bottom-aligned tab menu
    * Ready-to-use layout templates
 
 ===Shrinked and merged floatz CSS file to reduce bandwidth===
@@ -33,7 +34,11 @@ without loosing the modularity of the CSS framework.
 
 See also: WhatsInside.
 
-=== New skiplink navigation for accessibility ===
+===Use of CSS sprites images to reduce HTTP requests===
+
+To reduce the amount of HTTP requests, the current version uses CSS sprites images when ever possible.
+
+===New skiplink navigation for accessibility===
 
 This version comes with cross browser support for skip links that are a must have for websites that are serious about accessibility support.
 
@@ -41,9 +46,13 @@ This version comes with cross browser support for skip links that are a must hav
    Note: This feature introduces something that is really new and maybe unexpected for a CSS framework. It introduces javascript code for DOM manipulation. While currently, this is optional and only necessary if you want to use skiplinks (recommended), future releases of floatz will utilize this powerfull kind of progressive enhancement much more.
    ----
 
-===New horizontal bottom aligned tabbed menu===
+===New horizontal bottom aligned tab menu===
 
-The possibility of a horizontal bottom aligned tabbed menu is added to the navigation module.
+A horizontal bottom aligned tab menu is added to the navigation module. 
+
+   ----
+   Note: The implementation of the bottom aligned tab menu demonstrated the constraints of the CSS sprites image approach and (again) lead to single image files. See [http://code.google.com/p/floatz/source/browse/#svn/trunk/floatz.dev.kit/sandbox/sprites sandbox]
+   ----
 
 ===Ready-to-use layout templates ===
 
