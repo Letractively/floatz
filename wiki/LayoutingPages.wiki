@@ -1,3 +1,12 @@
-----
-Under construction
-----
+#summary All you need to know to get started with floatz
+Last Update: March 7th, 2010
+
+   ----
+   Note: this wiki page already covers the new version 1.1.0 that's currently in beta stadium.
+   ----
+
+<wiki:toc max_depth="1" />
+
+   ----
+   Page is under construction
+   ----
