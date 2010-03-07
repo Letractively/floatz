@@ -1,4 +1,4 @@
-#summary Provides some information what has been changed in each version
+#summary Provides some information about what has been changed in each version
 Last Update: March 7th, 2010
 
    ----
