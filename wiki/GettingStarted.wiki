@@ -32,10 +32,16 @@ The floatz development kit ships with a set of ready-to-use templates for differ
    * Create a project folder (e.g. `C:\Projects\MyProject`)
    * Copy the whole content of the desired template folder (e.g. `C:\Program Files\floatz\floatz.dev.kit.1.1.0\templates\layout.empty\*.*`) into your project folder (e.g. `C:\Projects\MyProject`)
    * Rename the provided project stylesheet `C:\Projects\MyProject\styles\project.css` to `C:\Projects\MyProject\styles\MyProject.css`
+   * Rename the provided project script file `C:\Projects\MyProject\scripts\project.js` to `C:\Projects\MyProject\scripts\MyProject.js`
    * Change the stylesheet import in `C:\Projects\MyProject\index.html` from `styles/project.css` to `styles/MyProject.css`. The code should look like this
 
    {{{
       <link rel="stylesheet" type="text/css" href="styles/MyProject.css" />
+   }}}
+   * Change the script import in `C:\Projects\MyProject\index.html` from `scripts/project.js` to `scripts/MyProject.js`. The code will look like this
+
+   {{{
+      <script type="text/javascript" src="scripts/MyProject.js"></script>
    }}}
 
    * Optional: Open the project stylesheet `C:\Projects\MyProject\styles\MyProject.css` and change the imported floatz CSS file from `floatz.liquid.css` to the desired layout stylesheet (e.g. `floatz.fixed.css` for fixed layout). The import should look like this:
@@ -85,6 +91,7 @@ If you want to prepare your project manually, here's what you have to do:
                <link rel="stylesheet" type="text/css" href="styles/MyProject.css" />
                <script type="text/javascript" src="styles/floatz.1.1.0/scripts/jquery-1.4.1.min.js"></script>
                <script type="text/javascript" src="styles/floatz.1.1.0/scripts/floatz.js"></script>
+               <script type="text/javascript" src="scripts/MyProject.js"></script>
             </head>
             <body>
                <!-- page container -->
@@ -94,6 +101,22 @@ If you want to prepare your project manually, here's what you have to do:
             </body>
          </html>
    }}}
+
+   * Optional: Create a project specific javascript file (e.g. `C:\Projects\MyProject\scripts\MyProject.js`), add a `document.ready()` event handler and call `floatz.init()`
+   
+   {{{
+      /**
+       * Initializes document
+       */
+       $(document).ready( function() {
+         // Initialize floatz
+         floatz.init();
+       });
+   }}}
+
+   ----
+   Note: The javascript modules are optional and only necessary to manipulate the DOM for cross browser compatibility in conjunction with skiplinks. Future versions of floatz will utilize this kind of progressive enhancement much more then now.
+   ----
 
 Now your project environment is up an running and you can start layouting your web pages using floatz.
 
