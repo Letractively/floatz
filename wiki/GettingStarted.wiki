@@ -83,6 +83,8 @@ If you want to prepare your project manually, here's what you have to do:
                <meta name="robots" content="index,follow" />
                <meta name="description" content="" />
                <link rel="stylesheet" type="text/css" href="styles/MyProject.css" />
+               <script type="text/javascript" src="styles/floatz.1.1.0/scripts/jquery-1.4.1.min.js"></script>
+               <script type="text/javascript" src="styles/floatz.1.1.0/scripts/floatz.js"></script>
             </head>
             <body>
                <!-- page container -->
