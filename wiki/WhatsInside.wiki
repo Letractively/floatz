@@ -1,6 +1,10 @@
 #summary What's inside the different floatz packages
 #labels Featured
-Last Update: February 7th, 2010
+Last Update: March 7th, 2010
+
+   ----
+   Note: this wiki page already covers the new version 1.1.0 that's currently in beta stadium.
+   ----
 
 <wiki:toc max_depth="2" />
 
