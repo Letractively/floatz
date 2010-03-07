@@ -7,6 +7,4 @@ Last Update: March 7th, 2010
 
 <wiki:toc max_depth="1" />
 
-   ----
-   Page is under construction
-   ----
+*Page is under construction*
