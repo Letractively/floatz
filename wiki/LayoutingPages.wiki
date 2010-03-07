@@ -1,4 +1,4 @@
-#summary Gives you an introduction how to layout pages
+#summary Describes how to create a page layout
 Last Update: March 7th, 2010
 
    ----
