@@ -1,5 +1,10 @@
 #summary What's inside the different floatz packages
 #labels Featured
+
+----
+Under construction.
+----
+
 Last Update: March 7th, 2010
 
    ----
@@ -8,21 +13,97 @@ Last Update: March 7th, 2010
 
 <wiki:toc max_depth="2" />
 
+=Download Packages=
+
+floatz is available in two different download packages.
+
+   * floatz-1.1.0 (production package)
+   * floatz.dev.kit-1.1.0 (development kit package)
+
+==Production package==
+This package is especially prepared for *production* use. It contains only those files that are really necessary and does not contain any comments, unnecessary whitespaces or line breaks. Because of its reduced readability, this package is not recommended during development.
+
+Content of the production package:
+|| *Folder* || *Short Description* || *Details* ||
+|| floatz-1.1.0 || Root folder || Root folder of the framework for easy [GettingStarted#Step_2_-_Install installation]. Contains one floatz CSS module in shrinked form for each layout type as well as a copyright note || 
+|| floatz-1.1.0/images || Image folder || Contains background-images that are used e.g. for tabbed navigation ||
+|| floatz-1.1.0/scripts || Script folder || Contains shrinked version of javascript modules that are only necessary for cross browser skiplink navigation ||
+
+==Development Kit Package==
+The development kit package is provided for *development time*. It contains the frameworks CSS and Javascript modules as well as many other helpful utilities. The included CSS and Javascript files contain comments and line breaks that increase readability but also file size. They are not recommended for production use.
+
+Content of the development kit package:
+|| *Folder* || *Short Description* || *Details* ||
+|| floatz.dev.kit-1.1.0 || Root folder || Contains a changelog as well as a copyright notice ||
+|| floatz.dev.kit-1.1.0/doc || Documentation folder || Contains floatz documentation files ||
+|| floatz.dev.kit-1.1.0/samples || Sample folder || Contains different samples that show the use of floatz ||
+|| floatz.dev.kit-1.1.0/src || Source folder || Contains all floatz CSS modules ||
+|| floatz.dev.kit-1.1.0/src/debug || Debug  folder || Contains special floatz CSS modules that can be used for debugging ||
+|| floatz.dev.kit-1.1.0/src/images || Image folder || Contains background-images that are used e.g. for tabbed navigation ||
+|| floatz.dev.kit-1.1.0/src/scripts || Script folder || Contains javascript modules that are only necessary for cross browser skiplink navigation ||
+|| floatz.dev.kit-1.1.0/templates || Template folder || Contains templates that can be used for project startup or as reference ||
+|| floatz.dev.kit-1.1.0/tests || Test folder || Contains test pages that are used for module and browser compatibility tests. Can also be used to test your own project CSS and as reference ||
+|| floatz.dev.kit-1.1.0/tools || Tools folder || Contains some usefull utilities ||
+|| floatz.dev.kit-1.1.0/tools/build || Tools folder || Contains build tool to create CSS files in production folder and to update templates ||
+|| floatz.dev.kit-1.1.0/tools/shrink || Tools folder || Contains shrink tool for shrinking and merging CSS files ||
+
 =Modules=
 
-floatz is made up of the following modules / files. The *load order* column indicates the order in which each file has to be loaded. This sequence is very important, otherwise the CSS inheritance and thus the framework will not work properly. The *set* column shows, what module is core (must be used) or is optional (can be used).
+==Production modules==
 
-|| *Load Order* || *Set* || *Module* || *Description* ||
-|| 0 || Optional || floatz.css || Loads all floatz modules in the correct order ||
-|| 1 || Core || floatz.reset.meyer.css || Basic reset styles to get a common baseline for all browsers ||
-|| 2 || Core || floatz.reset.css || Extends basic reset styles for floatz ||
-|| 3 || Core || floatz.layout.css || Basic styles for layouting pages, content and web forms ||
-|| 4 || Optional || floatz.form.css || Styles for build web forms ||
-|| 5 || Optional || floatz.nav.css || Styles for creating navigation elements ||
-|| 6 || Optional || floatz.layout.center.css || Extends basic layout styles for centered layout ||
-|| 6 || Optional || floatz.layout.liquid.css || Extends basic layout styles for liquid layout ||
+The following subsections contain those modules that are necessary at production time.
 
-==Loading modules==
+===CSS Modules for production===
+
+Only one of the listed modules must be imported into to your [GettingStarted#Step_3_-_Prepare project CSS file] depending on the desired page layout. The *usage* column shows, what module is mandatory (must be used) or is optional (can be used). The last column shows if the modules have to be used in combination or instead of each other.
+
+|| *Usage* || *Module* || *Description* || ||
+|| Mandatory || floatz.center.css || Shrinked and merged version of all floatz modules for center layout || OR ||
+|| Mandatory || floatz.fixed.css || Shrinked and merged version of all floatz modules for fixed layout || OR ||
+|| Mandatory || floatz.liquid.css || Shrinked and merged version of all floatz modules for liquid layout || ||
+
+===Javascript Modules for production===
+
+|| *Usage* || *Module* || *Description* ||
+|| Optional || floatz.js || Shrinked version of script that is necessary to prepare skiplinks for cross browser compatibility ||
+|| Optional || jquery-1.4.1.js || Shrinked version of javascript DOM manipulation library that is used in floatz.js ||
+
+== Development Kit modules ==
+
+The following subsections contain those modules that are necessary at development time.
+
+===CSS Modules for development===
+
+The *load order* column indicates the order in which each file has to be loaded. This sequence is very important, otherwise the CSS inheritance and thus the framework will not work properly. The *usage* column shows, what module is mandatory (must be used) or is optional (can be used). The last column indicates if the modules have to be used in combination or instead of each other.
+
+|| *Load Order* || *Usage* || *Module* || *Description* || ||
+|| 0 || Optional || floatz.css || Loads all floatz modules in the correct order || AND ||
+|| 1 || Mandatory || floatz.reset.meyer.css || Basic reset styles to get a common baseline for all browsers || AND ||
+|| 2 || Mandatory || floatz.reset.css || Extends basic reset styles for floatz || AND ||
+|| 3 || Mandatory || floatz.layout.css || Basic styles for layouting pages, content and web forms || AND ||
+|| 4 || Optional || floatz.form.css || Styles for build web forms || AND ||
+|| 5 || Optional || floatz.nav.css || Styles for creating navigation elements || AND ||
+|| 6 || Optional || floatz.layout.center.css || Extends basic layout styles for centered layout || AND ||
+|| 6 || Optional || floatz.layout.liquid.css || Extends basic layout styles for liquid layout || ||
+
+===Javascript Modules for development===
+
+Same modules as in production mode (see above).
+
+=Using the modules=
+
+==Using the Production modules=
+
+===Loading the CSS modules===
+
+===Loading the Javascript modules===
+
+===Affection layout modes===
+
+==Using the Development Kit modules=
+
+===Loading the CSS modules===
+
 The easiest way to load the CSS modules into your project, is by using the provided floatz.css file, that is added for convenience. It does not contain any CSS styles and is only responsible for loading the CSS modules in the correct order. Use this module within your [GettingStarted#Step_3_-_Prepare project CSS file] to load the entire framework:
 
 {{{ 
@@ -49,7 +130,12 @@ Of course, it is also possible to import the modules directly from your project 
    /* Project specific styles */
 }}}
 
-==Affecting layout modes==
+===Loading the Javascript modules===
+
+Same as for loading them in production mode (see above).
+
+===Affection layout modes===
+
 You can affect the kind of page layout that is used, depending on what additional layout module you load. The following layout modes are supported:
 
    * Fixed layout (default)
@@ -76,9 +162,9 @@ Load order for liquid layout:
    @import url(floatz.1.0.1/floatz.reset.meyer.css);
    @import url(floatz.1.0.1/floatz.reset.css);
    @import url(floatz.1.0.1/floatz.layout.css);
+   @import url(floatz.1.0.1/floatz.layout.liquid.css);
    @import url(floatz.1.0.1/floatz.form.css);
    @import url(floatz.1.0.1/floatz.nav.css);
-   @import url(floatz.1.0.1/floatz.layout.liquid.css);
 
    /* Project specific styles */
 }}}
@@ -89,47 +175,9 @@ Load order for center layout:
    @import url(floatz.1.0.1/floatz.reset.meyer.css);
    @import url(floatz.1.0.1/floatz.reset.css);
    @import url(floatz.1.0.1/floatz.layout.css);
+   @import url(floatz.1.0.1/floatz.layout.center.css);
    @import url(floatz.1.0.1/floatz.form.css);
    @import url(floatz.1.0.1/floatz.nav.css);
-   @import url(floatz.1.0.1/floatz.layout.center.css);
 
    /* Project specific styles */
 }}}
-
-=Download Packages=
-
-floatz is available in two different download packages.
-
-   * floatz
-   * floatz.dev.kit
-
-==floatz==
-This package is especially prepared for *production* use. It contains only those files that are really necessary and does not contain any comments, unnecessary whitespaces or line breaks. Because of its reduced readability, this package is not recommended during development.
-
-   ----
-   Note: Future releases of floatz will reduce this to an absolut minimum of only one CSS file without any line break. To minimize the amount of background-images, floatz will also use CSS sprite images, where ever possible. See [http://code.google.com/p/floatz/issues/list issue tracker] for more information.
-   ----
-
-Content of the production package:
-|| *Folder* || *Short Description* || *Details* ||
-|| floatz.1.0.1 || Root folder || Root folder of the framework for easy [GettingStarted#Step_2_-_Install installation]. Contains all floatz CSS modules / files as well as a copyright note. || 
-|| floatz.1.0.1/images|| Image folder || Contains background-images that are used e.g. for tabbed navigation  ||
-
-==floatz.dev.kit==
-The development kit package is provided for *development time*. It contains the frameworks CSS modules / files as well as many other helpful utilities. The included CSS files contain comments and line breaks that increase readability. They are not recommended for production use.
-
-   ----
-   Note: Version 1.0.1 only contains files in root folder, \src folder and \doc folder. All other content will be available with upcoming versions. Take a look at the [http://code.google.com/p/floatz/source/browse/#svn/trunk/floatz.dev.kit source repository] to get a preview of the version that is currently under development.
-   ----
-
-Content of the development kit package:
-|| *Folder* || *Short Description* || *Details* ||
-|| floatz.dev.kit.1.0.1 || Root folder || Contains a changelog as well as a copyright notice. ||
-|| floatz.dev.kit.1.0.1/doc || Documentation folder || Contains floatz documentation files ||
-|| floatz.dev.kit.1.0.1/samples || Sample folder || Contains different samples that show the use of floatz ||
-|| floatz.dev.kit.1.0.1/src || Source folder || Contains all floatz CSS modules ||
-|| floatz.dev.kit.1.0.1/src/debug || Debug  folder || Contains special floatz CSS modules that can be used for debugging ||
-|| floatz.dev.kit.1.0.1/src/images || Image folder || Contains background-images that are used e.g. for tabbed navigation ||
-|| floatz.dev.kit.1.0.1/templates || Template folder || Contains templates that can be used for project startup or as reference. ||
-|| floatz.dev.kit.1.0.1/tests || Test folder || Contains test pages that are used for module and browser compatibility tests. Can also be used to test your own project CSS and as reference ||
-|| floatz.dev.kit.1.0.1/tools || Tools folder || Contains some usefull utilities. ||
