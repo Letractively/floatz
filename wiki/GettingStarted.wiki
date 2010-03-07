@@ -13,8 +13,8 @@ First of all you have to download floatz from http://code.google.com/p/floatz/. 
 
 floatz is available in two separate download packages: 
 
-   * floatz.1.1.0.zip
-   * floatz.dev.kit.1.1.0.zip
+   * floatz-1.1.0.zip
+   * floatz.dev.kit-1.1.0.zip
 
 The first package is thought for production use and contains only what is really necessary. The second package contains additional files that are only interesting during development phase. The current tutorial considers only the production package. See WhatsInside for more information.
 
