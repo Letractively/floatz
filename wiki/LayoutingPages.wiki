@@ -1,4 +1,4 @@
-#summary Describes how to create a page layout
+#summary Describes how to create a page layout [under construction]
 Last Update: March 7th, 2010
 
    ----
@@ -6,5 +6,3 @@ Last Update: March 7th, 2010
    ----
 
 <wiki:toc max_depth="1" />
-
-*Page is under construction*
