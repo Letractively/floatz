@@ -1,4 +1,4 @@
-#summary All you need to know to get started with floatz
+#summary Gives you an introduction how to layout pages
 Last Update: March 7th, 2010
 
    ----
