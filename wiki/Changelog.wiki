@@ -9,7 +9,51 @@ Last Update: March 7th, 2010
 
 =Version 1.1.0=
 
-==New==
+==Highlights==
+
+Version 1.1.0 is a minor feature release as well as a larger maintenance release, that fixes some bugs. The highlights are:
+
+   * Shrinked and merged floatz CSS file to reduce bandwidth
+   * New skiplink navigation for accessibility
+   * New horizontal bottom-aligned tabbed menu
+   * Ready-to-use layout templates
+
+===Shrinked and merged floatz CSS file to reduce bandwidth===
+
+floatz introduces a new shrink and merge utility for CSS files. This allows to remove all unnecessary content (comments, linebreaks, whitespace) from all CSS modules and merges them into only one CSS file. This decreases the file size and saves bandwidth as well as file requests. The shrink utility also supports profiling, that makes it possible to define the set of CSS modules that should be shrinked and merged. 
+
+Future releases of floatz will use much more fine-grained CSS modules. The shrink and merge utility gives designers and programmers the ability to choose only what they really want to use, by creating their own profiles and generating their custom floatz CSS.
+
+This addresses (and solves) two major critisisms of CSS frameworks (see [http://en.wikipedia.org/wiki/CSS_framework Wikipedia])
+
+   * Bloated source code
+   * Additional HTTP requests for multiple files
+
+without loosing the modularity of the CSS framework.
+
+See also: WhatsInside.
+
+=== New skiplink navigation for accessibility ===
+
+This version comes with cross browser support for skip links that are a must have for websites that are serious about accessibility support.
+
+   ----
+   Note: This feature introduces something that is really new and maybe unexpected for a CSS framework. It introduces javascript code for DOM manipulation. While currently, this is optional and only necessary if you want to use skiplinks (recommended), future releases of floatz will utilize this powerfull kind of progressive enhancement much more.
+   ----
+
+===New horizontal bottom aligned tabbed menu===
+
+The possibility of a horizontal bottom aligned tabbed menu is added to the navigation module.
+
+===Ready-to-use layout templates ===
+
+floatz.dev.kit now ships with a set of predefined and ready-to-use layout templates.
+
+See also: WhatsInside, GettingStarted
+
+==Summary of changes==
+
+===New===
 
 The following items are new.
 
@@ -23,7 +67,7 @@ The following items are new.
 || - || NEW || Issue 15 || Adding \templates for the following layouts (nav,content,sidebar) 010, 011, 110, 111 to floatz.dev.kit ||
 || - || NEW || Issue 15 || Adding build.bat script to \tools for creating shrinked version of floatz and for updating all templates ||
 
-==Changed==
+===Changed===
 
 The following items have been changed.
 
@@ -43,11 +87,11 @@ The following items have been changed.
 || floatz.reset.css || CHANGE || - || Adding "Arial" as common font for all elements. ||
 || floatz.meyer.reset.css || FIX || Issue 5 || Text of input field slips under visible area at the bottom of the input field. Changed line-height: 1 to auto due to cropped labels (e.g. y, p, j, ...) ||
 
-==Deprecated==
+===Deprecated===
 
 None
 
-==Removed==
+===Removed===
 
 The following items have been removed.
 
@@ -62,7 +106,11 @@ The following items have been removed.
 
 =Version 1.0.1=
 
-==Changed==
+Version 1.0.1 is only a minor maintenance release.
+
+==Summary of changes==
+
+===Changed===
 
 || Module || Type || Issue || Description ||
 || floatz.form.css || CHANGE || - || Replacing all styles that where directly bound to input, select and textarea (e.g. input.flz_mandatory to .flz_mandatory) ||
