@@ -1,26 +1,17 @@
 #summary What's inside the different floatz packages
 #labels Featured
-
-----
-Under construction.
-----
-
 Last Update: March 7th, 2010
 
    ----
    Note: this wiki page already covers the new version 1.1.0 that's currently in beta stadium.
    ----
 
-<wiki:toc max_depth="2" />
-
-=Download Packages=
-
 floatz is available in two different download packages.
 
-   * floatz-1.1.0 (production package)
-   * floatz.dev.kit-1.1.0 (development kit package)
+<wiki:toc max_depth="2" />
 
-==Production package==
+=Production package (floatz-1.1.0)=
+
 This package is especially prepared for *production* use. It contains only those files that are really necessary and does not contain any comments, unnecessary whitespaces or line breaks. Because of its reduced readability, this package is not recommended during development.
 
 Content of the production package:
@@ -29,10 +20,77 @@ Content of the production package:
 || floatz-1.1.0/images || Image folder || Contains background-images that are used e.g. for tabbed navigation ||
 || floatz-1.1.0/scripts || Script folder || Contains shrinked version of javascript modules that are only necessary for cross browser skiplink navigation ||
 
-==Development Kit Package==
+==Modules of production package==
+
+===CSS Modules of production package===
+
+Only one of the listed modules must be imported into to your [GettingStarted#Step_3_-_Prepare project CSS file] depending on the desired page layout. The *usage* column shows, what module is mandatory (must be used) or is optional (can be used). The last column shows if the modules have to be used in combination or instead of each other.
+
+|| *Usage* || *Module* || *Description* || ||
+|| Mandatory || floatz.center.css || Shrinked and merged version of all floatz modules for center layout || OR ||
+|| Mandatory || floatz.fixed.css || Shrinked and merged version of all floatz modules for fixed layout || OR ||
+|| Mandatory || floatz.liquid.css || Shrinked and merged version of all floatz modules for liquid layout || ||
+
+===Javascript modules of production package===
+
+|| *Usage* || *Module* || *Description* ||
+|| Optional || floatz.js || Shrinked version of script that is necessary to prepare skiplinks for cross browser compatibility ||
+|| Optional || jquery-1.4.1.js || Shrinked version of javascript DOM manipulation library that is used in floatz.js ||
+
+==Loading production modules==
+
+===Loading production CSS modules===
+
+Loading the CSS modules into your project is pretty easy. Its only necessary to load one of the provided css modules depending on the layout mode you choose for your project. Use this module within your [GettingStarted#Step_3_-_Prepare project CSS file] to load the entire framework:
+
+{{{ 
+   /* Framework specific styles */
+   @import url(floatz.1.1.0/floatz.fixed.css)
+
+   /* Project specific styles */
+}}}
+
+===Loading production Javascript modules===
+
+==Affecting layouts in production mode==
+
+You can affect the kind of page layout that is used, by choosing one of the provided stylesheets depending on the desired layout mode. The following layout modes are supported. Each of them is represented by an according CSS file:
+
+   * Fixed layout (default)
+   * Centered layout
+   * Liquid / fluid layout
+
+For getting a deep knowledge about layouting pages with floatz, see [LayoutingPages Layouting Pages]. The following examples only show what kind of modules are necessary for each of the supported layout modes.
+
+Load order for fixed layout (default):
+{{{ 
+   /* Framework specific styles */
+   @import url(floatz.1.1.0/floatz.fixed.css)
+
+   /* Project specific styles */
+}}}
+
+Load order for liquid layout:
+{{{ 
+   /* Framework specific styles */
+   @import url(floatz.1.1.0/floatz.liquid.css)
+
+   /* Project specific styles */
+}}}
+
+Load order for center layout:
+{{{ 
+   /* Framework specific styles */
+   @import url(floatz.1.1.0/floatz.center.css)
+
+   /* Project specific styles */
+}}}
+
+=Development kit package (floatz.dev.kit-1.1.0)=
+
 The development kit package is provided for *development time*. It contains the frameworks CSS and Javascript modules as well as many other helpful utilities. The included CSS and Javascript files contain comments and line breaks that increase readability but also file size. They are not recommended for production use.
 
-Content of the development kit package:
+Content of development kit package:
 || *Folder* || *Short Description* || *Details* ||
 || floatz.dev.kit-1.1.0 || Root folder || Contains a changelog as well as a copyright notice ||
 || floatz.dev.kit-1.1.0/doc || Documentation folder || Contains floatz documentation files ||
@@ -47,32 +105,8 @@ Content of the development kit package:
 || floatz.dev.kit-1.1.0/tools/build || Tools folder || Contains build tool to create CSS files in production folder and to update templates ||
 || floatz.dev.kit-1.1.0/tools/shrink || Tools folder || Contains shrink tool for shrinking and merging CSS files ||
 
-=Modules=
-
-==Production modules==
-
-The following subsections contain those modules that are necessary at production time.
-
-===CSS Modules for production===
-
-Only one of the listed modules must be imported into to your [GettingStarted#Step_3_-_Prepare project CSS file] depending on the desired page layout. The *usage* column shows, what module is mandatory (must be used) or is optional (can be used). The last column shows if the modules have to be used in combination or instead of each other.
-
-|| *Usage* || *Module* || *Description* || ||
-|| Mandatory || floatz.center.css || Shrinked and merged version of all floatz modules for center layout || OR ||
-|| Mandatory || floatz.fixed.css || Shrinked and merged version of all floatz modules for fixed layout || OR ||
-|| Mandatory || floatz.liquid.css || Shrinked and merged version of all floatz modules for liquid layout || ||
-
-===Javascript Modules for production===
-
-|| *Usage* || *Module* || *Description* ||
-|| Optional || floatz.js || Shrinked version of script that is necessary to prepare skiplinks for cross browser compatibility ||
-|| Optional || jquery-1.4.1.js || Shrinked version of javascript DOM manipulation library that is used in floatz.js ||
-
-== Development Kit modules ==
-
-The following subsections contain those modules that are necessary at development time.
-
-===CSS Modules for development===
+==Modules of development kit package==
+===CSS Modules of development kit package===
 
 The *load order* column indicates the order in which each file has to be loaded. This sequence is very important, otherwise the CSS inheritance and thus the framework will not work properly. The *usage* column shows, what module is mandatory (must be used) or is optional (can be used). The last column indicates if the modules have to be used in combination or instead of each other.
 
@@ -86,29 +120,18 @@ The *load order* column indicates the order in which each file has to be loaded.
 || 6 || Optional || floatz.layout.center.css || Extends basic layout styles for centered layout || AND ||
 || 6 || Optional || floatz.layout.liquid.css || Extends basic layout styles for liquid layout || ||
 
-===Javascript Modules for development===
+===Javascript modules of development kit package===
 
-Same modules as in production mode (see above).
+Same modules as in production package (see above).
 
-=Using the modules=
-
-==Using the Production modules=
-
-===Loading the CSS modules===
-
-===Loading the Javascript modules===
-
-===Affection layout modes===
-
-==Using the Development Kit modules=
-
-===Loading the CSS modules===
+==Loading the devlopment kit modules==
+===Loading the development kit CSS modules===
 
 The easiest way to load the CSS modules into your project, is by using the provided floatz.css file, that is added for convenience. It does not contain any CSS styles and is only responsible for loading the CSS modules in the correct order. Use this module within your [GettingStarted#Step_3_-_Prepare project CSS file] to load the entire framework:
 
 {{{ 
    /* Framework specific styles */
-   @import url(floatz.1.0.1/floatz.css)
+   @import url(floatz.1.1.0/floatz.css)
 
    /* Project specific styles */
 }}}
@@ -121,20 +144,20 @@ Of course, it is also possible to import the modules directly from your project 
 
 {{{ 
    /* Framework specific styles */
-   @import url(floatz.1.0.1/floatz.reset.meyer.css);
-   @import url(floatz.1.0.1/floatz.reset.css);
-   @import url(floatz.1.0.1/floatz.layout.css);
-   @import url(floatz.1.0.1/floatz.form.css);
-   @import url(floatz.1.0.1/floatz.nav.css);
+   @import url(floatz.1.1.0/floatz.reset.meyer.css);
+   @import url(floatz.1.1.0/floatz.reset.css);
+   @import url(floatz.1.1.0/floatz.layout.css);
+   @import url(floatz.1.1.0/floatz.form.css);
+   @import url(floatz.1.1.0/floatz.nav.css);
 
    /* Project specific styles */
 }}}
 
-===Loading the Javascript modules===
+===Loading development kit Javascript modules===
 
-Same as for loading them in production mode (see above).
+Same as for loading them in production package (see above).
 
-===Affection layout modes===
+==Affecting layouts in development mode==
 
 You can affect the kind of page layout that is used, depending on what additional layout module you load. The following layout modes are supported:
 
@@ -147,11 +170,11 @@ For getting a deep knowledge about layouting pages with floatz, see [LayoutingPa
 Load order for fixed layout (default):
 {{{
    /* Framework specific styles */
-   @import url(floatz.1.0.1/floatz.reset.meyer.css);
-   @import url(floatz.1.0.1/floatz.reset.css);
-   @import url(floatz.1.0.1/floatz.layout.css);
-   @import url(floatz.1.0.1/floatz.form.css);
-   @import url(floatz.1.0.1/floatz.nav.css);
+   @import url(floatz.1.1.0/floatz.reset.meyer.css);
+   @import url(floatz.1.1.0/floatz.reset.css);
+   @import url(floatz.1.1.0/floatz.layout.css);
+   @import url(floatz.1.1.0/floatz.form.css);
+   @import url(floatz.1.1.0/floatz.nav.css);
 
    /* Project specific styles */
 }}}
@@ -159,12 +182,12 @@ Load order for fixed layout (default):
 Load order for liquid layout:
 {{{
    /* Framework specific styles */
-   @import url(floatz.1.0.1/floatz.reset.meyer.css);
-   @import url(floatz.1.0.1/floatz.reset.css);
-   @import url(floatz.1.0.1/floatz.layout.css);
-   @import url(floatz.1.0.1/floatz.layout.liquid.css);
-   @import url(floatz.1.0.1/floatz.form.css);
-   @import url(floatz.1.0.1/floatz.nav.css);
+   @import url(floatz.1.1.0/floatz.reset.meyer.css);
+   @import url(floatz.1.1.0/floatz.reset.css);
+   @import url(floatz.1.1.0/floatz.layout.css);
+   @import url(floatz.1.1.0/floatz.layout.liquid.css);
+   @import url(floatz.1.1.0/floatz.form.css);
+   @import url(floatz.1.1.0/floatz.nav.css);
 
    /* Project specific styles */
 }}}
@@ -172,12 +195,12 @@ Load order for liquid layout:
 Load order for center layout:
 {{{
    /* Framework specific styles */
-   @import url(floatz.1.0.1/floatz.reset.meyer.css);
-   @import url(floatz.1.0.1/floatz.reset.css);
-   @import url(floatz.1.0.1/floatz.layout.css);
-   @import url(floatz.1.0.1/floatz.layout.center.css);
-   @import url(floatz.1.0.1/floatz.form.css);
-   @import url(floatz.1.0.1/floatz.nav.css);
+   @import url(floatz.1.1.0/floatz.reset.meyer.css);
+   @import url(floatz.1.1.0/floatz.reset.css);
+   @import url(floatz.1.1.0/floatz.layout.css);
+   @import url(floatz.1.1.0/floatz.layout.center.css);
+   @import url(floatz.1.1.0/floatz.form.css);
+   @import url(floatz.1.1.0/floatz.nav.css);
 
    /* Project specific styles */
 }}}
