@@ -52,6 +52,26 @@ Loading the CSS modules into your project is pretty easy. Its only necessary to 
 
 ===Loading production Javascript modules===
 
+To load the javascript modules you have to add the following code to the head section of your HTML page:
+
+{{{
+      <script type="text/javascript" src="styles/floatz.1.1.0/scripts/jquery-1.4.1.min.js"></script>
+      <script type="text/javascript" src="styles/floatz.1.1.0/scripts/floatz.js"></script>
+      <script type="text/javascript" src="scripts/MyProject.js"></script>
+}}}
+
+Then create a project specific script file (e.g. `C:\Projects\MyProject\scripts\MyProject.js`) and add the following lines of code:
+
+{{{
+   /**
+    * Initializes document
+    */
+    $(document).ready( function() {
+      // Initialize floatz
+      floatz.init();
+    });
+}}}
+
 ==Affecting layouts in production mode==
 
 You can affect the kind of page layout that is used, by choosing one of the provided stylesheets depending on the desired layout mode. The following layout modes are supported. Each of them is represented by an according CSS file:
