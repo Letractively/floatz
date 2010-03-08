@@ -1,4 +1,4 @@
-#summary What's inside the different floatz packages
+#summary What's inside floatz
 #labels Featured
 Last Update: March 7th, 2010
 
