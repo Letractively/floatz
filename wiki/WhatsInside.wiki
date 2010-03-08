@@ -144,8 +144,8 @@ The *load order* column indicates the order in which each file has to be loaded.
 
 Same modules as in production package (see above).
 
-==Loading the devlopment kit modules==
-===Loading the development kit CSS modules===
+==Loading devlopment kit modules==
+===Loading development kit CSS modules===
 
 The easiest way to load the CSS modules into your project, is by using the provided floatz.css file, that is added for convenience. It does not contain any CSS styles and is only responsible for loading the CSS modules in the correct order. Use this module within your [GettingStarted#Step_3_-_Prepare project CSS file] to load the entire framework:
 
