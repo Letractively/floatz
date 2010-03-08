@@ -38,7 +38,7 @@ First of all we use the empty layout template from `/floatz.dev.kit-1.1.0/templa
 }}}
 
 =Defining the base layout=
-In this sample we will create a page with the following elements: header, menu, submenu, content and footer. To achive this, create a box for every page element. A box is a `DIV` element assigned with a CSS class named `flz_box`.
+In this sample we will create a page with the following elements: header, menu, submenu, content and footer. To achive this, create a box for every page element. A box is represented as a `DIV` tag, decorated with a CSS class named `flz_box`.
 
 {{{
    <body>
@@ -63,9 +63,10 @@ In this sample we will create a page with the following elements: header, menu, 
    </body>
 }}}
 
-When you save and open the page with your browser, you will see that each box is displayed in a separate line.
+When we save and open the page with our browser, we will see that each box is displayed in a separate line. Well, but that is not exactly what we want, especially for the submenu and content box.
 
 ==Adding layouters==
+
 
 {{{
    <body>
