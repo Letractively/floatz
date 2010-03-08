@@ -1,11 +1,13 @@
 #summary Describes how to layout a page [under construction]
 Last Update: March 7th, 2010
 
+*This page is currently under construction and thus not finished.*
+
    ----
    Note: this wiki page already covers the new version 1.1.0 that's currently in beta stadium.
    ----
 
-<wiki:toc max_depth="1" />
+<wiki:toc max_depth="2" />
 
 =Creating a page=
 First of all we use the empty layout template from `/floatz.dev.kit-1.1.0/templates/layout.empty` as as starting point. For that we copy all its content into a separate working folder (e.g. into `C:\MyProject`). Now we have an empty page template where we can easily start from.
@@ -61,9 +63,32 @@ In this sample we will create a page with the following elements: header, menu, 
    </body>
 }}}
 
+When you save and open the page with your browser, you will see that each box is displayed in a separate line.
+
+==Adding layouters==
+
+{{{
+   <body>
+      <!-- page -->
+      <div id="flz_page">
+         <div class="flz_box">
+            header
+         </div>
+         <div class="flz_box">
+            menu
+         </div>
+         <div class="flz_box flz_l20">
+            submenu
+         </div>
+         <div class="flz_box flz_r80">
+            content
+         </div>
+         <div class="flz_box">
+            footer
+         </div>
+      </div>
+   </body>
+}}}
 
 ==Customizing the page elements==
-
-
-
 =Adding whitespace=
