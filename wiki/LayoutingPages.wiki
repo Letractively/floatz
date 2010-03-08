@@ -92,4 +92,58 @@ When we save and open the page with our browser, we will see that each box is di
 }}}
 
 ==Customizing the page elements==
+
+{{{
+   /* Loads floatz CSS framework */
+   @import url(floatz.1.1.0/floatz.liquid.css);
+
+   /* Project specific styles */
+   body {
+      background: #efefef;
+   }
+
+   .header {
+      background-color: #0070c0;
+      color: #fff;
+   }
+
+   .menu {
+      background-color: #eaeaea;
+   }
+
+   .submenu {
+   }
+
+   .content {
+   }
+
+   .footer {
+      background-color: #0070c0;
+      color: #fff;
+   }
+}}}
+
+{{{
+   <body>
+      <!-- page -->
+      <div id="flz_page">
+         <div class="flz_box header">
+            header
+         </div>
+         <div class="flz_box menu">
+            menu
+         </div>
+         <div class="flz_box flz_l20 submenu">
+            submenu
+         </div>
+         <div class="flz_box flz_r80 content">
+            content
+         </div>
+         <div class="flz_box footer">
+            footer
+         </div>
+      </div>
+   </body>
+}}}
+
 =Adding whitespace=
