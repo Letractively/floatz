@@ -2,6 +2,6 @@
  * Initializes document
  */
 $(document).ready( function() {
-   // Initialize floatz  
+   // Initialize floatz
    floatz.init();
 });

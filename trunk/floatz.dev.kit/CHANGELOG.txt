@@ -154,3 +154,4 @@ NEW      -        Adding \templates for the following layouts (nav,content,sideb
 NEW      -        Adding build.bat to \tools for creating shrinked version of floatz and for updating
                   all templates
 -------------------------------------------------------------------------------------------------------------
+CHANGE   -        Changing all css, js and template files to UTF-8
