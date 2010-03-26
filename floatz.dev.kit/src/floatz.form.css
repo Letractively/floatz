@@ -58,7 +58,6 @@ fieldset {
    border: 1px solid #000;
    padding: 1em;
 }
-
 /**
  * @affected Opera <= 8.5
  */
@@ -271,4 +270,4 @@ img.flz_combifield {
    position: absolute;
    bottom: 0.25em;
    right: 0;
-} 
+}

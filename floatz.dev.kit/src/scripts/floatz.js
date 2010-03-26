@@ -1,7 +1,7 @@
 /**
  * floatz.js
  * 
- * Javascript that progressively enhances browser capabilities in circumstances where 
+ * Javascript that progressively enhances browser capabilities in circumstances where
  * no HTML & CSS only solution is available (e.g. skiplinks).
  *
  * @project       floatz CSS Framework
@@ -57,8 +57,8 @@ var floatz = {
    /**
     * Initialize skip link anchors.
     *
-    * Automatically adds tabindex attribute to every skip link anchor that is 
-    * annotated with class flz_anchor. This is mandatory for setting focus on 
+    * Automatically adds tabindex attribute to every skip link anchor that is
+    * annotated with class flz_anchor. This is mandatory for setting focus on
     * skip link anchors (IE without javascript, Webkit & Opera only javascript)
     *
     * @affected IE, Chrome, Safari (Webkit), Opera
@@ -68,12 +68,12 @@ var floatz = {
    
       // Check if webkit or opera browser
       if ($.browser.webkit || $.browser.opera || $.browser.msie) {
-                 
+         
          // Add tabindex attribute to all elements with class flz_anchor
          $("a.flz_anchor").attr("tabindex", "-1");
          
          // Todo: check if its possible to manipulate anchors without flz_anchor
          // only via ids of the skip links
-      }               
-   }   
+      }
+   }
 };
