@@ -571,6 +571,7 @@ Content of the HTML file:
    </div>
 </div>
 }}}
+*Example 15 - Positioned box*
 
 =Summary=
 What you have learned in this wiki article:
