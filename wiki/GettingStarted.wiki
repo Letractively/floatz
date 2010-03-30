@@ -1,6 +1,6 @@
 #summary All you need to know to get started with floatz
 #labels Featured
-Last Update: March 7th, 2010
+Last Update: March 30th, 2010
 
    ----
    Note: this wiki page covers version 1.1.0.
@@ -124,10 +124,12 @@ Now your project environment is up an running and you can start layouting your w
 
 =Step 4 - Use=
 
-The following information will be provided continuously. So please stay tuned.
+Have a look at the following wiki articles to see how to use floatz:
 
-   * Tutorials
-   * Examples & Showcases
-   * Element Reference
+   * [BasicConcepts]
+   * [ClassReference]
 
-For now, please have a look at the [http://code.google.com/p/floatz/source/browse/#svn/trunk/floatz.dev.kit/templates templates] and the [http://code.google.com/p/floatz/source/browse/#svn/trunk/floatz.dev.kit/tests test pages] that are part of the floatz development kit in version 1.1.0, that is currently in beta phase. They are currently not really sexy, but are showing the usage and some of the basic concepts of floatz. In the [http://code.google.com/p/floatz/source/browse/#svn/trunk/floatz.dev.kit/doc documentation folder] you will furthermore find a [http://floatz.googlecode.com/svn/trunk/floatz.dev.kit/doc/floatz.cheatsheet.pdf cheat sheet] that describes the basic layout elements of floatz.
+You'll find additional information and sources at
+
+   * [http://code.google.com/p/floatz/source/browse/#svn/trunk/floatz.dev.kit/templates Templates]
+   * [http://code.google.com/p/floatz/source/browse/#svn/trunk/floatz.dev.kit/tests Test pages]
