@@ -577,7 +577,7 @@ Content of the HTML file:
 What you have learned in this wiki article:
 
    * Boxes are the basic layout elements in floatz
-   * Boxes are by default as wide as its content
+   * Boxes are by default as wide as their content
    * Use layouters to change the width of boxes
    * Pay attention to the correct layouter orientation (l=left, m=mid, r=right)
    * The sum of all layouters in one row should be 100%
