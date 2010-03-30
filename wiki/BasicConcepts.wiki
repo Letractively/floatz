@@ -588,11 +588,11 @@ What you have learned in this wiki article:
    * Use semantic HTML tags for content instead of boxes when ever possible
    * Boxes are by default as high as their content
    * Boxes are always floating from left to right as long as there is enough space
-   * Clear the float of one subsequent box with flz_clear
-   * Clear the float of all subsequent boxes with BR and flz_clear
+   * Clear the float of one subsequent box with ´flz_clear´
+   * Clear the float of all subsequent boxes with ´BR´ and ´flz_clear´
    * Clear the float of all subsequent boxes with a surrounding box
-   * Use flz_relative to declare a box as container for absolute positioned elements
-   * Boxes can also be absolute positioned themself
+   * Use ´flz_relative´ to declare a box as container for absolute positioned elements
+   * Boxes can also be absolute positioned themselves
 
 =Further readings=
 The following wiki articles contain further information about how to use the basic concepts in practice:
