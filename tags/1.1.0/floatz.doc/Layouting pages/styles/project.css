@@ -1,0 +1,7 @@
+/* Loads floatz CSS framework */
+@import url(floatz.1.1.0/floatz.liquid.css);
+
+/* Project specific styles */
+body {
+   background: #efefef;
+}
