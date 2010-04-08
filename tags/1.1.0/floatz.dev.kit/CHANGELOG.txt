@@ -1,0 +1,157 @@
+VERSION 1.0.1
+=============
+
+floatz.form.css
+* CHANGED Replacing all styles that where directly bound to input, select and textarea (e.g. input.flz_mandatory to .flz_mandatory)
+* CHANGED Reworking file and section comments
+ 
+floatz.layout.css
+* CHANGED Removing duplication of .flz_clear
+* CHANGED Reworking file and section comments
+
+floatz.layout.center.css
+* CHANGED Reworking file and section comments
+
+floatz.layout.liquid.css
+* CHANGED Reworking file and section comments
+
+floatz.layout.nav.css
+* CHANGED Reworking file and section comments
+
+floatz.layout.reset.css
+* CHANGED Reworking file and section comments
+
+floatz.layout.reset.meyer.css
+* CHANGED Reworking file and section comments
+
+VERSION 1.1.0
+=============
+
+floatz.form.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+CHANGE   -        Adding border to flz_textbox, select and textarea to get same baseline of visual appearance
+-------------------------------------------------------------------------------------------------------------
+FIX      7        Different FIELDSET handling in floatz for IE 5.5,6,7 does not work with IE8
+                  Fixed by adding specific corrections with IE8 hack
+-------------------------------------------------------------------------------------------------------------
+FIX      12       Image in flz_combifield is not correctly aligned in all spacers
+                  Setting padding-top only for labels and inputs (see comment in issue tracker)
+-------------------------------------------------------------------------------------------------------------
+FIX      9        Button height in IE is different to other browsers
+                  Adjusting visual appearance for all browsers. Using browser specific hacks for IE.
+-------------------------------------------------------------------------------------------------------------                  
+FIX      6        Hidden dialog and suggestion boxes in GWT because of z-index.
+                  Removing all occurences of z-index.
+-------------------------------------------------------------------------------------------------------------
+CHANGE   -        Renaming flz_blockform to flz_form
+                  Removing (unnecessary) flz_checkbox, flz_radio
+                  Adding CSS2 selectors for input fields (all browsers but IE5,6)
+                  Leaving flz_inline only for IE 5,6 support and when label comes before radio, checkbox
+-------------------------------------------------------------------------------------------------------------
+
+floatz.layout.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+FIX      6        Hidden dialog and suggestion boxes in GWT because of z-index.
+                  Removing all occurences of z-index.
+-------------------------------------------------------------------------------------------------------------
+CHANGE   -        Adding margin-right: -5px for flz_r10 (otherwise box wraps to next line, as observed in
+                  tests/test.layout.layouter.html. See 
+                  http://jacksleight.com/old/blog/2008/01/20/ie-floated-columns-totaling-100-percent-bug
+-------------------------------------------------------------------------------------------------------------
+CHANGE   -        Adding overflow: hidden to flz_page for IE5, 6, 7 that is caused by corrections of width
+                  to solve sub-pixel-bug.
+-------------------------------------------------------------------------------------------------------------
+
+floatz.layout.center.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+FIX      6        Hidden dialog and suggestion boxes in GWT because of z-index.
+                  Removing all occurences of z-index.
+-------------------------------------------------------------------------------------------------------------
+
+floatz.layout.liquid.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+FIX      6        Hidden dialog and suggestion boxes in GWT because of z-index.
+                  Removing all occurences of z-index.
+-------------------------------------------------------------------------------------------------------------
+
+floatz.nav.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+CHANGE   1        Usin CSS sprite image for flz_tabmenu
+                  Removing all images and replacing it with tab_menu.gif sprite image. Changing name of 
+                  flz_tabmenu to flz_htabmenu and preparing it to use CSS sprite image.
+-------------------------------------------------------------------------------------------------------------
+CHANGE   13       Use flz_selected only for LI tags
+                  Changing styles to use flz_selected with LI an not with A for consistency with 
+                  flz_htabmenu. Adding workaround to support nested child selector in IE 5,6 for flz_vmenu.
+-------------------------------------------------------------------------------------------------------------
+FIX      6        Hidden dialog and suggestion boxes in GWT because of z-index.
+                  Removing all occurences of z-index.
+-------------------------------------------------------------------------------------------------------------
+NEW      15       Add skip link navigation for improving accessibility
+                  Added .flz_skipnav as skiplink container, .flz_skiplink for skiplinks, .flz_anchor for
+                  skiplink targets. All hyperlinks with flz_skiplink are only visible to users of screen
+                  readers. If they get keyboard focus (e.g. navigation via TAB key) they also get visible
+                  for screen users.
+-------------------------------------------------------------------------------------------------------------                  
+CHANGE   1        Renaming sprite image for flz_htabmenu.
+-------------------------------------------------------------------------------------------------------------                  
+NEW      2        Adding flz_htabmenu_bottom for bottom aligned horizontal tabmenu.
+-------------------------------------------------------------------------------------------------------------
+CHANGE   -        Changing top/bottom margin/padding of flz_hmenu, flz_vmenu, flz_htabmenu, 
+                  flz_htabmenu_bottom from 0.25 to 0.5em
+-------------------------------------------------------------------------------------------------------------                  
+
+floatz.reset.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+CHANGE   -        Text of input field slips under visible area at the bottom of the input field
+                  Removing line-height and adding same font-size as in meyer CSS for global defaults on
+-------------------------------------------------------------------------------------------------------------
+CHANGE   -        Removing style for address that overrides meyer reset
+-------------------------------------------------------------------------------------------------------------
+CHANGE   -        Activating outline for a:focus (that was originally reset in meyer css) for accessibiliy & 
+                  usability reasons.Each navigable element should be highlighted if it gets keyboard focus.
+-------------------------------------------------------------------------------------------------------------
+CHANGE   -        Adding "Arial" as common font for all elements.
+-------------------------------------------------------------------------------------------------------------
+
+floatz.reset.meyer.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+FIX      5        Text of input field slips under visible area at the bottom of the input field
+                  Changed line-height: 1 to auto due to cropped labels (e.g. y, p, j, ...)
+-------------------------------------------------------------------------------------------------------------
+
+floatz.dev.kit
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+NEW      -        Adding test diverse pages to \tests
+-------------------------------------------------------------------------------------------------------------
+NEW      -        Adding debug CSS floatz.layout.debug.css to \src\debug
+-------------------------------------------------------------------------------------------------------------
+NEW      15       Add skip link for improving accessibility
+                  Adding src/scripts/floatz.js and src/scripts/jquery1.4.1.js to floatz
+                  This is the only available solution to move keyboard focus in Chrome, Safari and Opera
+-------------------------------------------------------------------------------------------------------------
+NEW      3        Combine production CSS files to only one CSS file and shrink remove CR/LFs
+                  Adding shrink tool to tools/shrink and profiles to build one-file-versions of floatz.
+-------------------------------------------------------------------------------------------------------------
+NEW      -        Adding \templates for the following layouts (nav,content,sidebar) 010, 011, 110, 111
+-------------------------------------------------------------------------------------------------------------
+NEW      -        Adding build.bat to \tools for creating shrinked version of floatz and for updating
+                  all templates
+-------------------------------------------------------------------------------------------------------------
+CHANGE   -        Changing all css, js and template files to UTF-8
