@@ -603,6 +603,6 @@ What you have learned in this wiki article:
 ====Further readings====
 The following wiki articles contain further information about how to use the basic concepts in practice:
 
-   * [LayoutingPages]
-   * [LayoutingContent]
-   * [LayoutingForms]
+   * [LayoutingPages Layouting Pages]
+   * [LayoutingContent Layouting Content]
+   * [LayoutingForms Layouting Forms]
