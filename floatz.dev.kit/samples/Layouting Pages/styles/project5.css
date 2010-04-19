@@ -1,0 +1,42 @@
+/* Loads floatz CSS framework */
+@import url(floatz-1.1.0/floatz.liquid.css);
+
+/* Project specific styles */
+* {
+   font-family: "Verdana";
+   font-size: 100%;
+}
+
+body {
+   background: #eeeccc;
+   font-family: "Verdana";
+}
+
+#flz_page {
+   background: #cccccc;
+}
+
+.header {
+   background: #aaaccc;
+   height: 5em;
+}
+
+.menu {
+   background: #bbbccc;
+   height: 2em;
+}
+
+.submenu {
+   background: inherit;
+   width: 20em;
+}
+
+.content {
+   background: inherit;
+   margin-left: 20em;
+}
+
+.footer {
+   background: #dddccc;
+   height: 2em;
+}
