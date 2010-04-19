@@ -43,6 +43,7 @@ The following sample shows the default behaviour of boxes. Each box is shown in 
 </div>
 }}}
 *Example 2 - Default boxes*
+([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_01.html Live Demo])
 
 ==Layouters==
 
