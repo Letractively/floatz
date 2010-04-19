@@ -365,7 +365,7 @@ Content of the HTML file:
    </div>
 </div>
 }}}
-*Example 11 - Nesting boxes*([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_11.html Live Demo])
+*Example 11 - Nesting boxes* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_11.html Live Demo])
 
 ==Clearing the float of boxes==
 When working with boxes, you will sometimes run into situations where you need a way to abort the default float of a box. To achive this, floatz provides a marker CSS class named `flz_clear`, that must be attached to the box that should float into the next row, regardless if there is enough space beside the preceding box.
