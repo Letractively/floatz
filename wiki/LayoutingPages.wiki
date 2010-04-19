@@ -1,5 +1,5 @@
 #summary How to layout pages [UNDER CONSTRUCTION]
-Last Update: March 10th, 2010
+Last Update: April 19th, 2010
 
 *This page is currently under construction and thus not finished.*
 
@@ -7,4 +7,124 @@ Last Update: March 10th, 2010
    Note: this wiki page covers version 1.1.0.
    ----
 
+*Assumed readings*
+
+It is recommended to read the following articles before starting with the current wiki article:
+
+   * [GettingStarted Getting started]
+   * [BasicConcepts Basic Concepts]
+
+*Table of content*
 <wiki:toc max_depth="2" />
+
+=Defining the page structure=
+First of all we have to define the basic structure of our page. We start with the page container. The page container is a `DIV` element that is decorated with the CSS id `flz_page` and must be the first element within the `BODY` tag. Within the page container we create a `DIV` element for every structural element of the page: a header, a horizontal menu, a vertical submenu, a content container and a footer. Each of them is marked with the CSS class `flz_box`. Because the submenu and the content container should appear side by side, we add layouter CSS classes depending on the desired orientation and width. In our case: a left oriented layouter with 20% for the submenu and a right oriented layouter with 80% for the content container. Finally we decorate the footer with the layouter `flz_r100`. This is necessary to solve a bug in Internet Explorer (see [BrowserHacks Browser Hacks] for more details).
+
+{{{
+<body>
+   <!-- page -->
+   <div id="flz_page">
+      <!-- header -->
+      <div class="flz_box">
+         Header
+      </div>
+      <!-- menu -->
+      <div class="flz_box">
+         Menu
+      </div>
+      <!-- submenu -->
+      <div class="flz_box flz_l20">
+         Submenu
+      </div>
+      <!-- content -->
+      <div class="flz_box flz_r80">
+         Content
+      </div>
+      <!-- footer -->
+      <div class="flz_box flz_r100">
+         Footer
+      </div>
+   </div>
+</body>
+}}}
+*Example 1 - Basic struture of the page ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_01.html Live Demo])*
+
+=Customizing the page elements=
+
+*Code of the CSS file*
+{{{
+/* Project specific styles */
+body {
+   background: #eeeccc;
+}
+
+#flz_page {
+   background: #cccccc;
+}
+
+.header {
+   background: #aaaccc;
+   height: 5em;
+}
+
+.menu {
+   background: #bbbccc;
+   height: 2em;
+}
+
+.submenu {
+   background: inherit;
+}
+
+.content {
+   background: inherit;
+}
+
+.footer {
+   background: #dddccc;
+   height: 2em;
+}
+}}}
+
+*Code of the HTML file*
+{{{
+<body>
+   <!-- page -->
+   <div id="flz_page">
+      <!-- header -->
+      <div class="flz_box header">
+         Header
+      </div>
+      <!-- menu -->
+      <div class="flz_box menu">
+         Menu
+      </div>
+      <!-- submenu -->
+      <div class="flz_box flz_l20 submenu">
+         Submenu
+      </div>
+      <!-- content -->
+      <div class="flz_box flz_r80 content">
+         Content
+      </div>
+      <!-- footer -->
+      <div class="flz_box flz_r100 footer">
+         Footer
+      </div>
+   </div>
+</body>
+}}}
+
+*Example 2 - Customizing the page elements ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_02.html Live Demo])*
+
+
+=Summary=
+What you have learned in this wiki article:
+
+   * ...
+
+====Further readings====
+The following wiki articles contain further information about how to use the basic concepts in practice:
+
+   * [LayoutingContent Layouting Content]
+   * [LayoutingForms Layouting Forms]
