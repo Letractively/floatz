@@ -104,6 +104,87 @@ To change that we add layouters to the submenu and the content container, becaus
 *Example 3 - Adding layouters* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_03.html Live Demo])
 
 ==Customizing the page elements==
+As you can see in the previous example, floatz does not dictate you any kind of class names for your page elements. All you need are boxes and layouters. Next we create our own project specific CSS classes for each page element and attach them to the class attribute of the appropriate boxes in the HTML markup. 
+
+Now we are able to do some customization of the page elements using CSS. In this example we add background colors for the `BODY` (viewport background), the page container and all of our boxes. We also set `em` based heights for the header, the menu and the footer, which lets our layout resize proportional to the used font size.
+
+Especially the submenu and the context box should resize with their content, thus do not get any height declarations. To see this in action we add some dummy text to the content container.
+
+*CSS code*
+{{{
+/* Project specific styles */
+body {
+   background: #eeeccc;
+}
+
+#flz_page {
+   background: #cccccc;
+}
+
+.header {
+   background: #aaaccc;
+   height: 5em;
+}
+
+.menu {
+   background: #bbbccc;
+   height: 2em;
+}
+
+.submenu {
+   background: inherit;
+}
+
+.content {
+   background: inherit;
+}
+
+.footer {
+   background: #dddccc;
+   height: 2em;
+}
+}}}
+
+*HTML code*
+{{{
+<!-- page -->
+<div id="flz_page">
+   <!-- header -->
+   <div class="flz_box header">
+      Header
+   </div>
+   <!-- menu -->
+   <div class="flz_box menu">
+       Menu
+   </div>
+   <!-- submenu -->
+   <div class="flz_box flz_l20 submenu">
+      Submenu
+   </div>
+   <!-- content -->
+   <div class="flz_box flz_r80 content">
+      <div class="flz_spacer">
+         <h1>Header 1</h1>
+         <p>
+            Lorem ipsum dolor sit amet ...
+         </p>
+         <h2>Header 2</h2>
+         <p>
+            Lorem ipsum dolor sit amet ...
+         </p>
+         <h2>Header 2</h2>
+         <p>
+            Lorem ipsum dolor sit amet ...
+         </p>
+      </div>
+   </div>
+   <!-- footer -->
+   <div class="flz_box flz_r100 footer">
+      Footer
+   </div>
+</div>
+}}}
+*Example 4 - Customizing the page elements* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_04.html Live Demo])
 
 ==Changing the layout mode==
 
