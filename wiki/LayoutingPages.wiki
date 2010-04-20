@@ -186,7 +186,7 @@ body {
 }}}
 *Example 4 - Customizing the page elements* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_04.html Live Demo])
 
-The custom CSS classes for the page elements also give us the possibility to style default HTML tags in the context of specific layout elements (contextual styling). In our case, we add some margins to the header and paragraph tags for an instance.
+The custom CSS classes for the page elements also give us the possibility to style default HTML tags in the context of specific layout elements (contextual styling). In our case, we add some margins to the header and paragraph tags within the content container as an example.
 
 *CSS Code*
 {{{
