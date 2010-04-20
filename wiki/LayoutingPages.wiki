@@ -17,106 +17,101 @@ It is recommended to read the following articles before starting with the curren
 *Table of content*
 <wiki:toc max_depth="2" />
 
-=Defining the page structure=
-First of all we have to define the basic structure of our page. We start with the page container. The page container is a `DIV` element that is decorated with the CSS id `flz_page` and must be the first element within the `BODY` tag. Within the page container we create a `DIV` element for every structural element of the page: a header, a horizontal menu, a vertical submenu, a content container and a footer. Each of them is marked with the CSS class `flz_box`. Because the submenu and the content container should appear side by side, we add layouter CSS classes depending on the desired orientation and width. In our case: a left oriented layouter with 20% for the submenu and a right oriented layouter with 80% for the content container. Finally we decorate the footer with the layouter `flz_r100`. This is necessary to solve a bug in Internet Explorer (see [BrowserHacks Browser Hacks] for more details).
+=Creating the basic page structure=
+Layouting pages is really easy and straight forward in floatz. The following wiki article describes how to set up a basic page layout, customize the page elements, change the layout mode of the page and explains more advanced techniques to mix different layout modes.
 
+==Defining the page container==
+First of all we need a page container. The page container must be the first element within the `BODY` of the HTML page. As you can see in the code example, the page container is a `DIV` element with the CSS id `flz_page`. Using an id assures, that the page container can occur only once on the HTML page. While the `BODY` element is used as background for the viewport of the browser, the page defines the visual edges of our page. As we will see later in this article, the width of the page container is influenced by the layout mode that is used. In this article we start with a fixed layout.
+
+*CSS Code*
 {{{
-<body>
-   <!-- page -->
-   <div id="flz_page">
-      <!-- header -->
-      <div class="flz_box">
-         Header
-      </div>
-      <!-- menu -->
-      <div class="flz_box">
-         Menu
-      </div>
-      <!-- submenu -->
-      <div class="flz_box flz_l20">
-         Submenu
-      </div>
-      <!-- content -->
-      <div class="flz_box flz_r80">
-         Content
-      </div>
-      <!-- footer -->
-      <div class="flz_box flz_r100">
-         Footer
-      </div>
-   </div>
-</body>
-}}}
-*Example 1 - Basic struture of the page ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_01.html Live Demo])*
+/* Loads floatz CSS framework */
+@import url(floatz-1.1.0/floatz.fixed.css);
 
-=Customizing the page elements=
-
-*Code of the CSS file*
-{{{
 /* Project specific styles */
-body {
-   background: #eeeccc;
-}
-
-#flz_page {
-   background: #cccccc;
-}
-
-.header {
-   background: #aaaccc;
-   height: 5em;
-}
-
-.menu {
-   background: #bbbccc;
-   height: 2em;
-}
-
-.submenu {
-   background: inherit;
-}
-
-.content {
-   background: inherit;
-}
-
-.footer {
-   background: #dddccc;
-   height: 2em;
-}
 }}}
 
-*Code of the HTML file*
+*HTML code*
 {{{
 <body>
    <!-- page -->
    <div id="flz_page">
-      <!-- header -->
-      <div class="flz_box header">
-         Header
-      </div>
-      <!-- menu -->
-      <div class="flz_box menu">
-         Menu
-      </div>
-      <!-- submenu -->
-      <div class="flz_box flz_l20 submenu">
-         Submenu
-      </div>
-      <!-- content -->
-      <div class="flz_box flz_r80 content">
-         Content
-      </div>
-      <!-- footer -->
-      <div class="flz_box flz_r100 footer">
-         Footer
-      </div>
+      page
    </div>
 </body>
 }}}
+*Example 1 - Defining the page container*
 
-*Example 2 - Customizing the page elements ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_02.html Live Demo])*
+==Defining the basic page elements==
+Next we want to create a classic page layout structure with a header, a horizontal menu, a vertical submenu on the left, a content container on the right and a footer. Therefor we add a box for each of the page´s layout elements within the page container. A box is a `DIV` element with an associated CSS class named `flz_box`.
 
+{{{
+<!-- page -->
+<div id="flz_page">
+   <!-- header -->
+   <div class="flz_box">
+      Header
+   </div>
+   <!-- menu -->
+   <div class="flz_box">
+      Menu
+   </div>
+   <!-- submenu -->
+   <div class="flz_box">
+      Submenu
+   </div>
+   <!-- content -->
+   <div class="flz_box">
+      Content
+   </div>
+   <!-- footer -->
+   <div class="flz_box">
+      Footer
+   </div>
+</div>
+}}}
+*Example 2 - Defining the basic page elements*
+
+As you can see when you run the example, each of the boxes is shown in a separate row, because each box element by default has a width of 100%.
+
+Now we add layouters to the submenu and the content container, because they should appear side by side. We use a left oriented layouter with a width of 20% for the submenu and a right oriented layouter with a width of 80% for the content container. To fix a bug in Internet Explorer, it is also necessary to add a right oriented layouter to the last box element in a sequence of boxes on the same level (see [BrowserHacks Browser Hacks] for more details). In our case the footer is the last box in the sequence and thus must be marked with `flz_r100`.
+
+{{{
+<!-- page -->
+<div id="flz_page">
+   <!-- header -->
+   <div class="flz_box">
+      Header
+   </div>
+   <!-- menu -->
+   <div class="flz_box">
+      Menu
+   </div>
+   <!-- submenu -->
+   <div class="flz_box flz_l20">
+      Submenu
+   </div>
+   <!-- content -->
+   <div class="flz_box flz_r80">
+      Content
+   </div>
+   <!-- footer -->
+   <div class="flz_box flz_r100">
+      Footer
+   </div>
+</div>
+}}}
+*Example 3 - Adding layouters*
+
+==Customizing the page elements==
+
+==Changing the layout mode==
+
+==Adding min-width containers==
+
+=Advanced topics=
+
+==Mixing layout modes==
 
 =Summary=
 What you have learned in this wiki article:
