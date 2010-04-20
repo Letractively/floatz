@@ -2,14 +2,8 @@
 @import url(floatz-1.1.0/floatz.fixed.css);
 
 /* Project specific styles */
-* {
-   font-family: "Verdana";
-   font-size: 100%;
-}
-
 body {
    background: #eeeccc;
-   font-family: "Verdana";
 }
 
 #flz_page {
@@ -32,6 +26,12 @@ body {
 
 .content {
    background: inherit;
+}
+.content h1, h2 {
+   margin-bottom: 0.5em;
+}
+.content p {
+   margin-bottom: 1em;
 }
 
 .footer {
