@@ -191,6 +191,7 @@ The custom CSS classes for the page elements also give us the possibility to sty
 *CSS Code*
 {{{
 ...
+
 .content {
    background: inherit;
 }
@@ -199,6 +200,7 @@ The custom CSS classes for the page elements also give us the possibility to sty
 }
 .content p {
    margin-bottom: 1em;
+
 ...
 }
 }}}
