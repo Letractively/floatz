@@ -40,7 +40,7 @@ First of all we need a page container. The page container must be the first elem
    </div>
 </body>
 }}}
-*Example 1 - Defining the page container*
+*Example 1 - Defining the page container* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_01.html Live Demo])
 
 ==Defining the basic page elements==
 Next we want to create a classic page layout structure with a header, a horizontal menu, a vertical submenu on the left, a content container on the right and a footer. Therefor we add a box for each of the page´s layout elements within the page container. A box is a `DIV` element with an associated CSS class named `flz_box`.
@@ -70,9 +70,9 @@ Next we want to create a classic page layout structure with a header, a horizont
    </div>
 </div>
 }}}
-*Example 2 - Defining the basic page elements*
+*Example 2 - Defining the basic page elements* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_02.html Live Demo])
 
-As you can see when you run the example, each of the boxes is shown in a separate row, because each box element by default has a width of 100%.
+When you run the sample code and look at the result, you will see that each of the boxes is shown in a separate row, because each box element has a width of 100% by default.
 
 Now we add layouters to the submenu and the content container, because they should appear side by side. We use a left oriented layouter with a width of 20% for the submenu and a right oriented layouter with a width of 80% for the content container. To fix a bug in Internet Explorer, it is also necessary to add a right oriented layouter to the last box element in a sequence of boxes on the same level (see [BrowserHacks Browser Hacks] for more details). In our case the footer is the last box in the sequence and thus must be marked with `flz_r100`.
 
