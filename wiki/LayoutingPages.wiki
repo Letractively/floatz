@@ -208,7 +208,7 @@ The custom CSS classes for the page elements also give us the possibility to sty
 *Example 5 - Contextual customization* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_05.html Live Demo])
 
 ==Changing the layout mode==
-Now we are finished with our basic page layout. But what if we want to change the layout afterwards? Nothing easier than that. As long as we follow the [BasicConcepts basic concepts], floatz gives us the flexibility to switch to another layout mode of already finished pages, without any change to our HTML markup. In the current example, we started with a fixed layout. To change to e.g. a centered (and fixed) layout mode, we only have to change the `@import` statement in our project CSS file. 
+Now we are finished with our basic page layout. But what if we want to change the layout afterwards? Nothing easier than that. As long as we follow the [BasicConcepts basic concepts], floatz gives us the flexibility to switch to another layout mode for already finished pages, without any change to our HTML markup. In the current example, we started with a fixed layout. To change to e.g. a centered (and fixed) layout mode, we only have to change the `@import` statement in our project CSS file. 
 
 *CSS code*
 {{{
