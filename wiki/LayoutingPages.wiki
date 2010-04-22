@@ -263,6 +263,8 @@ There may be situations, where we need one or more layout container with a fixed
 
 First we are fixing the width of our submenu container by adding a width of 20em to its CSS class. Then we are adding a left margin of 20em to the content containers CSS class. Finally we remove `flz_box` and `flz_r80` from the content container in our HTML markup. That causes the content container to return to the document flow instead of floating to the right side of the submenu container. Because we have removed the layouter, the content container becomes a simple DIV block element with a width of 100%. The submenu floats over the content container overlaps the left margin of the content container.
 
+When you resize the browser window again now, you will see that the layout is still liquid, but the submenu no longer resizes.
+
 *CSS code*
 ...
 
@@ -289,7 +291,7 @@ First we are fixing the width of our submenu container by adding a width of 20em
    Submenu
 </div>
 <!-- content -->
-<div class="flz_r80 content">
+<div class="content">
 
    ...
 
@@ -298,8 +300,6 @@ First we are fixing the width of our submenu container by adding a width of 20em
 ...
 }}}
 *Example 9 - Mixing fixed and liquid layout* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_09.html Live Demo])
-
-When you resize the browser window again now, you will see that the layout is still liquid, but the submenu no longer resizes.
 
 =Summary=
 What you have learned in this wiki article:
