@@ -74,7 +74,7 @@ Next we want to create a classic page layout structure with a header, a horizont
 
 When you run the sample code and look at the result, you will see that each of the boxes is shown in a separate row. The reason is that a box element has a width of 100% by default.
 
-To change that we add layouters to the submenu and the content container, because they should appear side by side. We use a left oriented layouter with a width of 20% (`flz_l20`) for the submenu and a right oriented layouter with a width of 80% (`flz_r80`) for the content container. To fix a bug in Internet Explorer, it is also necessary to add a right oriented layouter to the last box element in a sequence of boxes on the same level (see [BrowserHacks Browser Hacks] for more details). In our case the footer is the last box in the sequence and thus must be marked with `flz_r100`. floatz ships with a list of predefined layouters to support most common layouts (see [ClassReference] Class Reference).
+To change that we add layouters to the submenu and the content container, because they should appear side by side. We use a left oriented layouter with a width of 20% (`flz_l20`) for the submenu and a right oriented layouter with a width of 80% (`flz_r80`) for the content container. To fix a bug in Internet Explorer, it is also necessary to add a right oriented layouter to the last box element in a sequence of boxes on the same level (see [BrowserHacks Browser Hacks] for more details). In our case the footer is the last box in the sequence and thus must be marked with `flz_r100`. floatz ships with a list of predefined layouters to support most common layouts (see [ClassReference Class Reference]).
 
 {{{
 <!-- page -->
