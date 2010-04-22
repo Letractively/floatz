@@ -253,7 +253,7 @@ To avoid problems with floating elements, especially with too small viewports in
 }}}
 *Example 8 - Adding extra markup to support min-width in IE6* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_08.html Live Demo])
 
-Because the extra min-width containers have no negative impact on the other browsers you are on the save side, if you generally add the min-width containers to your pages in a liquid layout scenario.
+The extra min-width containers have no negative impact on the other browsers, so you are on the save side, if you generally add the min-width containers to your pages in a liquid layout scenario.
 
 =Advanced topics=
 
