@@ -301,6 +301,21 @@ When you resize the browser window again now, you will see that the layout is st
 }}}
 *Example 9 - Mixing fixed and liquid layout* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_09.html Live Demo])
 
+==Mixing centered and liquid layout==
+The centered layout mode of floatz uses a fixed width design. If you want to have a liquid layout that is centered, use the CSS files for liquid layout mode and add a left and right margin to the `body` tag in your CSS file.
+
+{{{
+/* Loads floatz CSS framework */
+@import url(floatz-1.1.0/floatz.liquid.css);
+
+/* Project specific styles */
+body {
+   margin: 0 10em;
+}
+}}}
+
+To simplify matters, the [[http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_10.html Live Demo]] puts everything together: a centered design that mixes fixed and liquid layout containers.
+
 =Summary=
 What you have learned in this wiki article:
 
