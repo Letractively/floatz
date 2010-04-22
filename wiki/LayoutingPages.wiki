@@ -21,7 +21,7 @@ It is recommended to read the following articles before starting with the curren
 Layouting pages is really easy and straightforward in floatz. The following wiki article describes how to set up a basic page layout, customize the page elements, change the layout mode of the page and explains more advanced techniques like mixing different layout modes.
 
 ==Defining the page container==
-First of all we need a page container. The page container must be the first element within the `BODY` of the HTML page. As you can see in the code example, the page container is a `DIV` element with the CSS id `flz_page`. Using an id assures, that the page container can occur only once on the HTML page. While the `BODY` element is used as background for the viewport of the browser, the page defines the visual edges of our page. As we will see later in this article, the width of the page container is influenced by the layout mode that is used. In this article we start with a fixed layout.
+First of all we need a page container. The page container must be the first element within the `BODY` of the HTML page. As you can see in the code example, the page container is a `DIV` element with the CSS id `flz_page`. Using an id assures, that the page container can occur only once on the HTML page. While the `BODY` element is used as background for the viewport of the browser, the page container defines the visual edges of our page. As we will see later in this article, the width of the page container is influenced by the layout mode that is used. In this article we start with a fixed layout.
 
 *CSS Code*
 {{{
