@@ -18,7 +18,7 @@ It is recommended to read the following articles before starting with the curren
 This wiki page contains basic information about the key elements and concepts of floatz. It also covers some advanced topics in conjunction with boxes, that are also worth to know to use them in your projects.
 
 ==Page==
-The *page* is the underlying container for your page layouts. It is implemented as a `DIV` element and is decorated with a CSS id named `flz_page`. The page container is the first element within the `BODY` tag and can occur only once on a web page. All your markup must be put into the page container. The page container is also used to define if the web page should appear in a fixed, a centered or a liquid layout. See [LayoutingPages] for more information. The following sample shows the use of the page container. 
+The *page* is the underlying container for your page layouts. It is implemented as a `DIV` element and is decorated with a CSS id named `flz_page`. The page container is the first element within the `BODY` tag and can occur only once on a web page. All your markup must be put into the page container. The page container is also used to define if the web page should appear in a fixed, a centered or a liquid layout. See [LayoutingPages Layouting Pages] for more information. The following sample shows the use of the page container. 
 
 {{{
 <body>
@@ -49,7 +49,7 @@ The following sample shows the default behaviour of boxes. Each box is shown in 
 To change the width and the adjustment of boxes, floatz uses so called *layouters*. Layouters are marker classes and are attached to boxes. The name of a layouter contains information about the orientation (l=left, m=mid, r=right) and the width (in%) of its underlying box. 
 
    ----
-   In contrast to the width declaration, the orientation is only an information and does not affect the appearance of the underlying box. Boxes are always left floating, unless you specify something different during customization. But it is very important to use the correct orientations, because they also fix some issues in conjunction with Internet Explorer (see [BrowserHacks] for more details).
+   In contrast to the width declaration, the orientation is only an information and does not affect the appearance of the underlying box. Boxes are always left floating, unless you specify something different during customization. But it is very important to use the correct orientations, because they also fix some issues in conjunction with Internet Explorer (see [BrowserHacks Browser Hacks] for more details).
    ----
 
 To see the layouters in action, lets add some to the boxes in the previous example. A left oriented layouter to the box that appears on the left side and a right oriented for the box on the right side, each with a width of 50%. The example also shows the float behaviour of the boxes. Because the first box now takes only half of the parent containers width, the second box floats to its right edge into the same row.
@@ -64,7 +64,7 @@ To see the layouters in action, lets add some to the boxes in the previous examp
 }}}
 *Example 3 - Boxes and layouters* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_03.html Live Demo])
 
-You can combine as many layouters you need to gain your desired layout. floatz ships with a set of predefined layouters for the most common layout scenarios (see [ClassReference] for an overview). If you need additional layouters for special cases, have a look at the original layouter CSS and build your own in your project stylesheet. You only have to take care that you consider also the bugfixes for Internet Explorer to make them work in all browsers.
+You can combine as many layouters you need to gain your desired layout. floatz ships with a set of predefined layouters for the most common layout scenarios (see [ClassReference Class Reference] for an overview). If you need additional layouters for special cases, have a look at the original layouter CSS and build your own in your project stylesheet. You only have to take care that you consider also the bugfixes for Internet Explorer to make them work in all browsers.
 
 The following example uses a four column layout, where each box has a width of 25%. You see that the first box is attached with a left oriented layouter, followed by two mid oriented boxes and finally a box with a right oriented layouter.
 
@@ -87,7 +87,7 @@ The following example uses a four column layout, where each box has a width of 2
 When you attach layouters to boxes, you should take care that the sum of all layouters results in 100%. Otherwise the chance is high that the boxes will not float as you would expect. Means: if the available space after a box in a row is sufficient, the subsequent box floats into the same row, if not it floats into the next row to left edge of the parent container. In some cases it is necessary to influence the default float. The advanced topic chapter below covers how to clear the float of boxes.
 
 ==Spacers==
-Now we are getting to the last of the basic concepts of floatz: *Spacers*. They are used to add whitespace to boxes. A spacer is implemented as a `DIV` element with an attached spacer CSS class (see [ClassReference] for an overview) and is nested within a box. Each spacer has a default padding of 0.5em to 1em, depending on the kind of spacer that is used. The following example shows the use of a basic spacer that adds a padding of 1em to the top, left, bottom and right edge of the box.
+Now we are getting to the last of the basic concepts of floatz: *Spacers*. They are used to add whitespace to boxes. A spacer is implemented as a `DIV` element with an attached spacer CSS class (see [ClassReference Class Reference] for an overview) and is nested within a box. Each spacer has a default padding of 0.5em to 1em, depending on the kind of spacer that is used. The following example shows the use of a basic spacer that adds a padding of 1em to the top, left, bottom and right edge of the box.
 
 {{{
 <div class="flz_box">
@@ -203,7 +203,7 @@ The last example shows a more complex scenario with multi rows / multi columns w
 *Example 8 - Boxes and spacers, multi row / multi column scenario* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_08.html Live Demo])
 
 ==Subspacers==
-To support also scenarios of nested boxes with spacers, floatz offers a set of predefined subspacers for the same single / multi row / col scenarios as for spacers - see [ClassReference] for an overview. The following sample shows such a nested scenario. The first box contains already a spacer with whitespace. To avoid doubling the whitespace in the nested boxes, lets use subspacers instead.
+To support also scenarios of nested boxes with spacers, floatz offers a set of predefined subspacers for the same single / multi row / col scenarios as for spacers - see [ClassReference Class Reference] for an overview. The following sample shows such a nested scenario. The first box contains already a spacer with whitespace. To avoid doubling the whitespace in the nested boxes, lets use subspacers instead.
 
 {{{
 <div class="flz_box">
@@ -536,7 +536,7 @@ Content of the HTML file:
 }}}
 *Example 14 - Box as positioning container* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_14.html Live Demo])
 
-Instead of adding `flz_relative` to the box, you can add the necessary style (`position: relative;`) directly to the box class as well. The page container of floatz for an instance, is by default a container for absolute positioned elements. floatz provides some elements that are by default absolut positioned - see [ClassReference] for details.
+Instead of adding `flz_relative` to the box, you can add the necessary style (`position: relative;`) directly to the box class as well. The page container of floatz for an instance, is by default a container for absolute positioned elements. floatz provides some elements that are by default absolut positioned - see [ClassReference Class Reference] for details.
 
 ==Positioning boxes==
 As you have seen before, a box can act as container for absolute positioned markup. But it is also possible to absolute position a box itself. The next example shows how a box can be absolute positioned within a relative positioned container.
