@@ -330,7 +330,7 @@ What you have learned in this wiki article:
    * Centered, fixed and liquid layouts can be mixed together
 
 ====Further readings====
-The following wiki articles contain further information about how to add content to your your basic page layout:
+The following wiki articles contain further information about how to add content to your basic page layout:
 
    * [LayoutingContent Layouting Content]
    * [LayoutingForms Layouting Forms]
