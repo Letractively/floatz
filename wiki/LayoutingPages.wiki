@@ -322,7 +322,7 @@ What you have learned in this wiki article:
    * ...
 
 ====Further readings====
-The following wiki articles contain further information about how to use the basic concepts in practice:
+The following wiki articles contain further information about how to add content to your your basic page layout:
 
    * [LayoutingContent Layouting Content]
    * [LayoutingForms Layouting Forms]
