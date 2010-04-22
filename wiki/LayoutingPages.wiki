@@ -314,7 +314,7 @@ body {
 }
 }}}
 
-To simplify matters, the [[http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_10.html Live Demo]] puts everything together: a centered design that mixes fixed and liquid layout containers.
+To simplify matters, the [http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_10.html Live Demo] puts everything together: a centered design that mixes fixed and liquid layout containers.
 
 =Summary=
 What you have learned in this wiki article:
