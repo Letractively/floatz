@@ -104,7 +104,7 @@ To change that we add layouters to the submenu and the content container, becaus
 *Example 3 - Adding layouters* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_03.html Live Demo])
 
 ==Customizing the page elements==
-As you can see in the previous example, floatz does not dictate you any kind of class names for your page elements. All you need are boxes and layouters. Next we create our own project specific CSS classes for each page element and attach them to the class attribute of the appropriate boxes in the HTML markup. 
+As you can see in the previous example, floatz does not dictate you any kind of class names for your page elements. All you need are boxes and layouters. Next we create our own project specific CSS classes for each page element and attach them to the `class` attribute of the appropriate boxes in the HTML markup. 
 
 Now we are able to do some customization of the page elements using CSS. In this example we add background colors for the `BODY` (viewport background), the page container and all of our boxes. We also set `em` based heights for the header, the menu and the footer, which lets our layout resize proportional to the used font size.
 
