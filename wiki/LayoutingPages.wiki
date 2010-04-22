@@ -1,7 +1,5 @@
-#summary How to layout pages [UNDER CONSTRUCTION]
-Last Update: April 19th, 2010
-
-*This page is currently under construction and thus not finished.*
+#summary How to layout pages
+Last Update: April 22nd, 2010
 
    ----
    Note: this wiki page covers version 1.1.0.
@@ -319,7 +317,17 @@ The [http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages
 =Summary=
 What you have learned in this wiki article:
 
-   * ...
+   * Creating page layouts with floatz is easy and straight forward
+   * Define your page container with `flz_page`
+   * Use boxes (`flz_box`) for your page containers
+   * Add layouters to set the width of the boxes
+   * Always add a right oriented layouter to the last box in a sequence on the same level
+   * Customize boxes with custom CSS classes
+   * Change layout modes by using different floatz imports
+   * Floatz supports to fixed layout modes (fixed and center) as well as a liquid mode
+   * Liquid layout mode sets a min-width of 985px for `flz_page` by default
+   * Additional markup is necessary to support min-width in Internet Explorer 6
+   * Centered, fixed and liquid layouts can be mixed together
 
 ====Further readings====
 The following wiki articles contain further information about how to add content to your your basic page layout:
