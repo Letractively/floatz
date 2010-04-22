@@ -18,7 +18,7 @@ floatz is available in two separate download packages:
    * floatz-1.1.0.zip
    * floatz.dev.kit-1.1.0.zip
 
-The first package is thought for production use and contains only what is really necessary. The second package contains additional files that are only interesting during development phase. The current tutorial considers only the production package. See WhatsInside for more information.
+The first package is thought for production use and contains only what is really necessary. The second package contains additional files that are only interesting during development phase. The current tutorial considers only the production package. See [WhatsInside Whats inside] for more information.
 
 =Step 2 - Install=
 Installation is pretty easy. Only unzip the downloaded file into a desired folder on your computer (e.g. into `C:\Program Files\floatz`). During installation, a separate subfolder is created, that contains also the version number of floatz (e.g. `C:\Program Files\floatz\floatz.1.1.0`).
@@ -29,7 +29,7 @@ Before you can start using floatz, you have to prepare your project environment.
 
 ==Prepare your project by using a floatz template ==
 
-The floatz development kit ships with a set of ready-to-use templates for different layouts as well as an empty layout template (see WhatsInside for an overview). The following instruction uses the empty layout template.
+The floatz development kit ships with a set of ready-to-use templates for different layouts as well as an empty layout template (see [WhatsInside Whats inside] for an overview). The following instruction uses the empty layout template.
 
    * Create a project folder (e.g. `C:\Projects\MyProject`)
    * Copy the whole content of the desired template folder (e.g. `C:\Program Files\floatz\floatz.dev.kit.1.1.0\templates\layout.empty\*.*`) into your project folder (e.g. `C:\Projects\MyProject`)
@@ -126,8 +126,8 @@ Now your project environment is up an running and you can start layouting your w
 
 Have a look at the following wiki articles to see how to use floatz:
 
-   * [BasicConcepts]
-   * [ClassReference]
+   * [BasicConcepts Basic Concepts]
+   * [ClassReference Class Reference]
 
 You'll find additional information and sources at
 
