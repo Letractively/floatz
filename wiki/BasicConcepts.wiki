@@ -101,7 +101,7 @@ Now we are getting to the last of the basic concepts of floatz: *Spacers*. They 
 You may ask why floatz is using spacers and is adding additional markup to the boxes, when you could also add margins and paddings directly to them. The reason for this is the standard box model of CSS2: if you add margins, paddings or even borders to an element that is sized in percent, the width of the added margins, paddings and borders is added to the width of the element. That means, the element is getting wider as you have specified. floatz is designed to work also for liquid layouts and therefor uses widths in percent. To avoid unpredictable results when adding whitespace directly to boxes, floatz provides the concept of spacers.
 
    ----
-   If adding additional markup is not an option for you, please have a have a look at [HowtoAvoidObtrusiveMarkupAndCss].
+   If adding additional markup is not an option for you, please have a have a look at [AvoidingObtrusiveMarkupAndCss].
    ----
 
 floatz offers a set of predefined spacers as well as subspacers to support as much as possible layout combinations of boxes and layouters to let nothing to be desired. The following sample shows a single row / multi column scenario. The spacers are adding a padding of 1em at the edges and between the boxes (columns).
