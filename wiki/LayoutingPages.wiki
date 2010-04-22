@@ -259,7 +259,7 @@ The extra min-width containers have no negative impact on the other browsers, so
 The following subsections give you some insight how you can improve the page layout in some special situations.
 
 ==Mixing fixed and liquid layouts==
-There may be situations, where we need one or more layout container with a fixed width, instead of a liquid width based on a percentage delcaration. When we take a look at our current layout, the submenu on the left side of our page has a liquid width of 20%. When we resize the browser window in its width, the submenu is resized. How can we change it to a fixed width without affecting the container on its right side, that should still be liquid.
+There may be situations, where we need one or more layout container with a fixed width, instead of a liquid width based on a percentage delcaration. When we take a look at our current layout, the submenu on the left side of our page has a liquid width of 20%. When we resize the browser window in its width, the submenu is resized. How can we change it to a fixed width without affecting the container on its right side, that should still be liquid?
 
 First we are fixing the width of our submenu container by adding a width of 20em to its CSS class. Then we are adding a left margin of 20em to the content containers CSS class. Finally we remove `flz_box` from the content container. That causes the content container to return to the document flow instead of floating to the right side of the submenu container.
 
