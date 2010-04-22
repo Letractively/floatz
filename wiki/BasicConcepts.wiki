@@ -276,7 +276,7 @@ Content of the HTML file:
 Nesting boxes is possible and very easy to achieve. 
 
     ----
-    Please note that boxes should only be used as layouting containers and not as containers for everything in your markup. It is strongly recommended to use a semantically correct HTML tags instead of boxes, when ever possible (e.g. use paragraphs `P` for structuring your content instead of creating paragraph-like structures with `DIV`s. Otherwise you are creating meaningless markup salad and thus hamper the semantically correct interpretation of your web pages. HTML provides a set of semantic tags to structure content correctly (see [http://dev.w3.org/html5/spec/Overview.html#grouping-content GroupingContent] in the HTML5 specification).
+    Please note that boxes should only be used as layouting containers and not as containers for everything in your markup. It is strongly recommended to use a semantically correct HTML tags instead of boxes, when ever possible (e.g. use paragraphs `P` for structuring your content instead of creating paragraph-like structures with `DIV`s. Otherwise you are creating meaningless markup salad and thus hamper the semantically correct interpretation of your web pages. HTML provides a set of semantic tags to structure content correctly (see [http://dev.w3.org/html5/spec/Overview.html#grouping-content Grouping Content] in the HTML5 specification).
     ----
 
 The following example shows how you can nest boxes. If you need an example how to use subspacers instead of spacers when nesting boxes, please see the [BasicConcepts#Subspacers subspacers] chapter above.
