@@ -232,7 +232,7 @@ For the rest of our article we switch to the last of the three layout modes that
 }}}
 *Example 7 - Changing to liquid layout* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_07.html Live Demo])
 
-To avoid problems with floating elements, especially with too small viewports in liquid layouts, floatz adds by default a `min-width` of 985 pixels to the page container. If you also plan to support Internet Explorer 6, the `min-width` style does not work. In that case we have to add some extra markup directly under the page container and before the first layout element, in our example the header container.
+To avoid problems with floating elements, especially with too small viewports in liquid layouts, floatz adds by default a `min-width` of 985 pixels to the page container when the layout mode is switched to liquid layout. If you also plan to support Internet Explorer 6, the `min-width` style does not work. In that case you have to add some extra markup directly under the page container and before the first layout element, in our example the header container.
 
 {{{
 <!-- page -->
