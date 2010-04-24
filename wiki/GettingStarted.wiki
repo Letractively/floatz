@@ -8,9 +8,9 @@ Last Update: March 24th, 2010
 
 *Table of content*
 
-<wiki:toc max_depth="1" />
+<wiki:toc max_depth="2" />
 
-=Download floatz=
+=Download=
 First of all you have to download floatz from http://code.google.com/p/floatz/. The latest version is offered directly on the project home under "featured downloads" on the right side of the page. Alternatively check the [http://code.google.com/p/floatz/downloads/list download section] if you are interested in another version.
 
 floatz is available in two separate download packages: 
@@ -20,7 +20,7 @@ floatz is available in two separate download packages:
 
 The first package is thought for production use and contains only what is really necessary. The second package contains additional files that are only interesting during development phase. The current tutorial considers only the production package. See [WhatsInside What's inside] for more information.
 
-=Install floatz=
+=Install=
 Installation is pretty easy. Only unzip the downloaded file into a desired folder on your computer (e.g. into `C:\Program Files\floatz`). During installation, a separate subfolder is created, that contains also the version number of floatz (e.g. `C:\Program Files\floatz\floatz-1.1.0`).
 
 =Setup a project=
@@ -121,7 +121,7 @@ $(document).ready( function() {
 
 Now your project environment is up and running and you can start to layout your web pages using floatz.
 
-=Use floatz=
+=Start layouting=
 
 Have a look at the following wiki articles to see how to use floatz:
 
