@@ -1,4 +1,4 @@
-#summary What's inside floatz
+#summary Describes the available download packages and their content
 #labels Featured
 Last Update: April 24th, 2010
 
