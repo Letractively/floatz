@@ -101,7 +101,7 @@ Now we are getting to the last of the basic concepts of floatz: *Spacers*. They 
 You may ask why floatz is using spacers and is adding additional markup to the boxes, when you could also add margins and paddings directly to them. The reason for this is the standard box model of CSS2: if you add margins, paddings or even borders to an element that is sized in percent, the width of the added margins, paddings and borders is added to the width of the element. That means, the element is getting wider as you have specified. floatz is designed to work also for liquid layouts and therefore uses widths in percent. To avoid unpredictable results when adding whitespace directly to boxes, floatz provides the concept of spacers.
 
    ----
-   If adding additional markup is not an option for you, please have a have a look at [AvoidingObtrusiveMarkupAndCss Avoiding obtrusive markup and CSS].
+   Note: If adding additional markup is not an option for you, please have a have a look at [AvoidingObtrusiveMarkupAndCss Avoiding obtrusive markup and CSS].
    ----
 
 floatz offers a set of predefined spacers as well as subspacers to support as much as possible layout combinations of boxes and layouters to let nothing to be desired. The following sample shows a single row / multi column scenario. The spacers are adding a padding of 1em at the edges and between the boxes (columns).
@@ -276,7 +276,7 @@ Content of the HTML file:
 Nesting boxes is possible and very easy to achieve. 
 
     ----
-    Please note that boxes should only be used as layouting containers and not as containers for everything in your markup. It is strongly recommended to use a semantically correct HTML tags instead of boxes, whenever possible (e.g. use paragraphs `P` for structuring your content instead of creating paragraph-like structures with `DIV`s. Otherwise you are creating meaningless markup salad and thus hamper the semantically correct interpretation of your web pages. HTML provides a set of semantic tags to structure content correctly (see [http://dev.w3.org/html5/spec/Overview.html#grouping-content Grouping Content] in the HTML5 specification).
+    Note: Please keep in mind that boxes should only be used as layouting containers and not as containers for everything in your markup. It is strongly recommended to use a semantically correct HTML tags instead of boxes, whenever possible (e.g. use paragraphs `P` for structuring your content instead of creating paragraph-like structures with `DIV`s. Otherwise you are creating meaningless markup salad and thus hamper the semantically correct interpretation of your web pages. HTML provides a set of semantic tags to structure content correctly (see [http://dev.w3.org/html5/spec/Overview.html#grouping-content Grouping Content] in the HTML5 specification).
     ----
 
 The following example shows how you can nest boxes. If you need an example how to use subspacers instead of spacers when nesting boxes, please see the [BasicConcepts#Subspacers subspacers] chapter above.
