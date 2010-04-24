@@ -1,4 +1,4 @@
-#summary About boxes, layouters and spacers
+#summary Describes the basic concepts of floatz: boxes, layouters and spacers
 #labels Featured
 Last Update: April 19th, 2010
 
