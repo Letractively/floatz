@@ -18,7 +18,7 @@ floatz is available in two separate download packages:
    * floatz-1.1.0.zip
    * floatz.dev.kit-1.1.0.zip
 
-The first package is thought for use in production environment and contains only what is really necessary. The second package contains additional files that are only interesting during development phase. The current tutorial considers only the production package. See [WhatsInside What's inside] for more information.
+The first package is thought for use in production environment and contains only what is really necessary. The second package contains additional files that are only interesting during development phase. The current tutorial considers only the production package. See [WhatsInside What's inside] for more information about the content of each package.
 
 =Install=
 Installation is pretty easy. Only unzip the downloaded file into a desired folder on your computer (e.g. into `C:\Program Files\floatz`). During installation, a separate subfolder is created, that contains also the version number of floatz (e.g. `C:\Program Files\floatz\floatz-1.1.0`).
