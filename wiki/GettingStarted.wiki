@@ -121,7 +121,7 @@ $(document).ready( function() {
 
 Now your project environment is up and running and you can start to layout your web pages using floatz.
 
-=Step 4 - Use=
+=Use floatz=
 
 Have a look at the following wiki articles to see how to use floatz:
 
