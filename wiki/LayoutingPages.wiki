@@ -1,4 +1,4 @@
-#summary How to layout pages
+#summary Describes how to layout pages
 Last Update: April 24th, 2010
 
    ----
