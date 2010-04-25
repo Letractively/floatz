@@ -81,7 +81,7 @@ a:focus.flz_skiplink {
  */
 
 .flz_listnav {
-   background-color: inherit;
+   background: inherit;
    padding: 0.5em 1em;
    margin: 0;              /* because of IE 6 that shows a margin at the bottom of .listnav */
 }
@@ -185,7 +185,7 @@ a:focus.flz_skiplink {
 }
 
 .flz_hmenu li a {
-   background-color: inherit;
+   background: inherit;
    border-left: 1px solid #000;
    display: block;
    text-decoration: none;
@@ -204,19 +204,19 @@ a:focus.flz_skiplink {
 /* focused or hovered menu item */
 .flz_hmenu a:focus,
 .flz_hmenu a:hover {
-   background-color: #ddd;
+   background: #ddd;
    color: inherit;
 }
 
 /* active (clicked) menu item */
 .flz_hmenu a:active {
-   background-color: #ddd;
+   background: #ddd;
    color: inherit;
 }
 
 /* selected menu item */
 .flz_hmenu li.flz_selected {
-   background-color: #fff;
+   background: #fff;
    font-weight: bold;
    color: inherit;
 }
@@ -224,13 +224,13 @@ a:focus.flz_skiplink {
 /* focused or hovered selected menu item */
 .flz_hmenu li.flz_selected a:focus,
 .flz_hmenu li.flz_selected a:hover {
-   background-color: #ddd;
+   background: #ddd;
    color: inherit;
 }
 
 /* active (clicked) selected menu item */
 .flz_hmenu li.flz_selected a:active {
-   background-color: #bbb;
+   background: #bbb;
    color: inherit;
 }
 
@@ -260,7 +260,7 @@ a:focus.flz_skiplink {
 }
 
 .flz_vmenu li a {
-   background-color: inherit;
+   background: inherit;
    display: block;
    padding: 0.5em 1em;
    text-decoration: none;
@@ -268,22 +268,22 @@ a:focus.flz_skiplink {
 }
 
 .flz_vmenu li ul li a {
-   background-color: inherit;
+   background: inherit;
    padding-left: 2em;
 }
 
 .flz_vmenu li ul li ul li a {
-   background-color: inherit;
+   background: inherit;
    padding-left: 3em;
 }
 
 .flz_vmenu li ul li ul li ul li a {
-   background-color: inherit;
+   background: inherit;
    padding-left: 4em;
 }
 
 .flz_vmenu li ul li ul li ul li ul li a {
-   background-color: inherit;
+   background: inherit;
    padding-left: 5em;
 }
 
@@ -299,19 +299,19 @@ a:focus.flz_skiplink {
 /* focused or hovered menu item */
 .flz_vmenu a:focus,
 .flz_vmenu a:hover {
-   background-color: #ddd;
+   background: #ddd;
    color: inherit;
 }
 
 /* active (clicked) menu item */
 .flz_vmenu a:active {
-   background-color: #ddd;
+   background: #ddd;
    color: inherit;
 }
 
 /* Selected menu item */
 .flz_vmenu li.flz_selected > a {
-   background-color: #fff;
+   background: #fff;
    color: inherit;
    font-weight: bold;
 }
@@ -322,20 +322,20 @@ a:focus.flz_skiplink {
  * @affected IE 5, 6
  */
 * html .flz_vmenu li.flz_selected a {
-  background-color: expression(/flz_selected/.test(this.parentNode.className)? "#fff" : "inherit");
+  background: expression(/flz_selected/.test(this.parentNode.className)? "#fff" : "inherit");
   font-weight: expression(/flz_selected/.test(this.parentNode.className)? "bold" : "normal");
 }
 
 /* Focused or hovered selected menu item */
 .flz_vmenu li.flz_selected a:focus,
 .flz_vmenu li.flz_selected a:hover {
-   background-color: #ddd;
+   background: #ddd;
    color: inherit;
 }
 
 /* active (clicked) selected menu item */
 .flz_vmenu li.flz_selected a:active {
-   background-color: #bbb;
+   background: #bbb;
    color: inherit;
 }
 
