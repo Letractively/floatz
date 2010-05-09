@@ -33,22 +33,6 @@ body {
 .content p {
    margin-bottom: 1em;
 }
-.content .flz_form input[type="text"], 
-.content .flz_form textarea, 
-.content .flz_form select {
-   border-color: #aaaccc;
-}
-* html .content .flz_textbox,
-* html .content .flz_form textarea {
-   border-color: #aaaccc;
-}
-.content .flz_mandatory {
-   background: #ffffcc;
-}
-.content fieldset {
-   border-color: #888ccc;
-   margin-bottom: 0.5em;
-}
 
 .footer {
    background: #dddccc;

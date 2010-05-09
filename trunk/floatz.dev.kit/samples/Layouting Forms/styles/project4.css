@@ -45,6 +45,10 @@ body {
 .content .flz_mandatory {
    background: #ffffcc;
 }
+.content fieldset {
+   border-color: #888ccc;
+   margin-bottom: 0.5em;
+}
 
 .footer {
    background: #dddccc;
