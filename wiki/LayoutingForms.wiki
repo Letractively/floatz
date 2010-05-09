@@ -1,4 +1,4 @@
-#summary How to layout forms [UNDER CONSTRUCTION]
+#summary Describes how to layout simple as well as complex forms [UNDER CONSTRUCTION]
 Last Update: Mai 9th, 2010
 
 *This page is currently under construction and thus not finished.*
