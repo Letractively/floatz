@@ -1,4 +1,4 @@
-h#summary How to layout forms [UNDER CONSTRUCTION]
+#summary How to layout forms [UNDER CONSTRUCTION]
 Last Update: Mai 9th, 2010
 
 *This page is currently under construction and thus not finished.*
@@ -247,7 +247,7 @@ First we surround the label and the input field with a relative positioned box e
 
 As you can see when you run the code, the datepicker image appears as intended next to the birthday textbox. Now it´s on you to implement the "business logic" of the combobox.
 
-==Creating a buttonbar==
+==Adding a buttonbar==
 When you look at the result of the previous examples, the buttons are floating to the right side of the checkboxes. Lets change that and add a buttonbar below the input fields of the web form. For this purpose we simply surround the buttons with a box element, that forces them to appear in a separate row.
 
 {{{
