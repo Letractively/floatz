@@ -1,4 +1,4 @@
-#summary How to layout forms [UNDER CONSTRUCTION]
+h#summary How to layout forms [UNDER CONSTRUCTION]
 Last Update: Mai 9th, 2010
 
 *This page is currently under construction and thus not finished.*
@@ -243,7 +243,7 @@ First we surround the label and the input field with a relative positioned box e
 </form>
 }}}
 
-*Example 5 - Highlighting mandatory and readonly fields* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_05.html Live Demo])
+*Example 5 - Adding a combobox* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_05.html Live Demo])
 
 As you can see when you run the code, the datepicker image appears as intended next to the birthday textbox. Now it´s on you to implement the "business logic" of the combobox.
 
