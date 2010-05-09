@@ -69,7 +69,7 @@ In this wiki article we build up a web page with a customer data form from scrat
    </body>
 </html>
 }}}
-*Example 1 - The page template as starting point* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/LayoutingForms_01.html Live Demo])
+*Example 1 - The page template as starting point* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_01.html Live Demo])
 
 =Creating a basic form=
 Now we are ready to start with our basic web form that will accompany us in the whole wiki article. As mentioned before we will build a customer data web form. First of all we add a `FORM` tag inside the spacer of the context box of our page. Then we add `LABEL` and `INPUT` tags for customer number, first name, last name, birthday, street, zip code and city, a `SELECT` tag for country selection, a multiline `TEXTAREA` for adding additional information and `INPUT` tags that act as checkboxes for news subscriptions. Last but not least we add two `INPUT` tags that act as action buttons for saving or canceling the form input. The image after the birthday field is for special use and will be covered later. The example does not include radio buttons, but their behavior is the same as for checkboxes, so they are omitted here.
@@ -121,7 +121,7 @@ Now we are ready to start with our basic web form that will accompany us in the 
    </div>
 </body>
 }}}
-*Example 2 - The basic form* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/LayoutingForms_02.html Live Demo])
+*Example 2 - The basic form* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_02.html Live Demo])
 
 ==Adding floatz specific styles==
 Well, when you run the example and look at the result, this is definitely nothing you can give to your customer. Usually this is the point where you have to make a momentous decision: should you add additional markup like `BR` tags and customize every single form element ending up with obtrusive `STYLE` tags or should you style every single form element with CSS and end up in countless CSS classes within your markup? Nothing of both in floatz: You only have to add `flz_form` to the `FORM` tag and floatz does everything for you. 
@@ -136,7 +136,7 @@ Well, when you run the example and look at the result, this is definitely nothin
    </div>
 </div>
 }}}
-*Example 3a - Adding flz_form to the basic form* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/LayoutingForms_03a.html Live Demo])
+*Example 3a - Adding flz_form to the basic form* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_03a.html Live Demo])
 
 Run the example and you will see that each label and input field is in its own row and each input field is as wide as its surrounding container. Only the checkboxes and the buttons behave differently to the other form elements. Thats all, for this simple example.
 
@@ -182,7 +182,7 @@ If you have to support IE6 as well, some additional effort is necessary. The maj
       </form>
    </div>
 }}}
-*Example 3b - Adding additional CSS classes to support IE6* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/LayoutingForms_03b.html Live Demo])
+*Example 3b - Adding additional CSS classes to support IE6* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_03b.html Live Demo])
 
 If you run the sample again in IE6 and in all other browsers, you will see that the page now behaves the same in all of them. The additional classes have no negative impact on the CSS2 compliant browsers and we get our web form working in all browsers inluding IE6. 
 
@@ -220,7 +220,7 @@ Next lets hilite the mandatory fields in our customer form: first name, last nam
    </div>
 </div>
 }}}
-*Example 4 - Highlighting mandatory and readonly fields* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/LayoutingForms_04.html Live Demo])
+*Example 4 - Highlighting mandatory and readonly fields* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_04.html Live Demo])
 
 Run the sample code and voilà, every mandatory field is highlighted.
 
@@ -243,7 +243,7 @@ First we surround the label and the input field with a relative positioned box e
 </form>
 }}}
 
-*Example 5 - Highlighting mandatory and readonly fields* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/LayoutingForms_05.html Live Demo])
+*Example 5 - Highlighting mandatory and readonly fields* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_05.html Live Demo])
 
 As you can see when you run the code, the datepicker image appears as intended next to the birthday textbox. Now it´s on you to implement the "business logic" of the combobox.
 
@@ -259,7 +259,7 @@ When you look at the result of the previous examples, the buttons are floating t
    </div>
 </form>
 }}}
-*Example 6 - Adding a button bar* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/LayoutingForms_06.html Live Demo])
+*Example 6 - Adding a button bar* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_06.html Live Demo])
 
 =Customizing the form=
 Now we have finished our basic layout for the customer form. But to be honest, the default styling of the form elements does not really fit to the look & feel of the page layout that is used. So, the next step will be the customization of the form elements. First we change the border color of the textboxes, textareas and selectboxes as well as for the mandatory fields. For the former we partly use CSS2 based attribute selectors and constrain them to the context of the floatz form within the content container by using relative addressing. For the latter we directly change the background color of the `flz_mandatory` class. Because we want to support IE6 as well, we have to add a CSS hack for the textbox and the textarea that only effects IE6.
@@ -300,7 +300,7 @@ In the markup we add a header and an introduction text prior to the form, to get
    </div>
 </div>
 }}}
-*Example 7 - Customizing the web form* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/LayoutingForms_07.html Live Demo])
+*Example 7 - Customizing the web form* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_07.html Live Demo])
 
 =Structuring the form=
 ==Adding fieldsets==
