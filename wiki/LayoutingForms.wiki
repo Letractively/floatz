@@ -305,7 +305,7 @@ In the markup we add a header and an introduction text prior to the form, to get
 Now the result is much better. With a few changes of the CSS we have got a much more consistent form layout in combination with the page layout.
 
 =Structuring the form=
-The following subchapters show, how we can increase the readability and thus the usabtility of our customer form, by structuring it into contextual related pieces by using fieldsets and by adopting the layout.
+The following subchapters illustrates, how we can increase the readability and thus the usabtility of our customer form, by structuring it into contextual related pieces by using fieldsets and by adopting the layout.
 
 ==Adding fieldsets==
 Lets add three fieldsets to our web form. The first fieldset is "personal data" and contains customer number, first name, last name and birthday. The second fieldset is "address data" and contains street, zip, city and country. The last fieldset is "additional data" and contains the rest of our form, the textarea and the checkboxes. Because we have customized the border colors of our form fields before, we have to customize the border color of the fieldset in our CSS file too.
