@@ -262,7 +262,7 @@ When you look at the result of the previous examples, the buttons are floating t
 *Example 6 - Adding a button bar* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_06.html Live Demo])
 
 =Customizing the form=
-Now we have finished our basic layout for the customer form. But to be honest, the default styling of the form elements does not really fit to the look & feel of the page layout that is used. So, the next step will be the customization of the form elements. First we change the border color of the textboxes, textareas and selectboxes as then the background color of the mandatory fields. For the former we partly use CSS2 based attribute selectors and constrain them to the context of the floatz form within the content container by using relative addressing. For the latter we directly change the background color of the `flz_mandatory` class. Because we want to support IE6 as well, we have to add a CSS hack for the textbox and the textarea that only effects IE6.
+Now we have finished our basic layout of the customer form. But to be honest, the default styling of the form elements does not really fit to the look & feel of the page layout that is used. So, the next step will be the customization of the form elements. First we change the border color of the textboxes, textareas and selectboxes as then the background color of the mandatory fields. For the former we partly use CSS2 based attribute selectors and constrain them to the context of the floatz form within the content container by using relative addressing. For the latter we directly change the background color of the `flz_mandatory` class. Because we want to support IE6 as well, we have to add a CSS hack for the textbox and the textarea that only effects IE6.
 
 *CSS code*
 {{{
@@ -302,13 +302,13 @@ In the markup we add a header and an introduction text prior to the form, to get
 }}}
 *Example 7 - Customizing the web form* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_07.html Live Demo])
 
-Now the result is much better. With a few changes of the CSS we have got a much more consistent form layout in cooperation with the page layout.
+Now the result is much better. With a few changes of the CSS we have got a much more consistent form layout in combination with the page layout.
 
 =Structuring the form=
-tbd
+The following subchapters show, how we can increase the readability and thus the usabtility of our customer form, by structuring it into contextual related pieces by using fieldsets and by adopting the layout.
 
 ==Adding fieldsets==
-tbd
+Lets add three fieldsets to our web form. The first fieldset is "personal data" and contains customer number, first name, last name and birthday. The second fieldset is "address data" and contains street, zip, city and country. The last fieldset is "additional data" and contains the rest of our form, the textarea and the checkboxes. Because we have customized the border colors of our form fields before, we have to customize the border color of the fieldset in our CSS file too.
 
 *CSS code*
 {{{
