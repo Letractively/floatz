@@ -69,6 +69,8 @@ In this wiki article we build up a web page with a customer data form from scrat
 }}}
 *Example 1 - The page template as starting point* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_01.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_01.jpg
+
 =Creating a basic form=
 Now we are ready to start with our basic web form that will accompany us in the whole wiki article. As mentioned before we will build a customer data web form. First of all we add a `FORM` tag inside the spacer of the context box of our page. Then we add `LABEL` and `INPUT` tags for customer number, first name, last name, birthday, street, zip code and city, a `SELECT` tag for country selection, a multiline `TEXTAREA` for adding additional information and `INPUT` tags that act as checkboxes for news subscriptions. Last but not least we add two `INPUT` tags that act as action buttons for saving or canceling the form input. The image after the birthday field is for special use and will be covered later. The example does not include radio buttons, but their behavior is the same as for checkboxes, so they are omitted here.
 
@@ -121,6 +123,8 @@ Now we are ready to start with our basic web form that will accompany us in the 
 }}}
 *Example 2 - The basic form* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_02.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_02.jpg
+
 ==Adding floatz specific styles==
 Well, when you run the example and look at the result, this is definitely nothing you can give to your customer. Usually this is the point where you have to make a momentous decision: should you add additional markup like `BR` tags and customize every single form element ending up with obtrusive `STYLE` tags or should you style every single form element with CSS and end up in countless CSS classes within your markup? Nothing of both in floatz: You only have to add `flz_form` to the `FORM` tag and floatz does everything for you. 
 
@@ -137,6 +141,8 @@ Well, when you run the example and look at the result, this is definitely nothin
 *Example 3a - Adding flz_form to the basic form* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_03a.html Live Demo])
 
 Run the example and you will see that each label and input field is in its own row and each input field is as wide as its surrounding container. Only the checkboxes and the buttons behave differently to the other form elements. That’s all for this simple example.
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_03a.jpg
 
 ===Supporting Internet Explorer 6===
 If you have to support IE6 as well, some additional effort is necessary. The major problem of IE6 is, that it does not support CSS2 attribute selectors to distinguish between textboxes, buttons, radiobuttons and checkboxes that are all `INPUT` tags in HTML, with different `TYPE` attribute values like `TEXT`, `BUTTON`, `SUBMIT`, `RADIO` and `CHECKBOX`. Because floatz needs to differentiate between those types, you have to add specific CSS classes to the according form elements to get this functionaliy also in IE6. Otherwise the form would behave like we have seen in example 1, without any CSS. Thus lets add CSS class `flz_textbox` to each input tag of type `TEXT` and `flz_button` to all input tags of type `BUTTON`. The labels of the checkboxes must be annotated with `flz_inline` to stay next to the checkboxes. Otherwise they would appear in a separate row as all other labels. In the case of checkboxes and radiobuttons that’s not what we want.
@@ -188,6 +194,8 @@ If you run the sample again in IE6 and in all other browsers, you will see that 
    Rule of thumb: it is no failure when you always add those additional CSS classes to your markup even if you think you don’t need to support IE6 ... until one of your customers told you so. The effort will be much higher, when you have to change and test again all of your already finished web forms. See [ClassReference class reference] and [BrowserHacks browser hacks] for more information about IE6 support.
    ----
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_03b.jpg
+
 ==Defining mandatory and readonly fields==
 Next lets hilite the mandatory fields in our customer form: first name, last name, street, zip, city and country. The only thing we have to do is adding the CSS class `flz_mandatory` to the `CLASS` attribute for each of them. It’s a common practice to add a `*` next to the label of the mandatory fields, so we change that as well. Because the customer number should not be filled out by the user itself, we make that field readonly by inserting the HTML `READONLY` attribute and adding `flz_readonly` to it´s `CLASS` attribute.
 
@@ -222,6 +230,8 @@ Next lets hilite the mandatory fields in our customer form: first name, last nam
 
 Run the sample code and voilà, every mandatory field is highlighted.
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_04.jpg
+
 ==Adding a combobox==
 Now lets pay some attention on the birthday field and the datepicker icon. Unfortunately HTML doesn't support the UI element combobox by default, that is a combination of a textbox and a selectbox. In our example the birthday textbox and the image should appear like a combobox. floatz does not implement the whole functionality that would be necessary for a combobox, but it provides the visual baseline to show the textbox and the image side by side in one row, with full support to liquid layouts. To get that behavior, we have to change the HTML code for the combobox as shown in the sample code:
 
@@ -245,6 +255,8 @@ First we surround the label and the input field with a relative positioned box e
 
 As you can see when you run the code, the datepicker image appears as intended next to the birthday textbox. Now it’s on you to implement the "business logic" of the combobox.
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_05.jpg
+
 ==Adding a buttonbar==
 When you look at the result of the previous examples, the buttons are floating to the right side of the checkboxes. Let’s change that and add a buttonbar below the input fields of the web form. For this purpose we simply surround the buttons with a box element that forces them to appear in a separate row.
 
@@ -258,6 +270,8 @@ When you look at the result of the previous examples, the buttons are floating t
 </form>
 }}}
 *Example 6 - Adding a button bar* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_06.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_06.jpg
 
 =Customizing the form=
 Now we have finished our basic layout of the customer form. But to be honest, the default styling of the form elements does not really fit to the look & feel of the page layout that is used. So, the next step will be the customization of the form elements. First we change the border color of the textboxes, textareas and selectboxes as then the background color of the mandatory fields. For the former we partly use CSS2 based attribute selectors and constrain them to the context of the floatz form within the content container by using relative addressing. For the latter we directly change the background color of the `flz_mandatory` class. Because we want to support IE6 as well, we have to add a CSS hack for the textbox and the textarea that only affects IE6.
@@ -301,6 +315,8 @@ In the markup we add a header and an introduction text prior to the form, to get
 *Example 7 - Customizing the web form* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_07.html Live Demo])
 
 Yet, the result is much better. With a few changes of the CSS we have got a much more consistent form layout in combination with the page layout.
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_07.jpg
 
 =Structuring the form=
 The following subchapters illustrate, how we can increase the readability and thus the usability of our customer form, by structuring it into contextual related pieces using fieldsets and by adopting the layout.
@@ -380,6 +396,8 @@ Let’s add three fieldsets to our web form. The first fieldset is "personal dat
 }}}
 *Example 8 - Adding fieldsets* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_08.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_08.jpg
+
 ==Using multiple column layout==
 We can save a little vertical space by slightly changing the layout of our one-column form layout into a multi-column layout. As described in [BasicConcepts basic concepts], floatz ships with a layout system that can of course be used for layouting forms as well. Now we surround the personal data fieldset with a left oriented box and the address data fieldset with a right oriented box element. Within the boxes we are using appropriate subspacers to get some whitespace between the fieldsets. See [BasicConcepts basic concepts] for more information about spacers. 
 
@@ -409,6 +427,8 @@ We can save a little vertical space by slightly changing the layout of our one-c
 *Example 9 - Using multiple column layout* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_09.html Live Demo])
 
 The result is, that the two fieldsets now appear side by side in our customer form.
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_09.jpg
 
 ==Using free layout==
 Especially in business applications it is often necessary to create complex web forms containing a huge amount of fields. The next example illustrates how floatz can help you to achieve that. Therefor we remove the boxes that surround the personal and address data fieldsets from our previous example, then we remove the personal and address data fieldsets and use one "contact data" fieldset instead. Now we add some box elements with layouters and spacers to surround single fields in our form. This leads to a much more complicated form markup, but gives us full freedom of choice, how we can structure our web forms. See [BasicConcepts basic concepts] for more details on using boxes, layouters and spacers.
@@ -482,6 +502,8 @@ Especially in business applications it is often necessary to create complex web 
 }}}
 *Example 10 - Using free layout* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_10.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_10.jpg
+
 =Switching to liquid layout=
 To show you that the layout of our form also works in liquid layout without any code changes, we change the import statement of our CSS file from floatz.fixed.css to floatz.liquid.css. Run the sample again and resize the browser window. Our web form is still working and resizes accordingly with the browser.
 
@@ -494,6 +516,8 @@ To show you that the layout of our form also works in liquid layout without any 
 ...
 }}}
 *Example 11 - Switching to liquid layout* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_11.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_11.jpg
 
 =Summary=
 What you have learned in this wiki article:
