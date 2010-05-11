@@ -411,7 +411,7 @@ We can save a little vertical space by slightly changing the layout of our one-c
 The result is, that the two fieldsets now appear side by side in our customer form.
 
 ==Using free layout==
-Especially in business applications it is often necessary to create complex web forms containing a huge amount of fields. The next example illustrates how floatz can help you to achieve that. Therefor we remove the boxes that surround the personal and address data fieldsets from our previous example, then we remove the personal and address data fieldsets and use one "contact data" fieldset instead. Now we add some box elements with layouters and spacers to surround single fields in our form instead. This leads to a much more complicated form markup, but gives us full freedom of choice, how we can structure our web forms. See [BasicConcepts basic concepts] for more details on using boxes, layouters and spacers.
+Especially in business applications it is often necessary to create complex web forms containing a huge amount of fields. The next example illustrates how floatz can help you to achieve that. Therefor we remove the boxes that surround the personal and address data fieldsets from our previous example, then we remove the personal and address data fieldsets and use one "contact data" fieldset instead. Now we add some box elements with layouters and spacers to surround single fields in our form. This leads to a much more complicated form markup, but gives us full freedom of choice, how we can structure our web forms. See [BasicConcepts basic concepts] for more details on using boxes, layouters and spacers.
 
 {{{
 <form class="flz_form" action="">
