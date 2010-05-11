@@ -1,4 +1,4 @@
-#summary Describes how to layout simple as well as complex forms
+#summary Describes how to layout simple as well as complex web forms
 Last Update: Mai 11th, 2010
 
    ----
