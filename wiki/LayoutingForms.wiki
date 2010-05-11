@@ -1,7 +1,5 @@
-#summary Describes how to layout simple as well as complex forms [UNDER CONSTRUCTION]
-Last Update: Mai 9th, 2010
-
-*This page is currently under construction and thus not finished.*
+#summary Describes how to layout simple as well as complex forms
+Last Update: Mai 11th, 2010
 
    ----
    Note: this wiki page covers version 1.1.0.
@@ -19,7 +17,7 @@ It is recommended to read the following articles before starting with the curren
 <wiki:toc max_depth="2" />
 
 =Introduction=
-Layouting well designed, accessible web forms that come with a great user experience, is a difficult and often annoying topic in web development compared to traditional desktop based applications. Especially the creation of complex CSS based web forms for business applications, that go far beyond the simple registration form examples that you find in several discussion forums, can be a real challenge. Perform a google search for creating complex forms with CSS and you will be disappointed: more questions than answers and only really simple form examples. No wonder, that we still find HTML table based form layouts in most solutions as well as current frameworks. The following wiki article gives you an insight how easy and straightforward it is to create CSS based forms using floatz, that has been built with the possibility to layout complex web forms in mind.
+Layouting well designed accessible web forms that come with a great user experience, is a difficult and often annoying topic in web development compared to traditional desktop based applications. Especially the creation of complex CSS based web forms for business applications that go far beyond the simple registration form examples that you find in several discussion forums, can be a real challenge. Perform a google search for creating complex forms with CSS and you will be disappointed: more questions than answers and only really simple form examples. No wonder, that we still find HTML table based form layouts in most solutions as well as current frameworks. The following wiki article gives you an insight how easy and straightforward it is to create CSS based forms using floatz that has been built with the possibility to layout complex web forms in mind.
 
 =Getting started=
 In this wiki article we build up a web page with a customer data form from scratch. To concentrate on layouting the form, we use the example 5 from [LayoutingPages Layouting Pages] as our starting point. First we remove everything that's inside the spacer of the content box. The code should look like this:
@@ -138,10 +136,10 @@ Well, when you run the example and look at the result, this is definitely nothin
 }}}
 *Example 3a - Adding flz_form to the basic form* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_03a.html Live Demo])
 
-Run the example and you will see that each label and input field is in its own row and each input field is as wide as its surrounding container. Only the checkboxes and the buttons behave differently to the other form elements. Thats all, for this simple example.
+Run the example and you will see that each label and input field is in its own row and each input field is as wide as its surrounding container. Only the checkboxes and the buttons behave differently to the other form elements. That’s all for this simple example.
 
 ===Supporting Internet Explorer 6===
-If you have to support IE6 as well, some additional effort is necessary. The major problem of IE6 is, that it does not support CSS2 attribute selectors to distinguish between textboxes, buttons, radiobuttons and checkboxes that are all `INPUT` tags in HTML, with different `TYPE` attribute values like `TEXT`, `BUTTON`, `RADIO` and `CHECKBOX`. Because floatz needs to differentiate between those types, you have to add specific CSS classes to the according form elements to get this functionaliy also in IE6. Otherwise the form would behave like we have seen in example 1, without any CSS. Thus lets add CSS class `flz_textbox` to each input tag of type `TEXT` and `flz_button` to all input tags of type `BUTTON`. The labels of the checkboxes must be annotated with `flz_inline` to stay next to the checkboxes. Otherwise they would appear in a separate row as all other labels. But in the case of checkboxes and radiobuttons, that´s not what we want.
+If you have to support IE6 as well, some additional effort is necessary. The major problem of IE6 is, that it does not support CSS2 attribute selectors to distinguish between textboxes, buttons, radiobuttons and checkboxes that are all `INPUT` tags in HTML, with different `TYPE` attribute values like `TEXT`, `BUTTON`, `RADIO` and `CHECKBOX`. Because floatz needs to differentiate between those types, you have to add specific CSS classes to the according form elements to get this functionaliy also in IE6. Otherwise the form would behave like we have seen in example 1, without any CSS. Thus lets add CSS class `flz_textbox` to each input tag of type `TEXT` and `flz_button` to all input tags of type `BUTTON`. The labels of the checkboxes must be annotated with `flz_inline` to stay next to the checkboxes. Otherwise they would appear in a separate row as all other labels. In the case of checkboxes and radiobuttons that’s not what we want.
 
 {{{
 <!-- content -->
@@ -187,11 +185,11 @@ If you have to support IE6 as well, some additional effort is necessary. The maj
 If you run the sample again in IE6 and in all other browsers, you will see that the page now behaves the same in all of them. The additional classes have no negative impact on the CSS2 compliant browsers and we get our web form working in all browsers inluding IE6. 
 
    ----
-   Rule of thumb: it is no failure when you always add those additional CSS classes to your markup even if you think you don´t need to support IE6 ... until one of your customers told you so. The effort will be much higher, when you have to change and test again all of your already finished web forms. See [ClassReference class reference] and [BrowserHacks browser hacks] for more information about IE6 support.
+   Rule of thumb: it is no failure when you always add those additional CSS classes to your markup even if you think you don’t need to support IE6 ... until one of your customers told you so. The effort will be much higher, when you have to change and test again all of your already finished web forms. See [ClassReference class reference] and [BrowserHacks browser hacks] for more information about IE6 support.
    ----
 
 ==Defining mandatory and readonly fields==
-Next lets hilite the mandatory fields in our customer form: first name, last name, street, zip, city and country. The only thing we have to do is adding the CSS class `flz_mandatory` to the `CLASS` attribute for each of them. It´s a common practice to add a `*` next to the label of the mandatory fields, so we change that as well. Because the customer number should not be filled out by the user itself, we make that field readonly by inserting the HTML `READONLY` attribute and adding `flz_readonly` to it´s `CLASS` attribute.
+Next lets hilite the mandatory fields in our customer form: first name, last name, street, zip, city and country. The only thing we have to do is adding the CSS class `flz_mandatory` to the `CLASS` attribute for each of them. It’s a common practice to add a `*` next to the label of the mandatory fields, so we change that as well. Because the customer number should not be filled out by the user itself, we make that field readonly by inserting the HTML `READONLY` attribute and adding `flz_readonly` to it´s `CLASS` attribute.
 
 {{{
 <!-- content -->
@@ -245,10 +243,10 @@ First we surround the label and the input field with a relative positioned box e
 
 *Example 5 - Adding a combobox* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_05.html Live Demo])
 
-As you can see when you run the code, the datepicker image appears as intended next to the birthday textbox. Now it´s on you to implement the "business logic" of the combobox.
+As you can see when you run the code, the datepicker image appears as intended next to the birthday textbox. Now it’s on you to implement the "business logic" of the combobox.
 
 ==Adding a buttonbar==
-When you look at the result of the previous examples, the buttons are floating to the right side of the checkboxes. Lets change that and add a buttonbar below the input fields of the web form. For this purpose we simply surround the buttons with a box element, that forces them to appear in a separate row.
+When you look at the result of the previous examples, the buttons are floating to the right side of the checkboxes. Let’s change that and add a buttonbar below the input fields of the web form. For this purpose we simply surround the buttons with a box element that forces them to appear in a separate row.
 
 {{{
 <form class="flz_form" action="">
@@ -262,7 +260,7 @@ When you look at the result of the previous examples, the buttons are floating t
 *Example 6 - Adding a button bar* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_06.html Live Demo])
 
 =Customizing the form=
-Now we have finished our basic layout of the customer form. But to be honest, the default styling of the form elements does not really fit to the look & feel of the page layout that is used. So, the next step will be the customization of the form elements. First we change the border color of the textboxes, textareas and selectboxes as then the background color of the mandatory fields. For the former we partly use CSS2 based attribute selectors and constrain them to the context of the floatz form within the content container by using relative addressing. For the latter we directly change the background color of the `flz_mandatory` class. Because we want to support IE6 as well, we have to add a CSS hack for the textbox and the textarea that only effects IE6.
+Now we have finished our basic layout of the customer form. But to be honest, the default styling of the form elements does not really fit to the look & feel of the page layout that is used. So, the next step will be the customization of the form elements. First we change the border color of the textboxes, textareas and selectboxes as then the background color of the mandatory fields. For the former we partly use CSS2 based attribute selectors and constrain them to the context of the floatz form within the content container by using relative addressing. For the latter we directly change the background color of the `flz_mandatory` class. Because we want to support IE6 as well, we have to add a CSS hack for the textbox and the textarea that only affects IE6.
 
 *CSS code*
 {{{
@@ -305,10 +303,10 @@ In the markup we add a header and an introduction text prior to the form, to get
 Yet, the result is much better. With a few changes of the CSS we have got a much more consistent form layout in combination with the page layout.
 
 =Structuring the form=
-The following subchapters illustrates, how we can increase the readability and thus the usabtility of our customer form, by structuring it into contextual related pieces using fieldsets and by adopting the layout.
+The following subchapters illustrate, how we can increase the readability and thus the usability of our customer form, by structuring it into contextual related pieces using fieldsets and by adopting the layout.
 
 ==Adding fieldsets==
-Lets add three fieldsets to our web form. The first fieldset is "personal data" and contains customer number, first name, last name and birthday. The second fieldset is "address data" and contains street, zip, city and country. The last fieldset is "additional data" and contains the rest of our form, the textarea and the checkboxes. Because we have customized the border colors of our form fields before, we have to customize the border color of the fieldset in our CSS file too.
+Let’s add three fieldsets to our web form. The first fieldset is "personal data" and contains customer number, first name, last name and birthday. The second fieldset is "address data" and contains street, zip, city and country. The last fieldset is "additional data" and contains the rest of our form, the textarea and the checkboxes. Because we have customized the border colors of our form fields before, we have to customize the border color of the fieldset in our CSS file too.
 
 *CSS code*
 {{{
@@ -383,7 +381,7 @@ Lets add three fieldsets to our web form. The first fieldset is "personal data" 
 *Example 8 - Adding fieldsets* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_08.html Live Demo])
 
 ==Using multiple column layout==
-We can save a little vertical space by slightly changing the layout of our one-column form layout into a multi-column layout. As described in [BasicConcepts basic concepts], floatz ships with a layouting system that can of course be used for layouting forms as well. Now we surround the personal data fieldset with a left oriented box and the address data fieldset with a right oriented box element. Within the boxes we are using appropriate subspacers to get some whitespace between the fieldsets. See [BasicConcepts basic concepts] for more information about spacers. 
+We can save a little vertical space by slightly changing the layout of our one-column form layout into a multi-column layout. As described in [BasicConcepts basic concepts], floatz ships with a layout system that can of course be used for layouting forms as well. Now we surround the personal data fieldset with a left oriented box and the address data fieldset with a right oriented box element. Within the boxes we are using appropriate subspacers to get some whitespace between the fieldsets. See [BasicConcepts basic concepts] for more information about spacers. 
 
 {{{
 <form class="flz_form" action="">
@@ -500,8 +498,22 @@ To show you that the layout of our form also works in liquid layout without any 
 =Summary=
 What you have learned in this wiki article:
 
-   * ...
-
+   * Creating well designed web forms is difficult and often annoying
+   * It his hard to find solutions for complex CSS based web forms today
+   * Customizing every single form element with pure CSS leads to obtrusive CSS in markup or countless CSS classes
+   * Only add `flz_form` to your `FORM` tag and floatz does everything for you
+   * Use `flz_textbox` for input elements of type `TEXT` to support IE6
+   * Use `flz_button` for input elements of type `BUTTON` or `SUBMIT` to support IE6
+   * Use `flz_inline` for `LABEL` tags in combination with checkboxes or radionbuttons to support IE6
+   * Use `flz_mandatory` to annotate mandatory fields
+   * Use `flz_readonly` to annotate readonly fields
+   * Use `flz_combifield` to visually combine input fields and images to comboboxes
+   * Customize form elements by overloading the appropriate CSS styles in your project CSS file
+   * Use fieldsets to structure your forms into contextual releated pieces
+   * Use boxes, layouters and spacers for multicolumn form layouts
+   * Use boxes, layouters and spacers for free / complex form layouts
+   * floatz form layouts work in fixed, centered and liquid layout modes as well
+   
 ====Further readings====
 The following wiki articles contain further information about how to add content to your basic page layout:
 
