@@ -155,3 +155,19 @@ NEW      -        Adding build.bat to \tools for creating shrinked version of fl
                   all templates
 -------------------------------------------------------------------------------------------------------------
 CHANGE   -        Changing all css, js and template files to UTF-8
+
+VERSION 1.1.1
+=============
+
+floatz.form.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+CHANGE   ?        ?
+                  Replacing flz_combifield with flz_combobox for consistence with well known UI concepts
+-------------------------------------------------------------------------------------------------------------
+CHANGE   ?        ?
+                  Replacing flz_button in browser hacks for IE 7 with input[type=button] and 
+                  input[type=submit] for consistency reasons. flz_button thus is not necessary at all when
+                  using IE7 (only when IE6 should also be supported)
+-------------------------------------------------------------------------------------------------------------

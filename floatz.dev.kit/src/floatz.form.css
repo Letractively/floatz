@@ -4,13 +4,13 @@
  * Provides a common baseline as well as specific classes for form elements
  *
  * @project       floatz CSS Framework
- * @version       1.1.0
+ * @version       1.1.1
  * @see           http://code.google.com/p/floatz/
  * @author        Harald Humml
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-02-27
+ * @lastmodified  2010-05-20
  */
 
 /**
@@ -186,7 +186,8 @@ legend {
  * @workaround Omit too much left/right padding
  * @affected IE 7
  */
-*:first-child+html .flz_button {
+*:first-child+html input[type=button],
+*:first-child+html input[type=submit] {
    overflow: visible;
    padding: 0.25em 0.5em;
 }
@@ -201,7 +202,8 @@ legend {
  * @workaround Collapse table cell around button
  * @affected IE 7
  */
-*:first-child+html .flz_button {
+*:first-child+html input[type=button],
+*:first-child+html input[type=submit] {
    width: 1;
 }
 
@@ -257,14 +259,14 @@ legend {
    margin-right: -10px;
 }
 
-/* Combifield marker classes to combine fields with images in one line (e.g. date field with 
+/* Combobox marker classes to combine fields with images in one line (e.g. date field with 
    date picker image) */
-.flz_combifield {
+.flz_combobox {
    margin-right: 1.5em;
    padding-right: 0.5em;
 }
-span.flz_combifield,
-img.flz_combifield {
+span.flz_combobox,
+img.flz_combobox {
    padding: 0;
    margin: 0;
    position: absolute;

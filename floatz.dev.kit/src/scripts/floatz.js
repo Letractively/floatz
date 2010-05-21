@@ -5,7 +5,7 @@
  * no HTML & CSS only solution is available (e.g. skiplinks).
  *
  * @project       floatz CSS Framework
- * @version       1.1.0
+ * @version       1.1.1
  * @see           http://code.google.com/p/floatz/
  * @author        Harald Humml
  * @copyright     Copyright (c) 1998-2010 by :humml:design
