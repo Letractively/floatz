@@ -40,6 +40,8 @@ First of all we need a page container. The page container must be the first elem
 }}}
 *Example 1 - Defining the page container* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_01.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_01.jpg
+
 ==Defining the basic page elements==
 Next we want to create a classic page layout structure with a header, a horizontal menu, a vertical submenu on the left, a content container on the right and and last but not least a footer. Therefore we add a box for each of the page´s layout elements within the page container. A box is a `DIV` element with an associated CSS class named `flz_box`.
 
@@ -69,6 +71,8 @@ Next we want to create a classic page layout structure with a header, a horizont
 </div>
 }}}
 *Example 2 - Defining the basic page elements* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_02.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_02.jpg
 
 When you run the sample code and look at the result, you will see that each of the boxes is shown in a separate row. The reason is that a box element has a width of 100% by default.
 
@@ -100,6 +104,8 @@ To change that, we add layouters to the submenu and the content container, becau
 </div>
 }}}
 *Example 3 - Adding layouters* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_03.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_03.jpg
 
 ==Customizing the page elements==
 As you can see in the previous example, floatz does not dictate you any kind of class names for your page elements. All you need are boxes and layouters. Next we create our own project specific CSS classes for each page element and attach them to the `class` attribute of the appropriate boxes in the HTML markup. 
@@ -184,6 +190,8 @@ body {
 }}}
 *Example 4 - Customizing the page elements* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_04.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_04.jpg
+
 The custom CSS classes for the page elements also give us the possibility to style default HTML tags in the context of specific layout elements (relative styling). In our case, we add some margins to the header and paragraph tags within the content container for an example.
 
 *CSS Code*
@@ -205,6 +213,8 @@ The custom CSS classes for the page elements also give us the possibility to sty
 
 *Example 5 - Contextual customization with relative styles* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_05.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_05.jpg
+
 ==Changing the layout mode==
 Now we are finished with our basic page layout. But what if we want to change the layout afterwards? Nothing is easier than that. As long as we follow the [BasicConcepts basic concepts], floatz gives us the flexibility to switch to another layout mode for already finished pages, without any change to our HTML markup. In the current example, we started with a fixed layout. To change to e.g. a centered (and fixed) layout mode, we only have to change the `@import` statement in our project CSS file. 
 
@@ -218,6 +228,8 @@ Now we are finished with our basic page layout. But what if we want to change th
 }}}
 *Example 6 - Changing to centered layout* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_06.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_06.jpg
+
 For the rest of our article we switch to the last of the three layout modes that are supported by floatz: liquid layout.
 
 *CSS code*
@@ -229,6 +241,8 @@ For the rest of our article we switch to the last of the three layout modes that
 ...
 }}}
 *Example 7 - Changing to liquid layout* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_07.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_07.jpg
 
 To avoid problems with floating elements, especially with too small viewports in liquid layouts, floatz adds by default a `min-width` of 985 pixels to the page container when the layout mode is switched to liquid layout. If you also plan to support Internet Explorer 6, the `min-width` style does not work. In that case you have to add some extra markup directly under the page container and before the first layout element, in our example the header container.
 
@@ -299,6 +313,8 @@ When you resize the browser window again now, you will see that the layout is st
 }}}
 *Example 9 - Combining fixed and liquid layout* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_09.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_09.jpg
+
 The previous example showed the easiest way to change the markup for a combination of fixed and liquid layout. The downside of removing `flz_box` from the content box is, that it can not act as container for absolute positioned elements anymore - even when you assign `flz_relative` to it. In that case you have to add a subordinate `flz_box` element with `flz_relative` between the content container and the spacer.
 
 {{{
@@ -318,6 +334,8 @@ The previous example showed the easiest way to change the markup for a combinati
 }}}
 *Example 9b - Using content box as container for absolute positioned element* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_09b.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_09b.jpg
+
 The example uses `flz_toolbar` that is an absolute positined element by default, to show  this behavior in action. See [BasicConcepts basic concepts] for more information about using relative and absolute positioning.
 
 ==Combining centered and liquid layout==
@@ -334,6 +352,8 @@ body {
 }}}
 
 The [http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_10.html Live Demo] puts everything together: a centered design that combines fixed and liquid layout containers.
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_10.jpg
 
 =Summary=
 What you have learned in this wiki article:
