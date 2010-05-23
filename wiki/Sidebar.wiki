@@ -1,4 +1,5 @@
 #summary Wiki sidebar
+#labels Deprecated
 
   * Getting Started
     * [GettingStarted Getting started]
