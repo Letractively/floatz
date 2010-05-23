@@ -316,7 +316,7 @@ The previous example shows the easiest way to change the markup for a combinatio
    </div>
 </div>
 }}}
-*Example 9b - Using content box as container for absolute positioned element*
+*Example 9b - Using content box as container for absolute positioned element* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_09b.html Live Demo])
 
 The example uses `flz_toolbar` that is an absolute positined element by default, to show the this behavior in action. See [BasicConcepts basic concepts] for more information about using relative and absolute positioning.
 
