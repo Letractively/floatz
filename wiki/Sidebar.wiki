@@ -1,3 +1,9 @@
 #summary Wiki sidebar
 
-Sidebar
+* [GettingStarted Getting started]
+* [WhatsInside What's inside]
+* [BasicConcepts Basic concepts]
+  * [LayoutingPages Layouting pages]
+  * [LayoutingForms Layouting forms]
+  * [LayoutingContent Layouting content (tbd)]
+* [ClassReference Class reference]
