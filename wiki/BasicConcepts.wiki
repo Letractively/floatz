@@ -598,8 +598,8 @@ What you have learned in this wiki article:
    * Boxes are by default as high as their content
    * Boxes are always floating from left to right as long as there is enough space
    * Clear the float of one subsequent box with `flz_clear`
-   * Clear the float of all subsequent boxes with `BR` and `flz_clear`
-   * Clear the float of all subsequent boxes with a surrounding box
+   * Clear the float of all subsequent boxes with `BR` and `flz_clear` in IE6,7
+   * Clear the float of all subsequent boxes with a surrounding box in IE6,7
    * Use `flz_relative` to declare a box as container for absolute positioned elements
    * Boxes can also be absolute positioned themselves
 
