@@ -1,9 +1,20 @@
 #summary Wiki sidebar
 
-  * [GettingStarted Getting started]
-  * [WhatsInside What's inside]
-  * [BasicConcepts Basic concepts]
+  * Getting Started
+    * [GettingStarted Getting started]
+    * [WhatsInside What's inside]
+  * Basics
+    * [BasicConcepts Basic concepts]
     * [LayoutingPages Layouting pages]
     * [LayoutingForms Layouting forms]
     * [LayoutingContent Layouting content (tbd)]
-  * [ClassReference Class reference]
+    * [UsingNavigationModule Using navigation module (tbd)]
+  * Advanced
+    * [CustomizingMenus Customizing menus (tbd)]
+    * [CustomizingTabboxes Customizing tabboxes (tbd)]
+    * [UsingSkiplinks Using skiplinks (tbd)]
+    * [AvoidingObtrusiveMarkupAndCss Avoiding obtrusive markup and CSS (tbd)]
+  * Reference
+    * [BrowserHacks Browser hacks]
+    * [ClassReference Class reference]
+    * [Changelog Change Log]
