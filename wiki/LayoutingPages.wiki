@@ -299,6 +299,27 @@ When you resize the browser window again now, you will see that the layout is st
 }}}
 *Example 9 - Combining fixed and liquid layout* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_09.html Live Demo])
 
+The previous example shows the easiest way to change the markup for a combination of fixed and liquid layout. The downside of removing `flz_box` from the content box is, that it can not act as container for absolute positioned elements anymore - even when you assign `flz_relative` to it. In that case you have to add a subordinate `flz_box` element with `flz_relative` between the content container and the spacer.
+
+{{{
+<!-- content -->
+<div class="content">
+   <div class="flz_box flz_relative">
+      <ul class="flz_listnav flz_toolbar">
+         <li><a href="#"><img src="images/print.gif" alt="" title="Print page" /></a></li>
+         <li><a href="#"><img src="images/favorite.gif" alt="" title="Add to favorites" /></a></li>
+         <li><a href="#"><img src="images/mail.gif" alt="" title="Tell a friend" /></a></li>
+      </ul>
+      <div class="flz_spacer">
+         ...
+      </div>
+   </div>
+</div>
+}}}
+*Example 9b - Using content box as container for absolute positioned element*
+
+The example uses `flz_toolbar` that is an absolute positined element by default, to show the this behavior in action. See [BasicConcepts basic concepts] for more information about using relative and absolute positioning.
+
 ==Combining centered and liquid layout==
 The centered layout mode of floatz uses a fixed width design. If you want to have a liquid layout that is centered, use the CSS files for liquid layout mode and add a left and right margin to the `body` tag in your CSS file.
 
