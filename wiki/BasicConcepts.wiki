@@ -262,7 +262,7 @@ Customizing boxes is very easy. All you have to do is, create a CSS class within
 Content of the project CSS file:
 {{{
 .mybox {
-   background: #cccfff;
+   background: #aaaccc;
 }
 .mybox h1 {
    color: #fff;
@@ -304,25 +304,25 @@ The following example shows how you can nest boxes. If you need an example how t
 Content of the project CSS file:
 {{{
 .box1 {
-   background: #888fff;
-}
+  background: #cccccc;
+}  
 .box2 {
-   background: #999fff;
+   background: #aaaccc;
 }
 .box3 {
-   background: #aaafff;
+   background: #bbbccc;
 }
 .box4 {
-   background: #bbbfff;
+   background: #cccccc;
 }
 .box5 {
-   background: #cccfff;
-}      
+   background: #dddccc;
+}
 .box6 {
-   background: #dddfff;
+   background: #eeeccc;
 }
 .box7 {
-   background: #eeefff;
+   background: #fffccc;
 }
 }}}
 
@@ -545,7 +545,7 @@ Boxes can also act as containers for absolute positioned markup. In this case th
 Content of the project CSS file:
 {{{
 .mybox {
-   background: #eeefff;
+   background: #aaaccc;
    height: 10em;
    width: 50%;
    padding-top: 2em;
@@ -584,14 +584,14 @@ Content of the project CSS file:
 
 {{{
 .mybox {
-   background: #eeefff;
+   background: #cccccc;
    height: 15em;
 }
 .mybox h1 {
    margin-bottom: 0.5em;
 }
 .myabsolutebox {
-   background-color: #fff;
+   background-color: #dddccc;
    position: absolute;
    top: 1em;
    right: 1em;
