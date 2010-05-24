@@ -584,7 +584,7 @@ Content of the project CSS file:
 
 {{{
 .mybox {
-   background: #cccccc;
+   background: #aaaccc;
    height: 15em;
 }
 .mybox h1 {
