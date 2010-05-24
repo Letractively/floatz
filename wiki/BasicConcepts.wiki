@@ -471,7 +471,7 @@ In the next example, we clear the float of the first box in the second row by ad
 }}}
 *Example 13a - Float behaviour with different box heights, using `flz_clear`* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_13a.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_13a.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_13a.jpg
 
 ===Clearing the float in IE6,7===
 While the previous solution works perfectly in all browsers, the behavior is different in Internet Explorer 6 and 7. The first box (with `flz_clear`) floats to the next row, but now the second row floats into the first row. The reason is that the float is not cleared for all subsequent boxes in that versions.
