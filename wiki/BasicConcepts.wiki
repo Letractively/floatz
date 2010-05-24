@@ -478,7 +478,7 @@ While the previous solution works perfectly in all browsers, the behavior is dif
 
 http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_13a_IE6,7.jpg
 
-Now you have two options to clear the float of all subsequent boxes. First you add a `BR` tag after the first row and decorate it with `flz_clear`. The following example shows this. All boxes in the second row are floating as expected.
+Now you have two options to clear the float of all subsequent boxes. First can you add a `BR` tag after the first row and decorate it with `flz_clear`. The following example shows this. All boxes in the second row are floating as expected.
 
 {{{
 <!-- row 1 -->
