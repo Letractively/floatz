@@ -29,7 +29,7 @@ The *page* is the underlying container for your page layouts. It is implemented 
 }}}
 *Example 1 - Page container* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_01.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_01.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_01.jpg
 
 ==Boxes==
 The *box* is the most elementary layout element in floatz. It is used whenever something has to be layouted on web pages, be it the whole page layout, the micro structure of page content or even the visualization of a web form. A box is implemented as a left floating `DIV` element (that's where to name of floatz comes from) with an attached CSS class named `flz_box`. By default a box is as wide as its parent container and as high as its content. 
@@ -46,7 +46,7 @@ The following sample shows the default behavior of boxes. Each box is shown in a
 }}}
 *Example 2 - Default boxes* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_02.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_02.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_02.jpg
 
 ==Layouters==
 
@@ -68,7 +68,7 @@ To see the layouters in action, let's add some to the boxes in the previous exam
 }}}
 *Example 3 - Boxes and layouters* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_03.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_03.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_03.jpg
 
 You can combine as many layouters you need to gain your desired layout. floatz ships with a set of predefined layouters for the most common layout scenarios (see [ClassReference Class Reference] for an overview). If you need additional layouters for special cases, have a look at the original layouter CSS and build your own in your project stylesheet. You only have to take care that you consider also the bug fixes for Internet Explorer to make them work in all browsers.
 
@@ -90,7 +90,7 @@ The following example uses a four column layout, where each box has a width of 2
 }}}
 *Example 4 - Boxes and multiple layouters* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_04.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_04.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_04.jpg
 
 When you attach layouters to boxes, you should take care that the sum of all layouters results in 100%. Otherwise the chance is high that the boxes will not float as you would expect. Means: if the available space after a box in a row is sufficient, the subsequent box floats into the same row, if not it floats into the next row to left edge of the parent container. In some cases it is necessary to influence the default float. The advanced topic chapter below covers how to clear the float of boxes.
 
@@ -106,7 +106,7 @@ Now we are getting to the last of the basic concepts of floatz: *Spacers*. They 
 }}}
 *Example 5 - Box and spacer* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_05.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_05.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_05.jpg
 
 You may ask why floatz is using spacers and is adding additional markup to the boxes, when you could also add margins and paddings directly to them. The reason for this is the standard box model of CSS2: if you add margins, paddings or even borders to an element that is sized in percent, the width of the added margins, paddings and borders is added to the width of the element. That means, the element is getting wider as you have specified. floatz is designed to work also for liquid layouts and therefore uses widths in percent. To avoid unpredictable results when adding whitespace directly to boxes, floatz provides the concept of spacers.
 
@@ -140,7 +140,7 @@ floatz offers a set of predefined spacers as well as subspacers to support as mu
 }}}
 *Example 6 - Boxes and spacers, single row / multi column scenario* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_06.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_06.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_06.jpg
 
 The next example demonstrates spacers that are best for a multi row / single column scenario, where you get a padding of 1em at the edges and between the boxes (rows).
 
@@ -163,7 +163,7 @@ The next example demonstrates spacers that are best for a multi row / single col
 }}}
 *Example 7 - Boxes and spacers, multi row / single column scenario* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_07.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_07.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_07.jpg
 
 The last example shows a more complex scenario with multi rows / multi columns where a constant padding of 1em is needed around and between all boxes.
 
@@ -216,7 +216,7 @@ The last example shows a more complex scenario with multi rows / multi columns w
 }}}
 *Example 8 - Boxes and spacers, multi row / multi column scenario* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_08.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_08.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_08.jpg
 
 ==Subspacers==
 To support also scenarios of nested boxes with spacers, floatz offers a set of predefined subspacers for the same single / multi row / column scenarios as for spacers - see [ClassReference Class Reference] for an overview. The following sample shows such a nested scenario. The first box contains already a spacer with whitespace. To avoid doubling the whitespace in the nested boxes, let's use subspacers instead.
@@ -249,7 +249,7 @@ To support also scenarios of nested boxes with spacers, floatz offers a set of p
 }}}
 *Example 9 - Nested boxes with spacers and subspacers* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_09.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_09.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_09.jpg
 
 The combination of boxes, layouters and spacers as well as subspacers makes almost any layout scenario possible. They give you the ability to create cross-browser compatible, liquid or fixed layouts and the choice to switch between them, also afterwards when your layout is already finished - without any change.
 
@@ -290,7 +290,7 @@ Content of the HTML file:
 
 *Example 10 - Customizing boxes* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_10.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_10.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_10.jpg
 
 ==Nesting boxes==
 Nesting boxes is possible and very easy to achieve. 
@@ -387,7 +387,7 @@ Content of the HTML file:
 }}}
 *Example 11 - Nesting boxes* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_11.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_11.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_11.jpg
 
 ==Clearing the float of boxes==
 When working with boxes, you will sometimes run into situations where you need a way to abort the default float of a box. To achieve this, floatz provides a marker CSS class named `flz_clear`, that must be attached to the box that should float into the next row, regardless if there is enough space beside the preceding box.
@@ -413,7 +413,7 @@ The following example shows how you can clear the float of a subsequent box by a
 }}}
 *Example 12 - Clearing the float of a box* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_12.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_12.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_12.jpg
 
 While the previous example shows a scenario where you are consciously clearing the float of a box, there may be situations where the float of a box is affected by other parameters than its width. One such a case is, when you are arranging boxes side by side and they contain a different amount of content. Because of the fact, that the height of a box depends on the amount of its content, such boxes will have different heights. That could cause subsequent boxes to float to the right edge of those boxes instead of into the next row. 
 
@@ -443,7 +443,7 @@ The following example demonstrates this behavior. The first row contains four bo
 }}}
 *Example 13 - Float behaviour with different box heights, default* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_13.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_13.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_13.jpg
 
 In the next example, we clear the float of the first box in the second row by adding `flz_clear`. As you can see, the boxes in the second row are now floating as expected to the next row.
 
@@ -476,7 +476,7 @@ http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concep
 ===Clearing the float in IE6,7===
 While the previous solution works perfectly in all browsers, the behavior is different in Internet Explorer 6 and 7. The first box (with `flz_clear`) floats to the next row, but now the second row floats into the first row. The reason is that the float is not cleared for all subsequent boxes in that versions.
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_13a_IE6,7.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_13a_IE6,7.jpg
 
 Now you have two options to clear the float of all subsequent boxes. First you add a `BR` tag after the first row and decorate it with `flz_clear`. The following example shows this. All boxes in the second row are floating as expected.
 
@@ -505,7 +505,7 @@ Now you have two options to clear the float of all subsequent boxes. First you a
 }}}
 *Example 13b - Float behaviour with different box heights, using `BR` and `flz_clear` in IE6,7* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_13b.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_13b_IE6,7.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_13b_IE6,7.jpg
 
 Second you can surround the boxes in the second row with a box that is 100% wide. The last example demonstrates this solution.
 
@@ -535,7 +535,7 @@ Second you can surround the boxes in the second row with a box that is 100% wide
 }}}
 *Example 13c - Float behaviour with different box heights, using surrounding box in IE6,7* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_13c.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_13c_IE6,7.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_13c_IE6,7.jpg
 
 The float behavior of boxes may seem a little bit curious to you. Yes it is - welcome to the world of CSS layouts with floating elements. But don't be afraid, in practice those situations are rare and now you know everything you need to solve that kinds of issues.
 
@@ -573,7 +573,7 @@ Content of the HTML file:
 }}}
 *Example 14 - Box as positioning container* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_14.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_14.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_14.jpg
 
 Instead of adding `flz_relative` to the box, you can add the necessary style (`position: relative;`) directly to the box class as well. The page container of floatz for an instance is by default a container for absolute positioned elements. floatz provides some elements that are by default absolute positioned - see [ClassReference Class Reference] for details.
 
@@ -618,7 +618,7 @@ Content of the HTML file:
 }}}
 *Example 15 - Positioned box* ([http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/BasicConcepts_15.html Live Demo])
 
-http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Basic_Concepts_15.jpg
+http://design.humml.eu/toolbox/floatz/samples/BasicConcepts/images/Basic_Concepts_15.jpg
 
 =Summary=
 What you have learned in this wiki article:
