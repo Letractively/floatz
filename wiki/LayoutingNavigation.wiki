@@ -49,7 +49,7 @@ Now we add a list of hyperlinks to the menu container. The list starts with an `
 ...
 }}}
 
-*Example 1 - Defining a list of hyperlinks* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/Layouting_Navigation_01.html Live Demo])
+*Example 1 - Defining a list of hyperlinks* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_01.html Live Demo])
 
 ==Defining a list navigation==
 ==Defining a top navigation==
