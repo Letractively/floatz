@@ -32,7 +32,7 @@ It is recommended to read the following articles before starting with the curren
 
 *Further readings*
 
-The following wiki articles contain further information about how to add content to your basic page layout:
+The following wiki articles contain further information about how to add use floatz for:
 
    * [LayoutingPages Layouting Pages]
    * [LayoutingForms Layouting Forms]
