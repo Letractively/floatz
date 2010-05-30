@@ -11,16 +11,13 @@ Last Update: May 30, 2010
 
 =Introduction=
 =Layouting list navigations=
-==Defining a list navigations==
+==Defining a list navigation==
 ==Defining a top navigation==
 ==Defining a breadcrumb==
 ==Defining a toolbar==
 =Layouting menus=
 ==Defining a horizontal menu=
-===Changing the orientation===
 ==Defining a vertical menu=
-==Customizing menus==
-===Changing the look & feel===
 =Layouting tabboxes=
 =Layouting skiplinks=
 =Summary=
