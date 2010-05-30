@@ -33,7 +33,7 @@ Let´s start with the most basic navigation solution that is available in floatz
 ...
 }}}
 
-Now we add a list of hyperlinks to the menu container. The list starts with an `UL` tag, followed by `LI` tags that contain hyperlinks for the navigation. Usually you will add URLs to the hyperlinks, but in our example we use "#" as placeholder.
+Now we add a list of hyperlinks to the menu container. The list starts with an `UL` tag, followed by `LI` tags that contain hyperlinks as `A` tags for the navigation. Usually we will add URLs to the hyperlinks, but in our example we use "#" as placeholder.
 
 {{{
 ...
@@ -50,6 +50,41 @@ Now we add a list of hyperlinks to the menu container. The list starts with an `
 }}}
 
 *Example 1 - Defining a list of hyperlinks* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_01.html Live Demo])
+
+The result shows a simple list that isn't completely visible, because the menu container is not high enough. To transform the list into a list navigation we only have to add the CSS class `flz_listnav` to the class attribute of the `UL` tag.
+
+{{{
+<!-- menu -->
+...
+<div class="flz_box menu">
+   <ul class="flz_listnav">
+      <li class="flz_selected"><a href="#">Menu 1</a></li>
+      <li><a href="#">Menu 2</a></li>
+      <li><a href="#">Menu 3</a></li>
+      <li><a href="#">Menu 4</a></li>
+   </ul>
+</div>
+...
+}}}
+
+*Example 1b - Transforming the list to a list navigation* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_01b.html Live Demo])
+
+Now the result is much better. The navigation elements are listed side by side. To make the navigation perfect, we add separators between the navigation items as well as tooltips that are shown when the mouse cursor moves over the items. Last but not least, we want to highlight the current navigation item. To get this, we add `flz_selected` to the class attribute of the desired navigation item´s `LI` tag.
+
+{{{
+...
+<div class="flz_box menu">
+   <ul class="flz_listnav">
+      <li class="flz_selected"><a href="#" title="Goto Menu 1">Menu 1</a> |</li>
+      <li><a href="#" title="Goto Menu 2">Menu 2</a> |</li>
+      <li><a href="#" title="Goto Menu 3">Menu 3</a> |</li>
+      <li><a href="#" title="Goto Menu 4">Menu 4</a></li>
+   </ul>
+</div>
+...
+}}}
+
+*Example 1c - Finishing the list navigation example* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_01c.html Live Demo])
 
 ==Defining a list navigation==
 ==Defining a top navigation==
