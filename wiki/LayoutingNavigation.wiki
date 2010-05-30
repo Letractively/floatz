@@ -22,6 +22,7 @@ It is recommended to read the following articles before starting with the curren
 Navigation is one of the most important concepts in web application. The appropriate means to that purpose are hyperlinks. But in practice the requirements on the look & feel of our navigation goes far beyond hyplinks: we need nice looking menus, tabboxes, toolbars with hover effects, highlighting and so on. The following wiki article shows a way how you can meet most of those requirements, without Javascript and multi-nested HTML tables - only with CSS and simple list elements. And if you need more, you can add additional effects to that light weight navigation solution with javascript based effects libraries like jQuery.
 
 =Layouting list navigations=
+==Defining a list navigation==
 Let´s start with the most basic navigation solution that is available in floatz: list navigation. The following code is based on example 5 of [LayoutingPages Layouting pages]. Because we want to focus on navigation only, first of all we delete all content from that sample page thats within the content box. The content box should look like this:
 
 {{{
@@ -86,7 +87,31 @@ Now the result is much better. The navigation elements are listed side by side. 
 
 *Example 1c - Finishing the list navigation example* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_01c.html Live Demo])
 
-==Defining a list navigation==
+===Changing the alignment of the list navigation===
+To change the alignment of the list navigation, we simply have to customize the list navigation in the context of the menu container within our CSS file. In the following example the alignment is changed from left (default) to center.
+
+*CSS code:*
+
+{{{
+...
+.menu .flz_listnav {
+   text-align: center;
+}
+...
+}}}
+*Example 1d - Customizing the list navigation to centered alignment* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_01d.html Live Demo])
+
+If the alignment should be right instead, we change the CSS file again:
+
+*CSS code*
+
+{{{
+.menu .flz_listnav {
+   text-align: right;
+}
+}}}
+*Example 1e - Customizing the list navigation to right alignment* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_01e.html Live Demo])
+
 ==Defining a top navigation==
 ==Defining a breadcrumb==
 ==Defining a toolbar==
