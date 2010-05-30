@@ -12,6 +12,7 @@ Last Update: May 30, 2010
 It is recommended to read the following articles before starting with the current wiki article*
 
    * [BasicConcepts Basic Concepts]
+   * [LayoutingPages Layouting Pages]
 
 *Table of content*
 
@@ -21,6 +22,35 @@ It is recommended to read the following articles before starting with the curren
 Navigation is one of the most important concepts in web application. The appropriate means to that purpose are hyperlinks. But in practice the requirements on the look & feel of our navigation goes far beyond hyplinks: we need nice looking menus, tabboxes, toolbars with hover effects, highlighting and so on. The following wiki article shows a way how you can meet most of those requirements, without Javascript and multi-nested HTML tables - only with CSS and simple list elements. And if you need more, you can add additional effects to that light weight navigation solution with javascript based effects libraries like jQuery.
 
 =Layouting list navigations=
+Let´s start with the most basic navigation solution that is available in floatz: list navigation. The following code is based on example 5 of [LayoutingPages Layouting pages]. Because we want to focus on navigation only, first of all we delete all content from that sample page thats within the content box. The content box should look like this:
+
+{{{
+...
+<!-- content -->
+<div class="flz_box flz_r80 content">
+   Content
+</div>
+...
+}}}
+
+Now we add a list of hyperlinks to the menu container. The list starts with an `UL` tag, followed by `LI` tags that contain hyperlinks for the navigation. Usually you will add URLs to the hyperlinks, but in our example we use "#" as placeholder.
+
+{{{
+...
+<!-- menu -->
+<div class="flz_box menu">
+   <ul>
+      <li><a href="#">Menu 1</a></li>
+      <li><a href="#">Menu 2</a></li>
+      <li><a href="#">Menu 3</a></li>
+      <li><a href="#">Menu 4</a></li>
+   </ul>
+</div>
+...
+}}}
+
+*Example 1 - Defining a list of hyperlinks* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/Layouting_Navigation_01.html Live Demo])
+
 ==Defining a list navigation==
 ==Defining a top navigation==
 ==Defining a breadcrumb==
@@ -36,6 +66,5 @@ Navigation is one of the most important concepts in web application. The appropr
 
 The following wiki articles contain further information about how to use floatz for:
 
-   * [LayoutingPages Layouting Pages]
    * [LayoutingForms Layouting Forms]
    * [LayoutingContent Layouting Content]
