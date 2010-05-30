@@ -18,7 +18,7 @@ It is recommended to read the following articles before starting with the curren
 <wiki:toc max_depth="2" />
 
 =Introduction=
-Navigation is one of the most important concepts in web application. The appropriate means to that purpose are hyperlinks. But in practice the requirements on the look & feel of our navigation goes far beyond hyplinks: we need nice looking menus, tabboxes, toolbars with hover effects, and so on. The following wiki article shows a way how you can meet most of those requirements, without Javascript and multi-nested HTML tables - only with CSS and simple list elements. 
+Navigation is one of the most important concepts in web application. The appropriate means to that purpose are hyperlinks. But in practice the requirements on the look & feel of our navigation goes far beyond hyplinks: we need nice looking menus, tabboxes, toolbars with hover effects, highlighting and so on. The following wiki article shows a way how you can meet most of those requirements, without Javascript and multi-nested HTML tables - only with CSS and simple list elements. And if you need more effects you can simple extend that light weight navigation solutions with a javascript based effects library like jQuery.
 
 =Layouting list navigations=
 ==Defining a list navigation==
