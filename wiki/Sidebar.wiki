@@ -9,11 +9,8 @@
     * [LayoutingPages Layouting pages]
     * [LayoutingForms Layouting forms]
     * [LayoutingContent Layouting content (tbd)]
-    * [UsingNavigationModule Using navigation module (tbd)]
+    * [LayoutingNavigation Layouting navigation (tbd)]
   * Advanced
-    * [CustomizingMenus Customizing menus (tbd)]
-    * [CustomizingTabboxes Customizing tabboxes (tbd)]
-    * [UsingSkiplinks Using skiplinks (tbd)]
     * [AvoidingObtrusiveMarkupAndCss Avoiding obtrusive markup and CSS (tbd)]
   * Reference
     * [BrowserHacks Browser hacks]
