@@ -7,6 +7,12 @@ Last Update: May 30, 2010
    Note: this wiki page covers version 1.1.0.
    ----
 
+*Presumed readings*
+It is recommended to read the following articles before starting with the current wiki article*
+
+   * [BasicConcepts Basic Concepts]
+
+*Table of content*
 <wiki:toc max_depth="2" />
 
 =Introduction=
@@ -21,3 +27,7 @@ Last Update: May 30, 2010
 =Layouting tabboxes=
 =Layouting skiplinks=
 =Summary=
+
+*Further readings*
+
+The following wiki articles contain further information about how to add content to your basic page layout:
