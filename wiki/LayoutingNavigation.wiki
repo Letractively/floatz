@@ -1,4 +1,4 @@
-#summary Describes how to layout navigation as menus, toolbars, breadcrumbs, tabboxes  and skiplinks[UNDER CONSTRUCTION]
+#summary Describes how to layout navigation as menus, toolbars, breadcrumbs, tabboxes  and skiplinks [UNDER CONSTRUCTION]
 Last Update: May 30, 2010
 
 *This page is currently under construction and thus not finished.*
