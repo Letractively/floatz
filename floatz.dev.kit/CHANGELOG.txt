@@ -159,15 +159,35 @@ CHANGE   -        Changing all css, js and template files to UTF-8
 VERSION 1.1.1
 =============
 
+floatz.dev.kit
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+CHANGE   17       Templates are using wrong directory name
+                  Correcting templates as well as wiki examples
+-------------------------------------------------------------------------------------------------------------
+
 floatz.form.css
 =============================================================================================================
 Type     Issue    Description
 -------------------------------------------------------------------------------------------------------------
-CHANGE   ?        ?
-                  Replacing flz_combifield with flz_combobox for consistence with well known UI concepts
+CHANGE   17       Templates are using wrong directory name
+                  Correcting templates as well as wiki examples
 -------------------------------------------------------------------------------------------------------------
-CHANGE   ?        ?
+CHANGE   18       Avoid use of flz_button in IE7 by using attribute selector
                   Replacing flz_button in browser hacks for IE 7 with input[type=button] and 
                   input[type=submit] for consistency reasons. flz_button thus is not necessary at all when
                   using IE7 (only when IE6 should also be supported)
+-------------------------------------------------------------------------------------------------------------
+CHANGE   19       Rename flz_combifield to flz_combobox
+                  Replacing flz_combifield with flz_combobox for consistence with well known UI concepts
+-------------------------------------------------------------------------------------------------------------
+
+floatz.nav.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+CHANGE   22       Wrong addressing and color issues in flz_vmenu
+                  Changing styles in flz_vmenu
+                  Please check your customization of flz_vmenu and change it if necessary
 -------------------------------------------------------------------------------------------------------------
