@@ -22,7 +22,7 @@
  */
 
 #flz_page {
-   background: #fff;
+   background-color: #fff;
    float: left;
    position: relative;
    width: 985px;
@@ -57,7 +57,7 @@
  */
 
 .flz_box {
-   background: inherit;
+   background-color: inherit;
    clear: none;
    float: left;
    width: 100%;
