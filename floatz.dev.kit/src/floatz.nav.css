@@ -16,7 +16,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-03-04
+ * @lastmodified  2010-06-03
  */
 
 /**
@@ -81,7 +81,7 @@ a:focus.flz_skiplink {
  */
 
 .flz_listnav {
-   background: inherit;
+   background-color: inherit;
    padding: 0.5em 1em;
    margin: 0;              /* because of IE 6 that shows a margin at the bottom of .listnav */
 }
@@ -185,7 +185,7 @@ a:focus.flz_skiplink {
 }
 
 .flz_hmenu li a {
-   background: inherit;
+   background-color: inherit;
    border-left: 1px solid #000;
    display: block;
    text-decoration: none;
@@ -204,19 +204,19 @@ a:focus.flz_skiplink {
 /* focused or hovered menu item */
 .flz_hmenu a:focus,
 .flz_hmenu a:hover {
-   background: #ddd;
+   background-color: #ddd;
    color: inherit;
 }
 
 /* active (clicked) menu item */
 .flz_hmenu a:active {
-   background: #ddd;
+   background-color: #ddd;
    color: inherit;
 }
 
 /* selected menu item */
 .flz_hmenu li.flz_selected {
-   background: #fff;
+   background-color: #fff;
    font-weight: bold;
    color: inherit;
 }
@@ -224,13 +224,13 @@ a:focus.flz_skiplink {
 /* focused or hovered selected menu item */
 .flz_hmenu li.flz_selected a:focus,
 .flz_hmenu li.flz_selected a:hover {
-   background: #ddd;
+   background-color: #ddd;
    color: inherit;
 }
 
 /* active (clicked) selected menu item */
 .flz_hmenu li.flz_selected a:active {
-   background: #bbb;
+   background-color: #bbb;
    color: inherit;
 }
 
@@ -241,17 +241,21 @@ a:focus.flz_skiplink {
  * Vertical menu navigation element that supports 5 menu levels (including the 1st). Needs 
  * a surrounding DIV tag that uses vmenu.
  */
- 
+
+/* Placeholder for container class */ 
 .flz_vmenu {
 }
 
+/* Setting defaults for surrounding UL tag */
 .flz_vmenu ul {
    margin: 0;
    padding: 0;
    width: 100%;
 }
- 
+
+/* Setting defaults for LI tag */
 .flz_vmenu li {
+   background-color: #fff; /* Default background color for all menu items */
    float: left;
    list-style-type: none;
    margin: 0;
@@ -259,84 +263,123 @@ a:focus.flz_skiplink {
    width: 100%;
 }
 
-.flz_vmenu li a {
-   background: inherit;
+/* Setting defaults for all A tag within LI */
+.flz_vmenu ul li a {
+   background-color: transparent;
    display: block;
    padding: 0.5em 1em;
    text-decoration: none;
    border-bottom: 1px solid #000;
 }
 
-.flz_vmenu li ul li a {
-   background: inherit;
+/* Setting paddings for A tag of level 1-5 in menu to visualize hierarchy */
+.flz_vmenu ul li a {
    padding-left: 2em;
 }
-
-.flz_vmenu li ul li ul li a {
-   background: inherit;
+.flz_vmenu ul li ul li a {
    padding-left: 3em;
 }
-
-.flz_vmenu li ul li ul li ul li a {
-   background: inherit;
+.flz_vmenu ul li ul li ul li a {
    padding-left: 4em;
 }
-
-.flz_vmenu li ul li ul li ul li ul li a {
-   background: inherit;
+.flz_vmenu ul li ul li ul li ul li a {
    padding-left: 5em;
 }
 
-/* default menu item */
+/* Style all non-visited menu items */
 .flz_vmenu a:link {
+   color: inherit;
 }
 
-/* visited menu item */
+/* Style all visited menu items (always recommended!) */
 .flz_vmenu a:visited {
-   color: inherit;
+   color: #000;
 }
 
-/* focused or hovered menu item */
-.flz_vmenu a:focus,
+/* Style all hovered menu items (on mouse over) */
 .flz_vmenu a:hover {
-   background: #ddd;
-   color: inherit;
+   background-color: #ddd;
 }
 
-/* active (clicked) menu item */
+/* Style all focused menu items (on TAB navigation) 
+   Note: does not work in IE (uses a:active instead)
+ */
+.flz_vmenu a:focus {
+   background-color: #ddd;
+}
+
+/* Style all active menu items (on mouse click) */
 .flz_vmenu a:active {
-   background: #ddd;
-   color: inherit;
+   background-color: #eee;
 }
 
-/* Selected menu item */
+/**
+ * IE 6, 7 uses a:active for TAB navigation AND mouse click
+ * @workaround Reset styles to a:focus and thus disclaim "click behavior" in IE
+ * @affected IE 6, 7
+ */
+* html .flz_vmenu a:active {
+   background-color: #ddd;
+}
+*:first-child+html .flz_vmenu a:active {
+   background-color: #ddd;
+}
+
+/* Style selected menu item (restrict to first A within selected LI) - regardless if visited or not */
 .flz_vmenu li.flz_selected > a {
-   background: #fff;
-   color: inherit;
+   background-color: transparent;
    font-weight: bold;
 }
 
 /**
- * Selected menu item
- * @workaround Simulate child selector to highlight only first A within LI
- * @affected IE 5, 6
+ * IE 6 does not support first child selector
+ * @workaround Simulate with expressions
+ * @affected IE 6
  */
 * html .flz_vmenu li.flz_selected a {
-  background: expression(/flz_selected/.test(this.parentNode.className)? "#fff" : "inherit");
-  font-weight: expression(/flz_selected/.test(this.parentNode.className)? "bold" : "normal");
+  background-color: expression(/flz_selected/.test(this.parentNode.className)? "transparent" : "inherit");
+  font-weight: expression(/flz_selected/.test(this.parentNode.className)? "bold" : "inherit");
 }
 
-/* Focused or hovered selected menu item */
-.flz_vmenu li.flz_selected a:focus,
-.flz_vmenu li.flz_selected a:hover {
-   background: #ddd;
-   color: inherit;
+/* Style hovered selected menu item (restrict to first A within selected LI) */
+.flz_vmenu li.flz_selected > a:hover {
+   background-color: #bbb;
+}
+/**
+ * IE 6 does not support first child selector
+ * @workaround Simulate with expressions
+ * @affected IE 6
+ */
+* html .flz_vmenu li.flz_selected a:hover {
+  background-color: expression(/flz_selected/.test(this.parentNode.className)? "#bbb" : "inherit");
 }
 
-/* active (clicked) selected menu item */
-.flz_vmenu li.flz_selected a:active {
-   background: #bbb;
-   color: inherit;
+/* Style focused selected menu item
+   Note: does not work in IE (uses a:active instead) 
+ */
+.flz_vmenu li.flz_selected > a:focus {
+   background-color: #bbb;
+}
+
+/* Style active selected menu item (on mouse click) */
+.flz_vmenu li.flz_selected > a:active {
+   background-color: #ddd;
+}
+/**
+ * IE 6 does not support first child selector
+ * @workaround Simulate with expressions
+ * @affected IE 6
+ */
+* html .flz_vmenu li.flz_selected a:active {
+  background-color: expression(/flz_selected/.test(this.parentNode.className)? "#bbb" : "inherit");
+}
+/**
+ * IE 7 uses a:active for TAB navigation AND mouse click
+ * @workaround Reset styles to a:focus and thus disclaim "click behavior" in IE
+ * @affected IE 7
+ */
+*:first-child+html .flz_vmenu li.flz_selected > a:active {
+   background-color: #ddd;
 }
 
 /**
@@ -369,10 +412,10 @@ a:focus.flz_skiplink {
    padding: 0 0 0 0.5em;
 }
 .flz_htabmenu li {
-   background:url(images/htabmenu.gif) no-repeat left top;
+   background: url(images/htabmenu.gif) no-repeat left top;
 }
 .flz_htabmenu_bottom li {
-   background:url(images/htabmenu_bottom_inactive.gif) no-repeat left bottom;
+   background: url(images/htabmenu_bottom_inactive.gif) no-repeat left bottom;
 }
 
 /* menu item (hyperlink element as opening part of sliding door)*/
@@ -383,10 +426,10 @@ a:focus.flz_skiplink {
    padding: 0.5em 1em 0.5em 0.5em;  /* last one reduced at padding of LI */
 }
 .flz_htabmenu a {
-   background:url(images/htabmenu.gif) no-repeat right top;
+   background: url(images/htabmenu.gif) no-repeat right top;
 }
 .flz_htabmenu_bottom a{
-   background:url(images/htabmenu_bottom_inactive.gif) no-repeat right bottom;
+   background: url(images/htabmenu_bottom_inactive.gif) no-repeat right bottom;
 }
 
 /* default menu item */
@@ -403,11 +446,11 @@ a:focus.flz_skiplink {
 /* hovered menu item (hyperlink element as opening part of the sliding doors) */
 .flz_htabmenu a:hover,
 .flz_htabmenu li:hover a {
-   background:url(images/htabmenu.gif) no-repeat right -100px;
+   background: url(images/htabmenu.gif) no-repeat right -100px;
 }
 .flz_htabmenu_bottom a:hover,
 .flz_htabmenu_bottom li:hover a {
-   background:url(images/htabmenu_bottom_hover.gif) no-repeat right bottom;
+   background: url(images/htabmenu_bottom_hover.gif) no-repeat right bottom;
 }
 
 /**
@@ -415,11 +458,11 @@ a:focus.flz_skiplink {
  * @affected IE 5, 6
  */
 * html .flz_htabmenu a:hover {
-   background:url(images/htabmenu.gif) no-repeat right top;
+   background: url(images/htabmenu.gif) no-repeat right top;
    text-decoration: underline;
 }
 * html .flz_htabmenu_bottom a:hover {
-   background:url(images/htabmenu_bottom_inactive.gif) no-repeat right bottom;
+   background: url(images/htabmenu_bottom_inactive.gif) no-repeat right bottom;
    text-decoration: underline;
 }
 
@@ -434,28 +477,28 @@ a:focus.flz_skiplink {
 
 /* hovered menu item (list element as closing part of the sliding doors) */
 .flz_htabmenu li:hover {
-   background:url(images/htabmenu.gif) no-repeat left -100px;
+   background: url(images/htabmenu.gif) no-repeat left -100px;
 }
 .flz_htabmenu_bottom li:hover {
-   background:url(images/htabmenu_bottom_hover.gif) no-repeat left bottom;
+   background: url(images/htabmenu_bottom_hover.gif) no-repeat left bottom;
 }
 
 /* selected menu item (list element as closing part of the sliding door) */
 .flz_htabmenu li.flz_selected {
-   background:url(images/htabmenu.gif) no-repeat left -200px;
+   background: url(images/htabmenu.gif) no-repeat left -200px;
 }
 .flz_htabmenu_bottom li.flz_selected {
-   background:url(images/htabmenu_bottom_active.gif) no-repeat left bottom;
+   background: url(images/htabmenu_bottom_active.gif) no-repeat left bottom;
 }
 
 /* selected menu item (hyperlink element as opening part of sliding door)*/
 .flz_htabmenu li.flz_selected a {
-   background:url(images/htabmenu.gif) no-repeat right -200px;
+   background: url(images/htabmenu.gif) no-repeat right -200px;
    color: inherit;
    font-weight: bold;
 }
 .flz_htabmenu_bottom li.flz_selected a {
-   background:url(images/htabmenu_bottom_active.gif) no-repeat right bottom;
+   background: url(images/htabmenu_bottom_active.gif) no-repeat right bottom;
    color: inherit;
    font-weight: bold;
 }
@@ -463,12 +506,12 @@ a:focus.flz_skiplink {
 /* focused or hovered selected menu item (hyperlink element as opening part of the sliding doors) */
 .flz_htabmenu li.flz_selected a:hover,
 .flz_htabmenu li:hover.flz_selected a {
-   background:url(images/htabmenu.gif) no-repeat right -100px;
+   background: url(images/htabmenu.gif) no-repeat right -100px;
    color: inherit;
 }
 .flz_htabmenu_bottom li.flz_selected a:hover,
 .flz_htabmenu_bottom li:hover.flz_selected a {
-   background:url(images/htabmenu_bottom_hover.gif) no-repeat right bottom;
+   background: url(images/htabmenu_bottom_hover.gif) no-repeat right bottom;
    color: inherit;
 }
 
@@ -477,20 +520,20 @@ a:focus.flz_skiplink {
  * @affected IE 5, 6
  */
 * html .flz_htabmenu li.flz_selected a:hover {
-   background:url(images/htabmenu.gif) no-repeat right -200px;
+   background: url(images/htabmenu.gif) no-repeat right -200px;
    text-decoration: underline;
 }
 * html .flz_htabmenu_bottom li.flz_selected a:hover {
-   background:url(images/htabmenu_bottom_active.gif) no-repeat right bottom;
+   background: url(images/htabmenu_bottom_active.gif) no-repeat right bottom;
    text-decoration: underline;
 }
 
 /* focused or hovered selected menu item (list element as closing part of the sliding doors) */
 .flz_htabmenu li:hover.flz_selected {
-   background:url(images/htabmenu.gif) no-repeat left -100px;
+   background: url(images/htabmenu.gif) no-repeat left -100px;
 }
 .flz_htabmenu_bottom li:hover.flz_selected {
-   background:url(images/htabmenu_bottom_hover.gif) no-repeat left bottom;
+   background: url(images/htabmenu_bottom_hover.gif) no-repeat left bottom;
 }
 
 /* focus and active (clicked) selected menu item */
