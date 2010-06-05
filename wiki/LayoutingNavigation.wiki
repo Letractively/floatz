@@ -329,7 +329,7 @@ Because the height of the menu container seems a little bit to small for the con
 http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_05b.jpg
 
 ===Changing the orientation of the horizontal menu ===
-It is also possible to change the orientation of the horizontal menu from right (default) to left. The only this that has to be changed is in the CSS file. Only add a `float:left` to your menu containers class.
+It is also possible to change the orientation of the horizontal menu from right (default) to left. The only thing that has to be changed is in the CSS file. Only add a `float:left` to your menu containers class.
 
 {{{
 ...
