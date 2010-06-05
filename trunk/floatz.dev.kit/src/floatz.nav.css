@@ -37,18 +37,12 @@
 /* marker class for skiplinks within flz_skipnav */
 a.flz_skiplink {
    left: 0;
-/*   height: 1px;
-   overflow: hidden;*/
    position: absolute;
    top: -500px;
-   /*width: 1px;*/
 }
 a:active.flz_skiplink,
 a:focus.flz_skiplink {
-   /*height: auto;
-   overflow: visible;*/
    position: static;
-   /*width: auto;*/
 }
 
 /**
