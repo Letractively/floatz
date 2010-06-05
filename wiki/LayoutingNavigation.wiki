@@ -314,6 +314,37 @@ http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouti
 
 The result shows the horizontal menu in action. Try to move the mouse cursor over one menu item (only over the white space and not directly over the hyperlink) and you can see that the menu items white space is also clickable.
 
+Because the height of the menu container seems a little bit to small for the contained horizontal menu, we slightly increase the height of the menu container in the CSS file to make it perfect.
+
+{{{
+.menu {
+   background: #bbbccc;
+   height: 2.20em;
+}
+}}}
+
+*Example 5b - Increasing the height of the menu container* 
+([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_05b.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_05b.jpg
+
+===Changing the orientation of the horizontal menu ===
+It is also possible to change the orientation of the horizontal menu from right (default) to left. The only this that has to be changed is in the CSS file. Only add a `float:left` to your menu containers class.
+
+{{{
+...
+.menu ul {
+   float: left;
+}
+...
+}}}
+
+*Example 5c - Changing the menu orientation to left* 
+([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_05c.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_05c.jpg
+
+
 ==Defining a vertical menu=
 =Layouting tabboxes=
 =Layouting skiplinks=
