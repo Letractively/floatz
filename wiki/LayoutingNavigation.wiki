@@ -114,8 +114,10 @@ If the alignment should be right instead, we change the CSS file again:
 *CSS code*
 
 {{{
+...
 .menu .flz_listnav {
    text-align: right;
+...
 }
 }}}
 *Example 1e - Customizing the list navigation to right alignment* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_01e.html Live Demo])
@@ -125,7 +127,12 @@ http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouti
 ==Defining a top navigation==
 Next we add a navigation element to our example that is based on the list navigation. Its called top navigation and is normally used for secondary navigation that should occur on every page of the web site, but should not be part of the main navigation. Therefor we add a list navigation to the header container (as described in the previous section). Then we add `flz_topnav` after `flz_listnav` to the `class` attribute of the surrounding `UL` element. 
 
+   ----
+   Note: It is important that you first add `flz_listnav` to the class attribute and then `flz_topnav`. The top navigation class does not work on its on and only extends the behaviour of the list navigaton class.
+   ----
+
 {{{
+...
 <!-- header -->
 <div class="flz_box header">
    <ul class="flz_listnav flz_topnav">
@@ -135,6 +142,7 @@ Next we add a navigation element to our example that is based on the list naviga
    </ul>
    Header
 </div>
+...
 }}}
 *Example 2 - Adding a top navigation to the header* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_02.html Live Demo])
 
@@ -143,6 +151,48 @@ http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouti
 As you can see when you run the example, the top navigation container floats to the right corner of the header container. The reason for this is, because the page container is a relative positioned element and the `flz_topnav` annotation makes the list navigation to an absolute positioned element. See [BasicConcepts basic concepts] for a description about using relative and absolute positioned elements.
 
 ==Defining a breadcrumb==
+Breadcrumbs are one of the most useful navigation concepts in web sites and applications that shows the user where he currently is in the context of the sitemap and gives him the possibility to navigate back to a specific page in this path. floatz also provides a CSS class for breadcrumb support. 
+
+To see how to get a breadcrumb, first we add a simple list navigation to the content container, then we add the `flz_breadcrumb` annotation after `flz_listnav` to the `UL` element. To extend the example, we also add some content to the content container.
+
+{{{
+<!-- content -->
+...
+<div class="flz_box flz_r80 content">
+   <ul class="flz_listnav flz_breadcrumb">
+      <li><a href="#" title="Goto Homepage">Home</a> &gt;</li>
+      <li class="flz_selected"><a href="#" title="Goto Menu 1">Menu 1</a></li>
+   </ul>
+   <div class="flz_spacer">
+      <h1>Content</h1>
+      <p>
+         Lorem ipsum dolor sit amet, consetetur sadipscing elitr ...
+      </p>
+   </div>
+</div>
+...
+}}}
+
+*Example 3 - Adding a breadcrumb navigation to the content container* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_03.html Live Demo])
+
+The result is, that the breadcrumb floats to the top left corner of the whole page. Other than for the top navigation in the previous example, this is not what we want. The reason is, that the breadcrumb is an absolute positioned navigation element and thus needs a relative positioned container. In our case, the page is a relative positioned container by default but not the content container. To get the breadcrumb flowing within the content container, we make the content container a releative positioned element, by adding `flz_relative` to it. See [BasicConcepts basic concepts] to get more information about relative and absolute positioned elements.
+
+{{{
+...
+<!-- content -->
+<div class="flz_box flz_r80 flz_relative content">
+   <ul class="flz_listnav flz_breadcrumb">
+      ...
+   </ul>
+   <div class="flz_spacer">
+      ...
+   </div>
+</div>
+...
+}}}
+
+*Example 3 - Making the content container relative positioned* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_03b.html Live Demo])
+
 ==Defining a toolbar==
 =Layouting menus=
 ==Defining a horizontal menu=
