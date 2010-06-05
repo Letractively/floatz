@@ -126,7 +126,7 @@ Next we add a navigation element to our example that is based on the list naviga
    Header
 </div>
 }}}
-*Example 2 - Adding a top navigation to the header* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_02e.html Live Demo])
+*Example 2 - Adding a top navigation to the header* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_02.html Live Demo])
 
 As you can see when you run the example, the top navigation container floats to the right corner of the header container. The reason for this is, because the page container is a relative positioned element and the `flz_topnav` annotation makes the list navigation to an absolute positioned element. See [BasicConcepts basic concepts] for a description about using relative and absolute positioned elements.
 
