@@ -52,6 +52,8 @@ Now we add a list of hyperlinks to the menu container. The list starts with an `
 
 *Example 1 - Defining a list of hyperlinks* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_01.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_01.jpg
+
 The result shows a simple list that isn't completely visible, because the menu container is not high enough. To transform the list into a list navigation we only have to add the CSS class `flz_listnav` to the class attribute of the `UL` tag.
 
 {{{
@@ -70,6 +72,8 @@ The result shows a simple list that isn't completely visible, because the menu c
 
 *Example 1b - Transforming the list to a list navigation* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_01b.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_01b.jpg
+
 Now the result is much better. The navigation elements are listed side by side. To make the navigation perfect, we add separators between the navigation items as well as tooltips that are shown when the mouse cursor moves over the items. Last but not least, we want to highlight the current navigation item. To get this, we add `flz_selected` to the class attribute of the desired navigation item´s `LI` tag.
 
 {{{
@@ -87,6 +91,8 @@ Now the result is much better. The navigation elements are listed side by side. 
 
 *Example 1c - Finishing the list navigation example* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_01c.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_01c.jpg
+
 ===Changing the alignment of the list navigation===
 To change the alignment of the list navigation, we simply have to customize the list navigation in the context of the menu container within our CSS file. In the following example the alignment is changed from left (default) to center.
 
@@ -101,6 +107,8 @@ To change the alignment of the list navigation, we simply have to customize the 
 }}}
 *Example 1d - Customizing the list navigation to centered alignment* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_01d.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_01d.jpg
+
 If the alignment should be right instead, we change the CSS file again:
 
 *CSS code*
@@ -111,6 +119,8 @@ If the alignment should be right instead, we change the CSS file again:
 }
 }}}
 *Example 1e - Customizing the list navigation to right alignment* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_01e.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_01e.jpg
 
 ==Defining a top navigation==
 Next we add a navigation element to our example that is based on the list navigation. Its called top navigation and is normally used for secondary navigation that should occur on every page of the web site, but should not be part of the main navigation. Therefor we add a list navigation to the header container (as described in the previous section). Then we add `flz_topnav` after `flz_listnav` to the `class` attribute of the surrounding `UL` element. 
@@ -127,6 +137,8 @@ Next we add a navigation element to our example that is based on the list naviga
 </div>
 }}}
 *Example 2 - Adding a top navigation to the header* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_02.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_02.jpg
 
 As you can see when you run the example, the top navigation container floats to the right corner of the header container. The reason for this is, because the page container is a relative positioned element and the `flz_topnav` annotation makes the list navigation to an absolute positioned element. See [BasicConcepts basic concepts] for a description about using relative and absolute positioned elements.
 
