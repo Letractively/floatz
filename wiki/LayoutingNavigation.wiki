@@ -212,6 +212,36 @@ http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouti
 Now the breadcrumb works as expected and floats within the content container, above the text.
 
 ==Defining a toolbar==
+Last but not least, floatz provides also a list navigation type for toolbars. While the other examples were text based navigation elements, sometimes you may have an image based navigation in form of a toolbar for executing actions on your web page. The way to get a toolbar in floatz is as easy as for the top navigation and the breadcrumb. 
+
+To see the toolbar in action, we add an additional list navigation to the content container and extend its `class` attribute with `flz_toolbar`.
+
+{{{
+...
+<!-- content -->
+<div class="flz_box flz_r80 flz_relative content">
+   <ul class="flz_listnav flz_breadcrumb">
+      ...
+   </ul>
+   <div class="flz_spacer">
+      <ul class="flz_listnav flz_toolbar">
+         <li><a href="#"><img src="images/print.gif" alt="" title="Print page" /></a></li>
+         <li><a href="#"><img src="images/favorite.gif" alt="" title="Add to favorites" /></a></li>
+         <li><a href="#"><img src="images/mail.gif" alt="" title="Tell a friend" /></a></li>
+      </ul>
+      <h1>Content</h1>
+      <p>
+         ...
+      </p>
+   </div>
+</div>
+...
+}}}
+
+*Example 4 - Adding a toolbar to the content container* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_04.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_04.jpg
+
 =Layouting menus=
 ==Defining a horizontal menu=
 ==Defining a vertical menu=
