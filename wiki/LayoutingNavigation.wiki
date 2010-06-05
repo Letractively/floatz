@@ -175,6 +175,8 @@ To see how to get a breadcrumb, first we add a simple list navigation to the con
 
 *Example 3 - Adding a breadcrumb navigation to the content container* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_03.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_03.jpg
+
 The result is, that the breadcrumb floats to the top left corner of the whole page. Other than for the top navigation in the previous example, this is not what we want. The reason is, that the breadcrumb is an absolute positioned navigation element and thus needs a relative positioned container. In our case, the page is a relative positioned container by default but not the content container. To get the breadcrumb flowing within the content container, we make the content container a releative positioned element, by adding `flz_relative` to it. See [BasicConcepts basic concepts] to get more information about relative and absolute positioned elements.
 
 {{{
@@ -190,6 +192,8 @@ The result is, that the breadcrumb floats to the top left corner of the whole pa
 
 *Example 3b - Making the content container relative positioned* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_03b.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_03b.jpg
+
 The result is a little bit better, but now the breadcrumb overlaps the text of the content container. To fix this, we have to add a padding at the top of our content container. We do this directly in the CSS file:
 
 {{{
@@ -202,6 +206,8 @@ The result is a little bit better, but now the breadcrumb overlaps the text of t
 }}}
 
 *Example 3c - Making the content container relative positioned* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_03c.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_03c.jpg
 
 Now the breadcrumb works as expected and floats within the content container, above the text.
 
