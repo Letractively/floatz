@@ -151,7 +151,7 @@ http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouti
 As you can see when you run the example, the top navigation container floats to the right corner of the header container. The reason for this is, because the page container is a relative positioned element and the `flz_topnav` annotation makes the list navigation to an absolute positioned element. See [BasicConcepts basic concepts] for a description about using relative and absolute positioned elements.
 
 ==Defining a breadcrumb==
-Breadcrumbs are one of the most useful navigation concepts in web sites and applications that shows the user where he currently is in the context of the sitemap and gives him the possibility to navigate back to a specific page in this path. floatz also provides a CSS class for breadcrumb support. 
+Breadcrumbs are one of the most useful navigation concepts in web sites and applications. They shows users where they currently are in the context of the sitemap and give them the possibility to navigate back to a specific page in this path. floatz also provides a CSS class for breadcrumb support. 
 
 To see how to get a breadcrumb, first we add a simple list navigation to the content container, then we add the `flz_breadcrumb` annotation after `flz_listnav` to the `UL` element. To extend the example, we also add some content to the content container.
 
