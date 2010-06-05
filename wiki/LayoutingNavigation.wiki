@@ -183,9 +183,6 @@ The result is, that the breadcrumb floats to the top left corner of the whole pa
 <div class="flz_box flz_r80 flz_relative content">
    <ul class="flz_listnav flz_breadcrumb">
       ...
-   </ul>
-   <div class="flz_spacer">
-      ...
    </div>
 </div>
 ...
