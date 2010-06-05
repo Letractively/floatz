@@ -191,7 +191,22 @@ The result is, that the breadcrumb floats to the top left corner of the whole pa
 ...
 }}}
 
-*Example 3 - Making the content container relative positioned* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_03b.html Live Demo])
+*Example 3b - Making the content container relative positioned* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_03b.html Live Demo])
+
+The result is a little bit better, but now the breadcrumb overlaps the text of the content container. To fix this, we have to add a padding at the top of our content container. We do this directly in the CSS file:
+
+{{{
+...
+.content {
+   background: inherit;
+   padding-top: 2em;
+}
+...
+}
+
+*Example 3c - Making the content container relative positioned* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_03c.html Live Demo])
+
+Now the breadcrumb works as expected and floats within the content container, above the text.
 
 ==Defining a toolbar==
 =Layouting menus=
