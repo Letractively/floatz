@@ -61,7 +61,7 @@ The result shows a simple list that isn't completely visible, because the menu c
 ...
 <div class="flz_box menu">
    <ul class="flz_listnav">
-      <li class="flz_selected"><a href="#">Menu 1</a></li>
+      <li><a href="#">Menu 1</a></li>
       <li><a href="#">Menu 2</a></li>
       <li><a href="#">Menu 3</a></li>
       <li><a href="#">Menu 4</a></li>
