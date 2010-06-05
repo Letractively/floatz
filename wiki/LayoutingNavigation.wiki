@@ -289,6 +289,29 @@ As you have seen in the previous chapters, unsorted lists are an easy way to str
 floatz ships with a horizontal menu as well as a vertical menu that are also based on the powerful concept of unsorted lists. The following chapters show you how easy it is to create menus and how you can customize them for your own needs.
 
 ==Defining a horizontal menu=
+To get a horizontal menu, we transform the current list navigation in the menu container of our example to a menu. Therefor we remove `flz_listnav` from the `UL` element and add `flz_hmenu` to the surrounding `DIV` container.
+
+   ----
+   Note: In contrast to the list navigations, that are getting along with a simple `UL` element, the menus need an additional surrounding `DIV` container. The reason is because the menus are using CSS floats. That means each `LI` as well as the `UL` element becomes a floating element and thus must be covered by a container that holds everything together. Using this technic makes it possible to create anchors, that are enlarging the clickable area of each menu item, making it easier for users to click on them (see [http://en.wikipedia.org/wiki/Fitts's_law Fitts law]).
+   ----
+
+{{{
+...
+<!-- menu -->
+<div class="flz_box flz_hmenu menu">
+   <ul>
+      <li class="flz_selected"><a href="#" title="Goto Menu 1">Menu 1</a></li>
+      <li><a href="#" title="Goto Menu 2">Menu 2</a></li>
+      <li><a href="#" title="Goto Menu 3">Menu 3</a></li>
+      <li><a href="#" title="Goto Menu 4">Menu 4</a></li>
+   </ul>
+</div>
+...
+}}}
+*Example 5 - Defining a horizontal menu* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_05.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_05.jpg
+
 ==Defining a vertical menu=
 =Layouting tabboxes=
 =Layouting skiplinks=
