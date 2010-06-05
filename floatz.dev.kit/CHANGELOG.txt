@@ -188,6 +188,7 @@ floatz.nav.css
 Type     Issue    Description
 -------------------------------------------------------------------------------------------------------------
 CHANGE   22       Wrong addressing and color issues in flz_vmenu
-                  Changing styles in flz_vmenu
-                  Please check your customization of flz_vmenu and change it if necessary
+                  Removing most of all pre-defined customizations in flz_vmenu and flz_hmenu to avoid
+                  problems in customizations and to reduce CSS code. See wiki how to customize the menus.
+                  Please check your code after updating to this version, to see if it works as mentioned.
 -------------------------------------------------------------------------------------------------------------

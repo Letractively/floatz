@@ -3,5 +3,9 @@
 
 /* Project specific styles */
 body {
-   background: #efefef;
+   background: #eeeccc;
+}
+
+#flz_page {
+   background: #cccccc;
 }
