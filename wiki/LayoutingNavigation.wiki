@@ -360,7 +360,7 @@ To round the example up, we change the appearance of the vertical line at the be
 
 http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_05d.jpg
 
-Now we´re done, defining a left oriented horizontal menu. If you want to see how it can be customized to your desired look & feel, see [Customizing_the_menus] below.
+Now we´re done, defining a left oriented horizontal menu. If you want to see how it can be customized to your desired look & feel, see [LayoutingPages#Customizing the menus] below.
 
 ==Defining a vertical menu=
 ==Customizing the menus===
