@@ -312,6 +312,8 @@ To get a horizontal menu, we transform the current list navigation in the menu c
 
 http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_05.jpg
 
+The result shows the horizontal menu in action. Try to move the mouse cursor over one menu item (only over the white space and not directly over the hyperlink) and you can see that the menu items white space is also clickable.
+
 ==Defining a vertical menu=
 =Layouting tabboxes=
 =Layouting skiplinks=
