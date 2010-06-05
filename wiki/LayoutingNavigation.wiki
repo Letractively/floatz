@@ -202,7 +202,7 @@ The result is a little bit better, but now the breadcrumb overlaps the text of t
    padding-top: 2em;
 }
 ...
-}
+}}}
 
 *Example 3c - Making the content container relative positioned* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_03c.html Live Demo])
 
