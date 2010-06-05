@@ -360,7 +360,7 @@ To round the example up, we change the appearance of the vertical line at the be
 
 http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_05d.jpg
 
-No we´re done. We have a perfect left oriented horizontal menu.
+Now we´re done. We have a perfect left oriented horizontal menu.
 
 ==Defining a vertical menu=
 ==Customizing the menus===
