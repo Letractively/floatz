@@ -212,7 +212,7 @@ http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouti
 Now the breadcrumb works as expected and floats within the content container, above the text.
 
 ==Defining a toolbar==
-Last but not least, floatz provides also a list navigation type for toolbars. While the other examples were text based navigation elements, sometimes you may have an image based navigation in form of a toolbar for executing actions on your web page. The way to get a toolbar in floatz is as easy as for the top navigation and the breadcrumb. 
+Last but not least, floatz provides also a list navigation type for toolbars. While the other examples were text based navigation elements, sometimes you may want to have an image based navigation in form of a toolbar for executing actions on your web page. The way to get a toolbar in floatz is as easy as for the top navigation and the breadcrumb. 
 
 To see the toolbar in action, we add an additional list navigation to the content container and extend its `class` attribute with `flz_toolbar`.
 
