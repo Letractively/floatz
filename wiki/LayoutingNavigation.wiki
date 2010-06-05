@@ -242,6 +242,47 @@ To see the toolbar in action, we add an additional list navigation to the conten
 
 http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_04.jpg
 
+The example shows a toolbar floating to the top right corner of the content container. This is an example how you can create a page wide toolbar. Sometimes you need a separate toolbar for each content block on your web page (e.g. for a blog page). To get this, we have to surround each content with a `DIV` element that is annotated with `flz_box` and `flz_relative`. Than we add a separate toolbar to each of the content boxes.
+
+{{{
+...
+<!-- content -->
+<div class="flz_box flz_r80 flz_relative content">
+   <ul class="flz_listnav flz_breadcrumb">
+      ...
+   </ul>
+   <div class="flz_spacer">
+      <div class="flz_box flz_relative">
+         <ul class="flz_listnav flz_toolbar">
+            <li><a href="#"><img src="images/print.gif" alt="" title="Print page" /></a></li>
+            <li><a href="#"><img src="images/favorite.gif" alt="" title="Add to favorites" /></a></li>
+            <li><a href="#"><img src="images/mail.gif" alt="" title="Tell a friend" /></a></li>
+         </ul>
+         <h1>Content</h1>
+         <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr ...
+         </p>
+      </div>
+      <div class="flz_box flz_relative">
+         <ul class="flz_listnav flz_toolbar">
+            <li><a href="#"><img src="images/print.gif" alt="" title="Print page" /></a></li>
+            <li><a href="#"><img src="images/favorite.gif" alt="" title="Add to favorites" /></a></li>
+            <li><a href="#"><img src="images/mail.gif" alt="" title="Tell a friend" /></a></li>
+         </ul>
+         <h1>Content</h1>
+         <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr ...
+         </p>
+      </div>
+   </div>
+</div>
+...
+}}}
+
+*Example 4b - Adding a toolbar to each content box* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_04b.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_04b.jpg
+
 =Layouting menus=
 ==Defining a horizontal menu=
 ==Defining a vertical menu=
