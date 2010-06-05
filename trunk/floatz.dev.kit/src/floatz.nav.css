@@ -16,7 +16,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-06-03
+ * @lastmodified  2010-06-05
  */
 
 /**
@@ -166,17 +166,20 @@ a:focus.flz_skiplink {
  * Horizontal menu navigation element. Needs a surrounding DIV tag that uses hmenu.
  */
 
+/* Setting defaults for surrounding DIV tag */
 .flz_hmenu {
    float: left;
    width: 100%;
 }
 
+/* Setting defaults for surrounding UL tag */
 .flz_hmenu ul {
    float: right;
    margin: 0;
    padding: 0;
 }
 
+/* Setting defaults for LI tag */
 .flz_hmenu li {
    float: left; 
    list-style-type: none;
@@ -184,54 +187,22 @@ a:focus.flz_skiplink {
    padding: 0;
 }
 
-.flz_hmenu li a {
-   background-color: inherit;
+/* Setting defaults for all A tag within LI */
+.flz_hmenu a {
    border-left: 1px solid #000;
    display: block;
    text-decoration: none;
    padding: 0.5em 1em;
 }
 
-/* default menu item */
-.flz_hmenu a:link {
-}
-
-/* visited menu item */
-.flz_hmenu a:visited {
-   color: inherit;
-}
-
-/* focused or hovered menu item */
-.flz_hmenu a:focus,
-.flz_hmenu a:hover {
-   background-color: #ddd;
-   color: inherit;
-}
-
-/* active (clicked) menu item */
-.flz_hmenu a:active {
-   background-color: #ddd;
-   color: inherit;
-}
-
-/* selected menu item */
-.flz_hmenu li.flz_selected {
-   background-color: #fff;
+/* Highlighting selected anchor */
+.flz_hmenu li.flz_selected a {
    font-weight: bold;
-   color: inherit;
 }
 
-/* focused or hovered selected menu item */
-.flz_hmenu li.flz_selected a:focus,
-.flz_hmenu li.flz_selected a:hover {
-   background-color: #ddd;
-   color: inherit;
-}
-
-/* active (clicked) selected menu item */
-.flz_hmenu li.flz_selected a:active {
-   background-color: #bbb;
-   color: inherit;
+/* Highlighting anchor on hover (mouse over) */
+.flz_hmenu a:hover {
+   text-decoration: underline;
 }
 
 /**
@@ -242,10 +213,6 @@ a:focus.flz_skiplink {
  * a surrounding DIV tag that uses vmenu.
  */
 
-/* Placeholder for container class */ 
-.flz_vmenu {
-}
-
 /* Setting defaults for surrounding UL tag */
 .flz_vmenu ul {
    margin: 0;
@@ -255,7 +222,6 @@ a:focus.flz_skiplink {
 
 /* Setting defaults for LI tag */
 .flz_vmenu li {
-   background-color: #fff; /* Default background color for all menu items */
    float: left;
    list-style-type: none;
    margin: 0;
@@ -264,12 +230,21 @@ a:focus.flz_skiplink {
 }
 
 /* Setting defaults for all A tag within LI */
-.flz_vmenu ul li a {
-   background-color: transparent;
+.flz_vmenu a {
    display: block;
    padding: 0.5em 1em;
    text-decoration: none;
    border-bottom: 1px solid #000;
+}
+
+/* Highlighting selected anchor (only the first A under selected LI) */
+.flz_vmenu li.flz_selected > a {
+   font-weight: bold;
+}
+
+/* Highlighting anchor on hover (mouse over) */
+.flz_vmenu a:hover {
+   text-decoration: underline;
 }
 
 /* Setting paddings for A tag of level 1-5 in menu to visualize hierarchy */
@@ -284,102 +259,6 @@ a:focus.flz_skiplink {
 }
 .flz_vmenu ul li ul li ul li ul li a {
    padding-left: 5em;
-}
-
-/* Style all non-visited menu items */
-.flz_vmenu a:link {
-   color: inherit;
-}
-
-/* Style all visited menu items (always recommended!) */
-.flz_vmenu a:visited {
-   color: #000;
-}
-
-/* Style all hovered menu items (on mouse over) */
-.flz_vmenu a:hover {
-   background-color: #ddd;
-}
-
-/* Style all focused menu items (on TAB navigation) 
-   Note: does not work in IE (uses a:active instead)
- */
-.flz_vmenu a:focus {
-   background-color: #ddd;
-}
-
-/* Style all active menu items (on mouse click) */
-.flz_vmenu a:active {
-   background-color: #eee;
-}
-
-/**
- * IE 6, 7 uses a:active for TAB navigation AND mouse click
- * @workaround Reset styles to a:focus and thus disclaim "click behavior" in IE
- * @affected IE 6, 7
- */
-* html .flz_vmenu a:active {
-   background-color: #ddd;
-}
-*:first-child+html .flz_vmenu a:active {
-   background-color: #ddd;
-}
-
-/* Style selected menu item (restrict to first A within selected LI) - regardless if visited or not */
-.flz_vmenu li.flz_selected > a {
-   background-color: transparent;
-   font-weight: bold;
-}
-
-/**
- * IE 6 does not support first child selector
- * @workaround Simulate with expressions
- * @affected IE 6
- */
-* html .flz_vmenu li.flz_selected a {
-  background-color: expression(/flz_selected/.test(this.parentNode.className)? "transparent" : "inherit");
-  font-weight: expression(/flz_selected/.test(this.parentNode.className)? "bold" : "inherit");
-}
-
-/* Style hovered selected menu item (restrict to first A within selected LI) */
-.flz_vmenu li.flz_selected > a:hover {
-   background-color: #bbb;
-}
-/**
- * IE 6 does not support first child selector
- * @workaround Simulate with expressions
- * @affected IE 6
- */
-* html .flz_vmenu li.flz_selected a:hover {
-  background-color: expression(/flz_selected/.test(this.parentNode.className)? "#bbb" : "inherit");
-}
-
-/* Style focused selected menu item
-   Note: does not work in IE (uses a:active instead) 
- */
-.flz_vmenu li.flz_selected > a:focus {
-   background-color: #bbb;
-}
-
-/* Style active selected menu item (on mouse click) */
-.flz_vmenu li.flz_selected > a:active {
-   background-color: #ddd;
-}
-/**
- * IE 6 does not support first child selector
- * @workaround Simulate with expressions
- * @affected IE 6
- */
-* html .flz_vmenu li.flz_selected a:active {
-  background-color: expression(/flz_selected/.test(this.parentNode.className)? "#bbb" : "inherit");
-}
-/**
- * IE 7 uses a:active for TAB navigation AND mouse click
- * @workaround Reset styles to a:focus and thus disclaim "click behavior" in IE
- * @affected IE 7
- */
-*:first-child+html .flz_vmenu li.flz_selected > a:active {
-   background-color: #ddd;
 }
 
 /**
