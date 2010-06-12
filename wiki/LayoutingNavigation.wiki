@@ -363,6 +363,22 @@ http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouti
 Now we´re done, defining a left oriented horizontal menu. If you want to see how it can be customized to your desired look & feel, see the customization section below.
 
 ==Defining a vertical menu=
+Next we add a vertical menu to example 5b. Thus we insert another unsorted list into the submenu container and annotate the surroundig `DIV` element with `flz_vmenu`.
+
+{{{
+<!-- submenu -->
+<div class="flz_box flz_l20 flz_vmenu submenu">
+   <ul>
+      <li class="flz_selected"><a href="#" title="Goto Menu 1">Menu 1</a></li>
+      <li><a href="#" title="Goto Menu 2">Menu 2</a></li>
+      <li><a href="#" title="Goto Menu 3">Menu 3</a></li>
+      <li><a href="#" title="Goto Menu 4">Menu 4</a></li>
+   </ul>
+</div>
+}}}
+*Example 6 - Adding a vertical menu* 
+([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_06.html Live Demo])
+
 ==Customizing the menus===
 =Layouting tabboxes=
 =Layouting skiplinks=
