@@ -379,7 +379,9 @@ Next we add a vertical menu to example 5b. Thus we insert another unsorted list 
 *Example 6 - Adding a vertical menu* 
 ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_06.html Live Demo])
 
-One benefit of the vertical menu is, that it supports subordinate menus. That gives us the possibility to create a hierarchical navigation structure. To see this in action, we enhance our example by adding subordinate unsorted lists as sub menus to the vertical menu.
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_06.jpg
+
+One benefit of the vertical menu is, that it supports subordinate menus. That gives us the possibility to create a hierarchical navigation structure. To see this in action, we enhance our example by adding subordinate unsorted lists as sub menus to the vertical menu. floatz supports five levels by default.
 
 {{{
 <!-- submenu -->
@@ -419,9 +421,17 @@ One benefit of the vertical menu is, that it supports subordinate menus. That gi
 *Example 6b - Adding subordinate menu items* 
 ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_06b.html Live Demo])
 
+http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_06b.jpg
+
 ==Customizing the menus===
+TBD
+
 =Layouting tabboxes=
+TBD
+
 =Layouting skiplinks=
+TBD
+
 =Summary=
 
 *Further readings*
