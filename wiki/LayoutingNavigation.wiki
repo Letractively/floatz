@@ -355,7 +355,7 @@ To round the example up, we change the appearance of the vertical line at the be
 ...
 }}}
 
-*Example 5d - Changing the menu orientation to left* 
+*Example 5d - Adjusting the menu separator for left orientation* 
 ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_05d.html Live Demo])
 
 http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/images/Layouting_Navigation_05d.jpg
