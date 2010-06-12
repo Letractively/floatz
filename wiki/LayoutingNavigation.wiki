@@ -379,6 +379,46 @@ Next we add a vertical menu to example 5b. Thus we insert another unsorted list 
 *Example 6 - Adding a vertical menu* 
 ([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_06.html Live Demo])
 
+One benefit of the vertical menu is, that it supports subordinate menus. That gives us the possibility to create a hierarchical navigation structure. To see this in action, we enhance our example by adding subordinate unsorted lists as sub menus to the vertical menu.
+
+{{{
+<!-- submenu -->
+<div class="flz_box flz_l20 flz_vmenu submenu">
+   <ul>
+      <li class="flz_selected"><a href="#" title="Goto Menu 1">Menu 1</a>
+         <ul>
+            <li><a href="#" title="Goto Menu 11">Menu 11</a>
+               <ul>
+                  <li><a href="#" title="Goto Menu 111">Menu 111</a>
+                     <ul>
+                        <li><a href="#" title="Goto Menu 1111">Menu 1111</a>
+                           <ul>
+                              <li><a href="#" title="Goto Menu 11111">Menu 11111</a></li>
+                              <li><a href="#" title="Goto Menu 11112">Menu 11112</a></li>
+                              <li><a href="#" title="Goto Menu 11113">Menu 11113</a></li>
+                           </ul> 
+                        </li>
+                        <li><a href="#" title="Goto Menu 1112">Menu 1112</a></li>
+                        <li><a href="#" title="Goto Menu 1113">Menu 1113</a></li>
+                     </ul>   
+                  </li>
+                  <li><a href="#" title="Goto Menu 112">Menu 112</a></li>
+                  <li><a href="#" title="Goto Menu 113">Menu 113</a></li>
+               </ul>                     
+            </li>
+            <li><a href="#" title="Goto Menu 12">Menu 12</a></li>
+            <li><a href="#" title="Goto Menu 13">Menu 13</a></li>
+         </ul>   
+      </li>
+      <li><a href="#" title="Goto Menu 2">Menu 2</a></li>
+      <li><a href="#" title="Goto Menu 3">Menu 3</a></li>
+      <li><a href="#" title="Goto Menu 4">Menu 4</a></li>
+   </ul>
+</div>
+}}}
+*Example 6b - Adding subordinate menu items* 
+([http://design.humml.eu/toolbox/floatz/samples/LayoutingNavigation/LayoutingNavigation_06b.html Live Demo])
+
 ==Customizing the menus===
 =Layouting tabboxes=
 =Layouting skiplinks=
