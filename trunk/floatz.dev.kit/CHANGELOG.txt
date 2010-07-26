@@ -167,6 +167,24 @@ CHANGE   17       Templates are using wrong directory name
                   Correcting templates as well as wiki examples
 -------------------------------------------------------------------------------------------------------------
 
+floatz.reset.meyer.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+CHANGE   25       Focusable items should have outline:1
+                  Uncommenting :focus { outline: 0; } for accessbility/usability reasons. Otherwise navigable
+                  elements like buttons, selects, etc. would not be visibile if they get the keyboard focus.
+-------------------------------------------------------------------------------------------------------------
+
+floatz.reset.css
+=============================================================================================================
+Type     Issue    Description
+-------------------------------------------------------------------------------------------------------------
+CHANGE   25       Focusable items should have outline:1
+                  Adding a:focus img { outline: 1px dotted #000; } for accessibility/usability reasons.
+                  Otherwise anchors with an image would not be visible when they get the keyboard focus.
+-------------------------------------------------------------------------------------------------------------
+
 floatz.form.css
 =============================================================================================================
 Type     Issue    Description
@@ -192,3 +210,6 @@ CHANGE   22       Wrong addressing and color issues in flz_vmenu
                   problems in customizations and to reduce CSS code. See wiki how to customize the menus.
                   Please check your code after updating to this version, to see if it works as mentioned.
 -------------------------------------------------------------------------------------------------------------
+
+                  
+
