@@ -12,7 +12,7 @@
  * @author        Harald Humml
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2009-08-09
+ * @lastmodified  2010-07-26
  *
  * Original version
  * ----------------
@@ -49,17 +49,18 @@ blockquote, q {
    quotes: none;
 }
 
-/* not used because it leads to a left space in Safari and Google Chrome
+/* Note: not used because it leads to a left space in Safari and Google Chrome
 blockquote:before, blockquote:after,
 q:before, q:after {
    content: '';
    content: none;
 }*/
 
+/* Note: not used for usability/accessibility reasons because it removes :focus from all navigable elements (e.g. buttons, selects, etc.) */
 /* remember to define focus styles! */
-:focus {
+/*:focus {
    outline: 0;
-}
+}*/
 
 /* remember to highlight inserts somehow! */
 ins {

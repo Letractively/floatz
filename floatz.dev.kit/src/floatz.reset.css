@@ -12,7 +12,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-04-25
+ * @lastmodified  2010-07-26
  */
 
 /**
@@ -57,7 +57,7 @@ sup {
  * should show if it has the keyboard focus. Each navigable element should be highlighted
  * if it gets keyboard focus.
  */
-a:focus {
+a:focus img, a:focus {
    outline: 1px dotted #000;
 }
 
@@ -113,9 +113,9 @@ a:hover,
 a:visited {
    color: #000;
 }
-a img {
+/*a img {
    border: 0px;
-}
+}*/
 
 /* Clears floats for standard block elements */
 p, 
