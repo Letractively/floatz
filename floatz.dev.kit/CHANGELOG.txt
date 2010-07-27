@@ -166,6 +166,12 @@ Type     Issue    Description
 CHANGE   17       Templates are using wrong directory name
                   Correcting templates as well as wiki examples
 -------------------------------------------------------------------------------------------------------------
+FIX      23       Not all file handles are closed in shrink tool for CSS minification on exception
+                  Fixing bug in \tools\shrink\shrink.exe. Streamwriter for file merge was not close correctly 
+                  on error. 
+-------------------------------------------------------------------------------------------------------------
+CHANGE   -        Changing \tools\build\build.bat for easier version handling during floatz builds.
+-------------------------------------------------------------------------------------------------------------
 
 floatz.reset.meyer.css
 =============================================================================================================
@@ -189,9 +195,6 @@ floatz.form.css
 =============================================================================================================
 Type     Issue    Description
 -------------------------------------------------------------------------------------------------------------
-CHANGE   17       Templates are using wrong directory name
-                  Correcting templates as well as wiki examples
--------------------------------------------------------------------------------------------------------------
 CHANGE   18       Avoid use of flz_button in IE7 by using attribute selector
                   Replacing flz_button in browser hacks for IE 7 with input[type=button] and 
                   input[type=submit] for consistency reasons. flz_button thus is not necessary at all when
@@ -210,6 +213,3 @@ CHANGE   22       Wrong addressing and color issues in flz_vmenu
                   problems in customizations and to reduce CSS code. See wiki how to customize the menus.
                   Please check your code after updating to this version, to see if it works as mentioned.
 -------------------------------------------------------------------------------------------------------------
-
-                  
-
