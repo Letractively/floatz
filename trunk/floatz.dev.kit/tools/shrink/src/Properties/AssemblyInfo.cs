@@ -6,12 +6,12 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Floatz CSS Shrinker")]
-[assembly: AssemblyDescription("CSS Shrinker")]
+[assembly: AssemblyTitle("floatz CSS shrinker")]
+[assembly: AssemblyDescription("CSS shrinker")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany(":humml:design")]
 [assembly: AssemblyProduct("Floatz")]
-[assembly: AssemblyCopyright("Copyright (c) 2008-2010 by :humml:design")]
+[assembly: AssemblyCopyright("2008-2010 by :humml:design")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,6 +33,6 @@ using System.Resources;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.0.0")]
-[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: AssemblyVersion("1.1.1.0")]
+[assembly: AssemblyFileVersion("1.1.1.0")]
 [assembly: NeutralResourcesLanguageAttribute("")]

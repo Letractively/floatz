@@ -235,7 +235,7 @@ namespace eu.humml.floatz.shrink {
 
                // Close merge writer
                if (mergeWriter != null) {
-                  writer.Close();
+                  mergeWriter.Close();
                }
 
                // Close shrink writer
@@ -274,9 +274,8 @@ namespace eu.humml.floatz.shrink {
                   ShowErrorMessage(action, String.Format("No files found for {0}", action.Files));
                   error = true;
                }
-
-               // Read files from profile
             }
+            // Read files from profile
             else if (action.Profile != null) {
                ArrayList files = new ArrayList();
 
