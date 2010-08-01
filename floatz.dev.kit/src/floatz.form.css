@@ -10,7 +10,7 @@
  * @copyright     Copyright (c) 1998-2010 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-05-20
+ * @lastmodified  2010-08-01
  */
 
 /**
@@ -36,6 +36,12 @@ select,
 textarea {
    margin-bottom: 0.25em;
    vertical-align: middle;
+}
+
+/* Special class for custom buttons that removes unnecessary formatting */
+.flz_custombutton {
+   background: transparent;
+   border: 0;
 }
 
 /* Add border to get same visual appearance to all input elements */
@@ -145,7 +151,8 @@ legend {
  */
 
 /* Textbox */
-.flz_form input[type="text"] {
+.flz_form input[type="text"],
+.flz_form input[type="password"] {
    background-color: fff;
    border: 1px solid #000;
    display: block;
@@ -164,7 +171,9 @@ legend {
 
 /* Button  */
 .flz_form input[type="button"],
-.flz_form input[type="submit"] {
+.flz_form input[type="submit"],
+.flz_form input[type="reset"],
+.flz_form button {
    padding: 0.25em 0.35em;
 }
 /**
@@ -187,7 +196,9 @@ legend {
  * @affected IE 7
  */
 *:first-child+html input[type=button],
-*:first-child+html input[type=submit] {
+*:first-child+html input[type=submit],
+*:first-child+html input[type=reset],
+*:first-child+html button {
    overflow: visible;
    padding: 0.25em 0.5em;
 }
@@ -203,7 +214,9 @@ legend {
  * @affected IE 7
  */
 *:first-child+html input[type=button],
-*:first-child+html input[type=submit] {
+*:first-child+html input[type=submit],
+*:first-child+html input[type=reset],
+*:first-child+html button {
    width: 1;
 }
 
