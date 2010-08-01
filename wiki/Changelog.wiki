@@ -1,5 +1,4 @@
 #summary Informs about what has been changed in each version
-#labels Featured
 Last Update: August 1th, 2010
 
    ----
