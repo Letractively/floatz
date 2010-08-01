@@ -9,6 +9,40 @@ Last Update: March 7th, 2010
 *Table of content*
 <wiki:toc max_depth="1" />
 
+=Version 1.1.1=
+
+==Highlights==
+==Summary of changes==
+===New===
+The following items are new
+
+|| Module || Type || Issue || Description ||
+
+===Changed===
+The following items have been changed
+
+|| Module || Type || Issue || Description ||
+|| - || CHANGE || Issue 17 || Correcting wrong directory names in floatz.dev.kit/templates as well as wiki examples ||
+|| - || FIX || Issue 23 || Fixing bug in \tools\shrink\shrink.exe. Streamwriter for file merge was not close correctly on error ||
+|| - || CHANGE || - || Changing \tools\build\build.bat for easier version handling during floatz builds ||
+|| floatz.form.css || CHANGE || Issue 18 || Replacing flz_button in browser hacks for IE 7 with input[type=button] and input[type=submit] for consistency reasons. flz_button thus is not necessary at all when using IE7 (only when IE6 should also be supported) ||
+|| floatz.form.css || CHANGE || Issue 19 || Replacing flz_combifield with flz_combobox for consistence with well known UI concepts ||
+|| floatz.form.css || CHANGE || Issue 28 || Adding styles for input[type=password] as exist for input[type=button] ||
+|| floatz.form.css || CHANGE || Issue 29 || Adding same styles for button and reset tag, as for input[type=button]. Adding separate CSS class flz_custombutton to remove unneccessary styles like borders and backgrounds from button tags with custom markup ||
+
+
+|| floatz.reset.css || Change || Issue 25 || Adding a:focus img { outline: 1px dotted #000; } for accessibility/usability reasons. Otherwise anchors with an image would not be visible when they get the keyboard focus ||
+|| floatz.reset.meyer.css || CHANGE || Issue 25 || Uncommenting :focus { outline: 0; } for accessbility/usability reasons. Otherwise navigable elements like buttons, selects, etc. would not be visibile if they get the keyboard focus ||
+
+
+===Deprecated===
+None
+
+===Removed===
+The following items have been removed
+
+|| Module || Type || Issue || Description ||
+
 =Version 1.1.0=
 
 ==Highlights==
@@ -96,7 +130,7 @@ The following items have been changed.
 || floatz.reset.css || FIX || - || Text of input field slips under visible area at the bottom of the input field. Removing line-height and adding same font-size as in meyer CSS for global defaults on ||
 || floatz.reset.css || CHANGE || - || Activating outline for a:focus (that was originally reset in meyer css) for accessibiliy & usability reasons.Each navigable element should be highlighted if it gets keyboard focus. ||
 || floatz.reset.css || CHANGE || - || Adding "Arial" as common font for all elements. ||
-|| floatz.meyer.reset.css || FIX || Issue 5 || Text of input field slips under visible area at the bottom of the input field. Changed line-height: 1 to auto due to cropped labels (e.g. y, p, j, ...) ||
+|| floatz.reset.meyer.css || FIX || Issue 5 || Text of input field slips under visible area at the bottom of the input field. Changed line-height: 1 to auto due to cropped labels (e.g. y, p, j, ...) ||
 
 ===Deprecated===
 
