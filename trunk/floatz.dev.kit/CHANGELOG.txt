@@ -203,6 +203,14 @@ CHANGE   18       Avoid use of flz_button in IE7 by using attribute selector
 CHANGE   19       Rename flz_combifield to flz_combobox
                   Replacing flz_combifield with flz_combobox for consistence with well known UI concepts
 -------------------------------------------------------------------------------------------------------------
+CHANGE   28       Add same styling for input[type=password] as for input[type=text]
+                  Adding styles for input[type=password]
+-------------------------------------------------------------------------------------------------------------                  
+CHANGE   27       Add transparent background color for BUTTON tag to reset css
+                  Adding same styles for button and reset tag, as for input[type=button]
+                  Adding separate CSS class flz_custombutton to remove unneccessary styles like borders and
+                  backgrounds from button tags with custom markup.
+-------------------------------------------------------------------------------------------------------------
 
 floatz.nav.css
 =============================================================================================================
