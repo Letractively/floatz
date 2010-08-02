@@ -237,9 +237,9 @@ Now lets pay some attention on the birthday field and the datepicker icon. Unfor
 
 First we surround the label and the input field with a relative positioned box element (see [BasicConcepts basic concepts] for more details on relative positioning). Than we surround the textbox with a `DIV` element with the CSS class `flz_combobox`. Last but not least we surround the datepicker image, that should be clickable, with an anchor `A` tag and annotate the `IMG` tag with the CSS class `flz_combobox` too.
 
-   ---
+   ----
    Note: In previous versions, the combobox was named ´flz_combifield´. Since version 1.1.1 the name has been changed to ´flz_combobox´ for consistence with well known UI elements. 
-   ---
+   ----
 
 {{{
 <form class="flz_form" action="">
