@@ -221,3 +221,7 @@ CHANGE   22       Wrong addressing and color issues in flz_vmenu
                   problems in customizations and to reduce CSS code. See wiki how to customize the menus.
                   Please check your code after updating to this version, to see if it works as mentioned.
 -------------------------------------------------------------------------------------------------------------
+NEW      29       Add support for disabled items in vmenu, hmenu, htabmenu, htabmenu_bottom.
+                  Adding flz_disabled to flz_listnav, flz_breadcrumb, flz_topnav, flz_toolbar, flz_vmenu,
+                  flz_hmenu, flz_htabmenu, flz_htabmenu_bottom for supporting disabled navigation items
+-------------------------------------------------------------------------------------------------------------
