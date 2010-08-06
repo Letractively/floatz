@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module rename-to='floatz'>
-  <entry-point class='net.floatz.gwt.client.Css'/>
-  <source path='client'/>
-</module>
