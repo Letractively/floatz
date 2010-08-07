@@ -1,7 +1,0 @@
-Creating floatz.gwt-1.1.1.jar:
-==============================
-Right mouse key
-Export
-JAR File
-Exclude everything but src directory
-Use name floatz.gwt-x.y.z.jar
