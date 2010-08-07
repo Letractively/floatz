@@ -10,12 +10,7 @@
             <packagesToUnSeal/>
         </sealing>
     </manifest>
-    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
-        <javaElement handleIdentifier="=floatz.gwt/src&lt;net.floatz.gwt.client.resource"/>
-        <javaElement handleIdentifier="=floatz.gwt/src&lt;net.floatz.gwt.client"/>
-        <javaElement handleIdentifier="=floatz.gwt/src&lt;net"/>
-        <javaElement handleIdentifier="=floatz.gwt/src&lt;net.floatz"/>
-        <javaElement handleIdentifier="=floatz.gwt/src&lt;net.floatz.gwt.client.resource.css"/>
-        <javaElement handleIdentifier="=floatz.gwt/src&lt;net.floatz.gwt"/>
+    <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
+        <javaElement handleIdentifier="=floatz.gwt/src"/>
     </selectedElements>
 </jardesc>
