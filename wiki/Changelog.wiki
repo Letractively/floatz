@@ -33,7 +33,7 @@ The following items have been changed
 || floatz.reset.css || Change || Issue 25 || Adding a:focus img { outline: 1px dotted #000; } for accessibility/usability reasons. Otherwise anchors with an image would not be visible when they get the keyboard focus ||
 || floatz.reset.meyer.css || CHANGE || Issue 25 || Uncommenting :focus { outline: 0; } for accessbility/usability reasons. Otherwise navigable elements like buttons, selects, etc. would not be visibile if they get the keyboard focus || 
 || - || CHANGE || Issue 17 || Correcting wrong directory names in floatz.dev.kit/templates as well as wiki examples ||
-|| - || FIX || Issue 23 || Fixing bug in \tools\shrink\shrink.exe. Streamwriter for file merge was not close correctly on error ||
+|| - || FIX || Issue 23 || Fixing bug in \tools\shrink\shrink.exe. Streamwriter for file merge was not closed correctly on error ||
 || - || CHANGE || - || Changing \tools\build\build.bat for easier version handling during floatz builds ||
 
 ===Deprecated===
