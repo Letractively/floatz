@@ -29,6 +29,7 @@ The following items have been changed
 || floatz.form.css || CHANGE || Issue 19 || Replacing flz_combifield with flz_combobox for consistence with well known UI concepts ||
 || floatz.form.css || CHANGE || Issue 28 || Adding styles for input`[`type=password`]` as exists for input`[`type=button`]` ||
 || floatz.form.css || CHANGE || Issue 27 || Adding same styles for button and reset tag, as for input`[`type=button`]`}. Adding separate CSS class flz_custombutton to remove unneccessary styles like borders and backgrounds from button tags with custom markup ||
+|| floatz.form.css || FIX || Issue 31 || Adding outline to flz_combobox image witing anchor with focus. Otherwise the active anchor is not visible (because of absolute position of image - all browsers are concerned) ||
 || floatz.nav.css || CHANGE || Issue 22 || Removing most of all pre-defined customizations in flz_vmenu and flz_hmenu to avoid problems in customizations and to reduce CSS code. See wiki how to customize the menus. Please check your code after updating to this version, to see if it works as mentioned ||
 || floatz.reset.meyer.css || CHANGE || Issue 25 || Uncommenting :focus { outline: 0; } for accessbility/usability reasons. Otherwise navigable elements like buttons, selects, etc. would not be visibile if they get the keyboard focus || 
 || - || CHANGE || Issue 17 || Correcting wrong directory names in floatz.dev.kit/templates as well as wiki examples ||
