@@ -202,7 +202,7 @@ CHANGE   27       Add transparent background color for BUTTON tag to reset css
                   Adding separate CSS class flz_custombutton to remove unneccessary styles like borders and
                   backgrounds from button tags with custom markup.
 -------------------------------------------------------------------------------------------------------------
-FIX      25       Focusable items should have outline:1
+FIX      25       Focused anchor/image within flz_combobox not visible
                   Adding outline to flz_combobox image witing anchor with focus. Otherwise the active anchor
                   is not visible (because of absolute position of image - all browsers are concerned)
 -------------------------------------------------------------------------------------------------------------
