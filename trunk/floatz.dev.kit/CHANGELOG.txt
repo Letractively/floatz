@@ -182,15 +182,6 @@ CHANGE   25       Focusable items should have outline:1
                   elements like buttons, selects, etc. would not be visibile if they get the keyboard focus.
 -------------------------------------------------------------------------------------------------------------
 
-floatz.reset.css
-=============================================================================================================
-Type     Issue    Description
--------------------------------------------------------------------------------------------------------------
-CHANGE   25       Focusable items should have outline:1
-                  Adding a:focus img { outline: 1px dotted #000; } for accessibility/usability reasons.
-                  Otherwise anchors with an image would not be visible when they get the keyboard focus.
--------------------------------------------------------------------------------------------------------------
-
 floatz.form.css
 =============================================================================================================
 Type     Issue    Description
@@ -210,6 +201,10 @@ CHANGE   27       Add transparent background color for BUTTON tag to reset css
                   Adding same styles for button and reset tag, as for input[type=button]
                   Adding separate CSS class flz_custombutton to remove unneccessary styles like borders and
                   backgrounds from button tags with custom markup.
+-------------------------------------------------------------------------------------------------------------
+FIX      25       Focusable items should have outline:1
+                  Adding outline to flz_combobox image witing anchor with focus. Otherwise the active anchor
+                  is not visible (because of absolute position of image - all browsers are concerned)
 -------------------------------------------------------------------------------------------------------------
 
 floatz.nav.css

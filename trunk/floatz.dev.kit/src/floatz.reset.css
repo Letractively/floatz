@@ -57,7 +57,7 @@ sup {
  * should show if it has the keyboard focus. Each navigable element should be highlighted
  * if it gets keyboard focus.
  */
-a:focus img, a:focus {
+a:focus {
    outline: 1px dotted #000;
 }
 
