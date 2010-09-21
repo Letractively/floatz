@@ -172,6 +172,10 @@ FIX      23       Not all file handles are closed in shrink tool for CSS minific
 -------------------------------------------------------------------------------------------------------------
 CHANGE   -        Changing \tools\build\build.bat for easier version handling during floatz builds.
 -------------------------------------------------------------------------------------------------------------
+NEW      33       Margins are not correct if liquid layout is centered
+                  Adding new test page test.layout.center.liquid.html to dev kit, to show how CSS must be 
+                  corrected to solve this issue.
+-------------------------------------------------------------------------------------------------------------
 
 floatz.reset.meyer.css
 =============================================================================================================
@@ -194,18 +198,28 @@ CHANGE   18       Avoid use of flz_button in IE7 by using attribute selector
 CHANGE   19       Rename flz_combifield to flz_combobox
                   Replacing flz_combifield with flz_combobox for consistence with well known UI concepts
 -------------------------------------------------------------------------------------------------------------
-CHANGE   28       Add same styling for input[type=password] as for input[type=text]
-                  Adding styles for input[type=password]
+FIX      25       Focused anchor/image within flz_combobox not visible
+                  Adding outline to flz_combobox image witing anchor with focus. Otherwise the active anchor
+                  is not visible (because of absolute position of image - all browsers are concerned)
 -------------------------------------------------------------------------------------------------------------                  
 CHANGE   27       Add transparent background color for BUTTON tag to reset css
                   Adding same styles for button and reset tag, as for input[type=button]
                   Adding separate CSS class flz_custombutton to remove unneccessary styles like borders and
                   backgrounds from button tags with custom markup.
 -------------------------------------------------------------------------------------------------------------
-FIX      25       Focused anchor/image within flz_combobox not visible
-                  Adding outline to flz_combobox image witing anchor with focus. Otherwise the active anchor
-                  is not visible (because of absolute position of image - all browsers are concerned)
+CHANGE   28       Add same styling for input[type=password] as for input[type=text]
+                  Adding styles for input[type=password]
 -------------------------------------------------------------------------------------------------------------
+FIX      31       Focused anchor/image within flz_combobox not visible
+                  Adding outline to flz_combobox image witing anchor with focus. Otherwise the active anchor 
+                  is not visible (because of absolute position of image - all browsers are concerned).
+-------------------------------------------------------------------------------------------------------------                  
+FIX      32       Image Anchor in flz_combobox is not focusable
+                  Reworking markup and CSS for flz_combobox completely to show outline and allow focusing the
+                  image anchor with the TAB keys. Please check your code after updating to this version, to 
+                  see if it works as mentioned.
+-------------------------------------------------------------------------------------------------------------                  
+                  
 
 floatz.nav.css
 =============================================================================================================
