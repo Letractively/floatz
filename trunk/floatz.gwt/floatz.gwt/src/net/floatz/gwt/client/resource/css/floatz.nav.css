@@ -306,8 +306,12 @@ a:focus.flz_skiplink {
    margin: 0 1px;
    padding: 0 0 0 0.5em;
 }
-.flz_htabmenu li {
-   background: url(images/htabmenu.gif) no-repeat left top;
+@sprite .flz_htabmenu li {
+	background-position: left top;
+	background-repeat: no-repeat;
+	gwt-image: 'htabmenu';
+	height: auto;
+	width: auto;
 }
 .flz_htabmenu_bottom li {
    background: url(images/htabmenu_bottom_inactive.gif) no-repeat left bottom;
@@ -320,8 +324,12 @@ a:focus.flz_skiplink {
    text-decoration: none;
    padding: 0.5em 1em 0.5em 0.5em;  /* last one reduced at padding of LI */
 }
-.flz_htabmenu a {
-   background: url(images/htabmenu.gif) no-repeat right top;
+@sprite .flz_htabmenu li a {
+	background-repeat: no-repeat;
+	background-position: right top;
+	gwt-image: 'htabmenu';
+	height: auto;
+	width: auto;
 }
 .flz_htabmenu_bottom a{
    background: url(images/htabmenu_bottom_inactive.gif) no-repeat right bottom;
@@ -339,9 +347,13 @@ a:focus.flz_skiplink {
 }
 
 /* Hovered menu item (hyperlink element as opening part of the sliding doors) */
-.flz_htabmenu a:hover,
+@sprite .flz_htabmenu li a:hover,
 .flz_htabmenu li:hover a {
-   background: url(images/htabmenu.gif) no-repeat right -100px;
+	background-repeat: no-repeat;
+	background-position: right -100px;
+	gwt-image: 'htabmenu';
+	height: auto;
+	width: auto;
 }
 .flz_htabmenu_bottom a:hover,
 .flz_htabmenu_bottom li:hover a {
@@ -352,9 +364,13 @@ a:focus.flz_skiplink {
  * @workaround Reset sprite image with hovered menu item, because li:hover ist not supported in IE <= 6
  * @affected IE 5, 6
  */
-* html .flz_htabmenu a:hover {
-   background: url(images/htabmenu.gif) no-repeat right top;
-   text-decoration: underline;
+@sprite * html .flz_htabmenu li a:hover {
+	background-repeat: no-repeat;
+	background-position: right top;
+	gwt-image: 'htabmenu';
+	height: auto;
+	text-decoration: underline;
+	width: auto;
 }
 * html .flz_htabmenu_bottom a:hover {
    background: url(images/htabmenu_bottom_inactive.gif) no-repeat right bottom;
@@ -371,26 +387,38 @@ a:focus.flz_skiplink {
 }
 
 /* Hovered menu item (list element as closing part of the sliding doors) */
-.flz_htabmenu li:hover {
-   background: url(images/htabmenu.gif) no-repeat left -100px;
+@sprite .flz_htabmenu li:hover {
+	background-position: left -100px;
+	background-repeat: no-repeat;
+	gwt-image: 'htabmenu';
+	height: auto;
+	width: auto;
 }
 .flz_htabmenu_bottom li:hover {
    background: url(images/htabmenu_bottom_hover.gif) no-repeat left bottom;
 }
 
 /* Selected menu item (list element as closing part of the sliding door) */
-.flz_htabmenu li.flz_selected {
-   background: url(images/htabmenu.gif) no-repeat left -200px;
+@sprite .flz_htabmenu li.flz_selected {
+	background-repeat: no-repeat;
+	background-position: left -200px;
+	gwt-image: 'htabmenu';
+	height: auto;
+	width: auto;
 }
 .flz_htabmenu_bottom li.flz_selected {
    background: url(images/htabmenu_bottom_active.gif) no-repeat left bottom;
 }
 
 /* Selected menu item (hyperlink element as opening part of sliding door)*/
-.flz_htabmenu li.flz_selected a {
-   background: url(images/htabmenu.gif) no-repeat right -200px;
-   color: inherit;
-   font-weight: bold;
+@sprite .flz_htabmenu li.flz_selected a {
+	background-position: right -200px;
+	background-repeat: no-repeat;
+	color: inherit;
+	font-weight: bold;
+	gwt-image: 'htabmenu';
+	height: auto;
+	width: auto;
 }
 .flz_htabmenu_bottom li.flz_selected a {
    background: url(images/htabmenu_bottom_active.gif) no-repeat right bottom;
@@ -405,10 +433,14 @@ a:focus.flz_skiplink {
 }
 
 /* Focused or hovered selected menu item (hyperlink element as opening part of the sliding doors) */
-.flz_htabmenu li.flz_selected a:hover,
+@sprite .flz_htabmenu li.flz_selected a:hover,
 .flz_htabmenu li:hover.flz_selected a {
-   background: url(images/htabmenu.gif) no-repeat right -100px;
+   background-repeat: no-repeat;
+   background-position: right -100px;
    color: inherit;
+   gwt-image: 'htabmenu';
+   height: auto;
+   width: auto;
 }
 .flz_htabmenu_bottom li.flz_selected a:hover,
 .flz_htabmenu_bottom li:hover.flz_selected a {
@@ -420,9 +452,13 @@ a:focus.flz_skiplink {
  * @workaround Reset sprite image with hovered menu item, because li:hover ist not supported in IE <= 6
  * @affected IE 5, 6
  */
-* html .flz_htabmenu li.flz_selected a:hover {
-   background: url(images/htabmenu.gif) no-repeat right -200px;
+@sprite * html .flz_htabmenu li.flz_selected a:hover {
+   background-position: right -200px;
+   background-repeat: no-repeat;
+   gwt-image: 'htabmenu';
+   height: auto;
    text-decoration: underline;
+   width: auto;
 }
 * html .flz_htabmenu_bottom li.flz_selected a:hover {
    background: url(images/htabmenu_bottom_active.gif) no-repeat right bottom;
@@ -430,8 +466,12 @@ a:focus.flz_skiplink {
 }
 
 /* Focused or hovered selected menu item (list element as closing part of the sliding doors) */
-.flz_htabmenu li:hover.flz_selected {
-   background: url(images/htabmenu.gif) no-repeat left -100px;
+@sprite .flz_htabmenu li:hover.flz_selected {
+   background-position: left -100px;
+   background-repeat: no-repeat;
+   gwt-image: 'htabmenu';
+   height: auto;
+   width: auto;
 }
 .flz_htabmenu_bottom li:hover.flz_selected {
    background: url(images/htabmenu_bottom_hover.gif) no-repeat left bottom;
