@@ -2,6 +2,7 @@ package net.floatz.gwt.client.resource;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
+import com.google.gwt.resources.client.ImageResource;
 
 /**
  * Resource bundle of floatz CSS framework for GWT (2.0.1 and above)
@@ -40,4 +41,16 @@ public interface Floatz extends ClientBundle {
 
 	@Source("net/floatz/gwt/client/resource/css/floatz.nav.css")
 	Nav nav();
+
+	@Source("net/floatz/gwt/client/resource/image/htabmenu_bottom_active.gif")
+	ImageResource htabmenu_bottom_active();
+
+	@Source("net/floatz/gwt/client/resource/image/htabmenu_bottom_hover.gif")
+	ImageResource htabmenu_bottom_hover();
+
+	@Source("net/floatz/gwt/client/resource/image/htabmenu_bottom_inactive.gif")
+	ImageResource htabmenu_bottom_inactive();
+
+	@Source("net/floatz/gwt/client/resource/image/htabmenu.gif")
+	ImageResource htabmenu();
 }
