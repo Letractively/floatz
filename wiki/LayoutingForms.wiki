@@ -1,5 +1,5 @@
 #summary Describes how to layout simple as well as complex web forms
-Last Update: August 2nd, 2010
+Last Update: September 21st, 2010
 
    ----
    Note: this wiki page covers version 1.1.1.
@@ -140,12 +140,12 @@ Well, when you run the example and look at the result, this is definitely nothin
 }}}
 *Example 3a - Adding flz_form to the basic form* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_03a.html Live Demo])
 
-Run the example and you will see that each label and input field is in its own row and each input field is as wide as its surrounding container. Only the checkboxes and the buttons behave differently to the other form elements. That’s all for this simple example.
+Run the example and you will see that each label and input field is in its own row and each input field is as wide as its surrounding container. Only the checkboxes and the buttons behave differently to the other form elements. That's all for this simple example.
 
 http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_03a.jpg
 
 ===Supporting Internet Explorer 6===
-If you have to support IE6 as well, some additional effort is necessary. The major problem of IE6 is, that it does not support CSS2 attribute selectors to distinguish between textboxes, buttons, radiobuttons and checkboxes that are all `INPUT` tags in HTML, with different `TYPE` attribute values like `TEXT`, `BUTTON`, `SUBMIT`, `RADIO` and `CHECKBOX`. Because floatz needs to differentiate between those types, you have to add specific CSS classes to the according form elements to get this functionaliy also in IE6. Otherwise the form would behave like we have seen in example 1, without any CSS. Thus lets add CSS class `flz_textbox` to each input tag of type `TEXT` and `flz_button` to all input tags of type `BUTTON`. The labels of the checkboxes must be annotated with `flz_inline` to stay next to the checkboxes. Otherwise they would appear in a separate row as all other labels. In the case of checkboxes and radiobuttons that’s not what we want.
+If you have to support IE6 as well, some additional effort is necessary. The major problem of IE6 is, that it does not support CSS2 attribute selectors to distinguish between textboxes, buttons, radiobuttons and checkboxes that are all `INPUT` tags in HTML, with different `TYPE` attribute values like `TEXT`, `BUTTON`, `SUBMIT`, `RADIO` and `CHECKBOX`. Because floatz needs to differentiate between those types, you have to add specific CSS classes to the according form elements to get this functionaliy also in IE6. Otherwise the form would behave like we have seen in example 1, without any CSS. Thus let's add CSS class `flz_textbox` to each input tag of type `TEXT` and `flz_button` to all input tags of type `BUTTON`. The labels of the checkboxes must be annotated with `flz_inline` to stay next to the checkboxes. Otherwise they would appear in a separate row as all other labels. In the case of checkboxes and radiobuttons that's not what we want.
 
 {{{
 <!-- content -->
@@ -197,7 +197,7 @@ If you run the sample again in IE6 and in all other browsers, you will see that 
 http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_03b.jpg
 
 ==Defining mandatory and readonly fields==
-Next lets hilite the mandatory fields in our customer form: first name, last name, street, zip, city and country. The only thing we have to do is adding the CSS class `flz_mandatory` to the `CLASS` attribute for each of them. It’s a common practice to add a `*` next to the label of the mandatory fields, so we change that as well. Because the customer number should not be filled out by the user itself, we make that field readonly by inserting the HTML `READONLY` attribute and adding `flz_readonly` to it´s `CLASS` attribute.
+Next let's hilite the mandatory fields in our customer form: first name, last name, street, zip, city and country. The only thing we have to do is adding the CSS class `flz_mandatory` to the `CLASS` attribute for each of them. It's a common practice to add a `*` next to the label of the mandatory fields, so we change that as well. Because the customer number should not be filled out by the user itself, we make that field readonly by inserting the HTML `READONLY` attribute and adding `flz_readonly` to it's `CLASS` attribute.
 
 {{{
 <!-- content -->
@@ -233,36 +233,38 @@ Run the sample code and voilà, every mandatory field is highlighted.
 http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_04.jpg
 
 ==Adding a combobox==
-Now lets pay some attention on the birthday field and the datepicker icon. Unfortunately HTML doesn't support the UI element combobox by default, that is a combination of a textbox and a selectbox. In our example the birthday textbox and the image should appear like a combobox. floatz does not implement the whole functionality that would be necessary for a combobox, but it provides the visual baseline to show the textbox and the image side by side in one row, with full support to liquid layouts. To get that behavior, we have to change the HTML code for the combobox as shown in the sample code:
+Now let's pay some attention on the birthday field and the datepicker icon. Unfortunately HTML doesn't support the UI element combobox by default, which is a combination of a textbox and a selectbox. In our example the birthday textbox and the image should appear like a combobox. floatz does not implement the whole functionality that would be necessary for a combobox, but it provides the visual baseline to show the textbox and the image side by side in one row, with full support to liquid layouts. To get that behavior, we have to change the HTML code for the combobox as shown in the sample code:
 
-First we surround the label and the input field with a relative positioned box element (see [BasicConcepts basic concepts] for more details on relative positioning). Than we surround the textbox with a `DIV` element with the CSS class `flz_combobox`. Last but not least we surround the datepicker image, that should be clickable, with an anchor `A` tag and annotate the `IMG` tag with the CSS class `flz_combobox` too.
+First we create a `DIV` element with the CSS class `flz_combobox`. Next we place our input field and the clickable image within that `DIV` container. As noted in the following code snippet, it is important to place the image within the anchor into a separate line of code. Otherwise Internet Explorer adds unexpected whitespace to the combobox.
 
    ----
-   Note: In previous versions, the combobox was named `flz_combifield`. Since version 1.1.1 its name has been changed to `flz_combobox` for consistence with well known UI elements. 
+   Note: In previous versions, the combobox was named `flz_combifield`. Since version 1.1.1 its name has been changed to `flz_combobox` for consistence with well known UI elements. The necessary markup and CSS has also changed significant, so please check and change your existing code.
    ----
 
 {{{
 <form class="flz_form" action="">
    ...
-   <div class="flz_box flz_relative">
-      <label for="birthday">Birthday</label>
-      <div class="flz_combobox">
-         <input class="flz_textbox" id="birthday" type="text" />
-      </div>
-      <a href="#"><img class="flz_combobox" src="images/datepicker.gif" alt="Pick a date" /></a>
+   <label for="birthday">Birthday</label>
+   <div class="flz_combobox">
+      <input class="flz_textbox" id="birthday" type="text" />
+      <!-- Image must be in next line - otherwise unnecessary whitespace in IE -->
+      <a href="#">
+         <img src="images/datepicker.gif" alt="Pick a date" />
+      </a>
    </div>
    ...
 </form>
+
 }}}
 
 *Example 5 - Adding a combobox* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/Layouting_Forms_05.html Live Demo])
 
-As you can see when you run the code, the datepicker image appears as intended next to the birthday textbox. Now it’s on you to implement the "business logic" of the combobox.
+As you can see when you run the code, the datepicker image appears as intended next to the birthday textbox. Now it's on you to implement the "business logic" of the combobox.
 
 http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Forms_05.jpg
 
 ==Adding a buttonbar==
-When you look at the result of the previous examples, the buttons are floating to the right side of the checkboxes. Let’s change that and add a buttonbar below the input fields of the web form. For this purpose we simply surround the buttons with a box element that forces them to appear in a separate row.
+When you look at the result of the previous examples, the buttons are floating to the right side of the checkboxes. Let's change that and add a buttonbar below the input fields of the web form. For this purpose we simply surround the buttons with a box element that forces them to appear in a separate row.
 
 {{{
 <form class="flz_form" action="">
@@ -326,7 +328,7 @@ http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Fo
 The following subchapters illustrate, how we can increase the readability and thus the usability of our customer form, by structuring it into contextual related pieces using fieldsets and by adopting the layout.
 
 ==Adding fieldsets==
-Let’s add three fieldsets to our web form. The first fieldset is "personal data" and contains customer number, first name, last name and birthday. The second fieldset is "address data" and contains street, zip, city and country. The last fieldset is "additional data" and contains the rest of our form, the textarea and the checkboxes. Because we have customized the border colors of our form fields before, we have to customize the border color of the fieldset in our CSS file too.
+Let's add three fieldsets to our web form. The first fieldset is "personal data" and contains customer number, first name, last name and birthday. The second fieldset is "address data" and contains street, zip, city and country. The last fieldset is "additional data" and contains the rest of our form, the textarea and the checkboxes. Because we have customized the border colors of our form fields before, we have to customize the border color of the fieldset in our CSS file too.
 
 *CSS code*
 {{{
@@ -356,13 +358,14 @@ Let’s add three fieldsets to our web form. The first fieldset is "personal dat
             <input class="flz_textbox flz_mandatory" id="firstname" type="text" />
             <label for="lastname">Last Name*</label>
             <input class="flz_textbox flz_mandatory" id="lastname" type="text" />
-            <div class="flz_box flz_relative">
-               <label for="birthday">Birthday</label>
-               <div class="flz_combobox">
-                  <input class="flz_textbox" id="birthday" type="text" />
-               </div>
-               <a href="#"><img class="flz_combobox" src="images/datepicker.gif" alt="Pick a date" /></a>
+            <label for="birthday">Birthday</label>
+            <div class="flz_combobox">
+               <input class="flz_textbox" id="birthday" type="text" />
+               <a href="#">
+                  <img src="images/datepicker.gif" alt="Pick a date" />
+               </a>
             </div>
+         </div>
          </fieldset>
          <fieldset>
             <legend>Address data</legend>
@@ -461,12 +464,12 @@ Especially in business applications it is often necessary to create complex web 
       </div>
       <div class="flz_box flz_r25">
          <div class="flz_rsubspacer">
-            <div class="flz_box flz_relative">
-               <label for="birthday">Birthday</label>
-               <div class="flz_combobox">
-                  <input class="flz_textbox" id="birthday" type="text" />
-               </div>
-               <a href="#"><img class="flz_combobox" src="images/datepicker.gif" alt="Pick a date" /></a>
+            <label for="birthday">Birthday</label>
+            <div class="flz_combobox">
+               <input class="flz_textbox" id="birthday" type="text" />
+               <a href="#">
+                  <img src="images/datepicker.gif" alt="Pick a date" />
+               </a>
             </div>
          </div>
       </div>
@@ -527,7 +530,7 @@ http://design.humml.eu/toolbox/floatz/samples/LayoutingForms/images/Layouting_Fo
 What you have learned in this wiki article:
 
    * Creating well designed web forms is difficult and often annoying
-   * It his hard to find solutions for complex CSS based web forms today
+   * It is hard to find solutions for complex CSS based web forms today
    * Customizing every single form element with pure CSS leads to obtrusive CSS in markup or countless CSS classes
    * Only add `flz_form` to your `FORM` tag and floatz does everything for you
    * Use `flz_textbox` for input elements of type `TEXT` to support IE6
