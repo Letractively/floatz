@@ -2,6 +2,7 @@ package net.floatz.gwt.client.resource;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
+import com.google.gwt.resources.client.DataResource;
 import com.google.gwt.resources.client.ImageResource;
 
 /**
@@ -43,13 +44,13 @@ public interface Floatz extends ClientBundle {
 	Nav nav();
 
 	@Source("net/floatz/gwt/client/resource/image/htabmenu_bottom_active.gif")
-	ImageResource htabmenu_bottom_active();
+	DataResource htabmenu_bottom_active();
 
 	@Source("net/floatz/gwt/client/resource/image/htabmenu_bottom_hover.gif")
-	ImageResource htabmenu_bottom_hover();
+	DataResource htabmenu_bottom_hover();
 
 	@Source("net/floatz/gwt/client/resource/image/htabmenu_bottom_inactive.gif")
-	ImageResource htabmenu_bottom_inactive();
+	DataResource htabmenu_bottom_inactive();
 
 	@Source("net/floatz/gwt/client/resource/image/htabmenu.gif")
 	ImageResource htabmenu();
