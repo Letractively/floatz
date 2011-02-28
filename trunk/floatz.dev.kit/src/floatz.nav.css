@@ -113,7 +113,7 @@ a:focus.flz_skiplink {
 }
 
 /* selected navigation item */
-.flz_listnav li.flz_selected {
+.flz_listnav li.flz_selected a {
    color: inherit;
    font-weight: bold;
 }
