@@ -1,4 +1,4 @@
-#summary Using skiplinks [UNDER CONSTRUCTION]
+#summary Using skiplinks [tbd]
 Last Update: August 2nd, 2010
 
 *This page is currently under construction and thus not finished.*
