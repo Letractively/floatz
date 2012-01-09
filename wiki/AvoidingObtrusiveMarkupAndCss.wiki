@@ -1,4 +1,4 @@
-#summary How to avoid obtrusive markup and css [UNDER CONSTRUCTION]
+#summary How to avoid obtrusive markup and css [tbd]
 Last Update: August 2nd, 2010
 
 *This page is currently under construction and thus not finished.*
