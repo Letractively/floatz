@@ -1,4 +1,4 @@
-#summary Implemented browser hacks [UNDER CONSTRUCTION]
+#summary Implemented browser hacks [tbd]
 Last Update: August 2nd, 2010
 
 *This page is currently under construction and thus not finished.*
