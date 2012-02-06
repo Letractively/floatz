@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
 <jardesc>
-    <jar path="C:/Daten/Projekte/floatz/floatz.gwt-1.1.1.jar"/>
+    <jar path="C:/data/Workspaces/wsp_floatz/floatz.gwt-1.1.1.jar"/>
     <options buildIfNeeded="true" compress="true" descriptionLocation="/floatz.gwt/floatz.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>
@@ -12,5 +12,6 @@
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
         <javaElement handleIdentifier="=floatz.gwt/src"/>
+        <folder path="/floatz.gwt/doc"/>
     </selectedElements>
 </jardesc>
