@@ -10,7 +10,7 @@
  * style (everything after or within the li.selected class will get the same style)
  *
  * @project       floatz CSS Framework
- * @version       1.1.1
+ * @version       1.1.2
  * @see           http://code.google.com/p/floatz/
  * @author        Harald Humml
  * @copyright     Copyright (c) 1998-2010 by :humml:design
@@ -76,7 +76,6 @@ a:focus.flz_skiplink {
 
 .flz_listnav {
    background-color: inherit;
-   padding: 0.5em 1em;
    margin: 0;              /* because of IE 6 that shows a margin at the bottom of .listnav */
 }
 .flz_listnav ul {
@@ -148,15 +147,15 @@ a:focus.flz_skiplink {
 .flz_toolbar,
 .flz_topnav {
    position: absolute;
-   top: 0;
+   top: 1em;
 }
 
 .flz_breadcrumb {
-   left: 0;   
+   left: 1em;   
 }
 .flz_toolbar, 
 .flz_topnav {
-   right: 0;
+   right: 1em;
 }
 
 /**
@@ -185,6 +184,7 @@ a:focus.flz_skiplink {
    list-style-type: none;
    margin: 0;
    padding: 0;
+   white-space: nowrap; /* Fix word wrap in chrome 21+ */
 }
 
 /* Setting defaults for all A tag within LI */
@@ -198,6 +198,7 @@ a:focus.flz_skiplink {
 /* Highlighting selected anchor */
 .flz_hmenu li.flz_selected a {
    font-weight: bold;
+}
 }
 
 /* Disabled menu item */
@@ -261,16 +262,16 @@ a:focus.flz_skiplink {
 
 /* Setting paddings for A tag of level 1-5 in menu to visualize hierarchy */
 .flz_vmenu ul li a {
-   padding-left: 2em;
+   padding-left: 1em;
 }
 .flz_vmenu ul li ul li a {
-   padding-left: 3em;
+   padding-left: 2em;
 }
 .flz_vmenu ul li ul li ul li a {
-   padding-left: 4em;
+   padding-left: 3em;
 }
 .flz_vmenu ul li ul li ul li ul li a {
-   padding-left: 5em;
+   padding-left: 4em;
 }
 
 /**
@@ -301,6 +302,7 @@ a:focus.flz_skiplink {
    list-style-type: none;
    margin: 0 1px;
    padding: 0 0 0 0.5em;
+   white-space: nowrap; /* Fix word wrap in chrome 21+ */
 }
 .flz_htabmenu li {
    background: url(images/htabmenu.gif) no-repeat left top;
