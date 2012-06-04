@@ -77,6 +77,7 @@ a:focus.flz_skiplink {
 .flz_listnav {
    background-color: inherit;
    margin: 0;              /* because of IE 6 that shows a margin at the bottom of .listnav */
+   padding: 0.5em 1em;
 }
 .flz_listnav ul {
    display: inline;
@@ -147,15 +148,15 @@ a:focus.flz_skiplink {
 .flz_toolbar,
 .flz_topnav {
    position: absolute;
-   top: 1em;
+   top: 0;
 }
 
 .flz_breadcrumb {
-   left: 1em;   
+   left: 0;
 }
 .flz_toolbar, 
 .flz_topnav {
-   right: 1em;
+   right: 0;
 }
 
 /**
@@ -184,7 +185,6 @@ a:focus.flz_skiplink {
    list-style-type: none;
    margin: 0;
    padding: 0;
-   white-space: nowrap; /* Fix word wrap in chrome 21+ */
 }
 
 /* Setting defaults for all A tag within LI */
@@ -288,6 +288,14 @@ a:focus.flz_skiplink {
    width: 100%;
 }
 
+/* Show border below tabs by default */
+.flz_htabmenu {
+   border-bottom: 1px solid #000;
+}
+.flz_htabmenu_bottom {
+   border-top: 1px solid #000;
+}
+
 /* Menu list container */
 .flz_htabmenu ul,
 .flz_htabmenu_bottom {
@@ -302,13 +310,21 @@ a:focus.flz_skiplink {
    list-style-type: none;
    margin: 0 1px;
    padding: 0 0 0 0.5em;
-   white-space: nowrap; /* Fix word wrap in chrome 21+ */
 }
+
 .flz_htabmenu li {
    background: url(images/htabmenu.gif) no-repeat left top;
 }
 .flz_htabmenu_bottom li {
    background: url(images/htabmenu_bottom_inactive.gif) no-repeat left bottom;
+}
+
+/* Overlap (hide) underlying border */
+.flz_htabmenu li.flz_selected {
+   margin-bottom: -1px;
+}
+.flz_htabmenu_bottom li.flz_selected {
+   margin-top: -1px;
 }
 
 /* Menu item (hyperlink element as opening part of sliding door)*/
@@ -389,11 +405,13 @@ a:focus.flz_skiplink {
    background: url(images/htabmenu.gif) no-repeat right -200px;
    color: inherit;
    font-weight: bold;
+   margin-bottom: 1px; /* Overlap (hide) underlying border */
 }
 .flz_htabmenu_bottom li.flz_selected a {
    background: url(images/htabmenu_bottom_active.gif) no-repeat right bottom;
    color: inherit;
    font-weight: bold;
+   margin-top: 1px; /* Overlap (hide) underlying border */
 }
 
 /* Disabled menu item */
