@@ -1,5 +1,6 @@
 @echo off
-set floatz_version=1.1.1
+set floatz_version=1.1.2
+set floatz_jquery_version=1.7.2
 
 cd ..\shrink
 
@@ -57,6 +58,21 @@ copy ..\..\..\floatz\scripts\floatz.js ..\..\templates\layout.111.center\styles\
 copy ..\..\..\floatz\scripts\floatz.js ..\..\templates\layout.110.center\styles\floatz-%floatz_version%\scripts\ > nul
 copy ..\..\..\floatz\scripts\floatz.js ..\..\templates\layout.empty\styles\floatz-%floatz_version%\scripts\ > nul
 
+echo jquery-%floatz_jquery_version%.js
+copy ..\..\..\floatz\scripts\jquery-%floatz_jquery_version%.min.js ..\..\templates\layout.010.fixed\styles\floatz-%floatz_version%\scripts\ > nul
+copy ..\..\..\floatz\scripts\jquery-%floatz_jquery_version%.min.js ..\..\templates\layout.011.fixed\styles\floatz-%floatz_version%\scripts\ > nul
+copy ..\..\..\floatz\scripts\jquery-%floatz_jquery_version%.min.js ..\..\templates\layout.111.fixed\styles\floatz-%floatz_version%\scripts\ > nul
+copy ..\..\..\floatz\scripts\jquery-%floatz_jquery_version%.min.js ..\..\templates\layout.110.fixed\styles\floatz-%floatz_version%\scripts\ > nul
+copy ..\..\..\floatz\scripts\jquery-%floatz_jquery_version%.min.js ..\..\templates\layout.010.liquid\styles\floatz-%floatz_version%\scripts\ > nul
+copy ..\..\..\floatz\scripts\jquery-%floatz_jquery_version%.min.js ..\..\templates\layout.011.liquid\styles\floatz-%floatz_version%\scripts\ > nul
+copy ..\..\..\floatz\scripts\jquery-%floatz_jquery_version%.min.js ..\..\templates\layout.111.liquid\styles\floatz-%floatz_version%\scripts\ > nul
+copy ..\..\..\floatz\scripts\jquery-%floatz_jquery_version%.min.js ..\..\templates\layout.110.liquid\styles\floatz-%floatz_version%\scripts\ > nul
+copy ..\..\..\floatz\scripts\jquery-%floatz_jquery_version%.min.js ..\..\templates\layout.010.center\styles\floatz-%floatz_version%\scripts\ > nul
+copy ..\..\..\floatz\scripts\jquery-%floatz_jquery_version%.min.js ..\..\templates\layout.011.center\styles\floatz-%floatz_version%\scripts\ > nul
+copy ..\..\..\floatz\scripts\jquery-%floatz_jquery_version%.min.js ..\..\templates\layout.111.center\styles\floatz-%floatz_version%\scripts\ > nul
+copy ..\..\..\floatz\scripts\jquery-%floatz_jquery_version%.min.js ..\..\templates\layout.110.center\styles\floatz-%floatz_version%\scripts\ > nul
+copy ..\..\..\floatz\scripts\jquery-%floatz_jquery_version%.min.js ..\..\templates\layout.empty\styles\floatz-%floatz_version%\scripts\ > nul
+
 echo NOTICE.txt
 copy ..\..\NOTICE.txt ..\..\templates\layout.010.fixed\styles\floatz-%floatz_version%\ > nul
 copy ..\..\NOTICE.txt ..\..\templates\layout.011.fixed\styles\floatz-%floatz_version%\ > nul
@@ -74,3 +90,4 @@ copy ..\..\NOTICE.txt ..\..\templates\layout.empty\styles\floatz-%floatz_version
 
 cd ../build
 set floatz_version=
+set floatz_jquery_version=
