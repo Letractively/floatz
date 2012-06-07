@@ -170,10 +170,10 @@ legend {
 }
 
 /* Button  */
-.flz_form input[type="button"],
-.flz_form input[type="submit"],
-.flz_form input[type="reset"],
-.flz_form button {
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button {
    padding: 0.25em 0.35em;
 }
 /**

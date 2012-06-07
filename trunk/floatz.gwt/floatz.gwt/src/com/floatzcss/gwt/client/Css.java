@@ -1,7 +1,6 @@
-package net.floatz.gwt.client;
+package com.floatzcss.gwt.client;
 
-import net.floatz.gwt.client.resource.Floatz;
-
+import com.floatzcss.gwt.client.resource.Floatz;
 import com.google.gwt.core.client.EntryPoint;
 
 /**

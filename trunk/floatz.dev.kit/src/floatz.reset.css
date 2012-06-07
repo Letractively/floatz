@@ -24,6 +24,7 @@
 * {
    font-family: "Arial";
    font-size: 100%;  /* Set input elements to same font-size as in meyer reset */
+	-webkit-text-size-adjust: none; /* Prevent wrong font sizes in mobile webkit browsers */
 }
 
 /* Corrects meyer reset */
