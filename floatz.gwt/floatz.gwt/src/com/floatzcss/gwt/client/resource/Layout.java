@@ -1,4 +1,4 @@
-package net.floatz.gwt.client.resource;
+package com.floatzcss.gwt.client.resource;
 
 import com.google.gwt.resources.client.CssResource;
 

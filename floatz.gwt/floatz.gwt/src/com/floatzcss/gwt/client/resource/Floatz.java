@@ -1,4 +1,4 @@
-package net.floatz.gwt.client.resource;
+package com.floatzcss.gwt.client.resource;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
@@ -22,36 +22,36 @@ public interface Floatz extends ClientBundle {
 	// Get and create instance of resource bundle
 	public Floatz INSTANCE = GWT.create(Floatz.class);
 
-	@Source("net/floatz/gwt/client/resource/css/floatz.reset.meyer.css")
+	@Source("com/floatzcss/gwt/client/resource/css/floatz.reset.meyer.css")
 	ResetMeyer resetMeyer();
 
-	@Source("net/floatz/gwt/client/resource/css/floatz.reset.css")
+	@Source("com/floatzcss/gwt/client/resource/css/floatz.reset.css")
 	Reset reset();
 
-	@Source("net/floatz/gwt/client/resource/css/floatz.layout.css")
+	@Source("com/floatzcss/gwt/client/resource/css/floatz.layout.css")
 	Layout layout();
 
-	@Source("net/floatz/gwt/client/resource/css/floatz.layout.center.css")
+	@Source("com/floatzcss/gwt/client/resource/css/floatz.layout.center.css")
 	LayoutCenter layoutCenter();
 
-	@Source("net/floatz/gwt/client/resource/css/floatz.layout.liquid.css")
+	@Source("com/floatzcss/gwt/client/resource/css/floatz.layout.liquid.css")
 	LayoutLiquid layoutLiquid();
 
-	@Source("net/floatz/gwt/client/resource/css/floatz.form.css")
+	@Source("com/floatzcss/gwt/client/resource/css/floatz.form.css")
 	Form form();
 
-	@Source("net/floatz/gwt/client/resource/css/floatz.nav.css")
+	@Source("com/floatzcss/gwt/client/resource/css/floatz.nav.css")
 	Nav nav();
 
-	@Source("net/floatz/gwt/client/resource/image/htabmenu_bottom_active.gif")
+	@Source("com/floatzcss/gwt/client/resource/image/htabmenu_bottom_active.gif")
 	DataResource htabmenu_bottom_active();
 
-	@Source("net/floatz/gwt/client/resource/image/htabmenu_bottom_hover.gif")
+	@Source("com/floatzcss/gwt/client/resource/image/htabmenu_bottom_hover.gif")
 	DataResource htabmenu_bottom_hover();
 
-	@Source("net/floatz/gwt/client/resource/image/htabmenu_bottom_inactive.gif")
+	@Source("com/floatzcss/gwt/client/resource/image/htabmenu_bottom_inactive.gif")
 	DataResource htabmenu_bottom_inactive();
 
-	@Source("net/floatz/gwt/client/resource/image/htabmenu.gif")
+	@Source("com/floatzcss/gwt/client/resource/image/htabmenu.gif")
 	ImageResource htabmenu();
 }
