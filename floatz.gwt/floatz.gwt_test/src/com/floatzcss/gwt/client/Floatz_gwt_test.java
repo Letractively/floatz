@@ -1,9 +1,7 @@
-package net.floatz.gwt.client;
+package com.floatzcss.gwt.client;
 
-import net.floatz.gwt.client.resource.Floatz;
-
+import com.floatzcss.gwt.client.resource.Floatz;
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.dom.client.UListElement;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.Label;
