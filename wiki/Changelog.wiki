@@ -32,6 +32,12 @@ The following items have been changed
 || floatz.reset.css || FIX || Issue 43 || Adding -webkit-text-size-adjust: none to all elements, otherwise fonts are unprecitable increased on Webkit based smartphones.||
 || - || CHANGE || Issue 38 || Using latest version of jQuery (1.7.2)||
 
+===Deprecated===
+None
+
+===Removed===
+None
+
 =Version 1.1.1=
 
 ==Highlights==
