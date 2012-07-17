@@ -10,13 +10,13 @@
  * style (everything after or within the li.selected class will get the same style)
  *
  * @project       floatz CSS Framework
- * @version       1.1.1
+ * @version       1.1.2
  * @see           http://code.google.com/p/floatz/
  * @author        Harald Humml
- * @copyright     Copyright (c) 1998-2010 by :humml:design
+ * @copyright     Copyright (c) 1998-2012 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-08-03
+ * @lastmodified  2012-06-06
  */
 
 @external .flz_skipnav, .flz_anchor, .flz_skiplink, .flz_listnav, .flz_disabled;
@@ -80,8 +80,8 @@ a:focus.flz_skiplink {
 
 .flz_listnav {
    background-color: inherit;
-   padding: 0.5em 1em;
    margin: 0;              /* because of IE 6 that shows a margin at the bottom of .listnav */
+   padding: 0.5em 1em;
 }
 .flz_listnav ul {
    display: inline;
@@ -117,7 +117,7 @@ a:focus.flz_skiplink {
 }
 
 /* selected navigation item */
-.flz_listnav li.flz_selected {
+.flz_listnav li.flz_selected a {
    color: inherit;
    font-weight: bold;
 }
@@ -265,16 +265,16 @@ a:focus.flz_skiplink {
 
 /* Setting paddings for A tag of level 1-5 in menu to visualize hierarchy */
 .flz_vmenu ul li a {
-   padding-left: 2em;
+   padding-left: 1em;
 }
 .flz_vmenu ul li ul li a {
-   padding-left: 3em;
+   padding-left: 2em;
 }
 .flz_vmenu ul li ul li ul li a {
-   padding-left: 4em;
+   padding-left: 3em;
 }
 .flz_vmenu ul li ul li ul li ul li a {
-   padding-left: 5em;
+   padding-left: 4em;
 }
 
 /**
@@ -293,6 +293,14 @@ a:focus.flz_skiplink {
 .flz_htabmenu_bottom {
    float: left;
    width: 100%;
+}
+
+/* Show border below tabs by default */
+.flz_htabmenu {
+   border-bottom: 1px solid #000;
+}
+.flz_htabmenu_bottom {
+   border-top: 1px solid #000;
 }
 
 /* Menu list container */
@@ -322,6 +330,13 @@ a:focus.flz_skiplink {
 	background-repeat: no-repeat;
 	background-position: left bottom;
 }
+/* Overlap (hide) underlying border */
+.flz_htabmenu li.flz_selected {
+   margin-bottom: -1px;
+}
+.flz_htabmenu_bottom li.flz_selected {
+   margin-top: -1px;
+}
 
 /* Menu item (hyperlink element as opening part of sliding door)*/
 .flz_htabmenu a,
@@ -337,7 +352,7 @@ a:focus.flz_skiplink {
 	height: auto;
 	width: auto;
 }
-.flz_htabmenu_bottom a{
+.flz_htabmenu_bottom a {
 	background-image: HTABMENU_BOTTOM_INACTIVE;
 	background-repeat: no-repeat;
 	background-position: right bottom;
@@ -434,6 +449,7 @@ a:focus.flz_skiplink {
 	font-weight: bold;
 	gwt-image: 'htabmenu';
 	height: auto;
+   margin-bottom: 1px; /* Overlap (hide) underlying border */
 	width: auto;
 }
 .flz_htabmenu_bottom li.flz_selected a {
@@ -442,6 +458,7 @@ a:focus.flz_skiplink {
 	background-position: right bottom;
 	color: inherit;
 	font-weight: bold;
+   margin-top: 1px; /* Overlap (hide) underlying border */
 }
 
 /* Disabled menu item */
