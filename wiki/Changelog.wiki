@@ -18,7 +18,7 @@ This version is a small maintenance release that implements some requests from e
 The following items are new
 
 || Module || Type || Issue || Description ||
-|| floatz.gwt || NEW || Issue 30 || Releasing floatz for Google Web Toolit that allows using floatz as CSS bundles within in GWT applications.||
+|| floatz.gwt || NEW || Issue 30 || Releasing floatz for Google Web Toolit. Now you can use floatz as CSS bundle within in GWT applications (from code and from UI binders).||
 
 ===Changed===
 The following items have been changed
