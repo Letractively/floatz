@@ -1,8 +1,8 @@
 #summary Describes how to layout pages
-Last Update: August 2nd, 2010
+Last Update: July 17th, 2012
 
    ----
-   Note: this wiki page covers version 1.1.1.
+   Note: this wiki page covers version 1.1.2.
    ----
 
 *Presumed readings*
@@ -24,7 +24,7 @@ First of all we need a page container. The page container must be the first elem
 *CSS Code*
 {{{
 /* Loads floatz CSS framework */
-@import url(floatz-1.1.1/floatz.fixed.css);
+@import url(floatz-1.1.2/floatz.fixed.css);
 
 /* Project specific styles */
 }}}
@@ -221,7 +221,7 @@ Now we are finished with our basic page layout. But what if we want to change th
 *CSS code*
 {{{
 /* Loads floatz CSS framework */
-@import url(floatz-1.1.1/floatz.center.css);
+@import url(floatz-1.1.2/floatz.center.css);
 
 /* Project specific styles */
 ...
@@ -235,7 +235,7 @@ For the rest of our article we switch to the last of the three layout modes that
 *CSS code*
 {{{
 /* Loads floatz CSS framework */
-@import url(floatz-1.1.1/floatz.liquid.css);
+@import url(floatz-1.1.2/floatz.liquid.css);
 
 /* Project specific styles */
 ...
@@ -343,7 +343,7 @@ The centered layout mode of floatz uses a fixed width design. If you want to hav
 
 {{{
 /* Loads floatz CSS framework */
-@import url(floatz-1.1.1/floatz.liquid.css);
+@import url(floatz-1.1.2/floatz.liquid.css);
 
 /* Project specific styles */
 body {
