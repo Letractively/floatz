@@ -2,11 +2,35 @@
 Last Update: September 21st, 2010
 
    ----
-   Note: this wiki page covers version 1.1.1.
+   Note: this wiki page covers version 1.1.2.
    ----
 
 *Table of content*
 <wiki:toc max_depth="1" />
+
+=Version 1.1.2=
+
+==Highlights==
+This version is a small maintenance release that implements some requests from existing projects.
+
+==Summary of changes==
+===New===
+The following items are new
+
+|| Module || Type || Issue || Description ||
+|| floatz.gwt || NEW || Issue 30 || Releasing floatz for Google Web Toolit that allows using floatz as CSS bundles within in GWT applications.
+
+===Changed===
+The following items have been changed
+
+|| Module || Type || Issue || Description ||
+|| floatz.form.css || CHANGE || Issue 40 || Removing .flz_form context from button styles to harmonize specifity. Now all buttons can be styled without .flz_form context. ||
+|| floatz.form.css || NEW || Issue 46 || Adding whitespace (1em) below fieldsets ||
+|| floatz.nav.css || FIX || Issue 35 || Changing style for selected listnav item. Otherwise separator is also bold when selected.||
+|| floatz.nav.css || NEW || Issue 37 || Removing distance between active tab and tab container. Now the active tab overlaps the border of the underlying container to increase the effect of selection.||
+|| floatz.nav.css || FIX || Issue 41 || Reducing left margin of vertical menu items. Now they start at 1em.||
+|| floatz.reset.css || FIX || Issue 43 || Adding -webkit-text-size-adjust: none to all elements, otherwise fonts are unprecitable increased on Webkit based smartphones.||
+|| - || CHANGE || Issue 38 || Using latest version of jQuery (1.7.2)||
 
 =Version 1.1.1=
 
@@ -19,7 +43,6 @@ The following items are new
 
 || Module || Type || Issue || Description ||
 || floatz.nav.css || NEW || Issue 29 || Adding flz_disabled to flz_listnav, flz_breadcrumb, flz_topnav, flz_toolbar, flz_vmenu, flz_hmenu, flz_htabmenu, flz_htabmenu_bottom for supporting disabled navigation items ||
-
 
 ===Changed===
 The following items have been changed
