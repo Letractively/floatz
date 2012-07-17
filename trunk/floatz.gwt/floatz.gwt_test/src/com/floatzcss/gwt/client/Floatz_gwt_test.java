@@ -21,19 +21,22 @@ public class Floatz_gwt_test implements EntryPoint {
 		FlowPanel tabMenu = new FlowPanel();
 		tabMenu.addStyleName(floatz.nav().htabmenu());		
 		StringBuffer menuItems = new StringBuffer();
-		menuItems.append("<li class='flz_selected'><a href=''>Tab 1</a></li>");
-		menuItems.append("<li><a href=''>Tab 2</a></li>");
-		menuItems.append("<li><a href=''>Tab 3</a></li>");
+		menuItems.append("<li class='flz_selected'><a href='javascript:'>Tab 1</a></li>");
+		menuItems.append("<li><a href='javascript:'>Tab 2</a></li>");
+		menuItems.append("<li><a href='javascript:'>Tab 3</a></li>");
 		HTMLPanel ul = new HTMLPanel("ul", menuItems.toString());
 		tabMenu.add(ul);
 		spacer.add(tabMenu);
-
+		
+		HTMLPanel lineBreak = new HTMLPanel("<br /><br />");
+		spacer.add(lineBreak);
+		
 		FlowPanel tabMenuBottom = new FlowPanel();
 		tabMenuBottom.addStyleName(floatz.nav().htabmenu_bottom());		
 		StringBuffer menuItemsButtom = new StringBuffer();
-		menuItemsButtom.append("<li class='flz_selected'><a href=''>Tab 1</a></li>");
-		menuItemsButtom.append("<li><a href=''>Tab 2</a></li>");
-		menuItemsButtom.append("<li><a href=''>Tab 3</a></li>");
+		menuItemsButtom.append("<li class='flz_selected'><a href='javascript:'>Tab 1</a></li>");
+		menuItemsButtom.append("<li><a href='javascript:'>Tab 2</a></li>");
+		menuItemsButtom.append("<li><a href='javascript'>Tab 3</a></li>");
 		HTMLPanel ul2 = new HTMLPanel("ul", menuItemsButtom.toString());
 		tabMenuBottom.add(ul2);
 		spacer.add(tabMenuBottom);
