@@ -112,6 +112,29 @@ copy ..\..\NOTICE.txt ..\..\templates\layout.111.center\styles\floatz-%floatz_ve
 copy ..\..\NOTICE.txt ..\..\templates\layout.110.center\styles\floatz-%floatz_version%\ > nul
 copy ..\..\NOTICE.txt ..\..\templates\layout.empty\styles\floatz-%floatz_version%\ > nul
 
+echo.
+echo Creating floatz.dev.kit-%floatz_version%.zip ...
+xcopy ..\..\*.* ..\..\..\floatz.dev.kit-%floatz_version% /s /e /i /v > nul
+rd ..\..\..\floatz.dev.kit-%floatz_version%\sandbox /s /q
+del "..\..\..\floatz.dev.kit-%floatz_version%\.project" > nul
+del "..\..\..\floatz.dev.kit-%floatz_version%\samples\Basic Concepts\images\Basic_Concepts*.jpg" > nul
+rem del "..\..\..\floatz.dev.kit-%floatz_version%\samples\Layouting Content\images\Layouting*.jpg" > nul
+del "..\..\..\floatz.dev.kit-%floatz_version%\samples\Layouting Forms\images\Layouting*.jpg" > nul
+del "..\..\..\floatz.dev.kit-%floatz_version%\samples\Layouting Navigation\images\Layouting*.jpg" > nul
+del "..\..\..\floatz.dev.kit-%floatz_version%\samples\Layouting Pages\images\Layouting*.jpg" > nul
+cd ..\..\..
+zip floatz.dev.kit-%floatz_version%.zip floatz.dev.kit-%floatz_version% -r -q
+rd floatz.dev.kit-1.1.2 /s /q
+cd floatz.dev.kit/tools/shrink
+
+echo Creating floatz-%floatz_version%.zip ...
+xcopy ..\..\..\floatz ..\..\..\floatz-%floatz_version% /s /e /i /v > nul
+del "..\..\..\floatz-%floatz_version%\.project" > nul
+cd ..\..\..
+zip floatz-%floatz_version%.zip floatz-%floatz_version% -r -q
+rd floatz-1.1.2 /s /q
+cd floatz.dev.kit/tools/shrink
+
 cd ../build
 set floatz_version=
 set floatz_jquery_version=
