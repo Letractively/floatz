@@ -199,7 +199,6 @@ a:focus.flz_skiplink {
 .flz_hmenu li.flz_selected a {
    font-weight: bold;
 }
-}
 
 /* Disabled menu item */
 .flz_hmenu li.flz_disabled a {
