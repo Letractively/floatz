@@ -517,7 +517,7 @@ To show you that the layout of our form also works in liquid layout without any 
 *CSS code*
 {{{
 /* Loads floatz CSS framework */
-@import url(floatz-1.1.1/floatz.liquid.css);
+@import url(floatz-1.1.2/floatz.liquid.css);
 
 /* Project specific styles */
 ...
