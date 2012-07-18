@@ -13,6 +13,6 @@
   * Advanced
     * [AvoidingObtrusiveMarkupAndCss Avoiding obtrusive markup and CSS (tbd)]
   * Reference
-    * [BrowserHacks Browser hacks]
+    * [BrowserHacks Browser hacks (tbd)]
     * [ClassReference Class reference]
     * [Changelog Change Log]
