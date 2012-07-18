@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='floatz_gwt_test'>
+  <inherits name='com.google.gwt.user.User'/>
+  <inherits name='com.google.gwt.user.theme.standard.Standard'/>
+  <inherits name='com.floatzcss.gwt.Css'/>
+  <entry-point class='com.floatzcss.gwt.client.Floatz_gwt_test'/>
+  <source path='client'/>
+  <source path='shared'/>
+</module>
