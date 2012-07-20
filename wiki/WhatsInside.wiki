@@ -251,7 +251,8 @@ Next add a reference to floatz into your module descriptor by adding the followi
 ...
 }}}
 
-== ... ==
+== Use floatz within your java code ==
+== Use floatz within UI binders ==
 
 *Further readings*
 
