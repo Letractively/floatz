@@ -324,24 +324,24 @@ For getting a deep knowledge about how to layout pages with floatz, see [Layouti
 
 Load order for liquid layout:
 {{{ 
-      private static final Floatz FLOATZ = Floatz.INSTANCE;
+   private static final Floatz FLOATZ = Floatz.INSTANCE;
 
-      public void onModuleLoad() {
-	 ...	
-         FLOATZ.layoutLiquid().ensureInjected();
-         ...
-      }
+   public void onModuleLoad() {
+      ...	
+      FLOATZ.layoutLiquid().ensureInjected();
+      ...
+   }
 }}}
 
 Load order for center layout:
 {{{ 
-      private static final Floatz FLOATZ = Floatz.INSTANCE;
+   private static final Floatz FLOATZ = Floatz.INSTANCE;
 
-      public void onModuleLoad() {
-	 ...	
-         FLOATZ.layoutCenter().ensureInjected();
-         ...
-      }
+   public void onModuleLoad() {
+      ...	
+      FLOATZ.layoutCenter().ensureInjected();
+      ...
+   }
 }}}
 
 *Further readings*
