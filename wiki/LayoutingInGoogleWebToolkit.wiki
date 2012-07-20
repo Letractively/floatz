@@ -21,11 +21,26 @@ Using from code, Using within UI binders, Changing layout mode, Tips & Tricks us
 
 =Adding floatz to a GWT project=
 
+Integrating floatz into Google Web Toolkit projects is pretty easy. The following section gives a quick overview of the necessary steps.
+
 ==Adding the JAR file==
+
+First of all you must copy the [http://code.google.com/p/floatz/downloads/list latest version] of the floatz JAR file to the `WEB-INF/lib` folder of your web application and add it to the projects class path.
 
 ==Updating the module descriptor==
 
-=Integration into GWT=
+At last add a reference to floatz into your module descriptor by adding the following `inherits` tag.
+
+{{{
+   ...
+  <!-- Other module inherits                                      -->
+  <inherits name='com.floatzcss.gwt.Css'/>
+   ...
+}}}
+
+Finished. Now you can style your application using floatz.
+
+=Overview of the client and CSS bundles=
 
 =Layouting the application=
 
