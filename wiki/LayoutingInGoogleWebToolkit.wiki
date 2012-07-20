@@ -77,9 +77,8 @@ Floatz based layouts start with a surrounding DIV container directly below the B
 
       public void onModuleLoad() {
 
-         FlowPanel pageContainer = new FlowPanel();
+         HTMLPanel pageContainer = new HTMLPanel("<p>Hello world</p>");
          pageContainer.getElement().setId("flz_page");
-         pageContainer.add(new new HTMLPanel("<p>Hello world</p>");
          RootPanel.get().add(pageContainer);
      }
 }
