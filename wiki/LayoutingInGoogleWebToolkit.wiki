@@ -10,7 +10,7 @@ Last Update: July 20th, 2012
 *Table of content*
 <wiki:toc max_depth="2" />
 
-*Presumed readings*
+*Assumed readings*
    * [WhatsInside#Module_for_Google_Web_Toolkit Whats inside]
    * [GettingStarted Getting started]
    * [BasicConcepts Basic Concepts]
