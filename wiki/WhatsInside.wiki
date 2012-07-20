@@ -322,7 +322,7 @@ For getting a deep knowledge about how to layout pages with floatz, see [Layouti
    Note: Inject the layout module directly in the `onLoadModule` method of your web application. 
    ----
 
-Load order for liquid layout:
+Code for liquid layout:
 {{{ 
    private static final Floatz FLOATZ = Floatz.INSTANCE;
 
@@ -333,7 +333,7 @@ Load order for liquid layout:
    }
 }}}
 
-Load order for center layout:
+Code for center layout:
 {{{ 
    private static final Floatz FLOATZ = Floatz.INSTANCE;
 
