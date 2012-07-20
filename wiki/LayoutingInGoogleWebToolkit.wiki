@@ -64,7 +64,7 @@ In contrast do classic web pages, a GWT based application has only one page. So 
 
 ==Preparing the application page==
 
-Floatz based layouts start with a surrounding DIV container directly below the BODY tag with an attached CSS class named `flz_page`. In the following example we create a flow panel and attaching ´flz_page´natively to it,  because IDs are not supported in GWT CSS bundles. Then we add some content to the page container and   at least we add the page container to the root panel of the GWT application.
+Floatz based layouts start with a surrounding page container directly below the BODY tag. To achieve this, we create a HTML panel and attach `flz_page`natively to it (this is because GWT CSS bundles only support CSS classes and `flz_page` is a CSS id). The we add the page container to the root panel of the GWT application.
 
 {{{
    package com.floatzcss.demo.client;
