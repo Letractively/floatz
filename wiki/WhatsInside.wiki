@@ -266,24 +266,24 @@ Floatz provides a CSS bundle for each floatz module and all are reachable via th
 
    public class FloatzTest implements EntryPoint {
 
-   	   private static final Floatz FLOATZ = Floatz.INSTANCE;
+      private static final Floatz FLOATZ = Floatz.INSTANCE;
 
-	   public void onModuleLoad() {
+      public void onModuleLoad() {
 
-                // Here we must use the ID directly, because IDs are not supported in GWT´s CSS bundles
-	  	FlowPanel pageContainer = new FlowPanel();
-		pageContainer.getElement().setId("flz_page");
+         // Here we must use the ID directly, because IDs are not supported in GWT´s CSS bundles
+         FlowPanel pageContainer = new FlowPanel();
+         pageContainer.getElement().setId("flz_page");
 
-		HTMLPanel box = new HTMLPanel("");
-		box.setStyleName(FLOATZ.layout().box());
+         HTMLPanel box = new HTMLPanel("");
+         box.setStyleName(FLOATZ.layout().box());
 
-		HTMLPanel spacer = new HTMLPanel("<p>Hello world</p>");
-		spacer.setStyleName(FLOATZ.layout().spacer());
-		box.add(spacer);
+         HTMLPanel spacer = new HTMLPanel("<p>Hello world</p>");
+         spacer.setStyleName(FLOATZ.layout().spacer());
+         box.add(spacer);
 
-		pageContainer.add(box);
-		RootPanel.get().add(pageContainer);
-	}
+         pageContainer.add(box);
+         RootPanel.get().add(pageContainer);
+      }
    }
 }}}
 
