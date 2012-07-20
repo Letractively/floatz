@@ -42,6 +42,22 @@ Finished. Now you can style your application using floatz.
 
 =Overview of the client and CSS bundles=
 
+The floatz GWT module provides a CSS bundle for each available floatz module as well as a central client bundle from where you can easily access all CSS classes using a self-explanatory namespace.
+
+The following bundles are available:
+
+|| Class name || Bundle type || Description || Loaded by default ||
+|| Floatz || Client bundle || Floatz bundle that holds everything together || Yes ||
+|| ResetMeyer || CSS bundle || Reset module that implements floatz.reset.meyer.css ||  Yes  ||
+|| Reset || CSS bundle || Reset module that implements floatz.reset.css || Yes  ||
+|| Layout || CSS bundle || Layout module that implements floatz.layout.css || Yes ||
+|| Form || CSS bundle || Layout module that implements floatz.form.css || Yes  ||
+|| Nav || CSS bundle || Layout module that implements floatz.nav.css || Yes  ||
+|| LayoutCenter || CSS bundle || Layout module that implements floatz.layout.center.css || Yes ||
+|| LayoutLiquid || CSS bundle || Layout module that implements floatz.layout.liquid.css || Yes  ||
+
+
+
 =Layouting the application=
 
 ==Preparing the application page==
