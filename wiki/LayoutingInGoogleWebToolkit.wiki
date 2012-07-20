@@ -17,4 +17,4 @@ Last Update: July 20th, 2012
 <wiki:toc max_depth="2" />
 
 Remarks:
-Using from code, Using within UI binders, Changing layout mode, Tips & Tricks using it with GWT widgets, Extending/Customizing
+Using from code, Using within UI binders, Changing layout mode, Tips & Tricks using it with GWT widgets, Extending/Customizing, Conditional CSS, Link to GWT bundles.
