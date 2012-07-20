@@ -64,7 +64,7 @@ In contrast do classic web pages, a GWT based application has only one page. So 
 
 ==Preparing the application page==
 
-Floatz based layouts start with a surrounding page container directly below the BODY tag. To achieve this, we create a HTML panel and attach `flz_page`natively to it (this is because GWT CSS bundles only support CSS classes and `flz_page` is a CSS id). The we add the page container to the root panel of the GWT application.
+Floatz based layouts start with a surrounding page container directly below the BODY tag. To achieve this, we create a page container within the `onModuleLoad` method of our applications entry point class. Because GWT CSS bundles only support CSS classes (and `flz_page` is a CSS id) we must attach the ID natively to the page container. Then we add it to the root panel of the GWT application.
 
 {{{
    package com.floatzcss.demo.client;
@@ -85,6 +85,11 @@ Floatz based layouts start with a surrounding page container directly below the 
 }}}
 
 ==Changing the layout mode==
+
+By default floatz uses a fixed layout. If you want to change to another supported layout (e.g. center or fluid) we must inject the according CSS bundle to our application. For this example we want to used a fixed centered layout.
+
+{{{
+}}}
 
 =Layouting from code=
 
