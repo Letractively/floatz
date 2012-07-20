@@ -245,10 +245,10 @@ Before you start, copy the [http://code.google.com/p/floatz/downloads/list lates
 Next add a reference to floatz into your module descriptor by adding the following `inherits` tag.
 
 {{{
-...
+   ...
   <!-- Other module inherits                                      -->
   <inherits name='com.floatzcss.gwt.Css'/>
-...
+   ...
 }}}
 
 == Use floatz from code ==
@@ -270,6 +270,7 @@ Floatz provides a CSS bundle for each floatz module and all are reachable via th
 
 	   public void onModuleLoad() {
 
+                // Here we must use the ID directly, because IDs are not supported in GWT´s CSS bundles
 	  	FlowPanel pageContainer = new FlowPanel();
 		pageContainer.getElement().setId("flz_page");
 
@@ -287,6 +288,11 @@ Floatz provides a CSS bundle for each floatz module and all are reachable via th
 }}}
 
 == Use floatz within UI binders ==
+
+Thanks to the client and CSS bundle mechanism you have also access to all floatz styles within UI binders. Here is an additional example:
+
+{{{
+}}}
 
 *Further readings*
 
