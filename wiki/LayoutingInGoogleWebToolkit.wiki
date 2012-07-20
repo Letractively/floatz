@@ -20,9 +20,19 @@ Remarks:
 Using from code, Using within UI binders, Changing layout mode, Tips & Tricks using it with GWT widgets, Extending/Customizing, Conditional CSS, Link to GWT bundles.
 
 =Adding floatz to a GWT project=
+
 ==Adding the JAR file==
+
 ==Updating the module descriptor==
-=Layouting the applications page=
+
+=Integration into GWT=
+
+=Layouting the application=
+
+==Preparing the application page==
+
+==Changing the layout mode==
+
 =Layouting from code=
 
 Floatz provides a CSS bundle for each floatz module and all are reachable via the Floatz client bundle. So you have easy access to all styles via their module namespaces. Here is an easy example:
