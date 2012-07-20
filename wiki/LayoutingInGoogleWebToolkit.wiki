@@ -53,10 +53,10 @@ The following bundles are available:
 || `Layout` || CSS bundle || Layout module that implements floatz.layout.css || Yes ||
 || `Form` || CSS bundle || Layout module that implements floatz.form.css || Yes  ||
 || `Nav` || CSS bundle || Layout module that implements floatz.nav.css || Yes  ||
-|| `LayoutCenter`|| CSS bundle || Layout module that implements floatz.layout.center.css || Yes ||
-|| `LayoutLiquid`|| CSS bundle || Layout module that implements floatz.layout.liquid.css || Yes  ||
+|| `LayoutCenter`|| CSS bundle || Layout module that implements floatz.layout.center.css || No ||
+|| `LayoutLiquid`|| CSS bundle || Layout module that implements floatz.layout.liquid.css || No  ||
 
-
+You do not have to care about loading the CSS files in the correct order, as when you use them natively. The floatz GWT module itself takes care of that instead. Thanks to GWT only CSS classes that are used are compiled into CSS and javascript code.
 
 =Layouting the application=
 
