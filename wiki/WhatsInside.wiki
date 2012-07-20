@@ -310,8 +310,51 @@ Thanks to the client and CSS bundle mechanism of GWT you have also access to all
 
 == Affection layouts ==
 
-You can change the used layouting module as well
+==Affecting layouts in production mode==
 
+You can affect the kind of page layout that is used, by choosing one of the provided CSS bundles depending on the desired layout mode. The following layout modes are supported. Each of them is represented by an according CSS bundle:
+
+   * Fixed layout (default)
+   * Centered layout
+   * Liquid / fluid layout
+
+For getting a deep knowledge about how to layout pages with floatz, see [LayoutingPages Layouting Pages]. The following examples are showing what kinds of modules are necessary for each of the supported layout modes.
+
+   ---
+   Note: Inject the layout module directly in the `onLoadModule` method of your web application. 
+   ---
+
+{{{ 
+      private static final Floatz FLOATZ = Floatz.INSTANCE;
+
+      public void onModuleLoad() {
+	 ...	
+         FLOATZ.layoutCenter().ensureInjected();
+         ...
+      }
+}}}
+
+Load order for liquid layout:
+{{{ 
+      private static final Floatz FLOATZ = Floatz.INSTANCE;
+
+      public void onModuleLoad() {
+	 ...	
+         FLOATZ.layoutLiquid().ensureInjected();
+         ...
+      }
+}}}
+
+Load order for center layout:
+{{{ 
+      private static final Floatz FLOATZ = Floatz.INSTANCE;
+
+      public void onModuleLoad() {
+	 ...	
+         FLOATZ.layoutCenter().ensureInjected();
+         ...
+      }
+}}}
 
 *Further readings*
 
