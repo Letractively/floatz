@@ -1,4 +1,4 @@
-#summary Describes how you can use floatz with Google Web Toolkit [tbd]
+#summary Describes how you can use floatz with Google Web Toolkit
 Last Update: July 20th, 2012
 
    ----
