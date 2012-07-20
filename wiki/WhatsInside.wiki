@@ -292,6 +292,20 @@ Floatz provides a CSS bundle for each floatz module and all are reachable via th
 Thanks to the client and CSS bundle mechanism you have also access to all floatz styles within UI binders. Here is an additional example:
 
 {{{
+   <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+   <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+   xmlns:g="urn:import:com.google.gwt.user.client.ui">
+   <ui:with field="FLOATZ" type="com.floatzcss.gwt.client.resource.Floatz" />
+   <ui:style>
+   </ui:style>
+   <g:HTMLPanel styleName="{FLOATZ.layout.box}">
+     <div class="{FLOATZ.layout.spacer}">
+         <p>
+            Hello World!
+         </p>
+      </div>
+   </g:HTMLPanel>
+</ui:UiBinder> 
 }}}
 
 *Further readings*
