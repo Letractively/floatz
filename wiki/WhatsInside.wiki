@@ -251,7 +251,41 @@ Next add a reference to floatz into your module descriptor by adding the followi
 ...
 }}}
 
-== Use floatz within your java code ==
+== Use floatz from code ==
+
+Floatz provides a CSS bundle for each floatz module and all are reachable via the Floatz client bundle. So you have easy access to all styles via their module namespaces. Here is an easy example:
+
+{{{
+   package com.floatzcss.demo.client;
+
+   import com.floatzcss.gwt.client.resource.Floatz;
+   import com.google.gwt.core.client.EntryPoint;
+   import com.google.gwt.user.client.ui.FlowPanel;
+   import com.google.gwt.user.client.ui.HTMLPanel;
+   import com.google.gwt.user.client.ui.RootPanel;
+
+   public class FloatzTest implements EntryPoint {
+
+   	   private static final Floatz FLOATZ = Floatz.INSTANCE;
+
+	   public void onModuleLoad() {
+
+	  	FlowPanel pageContainer = new FlowPanel();
+		pageContainer.getElement().setId("flz_page");
+
+		HTMLPanel box = new HTMLPanel("");
+		box.setStyleName(FLOATZ.layout().box());
+
+		HTMLPanel spacer = new HTMLPanel("<p>Hello world</p>");
+		spacer.setStyleName(FLOATZ.layout().spacer());
+		box.add(spacer);
+
+		pageContainer.add(box);
+		RootPanel.get().add(pageContainer);
+	}
+   }
+}}}
+
 == Use floatz within UI binders ==
 
 *Further readings*
