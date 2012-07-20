@@ -143,7 +143,7 @@ As you may have already noticed in the previous example, it is very comfortable 
 
 =Layouting from UI binders=
 
-Structuring your markup from Java code may be become very hard to maintain. Thanks to the UI binder mechanism of GWT you can move all your markup into UI binder XML. Thus floatz can also be used within UI binders. The following example shows the markup.
+Structuring your markup from Java code may be become very hard to maintain. Thanks to the UI binder mechanism of GWT you can move all your markup into UI binder XML. The following sample shows how to use floatz within UI binders.
 
 {{{
    <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
@@ -160,4 +160,30 @@ Structuring your markup from Java code may be become very hard to maintain. Than
          </div>
       </g:HTMLPanel>
    </ui:UiBinder>
+}}}
+
+To finish the example we have to change the previous code in the entry point module to use the newly created content panel via UI binder.
+
+{{{
+   package com.floatzcss.demo.client;
+
+   import com.floatzcss.gwt.client.resource.Floatz;
+   import com.google.gwt.core.client.EntryPoint;
+   import com.google.gwt.user.client.ui.FlowPanel;
+   import com.google.gwt.user.client.ui.RootPanel;
+
+   public class FloatzTest implements EntryPoint {
+
+      private static final Floatz FLOATZ = Floatz.INSTANCE;
+
+      public void onModuleLoad() {
+
+         FLOATZ.layoutCenter().ensureInjected();		
+	
+         FlowPanel pageContainer = new FlowPanel();
+         pageContainer.getElement().setId("flz_page");
+         pageContainer.add(new ContentPanel());
+         RootPanel.get().add(pageContainer);
+      }
+   }
 }}}
