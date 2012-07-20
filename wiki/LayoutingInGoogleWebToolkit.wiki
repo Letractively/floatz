@@ -184,7 +184,7 @@ To finish the example we have to change the previous code in the entry point mod
 =Summary=
 Now you know everything you need to use floatz within GWT. Read the recommended wiki articles to get more information about the great possibilities you get with floatz.
 
-*Further readings*
+====Further readings====
 The following wiki articles contain further information about how to use the basic concepts in practice:
 
    * [LayoutingPages Layouting Pages]
