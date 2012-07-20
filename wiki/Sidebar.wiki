@@ -1,5 +1,4 @@
 #summary Wiki sidebar
-#labels Deprecated
 
   * Getting Started
     * [GettingStarted Getting started]
@@ -12,6 +11,7 @@
     * [LayoutingNavigation Layouting navigation (tbd)]
   * Advanced
     * [AvoidingObtrusiveMarkupAndCss Avoiding obtrusive markup and CSS (tbd)]
+    *[LayoutingInGoogleWebToolkit Layouting in Google Web Toolkit (tbd)]
   * Reference
     * [BrowserHacks Browser hacks (tbd)]
     * [ClassReference Class reference]
