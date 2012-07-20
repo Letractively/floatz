@@ -80,15 +80,28 @@ Floatz based layouts start with a surrounding page container directly below the 
          HTMLPanel pageContainer = new HTMLPanel("<p>Hello world</p>");
          pageContainer.getElement().setId("flz_page");
          RootPanel.get().add(pageContainer);
-     }
-}
+      }
+   }
 }}}
 
 ==Changing the layout mode==
 
-By default floatz uses a fixed layout. If you want to change to another supported layout (e.g. center or fluid) we must inject the according CSS bundle to our application. For this example we want to used a fixed centered layout.
+By default floatz uses a fixed layout. If you want to change to another supported layout (e.g. center or fluid) we must inject the according CSS bundle to our application. For this example we switch to fixed centered layout.
 
+   ---
+   Note: The stylesheet injection must be the first operation within your modules load method.
+   ---
 {{{
+   public class FloatzTest implements EntryPoint {
+
+      private static final Floatz FLOATZ = Floatz.INSTANCE;
+
+      public void onModuleLoad() {
+
+         FLOATZ.layoutCenter().ensureInjected();
+         ...
+      }
+   }
 }}}
 
 =Layouting from code=
