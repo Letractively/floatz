@@ -69,7 +69,7 @@ Floatz provides a CSS bundle for each floatz module and all are reachable via th
    }
 }}}
 
-=Layouting from UI binders
+=Layouting from UI binders=
 
 Thanks to the client and CSS bundle mechanism of GWT you have also access to all floatz styles within UI binders. Here is an additional example:
 
