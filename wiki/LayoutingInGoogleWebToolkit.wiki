@@ -1,4 +1,5 @@
 #summary Describes how you can use floatz with Google Web Toolkit [tbd]
+#labels Featured
 Last Update: July 20th, 2012
 
 *This page is currently under construction and thus not finished.*
