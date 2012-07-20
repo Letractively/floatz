@@ -21,7 +21,7 @@ Using from code, Using within UI binders, Changing layout mode, Tips & Tricks us
 
 =Adding floatz to a GWT project=
 
-Integrating floatz into Google Web Toolkit projects is really easy. The following section gives a quick overview of the necessary steps.
+Integrating floatz into Google Web Toolkit projects is really easy. These are the necessary steps:
 
 ==Adding the JAR file==
 
