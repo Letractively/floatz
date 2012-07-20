@@ -236,7 +236,7 @@ Load order for center layout:
 
 floatz is also available als JAR file for use in Google Web Toolkit based web applications. This section describes how you can integrate it into project.
 
-== Adding floatz to the class path
+== Adding floatz to the class path ==
 
 Before you start, you must add the floatz JAR file to the class path of your web application.
 
