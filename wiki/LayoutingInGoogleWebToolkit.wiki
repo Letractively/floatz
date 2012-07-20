@@ -11,7 +11,7 @@ Last Update: July 20th, 2012
 <wiki:toc max_depth="2" />
 
 *Presumed readings*
-[WhatsInside#Module_for_Google_Web_Toolkit Whats inside]
-[GettingStarted Getting started]
-[BasicConcepts Basic Concepts]
-[LayoutingPages Layouting Pages]
+   * [WhatsInside#Module_for_Google_Web_Toolkit Whats inside]
+   * [GettingStarted Getting started]
+   * [BasicConcepts Basic Concepts]
+   * [LayoutingPages Layouting Pages]
