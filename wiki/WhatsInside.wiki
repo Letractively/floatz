@@ -234,7 +234,7 @@ Load order for center layout:
 
 =Module for Google Web Toolkit =
 
-floatz is also available als JAR file for use in Google Web Toolkit based web applications. This section describes how you can integrate it into project.
+floatz is also available als JAR file for use in Google Web Toolkit based web applications. This section describes how you can integrate it into project. More information about using floatz in GWT can be found under [LayoutingInGoogleWebToolkit Layouting in Google Web Toolkit].
 
 == Adding floatz to the class path ==
 
