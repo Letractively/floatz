@@ -234,7 +234,22 @@ Load order for center layout:
 
 =Module for Google Web Toolkit =
 
-Floatz is also available als JAR file for use in Google Web Toolkit based web applications.
+floatz is also available als JAR file for use in Google Web Toolkit based web applications. This section describes how you can integrate it into project.
+
+== Adding floatz to the class path
+
+Before you start, you must add the floatz JAR file to the class path of your web application.
+
+== Referencing floatz in your module descriptor ==
+
+Now you must reference floatz in your module descriptor by adding the following inherits tag.
+
+{{{
+...
+  <!-- Other module inherits                                      -->
+  <inherits name='com.floatzcss.gwt.Css'/>
+...
+}}}
 
 *Further readings*
 
