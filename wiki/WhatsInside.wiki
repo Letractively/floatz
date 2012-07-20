@@ -308,7 +308,7 @@ Thanks to the client and CSS bundle mechanism of GWT you have also access to all
    </ui:UiBinder> 
 }}}
 
-== Affection layouts ==
+== Affecting layouts ==
 
 You can affect the kind of page layout that is used, by choosing one of the provided CSS bundles depending on the desired layout mode. The following layout modes are supported. Each of them is represented by an according CSS bundle:
 
