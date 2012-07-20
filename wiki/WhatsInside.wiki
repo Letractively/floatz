@@ -242,7 +242,7 @@ Before you start, copy the [http://code.google.com/p/floatz/downloads/list lates
 
 == Referencing floatz in your module descriptor ==
 
-Now you must reference floatz in your module descriptor by adding the following inherits tag.
+Next add a reference to floatz into your module descriptor by adding the following `inherits` tag.
 
 {{{
 ...
@@ -250,6 +250,8 @@ Now you must reference floatz in your module descriptor by adding the following 
   <inherits name='com.floatzcss.gwt.Css'/>
 ...
 }}}
+
+== ... ==
 
 *Further readings*
 
