@@ -251,7 +251,7 @@ Next add a reference to floatz into your module descriptor by adding the followi
    ...
 }}}
 
-== Use floatz from code ==
+== Using floatz from code ==
 
 Floatz provides a CSS bundle for each floatz module and all are reachable via the Floatz client bundle. So you have easy access to all styles via their module namespaces. Here is an easy example:
 
@@ -287,7 +287,7 @@ Floatz provides a CSS bundle for each floatz module and all are reachable via th
    }
 }}}
 
-== Use floatz within UI binders ==
+== Using floatz within UI binders ==
 
 Thanks to the client and CSS bundle mechanism of GWT you have also access to all floatz styles within UI binders. Here is an additional example:
 
