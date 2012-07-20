@@ -21,7 +21,7 @@ Using from code, Using within UI binders, Changing layout mode, Tips & Tricks us
 
 =Adding floatz to a GWT project=
 ==Adding the JAR file==
-==Referencing floatz in the module descriptor==
+==Updating the module descriptor==
 =Layouting the applications page=
 =Layouting from code=
 
