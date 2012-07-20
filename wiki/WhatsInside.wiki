@@ -308,6 +308,11 @@ Thanks to the client and CSS bundle mechanism of GWT you have also access to all
    </ui:UiBinder> 
 }}}
 
+== Affection layouts ==
+
+You can change the used layouting module as well
+
+
 *Further readings*
 
 The following wiki articles contain further information about how to use floatz in pratice:
