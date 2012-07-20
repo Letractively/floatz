@@ -10,10 +10,11 @@ Last Update: July 17th, 2012
 <wiki:toc max_depth="2" />
 
 
-floatz is available in two different download packages.
+floatz is available in the following download packages.
 
    * Production package
    * Development kit package
+   * Module for Google Web Toolkit
 
 =Production package=
 
@@ -231,6 +232,8 @@ Load order for center layout:
 
    /* Project specific styles */
 }}}
+
+=Module for Google Web Toolkit =
 
 *Further readings*
 
