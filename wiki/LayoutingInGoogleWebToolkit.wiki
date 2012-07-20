@@ -18,3 +18,64 @@ Last Update: July 20th, 2012
 
 Remarks:
 Using from code, Using within UI binders, Changing layout mode, Tips & Tricks using it with GWT widgets, Extending/Customizing, Conditional CSS, Link to GWT bundles.
+
+=Adding floatz to a GWT project=
+==Adding the JAR file==
+==Referencing floatz in the module descriptor==
+=Layouting the applications page=
+=Layouting from code=
+
+Floatz provides a CSS bundle for each floatz module and all are reachable via the Floatz client bundle. So you have easy access to all styles via their module namespaces. Here is an easy example:
+
+{{{
+   package com.floatzcss.demo.client;
+
+   import com.floatzcss.gwt.client.resource.Floatz;
+   import com.google.gwt.core.client.EntryPoint;
+   import com.google.gwt.user.client.ui.FlowPanel;
+   import com.google.gwt.user.client.ui.HTMLPanel;
+   import com.google.gwt.user.client.ui.RootPanel;
+
+   public class FloatzTest implements EntryPoint {
+
+      private static final Floatz FLOATZ = Floatz.INSTANCE;
+
+      public void onModuleLoad() {
+
+         // Here we must use the ID directly, because IDs are not supported in GWT´s CSS bundles
+         FlowPanel pageContainer = new FlowPanel();
+         pageContainer.getElement().setId("flz_page");
+
+         HTMLPanel box = new HTMLPanel("");
+         box.setStyleName(FLOATZ.layout().box());
+
+         HTMLPanel spacer = new HTMLPanel("<p>Hello world</p>");
+         spacer.setStyleName(FLOATZ.layout().spacer());
+         box.add(spacer);
+
+         pageContainer.add(box);
+         RootPanel.get().add(pageContainer);
+      }
+   }
+}}}
+
+=Layouting from UI binders
+
+Thanks to the client and CSS bundle mechanism of GWT you have also access to all floatz styles within UI binders. Here is an additional example:
+
+{{{
+   <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+   <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+      xmlns:g="urn:import:com.google.gwt.user.client.ui">
+      <ui:with field="FLOATZ" type="com.floatzcss.gwt.client.resource.Floatz" />
+      <ui:style>
+      </ui:style>
+      <g:HTMLPanel styleName="{FLOATZ.layout.box}">
+        <div class="{FLOATZ.layout.spacer}">
+            <p>
+               Hello World!
+            </p>
+         </div>
+      </g:HTMLPanel>
+   </ui:UiBinder> 
+}}}
