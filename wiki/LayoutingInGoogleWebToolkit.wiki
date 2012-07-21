@@ -57,7 +57,7 @@ In contrast do classic web pages, a GWT based application has only one page. So 
 
 ==Preparing the application page==
 
-Floatz based layouts start with a surrounding page container directly below the BODY tag. To achieve this, we create a page container within the `onModuleLoad` method of our applications entry point class. Because GWT CSS bundles only support CSS classes (and `flz_page` is a CSS id) we must attach the ID natively to the page container. Then we add it to the root panel of the GWT application.
+Floatz based layouts start with a surrounding page container directly below the BODY tag. To achieve this, create a page container within the `onModuleLoad` method of our applications entry point class. Because GWT CSS bundles only support CSS classes (and `flz_page` is a CSS id) you must attach the ID natively to the page container. Then add it to the root panel of the GWT application.
 
 {{{
    package com.floatzcss.demo.client;
@@ -79,7 +79,7 @@ Floatz based layouts start with a surrounding page container directly below the 
 
 ==Changing the layout mode==
 
-By default floatz uses a fixed layout. If you want to change to another supported layout (e.g. center or fluid) we must inject the according CSS bundle to our application. For this example we switch to fixed centered layout.
+By default floatz uses a fixed layout. If you want to change to another supported layout (e.g. center or fluid) you must inject the according CSS bundle to our application. For this example switch to fixed centered layout.
 
    ---
    Note: The stylesheet injection must be the first operation within your modules load method.
@@ -99,7 +99,7 @@ By default floatz uses a fixed layout. If you want to change to another supporte
 
 =Layouting from code=
 
-As you may have already noticed in the previous example, it is very comfortable to access the floatz CSS classes via the central `Floatz CSS bundle`, especially when you are using an IDE with support for inline code suggestions. In the slightly changed example we use floatz directly from Java code.
+As you may have already noticed in the previous example, it is very comfortable to access the floatz CSS classes via the central `Floatz CSS bundle`, especially when you are using an IDE with support for inline code suggestions. In the slightly changed example you use floatz directly from Java code.
 
 {{{
    package com.floatzcss.demo.client;
@@ -155,7 +155,7 @@ Structuring your markup from Java code may be become very hard to maintain. Than
    </ui:UiBinder>
 }}}
 
-To finish the example we have to change the previous code in the entry point module to use the newly created content panel via UI binder.
+To finish the example you have to change the previous code in the entry point module to use the newly created content panel via UI binder.
 
 {{{
    package com.floatzcss.demo.client;
