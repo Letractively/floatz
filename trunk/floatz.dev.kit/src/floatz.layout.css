@@ -65,12 +65,6 @@
 .flz_scrollbox {
 	overflow: auto;
 }
-.flz_hscrollbox {
-	overflow-y: auto;
-}
-.flz_vscrollbox {
-	overflow-x: auto;
-}
 
 /**
  * ---------------------------------------------------------------------------------------
@@ -465,7 +459,7 @@
  * positions of panels must manually using top, right, bottom, left em values.
  */
 
-.flz_panel, .flz_scrollpanel, .flz_vscrollpanel, .flz_hscrollpanel {
+.flz_panel, .flz_scrollpanel {
 	bottom: 0;
 	left: 0;
 	position: absolute;
@@ -477,10 +471,3 @@
 }
 .flz_scrollpanel {
 	overflow: auto;
-}
-.flz_vscrollpanel {
-	overflow-x: auto;
-}
-.flz_hscrollpanel {
-	overflow-y: auto;	
-}
