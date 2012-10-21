@@ -4,13 +4,13 @@
  * Basic layouting elements for fixed (and also fluid) layout
  *
  * @project       floatz CSS Framework
- * @version       1.1.2
+ * @version       1.2.0
  * @see           http://code.google.com/p/floatz/
  * @author        Harald Humml
  * @copyright     Copyright (c) 1998-2012 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2012-06-06
+ * @lastmodified  2012-10-21
  */
 
 /**
@@ -48,9 +48,9 @@
 
 /**
  * ---------------------------------------------------------------------------------------
- * @section       Layout container
+ * @section       Layout containers
  *
- * Basic layout container that is used for the whole structure of a web page. Follows the
+ * Basic layout container that are used for the whole structure of a web page. Follows the
  * principle: everything is a box. Can be combined with layouters to provide auto calculated
  * widths based on percentages. Relative box acts also as target for absolute positioned 
  * elements like toolbars, breadcrumbs, etc.
@@ -61,6 +61,15 @@
    clear: none;
    float: left;
    width: 100%;
+}
+.flz_scrollbox {
+	overflow: auto;
+}
+.flz_hscrollbox {
+	overflow-y: auto;
+}
+.flz_vscrollbox {
+	overflow-x: auto;
 }
 
 /**
@@ -446,4 +455,32 @@
 /* Clears floating elements */
 .flz_clear {
    clear: both;
+}
+
+/**
+ * ---------------------------------------------------------------------------------------
+ * @section       Panel containers
+ *
+ * Advanced layout containers for structuring desktop like web applications. Dimensions and
+ * positions of panels must manually using top, right, bottom, left em values.
+ */
+
+.flz_panel, .flz_scrollpanel, .flz_vscrollpanel, .flz_hscrollpanel {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.flz_panel {
+	overflow: hidden;
+}
+.flz_scrollpanel {
+	overflow: auto;
+}
+.flz_vscrollpanel {
+	overflow-x: auto;
+}
+.flz_hscrollpanel {
+	overflow-y: auto;	
 }
