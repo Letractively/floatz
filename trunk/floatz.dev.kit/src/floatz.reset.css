@@ -12,7 +12,7 @@
  * @copyright     Copyright (c) 1998-2012 by :humml:design
  * @link          http://design.humml.eu/toolbox/floatz
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2012-10-21
+ * @lastmodified  2012-10-28
  */
 
 /**
@@ -24,6 +24,11 @@
 * {
    font-family: "Arial";
    font-size: 100%;  /* Set input elements to same font-size as in meyer reset */
+}
+
+/* Set basic defaults - corrects font: inherit in meyer reset */
+h1, h2, h3, h4, h5, h6, strong, b {
+	font-weight: bold;
 }
 
 /* Corrects meyer reset */
