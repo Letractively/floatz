@@ -1,79 +1,181 @@
-/**
- * floatz.js
- * 
- * Javascript that progressively enhances browser capabilities in circumstances where
- * no HTML & CSS only solution is available (e.g. skiplinks).
- *
- * @project       floatz CSS Framework
- * @version       1.1.1
- * @see           http://code.google.com/p/floatz/
- * @author        Harald Humml
- * @copyright     Copyright (c) 1998-2010 by :humml:design
- * @link          http://design.humml.eu/toolbox/floatz
- * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2010-02-13
- */
+var floatz = (function() {
+	
+	////////////////////////////////////////////////////
+	// Public interface
 
-var floatz = {
+	var self = {
 
-   /**
-    * Initializes floatz.
-    *
-    * @since 1.1.0
-    */
-   init : function() {
-      // Initialize skip links
-      this.initSkiplinks();
-      
-      // Initialize skip link anchors
-      this.initSkiplinkAnchors();
-   },
+		/* Enumarations */
+		LOGLEVEL : {
+			ERROR : 0,
+			WARN : 1,
+			INFO : 2,
+			DEBUG : 3
+		},
 
-   /**
-    * Initialize skip links.
-    * 
-    * Adds click event handlers to all skip links within flz_skipnav. The click event
-    * handler sets the focus on skip link anchors when user clicks on skip link. This
-    * works only if every skip link anchor also has tabindex set to -1.
-    *
-    * @affected Chrome, Safari (Webkit), Opera
-    * @since 1.1.0
-    */
-   initSkiplinks : function() {
-   
-      // Check if webkit or opera browser
-      if ($.browser.webkit || $.browser.opera) {
-   
-         // Add click event handler for all hyperlinks within flz_skipnav
-         $(".flz_skipnav a").click(function(){
-   
-            // Set focus to skiplink anchor by parsing anchor id from skiplink's href
-            // when user clicks on skip link
-            $(this.href.substring(this.href.indexOf("#"), this.href.length)).focus();
-         });
-      }
-   },
+		/* Fields */
+		loadedModules : new Array(),
+		module : {
+			name : "floatz",
+			version : "1.2.0"
+		},
 
-   /**
-    * Initialize skip link anchors.
-    *
-    * Automatically adds tabindex attribute to every skip link anchor that is
-    * annotated with class flz_anchor. This is mandatory for setting focus on
-    * skip link anchors (IE without javascript, Webkit & Opera only javascript)
-    *
-    * @affected IE, Chrome, Safari (Webkit), Opera
-    * @since 1.1.0
-    */
-   initSkiplinkAnchors : function() {
-   
-      // Check if webkit or opera browser
-      if ($.browser.webkit || $.browser.opera || $.browser.msie) {
-         
-         // Add tabindex attribute to all elements with class flz_anchor
-         $("a.flz_anchor").attr("tabindex", "-1");
-         
-         // Todo: check if its possible to manipulate anchors without flz_anchor
-         // only via ids of the skip links
-      }
-   }
-};
+		/* Methods */
+		start : start,
+		log : log,
+		
+		/* String utilities */
+		string : {
+			lpad : lpad,
+			rpad : rpad
+		}
+	};
+
+	////////////////////////////////////////////////////
+	// Private variables
+	
+	var LOGLEVEL = self.LOGLEVEL;
+	var loadedModules = self.loadedModules;
+	var module = self.module;
+	var config = {
+		debug : false,
+		logLevel : LOGLEVEL.DEBUG, /* Use only in dev mode */
+	};
+	
+	////////////////////////////////////////////////////
+	// Private functions
+	
+	/**
+	 * Start floatz.
+	 * <p>
+	 * start();
+	 * start(<config>);
+	 * <p>
+	 * 
+	 * @param config Configuration options {
+	 * 			[debug : true|false][,]
+	 * 			[logLevel : floatz.LOGLEVEL.<level>][,]
+	 * 			[modules : { <modulename> [,<modulname>]}]
+	 * 		  }
+	 */
+	function start(options) {
+
+		// Mix options and defaults
+		$.extend(config, options);
+		
+		// Find modules to start
+		log(LOGLEVEL.INFO, "Module " + module.name + " started", module.name);
+		for(var i in loadedModules) {
+			
+			// Start all loaded modules if nothing is configured
+			var start = config.modules === undefined;
+			if(! start) {
+
+				// Check if module is configured to be started
+				for(var j in config.modules) {
+					if(loadedModules[i].name === config.modules[j]) {
+						start = true;
+						break;
+					}
+				}
+			}
+			
+			// Start module
+			if(start) {
+				loadedModules[i].start();
+			}
+		}
+		
+		// Show all modules in config that could not be loaded
+		for(var i in config.modules) {
+			var found = false;
+			for(var j in loadedModules) {
+				if(config.modules[i] === loadedModules[j].name) {
+					found = true;
+				}
+			}		
+
+			if(! found) {
+				log(LOGLEVEL.ERROR, "Module " + config.modules[i] + " is invalid or not loaded", module.name);
+			}
+		}		
+	}
+	
+	/**
+	 * Log into browser console.
+	 * 
+	 * @param level Log level
+	 * @param msg Log message
+	 * @param context Context (e.g. module name)
+	 */
+	function log(level, msg, context) {
+		if(level <= config.logLevel) {
+			console.log(rpad(context, " ", 20) + " | " + module.version + " | " + 
+				rpad(logLevelName(level), " ", 6) + " | " + msg);
+		}
+	}
+
+	/**
+	 * Get readable name for log level.
+	 * 
+	 * @param Log level
+	 * @return Name for log level
+	 */
+	// Get name for log level
+	function logLevelName(level) {
+		return level === LOGLEVEL.ERROR ? "ERROR" : 
+			   level === LOGLEVEL.WARN  ? "WARN" : 
+			   level === LOGLEVEL.INFO  ? "INFO" : 
+			   level === LOGLEVEL.DEBUG ? "DEBUG" : "UNKOWN";
+	}
+	
+	/**
+	 * Right pad a string.
+	 * 
+	 * @param str Original string
+	 * @param char Padding character
+	 * @param len Target length of the returned string
+	 * @return Padded string
+	 */
+	function rpad(str, char, len) {
+		if (! str || ! char || str.length >= len) {
+			return str;
+		}
+		
+		var pstr = str;
+		var max = (len - str.length) / char.length;
+		for (var i = 0; i < max; i++) {
+			pstr += char;
+		}		
+		return pstr;
+	}
+	
+	/**
+	 * Left pad a string.
+	 * 
+	 * @param str Original string
+	 * @param char Padding character
+	 * @param len Target length of the returned string
+	 * @return Padded string 
+	 */
+	function lpad(str, char, len) {
+		if (! str || ! char || str.length >= len) {
+			return str;
+		}
+		
+		var pstr = str;
+		var max = (len - str.length) / char.length;
+		for (var i = 0; i < max; i++) {
+			pstr = char + pstr;
+		}
+		return pstr;
+	}
+
+	////////////////////////////////////////////////////
+	// Init code
+	
+	log(LOGLEVEL.INFO, "Module " + module.name + " loaded", module.name);
+	
+	// Return public interface
+	return self;
+}());
