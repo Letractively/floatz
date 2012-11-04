@@ -109,7 +109,9 @@ var floatz = (function() {
 	 * @param context Context (e.g. module name)
 	 */
 	function log(level, msg, context) {
-		if(level <= config.logLevel) {
+		
+		// Check if console is available (IE 8 and below) and log level is allowed
+		if(window.console !== undefined && level <= config.logLevel) {
 			console.log(rpad(context, " ", 20) + " | " + module.version + " | " + 
 				rpad(logLevelName(level), " ", 6) + " | " + msg);
 		}
