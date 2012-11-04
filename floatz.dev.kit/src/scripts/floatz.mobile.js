@@ -38,8 +38,8 @@ floatz.mobile = (function() {
 			// Smooth scrolling for scrollable panels on mobile iOS devices
 			// See: http://johanbrook.com/browsers/native-momentum-scrolling-ios-5/
 			floatz.log(floatz.LOGLEVEL.DEBUG, "Adding -webkit-overflow-scrolling: touch to flz_scrollbar, flz_scrollbox on mobile webkit", module.name);		
-			floatz.log(floatz.LOGLEVEL.DEBUG, "Adding overflow:scroll to flz_scrollbar, flz_scrollbox on mobile webkit", module.name);		
-			$(".flz_scrollpanel", ".flz_scrollbox").css("-webkit-overflow-scrolling", "touch").css("overflow", "scroll");
+			floatz.log(floatz.LOGLEVEL.DEBUG, "Adding overflow:scroll to flz_scrollpanel, flz_scrollbox on mobile webkit", module.name);		
+			$(".flz_scrollpanel, .flz_scrollbox").css("-webkit-overflow-scrolling", "touch").css("overflow", "scroll");
 		}
 		
 		floatz.log(floatz.LOGLEVEL.INFO, "Module " + module.name + " started", module.name);		
