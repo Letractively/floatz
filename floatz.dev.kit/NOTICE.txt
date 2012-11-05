@@ -21,20 +21,20 @@ limitations under the License.
 
 Used third party libraries
 
-   jQuery JavaScript Library v1.7.2
+   jQuery JavaScript Library v1.8.2
    http://jquery.com/
-   Copyright 2010, John Resig
-   Dual licensed under the MIT or GPL Version 2 licenses.
+   Copyright 2012, jQuery Foundation
+   Licensed under MIT License
    http://jquery.org/license
 	
 	LESS - Leaner CSS v1.3.1
 	http://lesscss.org
 	Copyright (c) 2009-2011, Alexis Sellier
-	Licensed under the Apache 2.0 License.
+	Licensed under the Apache 2.0 License
 	http://www.apache.org/licenses/LICENSE-2.0
 
 	LAB.js (Loading And Blocking JavaScript) v2.0.3
 	http://labjs.com/
    Copyright, Kyle Simpson
-   MIT License
+   Licensed under MIT License
 	http://opensource.org/licenses/MIT
