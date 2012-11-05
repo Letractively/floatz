@@ -10,7 +10,7 @@
  * 
  * @project       floatz CSS Framework
  * @version       1.2.0
- * @since			1.2.0
+ * @since         1.2.0
  * @see           http://code.google.com/p/floatz/
  * @author        Harald Humml
  * @copyright     Copyright (c) 1998-2012 by :humml:design
@@ -77,6 +77,8 @@
 	 * 			[logLevel : floatz.LOGLEVEL.<level>][,]
 	 * 			[modules : { <modulename> [,<modulname>]}]
 	 * 		  }
+	 * 
+	 * @since 1.2.0
 	 */
 	function start(options) {
 
@@ -127,6 +129,7 @@
 	 * @param level Log level
 	 * @param msg Log message
 	 * @param context Context (e.g. module name)
+	 * @since 1.2.0
 	 */
 	function log(level, msg, context) {
 		
@@ -142,6 +145,7 @@
 	 * 
 	 * @param Log level
 	 * @return Name for log level
+	 * @since 1.2.0
 	 */
 	// Get name for log level
 	function logLevelName(level) {
@@ -158,6 +162,7 @@
 	 * @param char Padding character
 	 * @param len Target length of the returned string
 	 * @return Padded string
+	 * @since 1.2.0
 	 */
 	function rpad(str, char, len) {
 		if (! str || ! char || str.length >= len) {
@@ -179,6 +184,7 @@
 	 * @param char Padding character
 	 * @param len Target length of the returned string
 	 * @return Padded string 
+	 * @since 1.2.0
 	 */
 	function lpad(str, char, len) {
 		if (! str || ! char || str.length >= len) {

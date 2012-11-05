@@ -10,7 +10,7 @@
  *
  * @project       floatz CSS Framework
  * @version       1.2.0
- * @since			1.2.0
+ * @since         1.2.0
  * @see           http://code.google.com/p/floatz/
  * @author        Harald Humml
  * @copyright     Copyright (c) 1998-2012 by :humml:design
@@ -18,7 +18,6 @@
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
  * @lastmodified  2012-11-05
  */
-
 
 floatz.browser = (function() {
 
