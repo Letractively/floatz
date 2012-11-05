@@ -1,4 +1,25 @@
-var floatz = (function() {
+/**
+ * floatz.js
+ * 
+ * Base module that manages all floatz specific modules and provides some utility methods.
+ *
+ * Note: This file contains optional javascript code that progressively enhances browser 
+ * capabilities in circumstances where no HTML & CSS only solution is available.
+ *
+ * Depends on: jQuery
+ * 
+ * @project       floatz CSS Framework
+ * @version       1.2.0
+ * @since			1.2.0
+ * @see           http://code.google.com/p/floatz/
+ * @author        Harald Humml
+ * @copyright     Copyright (c) 1998-2012 by :humml:design
+ * @link          http://www.floatzcss.com
+ * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
+ * @lastmodified  2012-11-05
+ */
+
+ var floatz = (function() {
 	
 	////////////////////////////////////////////////////
 	// Public interface
@@ -46,11 +67,10 @@ var floatz = (function() {
 	// Private functions
 	
 	/**
-	 * Start floatz.
-	 * <p>
+	 * Start floatz and all configured modules.
+	 * 
 	 * start();
 	 * start(<config>);
-	 * <p>
 	 * 
 	 * @param config Configuration options {
 	 * 			[debug : true|false][,]

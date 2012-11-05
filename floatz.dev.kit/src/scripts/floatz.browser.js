@@ -1,3 +1,25 @@
+/**
+ * browser.js
+ * 
+ * Browser module that allows to check for specific browsers, versions and devices.
+ *
+ * Note: This file contains optional javascript code that progressively enhances browser 
+ * capabilities in circumstances where no HTML & CSS only solution is available.
+ *
+ * Depends on: floatz.js
+ *
+ * @project       floatz CSS Framework
+ * @version       1.2.0
+ * @since			1.2.0
+ * @see           http://code.google.com/p/floatz/
+ * @author        Harald Humml
+ * @copyright     Copyright (c) 1998-2012 by :humml:design
+ * @link          http://www.floatzcss.com
+ * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
+ * @lastmodified  2012-11-05
+ */
+
+
 floatz.browser = (function() {
 
 	////////////////////////////////////////////////////
@@ -38,7 +60,8 @@ floatz.browser = (function() {
 		webkit: $.browser.webkit === undefined ? false : $.browser.webkit,
 		winPhone: /Windows\ Phone/.test(userAgent),
 		winPhoneVersion: "" + (userAgent.match( /.+(?:windows\ phone\ os)[\/: ]([\d_]+)/ ) || [0,0])[1],
-		isMobileWebkit : isMobileWebkit
+		isMobileWebkit : isMobileWebkit,
+		isMobile : isMobile
 	};
 	
 	////////////////////////////////////////////////////
@@ -48,14 +71,25 @@ floatz.browser = (function() {
 	
 	////////////////////////////////////////////////////
 	// Private functions
-	
+
 	/**
 	 * Check if mobile webkit browser.
 	 * 
 	 * @return true if mobile webkit, false if not
+	 * @since 1.2.0
 	 */
 	function isMobileWebkit() {
 		return self.webkit && (self.android || self.iphone || self.ipad);
+	}
+	
+	/**
+	 * Check if mobile browser.
+	 * 
+	 * @return true if mobile, false if not
+	 * @since 1.2.0
+	 */
+	function isMobile() {
+		return self.android || self.iphone || self.ipad || self.winPhone;
 	}
 		
 	////////////////////////////////////////////////////

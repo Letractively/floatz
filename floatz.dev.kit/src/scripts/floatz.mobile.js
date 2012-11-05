@@ -1,3 +1,23 @@
+/**
+ * mobile.js
+ * 
+ * Mobile module that adds some fixes to mobile webkit browsers.
+ *
+ * Note: This file contains optional javascript code that progressively enhances browser 
+ * capabilities in circumstances where no HTML & CSS only solution is available.
+ *
+ * Depends on: floatz.js, browser.js
+ * 
+ * @project       floatz CSS Framework
+ * @version       1.2.0
+ * @since			1.2.0
+ * @see           http://code.google.com/p/floatz/
+ * @author        Harald Humml
+ * @copyright     Copyright (c) 1998-2012 by :humml:design
+ * @link          http://www.floatzcss.com
+ * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
+ * @lastmodified  2012-11-05
+ */
 floatz.mobile = (function() {
 
 	////////////////////////////////////////////////////
@@ -21,6 +41,11 @@ floatz.mobile = (function() {
 	////////////////////////////////////////////////////
 	// Private functions
 	
+  /**
+	* Start module.
+	*
+   * @since 1.2.0
+	*/
 	function start() {
 
 		// Optimize mobile webkit behavior
