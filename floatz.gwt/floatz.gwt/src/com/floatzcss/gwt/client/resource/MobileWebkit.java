@@ -3,8 +3,7 @@ package com.floatzcss.gwt.client.resource;
 import com.google.gwt.resources.client.CssResource;
 
 /**
- * Css bundle implementation of floatz.layout.liquid.css for GWT (2.0.1 and
- * above)
+ * Css bundle implementation of floatz.reset.css for GWT (2.0.1 and above)
  * <p>
  * Copyright (c) 1998-2012 by :humml:design
  * http://www.floatzcss.com Licensed under Apache License 2.0
@@ -17,5 +16,8 @@ import com.google.gwt.resources.client.CssResource;
  * @version 1.2.0
  */
 
-public interface LayoutLiquid extends CssResource {
+public interface MobileWebkit extends CssResource {
+
+	@ClassName("flz_scrollpanel")
+	String scrollPanel();
 }
