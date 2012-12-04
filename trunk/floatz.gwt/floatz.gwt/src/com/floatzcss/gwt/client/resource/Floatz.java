@@ -9,14 +9,14 @@ import com.google.gwt.resources.client.ImageResource;
  * Resource bundle of floatz CSS framework for GWT (2.0.1 and above)
  * <p>
  * Copyright (c) 1998-2012 by :humml:design
- * http://design.humml.eu/toolbox/floatz Licensed under Apache License 2.0
+ * http://www.floatzcss.com Licensed under Apache License 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  * </p>
  * <p>
  * See: http://code.google.com/p/floatz/
  * </p>
  * @author Harald Humml
- * @version 1.1.2
+ * @version 1.2.0
  */
 
 public interface Floatz extends ClientBundle {
@@ -44,6 +44,9 @@ public interface Floatz extends ClientBundle {
 
 	@Source("com/floatzcss/gwt/client/resource/css/floatz.nav.css")
 	Nav nav();
+
+	@Source("com/floatzcss/gwt/client/resource/css/floatz.mobile.webkit.css")
+	MobileWebkit mobile();
 
 	@Source("com/floatzcss/gwt/client/resource/image/htabmenu_bottom_active.gif")
 	DataResource htabmenu_bottom_active();

@@ -6,21 +6,21 @@ import com.google.gwt.resources.client.CssResource;
  * Css bundle implementation of floatz.nav.css for GWT (2.0.1 and above)
  * <p>
  * Copyright (c) 1998-2012 by :humml:design
- * http://design.humml.eu/toolbox/floatz Licensed under Apache License 2.0
+ * http://www.floatzcss.com Licensed under Apache License 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  * </p>
  * <p>
  * See: http://code.google.com/p/floatz/
  * </p>
  * @author Harald Humml
- * @version 1.1.2
+ * @version 1.2.0
  */
 
 public interface Nav extends CssResource {
 
 	/**
 	 * Skiplink target anchor class
-	 * 
+	 *
 	 * @return Name of CSS class
 	 */
 	@ClassName("flz_anchor")
@@ -28,7 +28,7 @@ public interface Nav extends CssResource {
 
 	/**
 	 * Breadcrumb container class
-	 * 
+	 *
 	 * @return Name of CSS class
 	 */
 	@ClassName("flz_breadcrumb")
@@ -36,7 +36,7 @@ public interface Nav extends CssResource {
 
 	/**
 	 * Marker class for disabled navigation item
-	 * 
+	 *
 	 * @return Name of CSS class
 	 */
 	@ClassName("flz_disabled")
@@ -44,7 +44,7 @@ public interface Nav extends CssResource {
 
 	/**
 	 * Horizontal menu container class
-	 * 
+	 *
 	 * @return Name of CSS class
 	 */
 	@ClassName("flz_hmenu")
@@ -52,7 +52,7 @@ public interface Nav extends CssResource {
 
 	/**
 	 * Horizontal tab menu container class
-	 * 
+	 *
 	 * @return Name of CSS class
 	 */
 	@ClassName("flz_htabmenu")
@@ -60,7 +60,7 @@ public interface Nav extends CssResource {
 
 	/**
 	 * Horizontal bottom aligned tab menu container class
-	 * 
+	 *
 	 * @return Name of CSS class
 	 */
 	@ClassName("flz_htabmenu_bottom")
@@ -68,7 +68,7 @@ public interface Nav extends CssResource {
 
 	/**
 	 * List navigation class
-	 * 
+	 *
 	 * @return Name of CSS class
 	 */
 	@ClassName("flz_listnav")
@@ -76,7 +76,7 @@ public interface Nav extends CssResource {
 
 	/**
 	 * Marker class for selected navigation items
-	 * 
+	 *
 	 * @return Name of CSS class
 	 */
 	@ClassName("flz_selected")
@@ -84,7 +84,7 @@ public interface Nav extends CssResource {
 
 	/**
 	 * Skiplink anchor class
-	 * 
+	 *
 	 * @return Name of CSS class
 	 */
 	@ClassName("flz_skiplink")
@@ -92,7 +92,7 @@ public interface Nav extends CssResource {
 
 	/**
 	 * Skiplink navigation container class
-	 * 
+	 *
 	 * @return Name of CSS class
 	 */
 	@ClassName("flz_skipnav")

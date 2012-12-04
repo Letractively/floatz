@@ -4,13 +4,14 @@
  * Provides a common baseline as well as specific classes for form elements
  *
  * @project       floatz CSS Framework
- * @version       1.1.2
+ * @version       1.2.0
  * @see           http://code.google.com/p/floatz/
  * @author        Harald Humml
  * @copyright     Copyright (c) 1998-2012 by :humml:design
- * @link          http://design.humml.eu/toolbox/floatz
+ * @link          http://www.floatzcss.com
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2012-07-12  
+ * @lastmodified  2012-07-12
+ * @since         1.0.0
  */
 
 @external .flz_custombutton, .flz_form, .flz_textbox, .flz_button, .flz_mandatory;
@@ -24,7 +25,7 @@
  */
 
 /* Sets font style to form elements */
-label, 
+label,
 fieldset {
    font-weight: bold;
 }
@@ -33,9 +34,9 @@ optgroup {
 }
 
 /* Adjusts baseline of input fields and label */
-input, 
-label, 
-select, 
+input,
+label,
+select,
 textarea {
    margin-bottom: 0.25em;
    vertical-align: middle;
@@ -54,19 +55,19 @@ textarea {
 }
 
 /* Clears floats for fieldsets and forms */
-fieldset, 
+fieldset,
 form {
    clear: both;
 }
 
 /**
- * Sets border styles (because of meyer reset), paddings and encloses floating boxes 
+ * Sets border styles (because of meyer reset), paddings and encloses floating boxes
  * within fieldset using overflow method
  */
 fieldset {
    border: 1px solid #000;
+   padding: 1em;
    margin-bottom: 1em;
-	padding: 1em;
 }
 /**
  * @affected Opera <= 8.5
@@ -94,7 +95,7 @@ fieldset {
 }
 
 /**
- * @workaround Wrong padding behaviour of fieldset in IE. (hack works only with one 
+ * @workaround Wrong padding behaviour of fieldset in IE. (hack works only with one
  * setting per element)
  * @affected IE 8
  */
@@ -133,7 +134,7 @@ fieldset {
 }
 
 /**
- * @workaround Wrong padding behaviour of fieldset in IE (hack works only with one 
+ * @workaround Wrong padding behaviour of fieldset in IE (hack works only with one
  * setting per element)
  * @affected IE 8
  */
@@ -266,17 +267,17 @@ button {
    display: inline;
    width: auto;
 }
-   
+
 /**
  * @workaround Correct margins of input type text and textareas within blocked forms
  * @affected IE 5, 6
  */
-* html .flz_textbox, 
+* html .flz_textbox,
 * html .flz_form textarea {
    margin-right: -10px;
 }
 
-/* Combobox marker classes to combine fields with images in one line (e.g. date field with 
+/* Combobox marker classes to combine fields with images in one line (e.g. date field with
    date picker image) */
 .flz_combobox {
    position: relative;

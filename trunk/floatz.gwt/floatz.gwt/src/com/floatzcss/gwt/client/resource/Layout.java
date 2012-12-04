@@ -6,14 +6,14 @@ import com.google.gwt.resources.client.CssResource;
  * Css bundle implementation of floatz.layout.css for GWT (2.0.1 and above)
  * <p>
  * Copyright (c) 1998-2012 by :humml:design
- * http://design.humml.eu/toolbox/floatz Licensed under Apache License 2.0
+ * http://www.floatzcss.com Licensed under Apache License 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  * </p>
  * <p>
  * See: http://code.google.com/p/floatz/
  * </p>
  * @author Harald Humml
- * @version 1.1.2
+ * @version 1.2.0
  */
 
 public interface Layout extends CssResource {
@@ -35,28 +35,28 @@ public interface Layout extends CssResource {
 
 	@ClassName("flz_l33")
 	String l33();
-	
+
 	@ClassName("flz_l40")
 	String l40();
-	
+
 	@ClassName("flz_l50")
 	String l50();
-	
+
 	@ClassName("flz_l60")
 	String l60();
 
 	@ClassName("flz_l66")
 	String l66();
-	
+
 	@ClassName("flz_l75")
 	String l75();
 
 	@ClassName("flz_l80")
 	String l80();
-	
+
 	@ClassName("flz_l90")
 	String l90();
-	
+
 	@ClassName("flz_lspacer")
 	String lspacer();
 
@@ -74,13 +74,13 @@ public interface Layout extends CssResource {
 
 	@ClassName("flz_lsubspacer_mrmc_bottom")
 	String lsubspacer_mrmc_bottom();
-	
+
 	@ClassName("flz_lsubspacer_mrmc_mid")
 	String lsubspacer_mrmc_mid();
 
 	@ClassName("flz_lsubspacer_mrmc_top")
 	String lsubspacer_mrmc_top();
-	
+
 	@ClassName("flz_m10")
 	String m10();
 
@@ -89,13 +89,13 @@ public interface Layout extends CssResource {
 
 	@ClassName("flz_m25")
 	String m25();
-	
+
 	@ClassName("flz_m33")
 	String m33();
 
 	@ClassName("flz_m40")
 	String m40();
-	
+
 	@ClassName("flz_m50")
 	String m50();
 
@@ -107,10 +107,10 @@ public interface Layout extends CssResource {
 
 	@ClassName("flz_mspacer")
 	String mspacer();
-	
+
 	@ClassName("flz_mspacer_mrmc_bottom")
 	String mspacer_mrmc_bottom();
-	
+
 	@ClassName("flz_mspacer_mrmc_mid")
 	String mspacer_mrmc_mid();
 
@@ -128,7 +128,7 @@ public interface Layout extends CssResource {
 
 	@ClassName("flz_msubspacer_mrmc_top")
 	String msubspacer_mrmc_top();
-	
+
 	@ClassName("flz_r10")
 	String r10();
 
@@ -149,7 +149,7 @@ public interface Layout extends CssResource {
 
 	@ClassName("flz_r60")
 	String r60();
-	
+
 	@ClassName("flz_r66")
 	String r66();
 
@@ -170,13 +170,13 @@ public interface Layout extends CssResource {
 
 	@ClassName("flz_rspacer")
 	String rspacer();
-	
+
 	@ClassName("flz_rspacer_mrmc_bottom")
 	String rspacer_mrmc_bottom();
-	
+
 	@ClassName("flz_rspacer_mrmc_mid")
 	String rspacer_mrmc_mid();
-	
+
 	@ClassName("flz_rspacer_mrmc_top")
 	String rspacer_mrmc_top();
 
@@ -188,7 +188,7 @@ public interface Layout extends CssResource {
 
 	@ClassName("flz_rsubspacer_mrmc_mid")
 	String rsubspacer_mrmc_mid();
-	
+
 	@ClassName("flz_rsubspacer_mrmc_top")
 	String rsubspacer_mrmc_top();
 
@@ -197,7 +197,7 @@ public interface Layout extends CssResource {
 
 	@ClassName("flz_spacer_mrsc_bottom")
 	String spacer_mrsc_bottom();
-	
+
 	@ClassName("flz_spacer_mrsc_mid")
 	String spacer_mrsc_mid();
 
@@ -206,13 +206,19 @@ public interface Layout extends CssResource {
 
 	@ClassName("flz_subspacer")
 	String subspacer();
-	
+
 	@ClassName("flz_subspacer_mrsc_bottom")
 	String subspacer_mrsc_bottom();
-	
+
 	@ClassName("flz_subspacer_mrsc_mid")
 	String subspacer_mrsc_mid();
 
 	@ClassName("flz_subspacer_mrsc_top")
 	String subspacer_mrsc_top();
+
+	@ClassName("flz_panel")
+	String panel();
+
+	@ClassName("flz_scrollpanel")
+	String scrollPanel();
 }

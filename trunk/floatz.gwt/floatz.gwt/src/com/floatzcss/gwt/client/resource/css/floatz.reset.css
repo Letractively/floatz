@@ -2,17 +2,18 @@
  * floatz.reset.css
  * ---------------------------------------------------------------------------------------
  * Provides a common baseline for the framework itself as well as web pages that are built
- * on top of it. All form specific elements are defined in separate css file. Attention: 
+ * on top of it. All form specific elements are defined in separate css file. Attention:
  * Load floatz.reset.meyer.css before this stylesheet!
  *
  * @project       floatz CSS Framework
- * @version       1.1.2
+ * @version       1.2.0
  * @see           http://code.google.com/p/floatz/
  * @author        Harald Humml
  * @copyright     Copyright (c) 1998-2012 by :humml:design
- * @link          http://design.humml.eu/toolbox/floatz
+ * @link          http://www.floatzcss.com
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2012-06-07
+ * @lastmodified  2012-10-28
+ * @since         1.0.0
  */
 
 /**
@@ -24,7 +25,11 @@
 * {
    font-family: "Arial";
    font-size: 100%;  /* Set input elements to same font-size as in meyer reset */
-	-webkit-text-size-adjust: none; /* Prevent wrong font sizes in mobile webkit browsers */
+}
+
+/* Set basic defaults - corrects font: inherit in meyer reset */
+h1, h2, h3, h4, h5, h6, strong, b {
+	font-weight: bold;
 }
 
 /* Corrects meyer reset */
@@ -40,7 +45,7 @@ sup {
  * Corrects meyer reset
  * @affected IE 5+, 6
  */
-* html sub, 
+* html sub,
 * html sup {
    font-size: 1em;
 }
@@ -48,7 +53,7 @@ sup {
  * Corrects meyer reset
  * @affected IE 7
  */
-*:first-child+html sub, 
+*:first-child+html sub,
 *:first-child+html sup {
    font-size: 1em;
 }
@@ -63,7 +68,7 @@ a:focus {
 }
 
 /* Sets defaults within body */
-body { 
+body {
    background: #fff;
    color: #000;
    font-family: "Arial";
@@ -106,11 +111,11 @@ ol li {
 }
 
 /* Sets colors and image borders for hyperlinks */
-a, 
-a:active, 
-a:focus, 
-a:link, 
-a:hover, 
+a,
+a:active,
+a:focus,
+a:link,
+a:hover,
 a:visited {
    color: #000;
 }
@@ -119,18 +124,18 @@ a:visited {
 }*/
 
 /* Clears floats for standard block elements */
-p, 
-h1, 
-h2, 
-h3, 
-h4, 
+p,
+h1,
+h2,
+h3,
+h4,
 h5,
-h6, 
-address, 
-blockquote, 
-ul, 
-ol, 
-dl/*, 
+h6,
+address,
+blockquote,
+ul,
+ol,
+dl/*,
 pre*/ {
    clear: both;
 }

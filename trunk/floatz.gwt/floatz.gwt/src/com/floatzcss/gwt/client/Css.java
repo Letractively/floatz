@@ -14,7 +14,7 @@ import com.google.gwt.core.client.EntryPoint;
  * See: http://code.google.com/p/floatz/
  * </p>
  * @author Harald Humml
- * @version 1.1.2
+ * @version 1.2.0
  */
 
 public class Css implements EntryPoint {
@@ -28,5 +28,8 @@ public class Css implements EntryPoint {
 		Floatz.INSTANCE.layout().ensureInjected();
 		Floatz.INSTANCE.form().ensureInjected();
 		Floatz.INSTANCE.nav().ensureInjected();
+
+		// TODO Check if mobile webkit on iOS, if so inject css
+		// Floatz.INSTANCE.mobile().ensureInjected();
 	}
 }

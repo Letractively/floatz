@@ -1,22 +1,23 @@
 /*****************************************************************************************
  * floatz.nav.css
  * ---------------------------------------------------------------------------------------
- * Contains navigational elements: simple list navigation, top navigation, breadcrumb 
+ * Contains navigational elements: simple list navigation, top navigation, breadcrumb
  * navigation, toolbar navigation, horizontal menu navigation, vertical menu navigation
  * and tabbed menu navigation
  *
- * Note: all menu items use a.selected while tabmenu uses li.selected. Latter is not 
+ * Note: all menu items use a.selected while tabmenu uses li.selected. Latter is not
  * possible, though it is inconsistent, because IE would not correctly use the li.selected
  * style (everything after or within the li.selected class will get the same style)
  *
  * @project       floatz CSS Framework
- * @version       1.1.2
+ * @version       1.2.0
  * @see           http://code.google.com/p/floatz/
  * @author        Harald Humml
  * @copyright     Copyright (c) 1998-2012 by :humml:design
- * @link          http://design.humml.eu/toolbox/floatz
+ * @link          http://www.floatzcss.com
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
  * @lastmodified  2012-06-06
+ * @since         1.0.0
  */
 
 @external .flz_skipnav, .flz_anchor, .flz_skiplink, .flz_listnav, .flz_disabled;
@@ -73,9 +74,9 @@ a:focus.flz_skiplink {
  * ---------------------------------------------------------------------------------------
  * @section       Simple list navigation
  *
- * Simple list navigation element, thats the base for the derived top, breadcrumb and 
- * toolbar navigation elements (see next section). Simple list navigation and derived 
- * elements do not need an extra surrounding DIV tag, thus can be used directly with UL. 
+ * Simple list navigation element, thats the base for the derived top, breadcrumb and
+ * toolbar navigation elements (see next section). Simple list navigation and derived
+ * elements do not need an extra surrounding DIV tag, thus can be used directly with UL.
  */
 
 .flz_listnav {
@@ -93,7 +94,7 @@ a:focus.flz_skiplink {
    padding: 0;
 }
 .flz_listnav a {
-   text-decoration: none;   
+   text-decoration: none;
 }
 
 /* default navigation item */
@@ -144,7 +145,7 @@ a:focus.flz_skiplink {
  * @section       Advanced list navigation (advanced)
  *
  * Top, breadcrumb and toolbar navigation elements. These classes are derived from simple
- * list navigation, thus the class definitions have to be used in combination (e.g. 
+ * list navigation, thus the class definitions have to be used in combination (e.g.
  * class="listnav breadcrumb" for breadcrum navigation.
  */
 
@@ -156,9 +157,9 @@ a:focus.flz_skiplink {
 }
 
 .flz_breadcrumb {
-   left: 0;   
+   left: 0;
 }
-.flz_toolbar, 
+.flz_toolbar,
 .flz_topnav {
    right: 0;
 }
@@ -185,7 +186,7 @@ a:focus.flz_skiplink {
 
 /* Setting defaults for LI tag */
 .flz_hmenu li {
-   float: left; 
+   float: left;
    list-style-type: none;
    margin: 0;
    padding: 0;
@@ -219,7 +220,7 @@ a:focus.flz_skiplink {
  * ---------------------------------------------------------------------------------------
  * @section       Vertical menu navigation
  *
- * Vertical menu navigation element that supports 5 menu levels (including the 1st). Needs 
+ * Vertical menu navigation element that supports 5 menu levels (including the 1st). Needs
  * a surrounding DIV tag that uses vmenu.
  */
 
@@ -284,10 +285,6 @@ a:focus.flz_skiplink {
  * Horizontal tab menu navigation element. Needs a surrounding DIV tag using flz_htabmenu.
  */
 
-@url HTABMENU_BOTTOM_ACTIVE htabmenu_bottom_active;
-@url HTABMENU_BOTTOM_HOVER htabmenu_bottom_hover;
-@url HTABMENU_BOTTOM_INACTIVE htabmenu_bottom_inactive;
-
 /* Menu container (background image acts as horizontal separator line) */
 .flz_htabmenu,
 .flz_htabmenu_bottom {
@@ -318,18 +315,14 @@ a:focus.flz_skiplink {
    margin: 0 1px;
    padding: 0 0 0 0.5em;
 }
-@sprite .flz_htabmenu li {
-	background-position: left top;
-	background-repeat: no-repeat;
-	gwt-image: 'htabmenu';
-	height: auto;
-	width: auto;
+
+.flz_htabmenu li {
+   background: url(images/htabmenu.gif) no-repeat left top;
 }
 .flz_htabmenu_bottom li {
-	background-image: HTABMENU_BOTTOM_INACTIVE;
-	background-repeat: no-repeat;
-	background-position: left bottom;
+   background: url(images/htabmenu_bottom_inactive.gif) no-repeat left bottom;
 }
+
 /* Overlap (hide) underlying border */
 .flz_htabmenu li.flz_selected {
    margin-bottom: -1px;
@@ -345,21 +338,15 @@ a:focus.flz_skiplink {
    text-decoration: none;
    padding: 0.5em 1em 0.5em 0.5em;  /* last one reduced at padding of LI */
 }
-@sprite .flz_htabmenu li a {
-	background-repeat: no-repeat;
-	background-position: right top;
-	gwt-image: 'htabmenu';
-	height: auto;
-	width: auto;
+.flz_htabmenu a {
+   background: url(images/htabmenu.gif) no-repeat right top;
 }
-.flz_htabmenu_bottom a {
-	background-image: HTABMENU_BOTTOM_INACTIVE;
-	background-repeat: no-repeat;
-	background-position: right bottom;
+.flz_htabmenu_bottom a{
+   background: url(images/htabmenu_bottom_inactive.gif) no-repeat right bottom;
 }
 
 /* Default menu item */
-.flz_htabmenu a:link, 
+.flz_htabmenu a:link,
 .flz_htabmenu_bottom a:link {
 }
 
@@ -370,38 +357,26 @@ a:focus.flz_skiplink {
 }
 
 /* Hovered menu item (hyperlink element as opening part of the sliding doors) */
-@sprite .flz_htabmenu li a:hover,
+.flz_htabmenu a:hover,
 .flz_htabmenu li:hover a {
-	background-repeat: no-repeat;
-	background-position: right -100px;
-	gwt-image: 'htabmenu';
-	height: auto;
-	width: auto;
+   background: url(images/htabmenu.gif) no-repeat right -100px;
 }
 .flz_htabmenu_bottom a:hover,
 .flz_htabmenu_bottom li:hover a {
-	background-image: HTABMENU_BOTTOM_HOVER;
-	background-repeat: no-repeat;
-	background-position: right bottom;
+   background: url(images/htabmenu_bottom_hover.gif) no-repeat right bottom;
 }
 
 /**
  * @workaround Reset sprite image with hovered menu item, because li:hover ist not supported in IE <= 6
  * @affected IE 5, 6
  */
-@sprite * html .flz_htabmenu li a:hover {
-	background-repeat: no-repeat;
-	background-position: right top;
-	gwt-image: 'htabmenu';
-	height: auto;
-	text-decoration: underline;
-	width: auto;
+* html .flz_htabmenu a:hover {
+   background: url(images/htabmenu.gif) no-repeat right top;
+   text-decoration: underline;
 }
 * html .flz_htabmenu_bottom a:hover {
-	background-image: HTABMENU_BOTTOM_INACTIVE;
-	background-repeat: no-repeat;
-	background-position: right bottom;
-	text-decoration: underline;
+   background: url(images/htabmenu_bottom_inactive.gif) no-repeat right bottom;
+   text-decoration: underline;
 }
 
 /* Active and focus menu item (focus and active is not supported for li, thus underline for hyperlinks are used)*/
@@ -414,50 +389,32 @@ a:focus.flz_skiplink {
 }
 
 /* Hovered menu item (list element as closing part of the sliding doors) */
-@sprite .flz_htabmenu li:hover {
-	background-position: left -100px;
-	background-repeat: no-repeat;
-	gwt-image: 'htabmenu';
-	height: auto;
-	width: auto;
+.flz_htabmenu li:hover {
+   background: url(images/htabmenu.gif) no-repeat left -100px;
 }
 .flz_htabmenu_bottom li:hover {
-	background-image: HTABMENU_BOTTOM_HOVER;
-	background-repeat: no-repeat;
-	background-position: left bottom;
+   background: url(images/htabmenu_bottom_hover.gif) no-repeat left bottom;
 }
 
 /* Selected menu item (list element as closing part of the sliding door) */
-@sprite .flz_htabmenu li.flz_selected {
-	background-repeat: no-repeat;
-	background-position: left -200px;
-	gwt-image: 'htabmenu';
-	height: auto;
-	width: auto;
+.flz_htabmenu li.flz_selected {
+   background: url(images/htabmenu.gif) no-repeat left -200px;
 }
 .flz_htabmenu_bottom li.flz_selected {
-	background-image: HTABMENU_BOTTOM_ACTIVE;
-	background-repeat: no-repeat;
-	background-position: left bottom;
+   background: url(images/htabmenu_bottom_active.gif) no-repeat left bottom;
 }
 
 /* Selected menu item (hyperlink element as opening part of sliding door)*/
-@sprite .flz_htabmenu li.flz_selected a {
-	background-position: right -200px;
-	background-repeat: no-repeat;
-	color: inherit;
-	font-weight: bold;
-	gwt-image: 'htabmenu';
-	height: auto;
+.flz_htabmenu li.flz_selected a {
+   background: url(images/htabmenu.gif) no-repeat right -200px;
+   color: inherit;
+   font-weight: bold;
    margin-bottom: 1px; /* Overlap (hide) underlying border */
-	width: auto;
 }
 .flz_htabmenu_bottom li.flz_selected a {
-	background-image: HTABMENU_BOTTOM_ACTIVE;
-	background-repeat: no-repeat;
-	background-position: right bottom;
-	color: inherit;
-	font-weight: bold;
+   background: url(images/htabmenu_bottom_active.gif) no-repeat right bottom;
+   color: inherit;
+   font-weight: bold;
    margin-top: 1px; /* Overlap (hide) underlying border */
 }
 
@@ -468,54 +425,36 @@ a:focus.flz_skiplink {
 }
 
 /* Focused or hovered selected menu item (hyperlink element as opening part of the sliding doors) */
-@sprite .flz_htabmenu li.flz_selected a:hover,
+.flz_htabmenu li.flz_selected a:hover,
 .flz_htabmenu li:hover.flz_selected a {
-   background-repeat: no-repeat;
-   background-position: right -100px;
+   background: url(images/htabmenu.gif) no-repeat right -100px;
    color: inherit;
-   gwt-image: 'htabmenu';
-   height: auto;
-   width: auto;
 }
 .flz_htabmenu_bottom li.flz_selected a:hover,
 .flz_htabmenu_bottom li:hover.flz_selected a {
-	background-image: HTABMENU_BOTTOM_HOVER;
-	background-repeat: no-repeat;
-	background-position: right bottom;
-	color: inherit;
+   background: url(images/htabmenu_bottom_hover.gif) no-repeat right bottom;
+   color: inherit;
 }
 
 /**
  * @workaround Reset sprite image with hovered menu item, because li:hover ist not supported in IE <= 6
  * @affected IE 5, 6
  */
-@sprite * html .flz_htabmenu li.flz_selected a:hover {
-   background-position: right -200px;
-   background-repeat: no-repeat;
-   gwt-image: 'htabmenu';
-   height: auto;
+* html .flz_htabmenu li.flz_selected a:hover {
+   background: url(images/htabmenu.gif) no-repeat right -200px;
    text-decoration: underline;
-   width: auto;
 }
 * html .flz_htabmenu_bottom li.flz_selected a:hover {
-	background-image: HTABMENU_BOTTOM_ACTIVE;
-	background-repeat: no-repeat;
-	background-position: right bottom;
-	text-decoration: underline;
+   background: url(images/htabmenu_bottom_active.gif) no-repeat right bottom;
+   text-decoration: underline;
 }
 
 /* Focused or hovered selected menu item (list element as closing part of the sliding doors) */
-@sprite .flz_htabmenu li:hover.flz_selected {
-   background-position: left -100px;
-   background-repeat: no-repeat;
-   gwt-image: 'htabmenu';
-   height: auto;
-   width: auto;
+.flz_htabmenu li:hover.flz_selected {
+   background: url(images/htabmenu.gif) no-repeat left -100px;
 }
 .flz_htabmenu_bottom li:hover.flz_selected {
-	background-image: HTABMENU_BOTTOM_HOVER;
-	background-repeat: no-repeat;
-	background-position: left bottom;
+   background: url(images/htabmenu_bottom_hover.gif) no-repeat left bottom;
 }
 
 /* Focus and active (clicked) selected menu item */
