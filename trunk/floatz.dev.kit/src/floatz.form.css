@@ -10,7 +10,7 @@
  * @copyright     Copyright (c) 1998-2012 by :humml:design
  * @link          http://www.floatzcss.com
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * @lastmodified  2012-07-12
+ * @lastmodified  2013-02-22
  * @since         1.0.0
  */
 
@@ -31,11 +31,13 @@ optgroup {
 }
 
 /* Adjusts baseline of input fields and label */
+button
 input, 
 label, 
 select, 
 textarea {
    margin-bottom: 0.25em;
+   margin-left: 0;
    vertical-align: middle;
 }
 
