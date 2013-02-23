@@ -1,17 +1,17 @@
-Copyright (c) 1998-2012 by :humml:design 
+Copyright (c) 1998-2013 by :humml:design 
 
-   http://design.humml.eu
+	http://design.humml.eu
 
 The project is located at
 
-   http://code.google.com/p/floatz
-   http://www.floatzcss.com
+	http://code.google.com/p/floatz
+	http://www.floatzcss.com
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-   http://www.apache.org/licenses/LICENSE-2.0
+	http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,11 +21,11 @@ limitations under the License.
 
 Used third party libraries
 
-   jQuery JavaScript Library v1.8.2
-   http://jquery.com/
-   Copyright 2012, jQuery Foundation
-   Licensed under MIT License
-   http://jquery.org/license
+	jQuery JavaScript Library v1.8.2
+	http://jquery.com/
+	Copyright 2012, jQuery Foundation
+	Licensed under MIT License
+	http://jquery.org/license
 	
 	LESS - Leaner CSS v1.3.1
 	http://lesscss.org
@@ -35,6 +35,6 @@ Used third party libraries
 
 	LAB.js (Loading And Blocking JavaScript) v2.0.3
 	http://labjs.com/
-   Copyright, Kyle Simpson
-   Licensed under MIT License
+	Copyright, Kyle Simpson
+	Licensed under MIT License
 	http://opensource.org/licenses/MIT

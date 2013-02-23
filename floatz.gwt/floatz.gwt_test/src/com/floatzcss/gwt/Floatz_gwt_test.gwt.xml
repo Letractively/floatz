@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module rename-to='floatz_gwt_test'>
   <inherits name='com.google.gwt.user.User'/>
-  <inherits name='com.google.gwt.user.theme.standard.Standard'/>
   <inherits name='com.floatzcss.gwt.Css'/>
   <entry-point class='com.floatzcss.gwt.client.Floatz_gwt_test'/>
+  <script src="floatz-1.2.0/scripts/jquery-1.8.2.min.js"/>
+  <script src="floatz-1.2.0/scripts/floatz.js"/>
+  <script src="floatz-1.2.0/scripts/floatz.browser.js"/>
+  <script src="floatz-1.2.0/scripts/floatz.mobile.js"/>
+  <script src="floatz-1.2.0/scripts/floatz.skiplink.js"/>
   <source path='client'/>
   <source path='shared'/>
 </module>
