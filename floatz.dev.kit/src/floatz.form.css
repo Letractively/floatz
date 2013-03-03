@@ -99,7 +99,7 @@ fieldset {
  * @affected IE 8
  */
 fieldset {
-   padding /*\**/: 0 1em 1em 1em \9
+   padding: ~"0 1em 1em 1em\0/";
 }
 
 /**
@@ -138,13 +138,13 @@ fieldset {
  * @affected IE 8
  */
 legend {
-   margin-top /*\**/: -1em \9
+	margin-top: ~"-1em\0/";
 }
 legend {
-   padding-top /*\**/: 1em \9
+   padding-top: ~"1em\0/";
 }
 legend {
-   padding-bottom /*\**/: 1em \9
+   padding-bottom: ~"1em\0/";
 }
 
 /**
