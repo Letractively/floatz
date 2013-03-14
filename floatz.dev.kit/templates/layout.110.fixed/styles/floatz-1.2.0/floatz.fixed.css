@@ -24,7 +24,6 @@ ul li{list-style-type:disc;margin-left:2.8em;}
 ol li{list-style-type:decimal;margin-left:2.8em;}
 * html ol li{margin-left:1.5em;}
 a,a:active,a:focus,a:link,a:hover,a:visited{color:#000;}
-p,h1,h2,h3,h4,h5,h6,address,blockquote,ul,ol,dl{clear:both;}
 #flz_page{background-color:#fff;float:left;position:relative;width:985px;}
 * html #flz_page{overflow:hidden;}
 *:first-child+html #flz_page{overflow:hidden;}
@@ -138,39 +137,26 @@ a:active.flz_skiplink,a:focus.flz_skiplink{position:static;}
 .flz_htabmenu li:hover.flz_selected{background:url(images/htabmenu.gif) no-repeat left -100px;}
 .flz_htabmenu_bottom li:hover.flz_selected{background:url(images/htabmenu_bottom_hover.gif) no-repeat left bottom;}
 .flz_htabmenu li.flz_selected a:focus,.flz_htabmenu li.flz_selected a:active,.flz_htabmenu_bottom li.flz_selected a:focus,.flz_htabmenu_bottom li.flz_selected a:active{color:inherit;text-decoration:underline;}
-label,fieldset{font-weight:bold;}
+form{clear:both;}
+label{font-weight:bold;}
 optgroup{font-style:italic;}
 button input,label,select,textarea{margin-bottom:0.25em;margin-left:0;vertical-align:middle;}
-.flz_custombutton{background:transparent;border:0;}
 select,textarea{border:1px solid #000;}
-fieldset,form{clear:both;}
-fieldset{border:1px solid #000;padding:1em;margin-bottom:1em;}
-fieldset{overflow:hidden;}
-* html fieldset{padding:0 1em 1em 1em;margin-top:-1em;}
-*:first-child+html fieldset{padding:0 1em 1em 1em;}
-fieldset{padding:0 1em 1em 1em\0/;}
-* html fieldset legend{color:#000;}
-* html legend{margin-left:-0.5em;padding-top:1em;padding-bottom:1em;padding-left:0;}
-*:first-child+html legend{margin-left:-0.5em;margin-top:-1em;padding-top:1em;padding-bottom:1em;padding-left:0;}
-legend{margin-top:-1em\0/;}
-legend{padding-top:1em\0/;}
-legend{padding-bottom:1em\0/;}
-.flz_form input[type="text"],.flz_form input[type="password"]{background-color:fff;border:1px solid #000;display:block;width:99.4%;}
-* html .flz_textbox{background-color:fff;border:1px solid #000;display:block;width:99.4%;}
-input[type="button"],input[type="submit"],input[type="reset"],button{padding:0.25em 0.35em;}
-* html .flz_button{padding:0.25em 0.35em;}
-* html .flz_button{overflow:visible;padding:0.25em 0.5em;}
-*:first-child+html input[type=button],*:first-child+html input[type=submit],*:first-child+html input[type=reset],*:first-child+html button{overflow:visible;padding:0.25em 0.5em;}
-* html .flz_button{width:1;}
-*:first-child+html input[type=button],*:first-child+html input[type=submit],*:first-child+html input[type=reset],*:first-child+html button{width:1;}
-.flz_mandatory{background-color:yellow;}
-.flz_readonly{background-color:#efefef;color:#aaa;}
+fieldset{clear:both;font-weight:bold;border:1px solid #000;padding:1em;margin-bottom:1em;overflow:hidden;padding:0 1em 1em 1em\0/;}fieldset legend{margin-top:-1em\0/;padding-top:1em\0/;padding-bottom:1em\0/;}
+* html fieldset{padding:0 1em 1em 1em;margin-top:-1em;}* html fieldset legend{color:#000;margin-left:-0.5em;padding-top:1em;padding-bottom:1em;padding-left:0;}
+*:first-child+html fieldset{padding:0 1em 1em 1em;}*:first-child+html fieldset legend{margin-left:-0.5em;margin-top:-1em;padding-top:1em;padding-bottom:1em;padding-left:0;}
+.flz_form{}.flz_form input[type="text"],.flz_form input[type="password"]{background-color:#fff;border:1px solid #000;display:block;width:99.4%;}
 .flz_form label,.flz_form select{display:block;width:100%;}
 .flz_form textarea{display:block;width:99.4%;}
 .flz_form input[type="checkbox"]+label,.flz_form input[type="radio"]+label{display:inline;width:auto;}
+.flz_form .flz_mandatory{background-color:yellow;}
+.flz_form .flz_readonly{background-color:#efefef;color:#aaa;}
 .flz_form .flz_inline{display:inline;width:auto;}
-* html .flz_textbox,* html .flz_form textarea{margin-right:-10px;}
-.flz_combobox{position:relative;margin-right:1.5em;padding-right:0.5em;}
-.flz_combobox a,.flz_combobox span{position:absolute;bottom:0;right:0;margin-right:-1.5em;}
-* html .flz_combobox{float:left;}
-* html .flz_combobox a{margin-right:-0.75em;}
+.flz_form .flz_combobox{position:relative;margin-right:1.5em;padding-right:0.5em;}.flz_form .flz_combobox a,.flz_form .flz_combobox span{position:absolute;bottom:0;right:0;margin-right:-1.5em;}
+* html .flz_form{}* html .flz_form .flz_textbox{background-color:#fff;border:1px solid #000;display:block;width:99.4%;}
+* html .flz_form .flz_textbox,* html .flz_form textarea{margin-right:-10px;}
+* html .flz_form .flz_combobox{float:left;}* html .flz_form .flz_combobox a{margin-right:-0.75em;}
+input[type="button"],input[type="submit"],input[type="reset"],button{padding:0.25em 0.35em;}
+* html .flz_button{padding:0.25em 0.35em;overflow:visible;padding:0.25em 0.5em;width:1;}
+*:first-child+html input[type=button],*:first-child+html input[type=submit],*:first-child+html input[type=reset],*:first-child+html button{overflow:visible;padding:0.25em 0.5em;width:1;}
+.flz_custombutton{background:transparent;border:0;}
