@@ -82,31 +82,31 @@ then
 	#Create minified css
 	echo "floatz.build | INFO  | Creating minified version of floatz.fixed.css"
 	createFile floatz.fixed.css.tmp
-	lessc --compress ../../src/floatz.reset.meyer.css >> floatz.fixed.css.tmp
-	lessc --compress ../../src/floatz.reset.css >> floatz.fixed.css.tmp
-	lessc --compress ../../src/floatz.layout.css >> floatz.fixed.css.tmp
-	lessc --compress ../../src/floatz.nav.css >> floatz.fixed.css.tmp
-	lessc --compress ../../src/floatz.form.css >> floatz.fixed.css.tmp
+	lessc --compress ../../src/floatz.reset.meyer.less >> floatz.fixed.css.tmp
+	lessc --compress ../../src/floatz.reset.less >> floatz.fixed.css.tmp
+	lessc --compress ../../src/floatz.layout.less >> floatz.fixed.css.tmp
+	lessc --compress ../../src/floatz.nav.less >> floatz.fixed.css.tmp
+	lessc --compress ../../src/floatz.form.less >> floatz.fixed.css.tmp
 	mv floatz.fixed.css.tmp ../../../floatz/floatz.fixed.css
 
 	echo "floatz.build | INFO  | Creating minified version of floatz.liquid.css"
 	createFile floatz.liquid.css.tmp
-	lessc --compress ../../src/floatz.reset.meyer.css >> floatz.liquid.css.tmp
-	lessc --compress ../../src/floatz.reset.css >> floatz.liquid.css.tmp
-	lessc --compress ../../src/floatz.layout.css >> floatz.liquid.css.tmp
-	lessc --compress ../../src/floatz.layout.liquid.css >> floatz.liquid.css.tmp
-	lessc --compress ../../src/floatz.nav.css >> floatz.liquid.css.tmp
-	lessc --compress ../../src/floatz.form.css >> floatz.liquid.css.tmp
+	lessc --compress ../../src/floatz.reset.meyer.less >> floatz.liquid.css.tmp
+	lessc --compress ../../src/floatz.reset.less >> floatz.liquid.css.tmp
+	lessc --compress ../../src/floatz.layout.less >> floatz.liquid.css.tmp
+	lessc --compress ../../src/floatz.layout.liquid.less >> floatz.liquid.css.tmp
+	lessc --compress ../../src/floatz.nav.less >> floatz.liquid.css.tmp
+	lessc --compress ../../src/floatz.form.less >> floatz.liquid.css.tmp
 	mv floatz.liquid.css.tmp ../../../floatz/floatz.liquid.css
 
 	echo "floatz.build | INFO  | Creating minified version of floatz.center.css"
 	createFile floatz.center.css.tmp
-	lessc --compress ../../src/floatz.reset.meyer.css >> floatz.center.css.tmp
-	lessc --compress ../../src/floatz.reset.css >> floatz.center.css.tmp
-	lessc --compress ../../src/floatz.layout.css >> floatz.center.css.tmp
-	lessc --compress ../../src/floatz.layout.center.css >> floatz.center.css.tmp
-	lessc --compress ../../src/floatz.nav.css >> floatz.center.css.tmp
-	lessc --compress ../../src/floatz.form.css >> floatz.center.css.tmp
+	lessc --compress ../../src/floatz.reset.meyer.less >> floatz.center.css.tmp
+	lessc --compress ../../src/floatz.reset.less >> floatz.center.css.tmp
+	lessc --compress ../../src/floatz.layout.less >> floatz.center.css.tmp
+	lessc --compress ../../src/floatz.layout.center.less >> floatz.center.css.tmp
+	lessc --compress ../../src/floatz.nav.less >> floatz.center.css.tmp
+	lessc --compress ../../src/floatz.form.less >> floatz.center.css.tmp
 	mv floatz.center.css.tmp ../../../floatz/floatz.center.css
 else
 	echo "floatz.build | ERROR | Less compiler could not be found. Please install less compiler before build."
