@@ -98,6 +98,8 @@ a:active.flz_skiplink,a:focus.flz_skiplink{position:static;}
 .flz_vmenu ul li ul li ul li a{padding-left:2em;}
 .flz_vmenu ul li ul li ul li ul li a{padding-left:3em;}
 .flz_vmenu ul li ul li ul li ul li ul li a{padding-left:4em;}
+* html .flz_vmenu ul{}* html .flz_vmenu ul li.flz_selected a{font-weight:expression(/flz_selected/.test(this.parentNode.className) ? "bold" : "inherit");}
+* html .flz_vmenu ul li.flz_disabled a{color:expression(/flz_disabled/.test(this.parentNode.className) ? "#aaa" : "inherit");text-decoration:expression(/flz_disabled/.test(this.parentNode.className) ? "none" : "inherit");}
 .flz_htabmenu,.flz_htabmenu_bottom{float:left;width:100%;}.flz_htabmenu ul,.flz_htabmenu_bottom ul{margin:0;padding:0;}.flz_htabmenu ul li,.flz_htabmenu_bottom ul li{float:left;list-style-type:none;margin:0 1px;padding:0 0 0 0.5em;}.flz_htabmenu ul li a,.flz_htabmenu_bottom ul li a{display:block;text-decoration:none;padding:0.5em 1em 0.5em 0.5em;}
 .flz_htabmenu ul li a a:visited,.flz_htabmenu_bottom ul li a a:visited{color:inherit;}
 .flz_htabmenu ul li a:focus,.flz_htabmenu_bottom ul li a:focus,.flz_htabmenu ul li a:active,.flz_htabmenu_bottom ul li a:active{color:inherit;text-decoration:underline;}
@@ -132,10 +134,10 @@ fieldset{clear:both;font-weight:bold;border:1px solid #000;padding:1em;margin-bo
 .flz_form .flz_mandatory{background-color:yellow;}
 .flz_form .flz_readonly{background-color:#efefef;color:#aaa;}
 .flz_form .flz_inline{display:inline;width:auto;}
-.flz_form .flz_combobox{position:relative;margin-right:1.5em;padding-right:0.5em;}.flz_form .flz_combobox a,.flz_form .flz_combobox span{position:absolute;bottom:0;right:0;margin-right:-1.5em;}
+.flz_form .flz_combobox{position:relative;padding-right:2em;}.flz_form .flz_combobox a,.flz_form .flz_combobox span{position:absolute;bottom:0;right:0;}
 * html .flz_form{}* html .flz_form .flz_textbox{background-color:#fff;border:1px solid #000;display:block;width:99.4%;}
 * html .flz_form .flz_textbox,* html .flz_form textarea{margin-right:-10px;}
-* html .flz_form .flz_combobox{float:left;}* html .flz_form .flz_combobox a{margin-right:-0.75em;}
+* html .flz_form .flz_combobox{float:left;}
 input[type="button"],input[type="submit"],input[type="reset"],button{padding:0.25em 0.35em;}
 * html .flz_button{padding:0.25em 0.35em;overflow:visible;padding:0.25em 0.5em;width:1;}
 *:first-child+html input[type=button],*:first-child+html input[type=submit],*:first-child+html input[type=reset],*:first-child+html button{overflow:visible;padding:0.25em 0.5em;width:1;}
