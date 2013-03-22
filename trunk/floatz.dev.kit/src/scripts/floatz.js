@@ -19,7 +19,8 @@
  * @lastmodified  2012-11-05
  */
 
- var floatz = (function() {
+var floatz = (function() {
+	"use strict";
 	
 	////////////////////////////////////////////////////
 	// Public interface
@@ -35,7 +36,7 @@
 		},
 
 		/* Fields */
-		loadedModules : new Array(),
+		loadedModules : [],
 		module : {
 			name : "floatz",
 			version : "1.2.0"
@@ -60,7 +61,7 @@
 	var module = self.module;
 	var config = {
 		debug : false,
-		logLevel : LOGLEVEL.DEBUG, /* Use only in dev mode */
+		logLevel : LOGLEVEL.DEBUG /* Use only in dev mode */
 	};
 	
 	////////////////////////////////////////////////////
@@ -73,45 +74,47 @@
 	 * start(<config>);
 	 * 
 	 * @param config Configuration options {
-	 * 			[debug : true|false][,]
-	 * 			[logLevel : floatz.LOGLEVEL.<level>][,]
-	 * 			[modules : { <modulename> [,<modulname>]}]
-	 * 		  }
+	 *			[debug : true|false][,]
+	 *			[logLevel : floatz.LOGLEVEL.<level>][,]
+	 *			[modules : { <modulename> [,<modulname>]}]
+	 *		}
 	 * 
 	 * @since 1.2.0
 	 */
 	function start(options) {
 
+		var i, j;
+		
 		// Mix options and defaults
 		$.extend(config, options);
 		
 		// Find modules to start
 		log(LOGLEVEL.INFO, "Module " + module.name + " started", module.name);
-		for(var i in loadedModules) {
+		for(i in loadedModules) {
 			
 			// Start all loaded modules if nothing is configured
-			var start = config.modules === undefined;
-			if(! start) {
+			var canStart = config.modules === undefined;
+			if(! canStart) {
 
 				// Check if module is configured to be started
-				for(var j in config.modules) {
+				for(j in config.modules) {
 					if(loadedModules[i].name === config.modules[j]) {
-						start = true;
+						canStart = true;
 						break;
 					}
 				}
 			}
 			
 			// Start module
-			if(start) {
+			if(canStart) {
 				loadedModules[i].start();
 			}
 		}
 		
 		// Show all modules in config that could not be loaded
-		for(var i in config.modules) {
+		for(i in config.modules) {
 			var found = false;
-			for(var j in loadedModules) {
+			for(j in loadedModules) {
 				if(config.modules[i] === loadedModules[j].name) {
 					found = true;
 				}
@@ -149,30 +152,30 @@
 	 */
 	// Get name for log level
 	function logLevelName(level) {
-		return level === LOGLEVEL.ERROR ? "ERROR" : 
-			   level === LOGLEVEL.WARN  ? "WARN" : 
-			   level === LOGLEVEL.INFO  ? "INFO" : 
-			   level === LOGLEVEL.DEBUG ? "DEBUG" : "UNKOWN";
+		return	level === LOGLEVEL.ERROR ? "ERROR" : 
+				level === LOGLEVEL.WARN  ? "WARN" : 
+				level === LOGLEVEL.INFO  ? "INFO" : 
+				level === LOGLEVEL.DEBUG ? "DEBUG" : "UNKOWN";
 	}
 	
 	/**
 	 * Right pad a string.
 	 * 
 	 * @param str Original string
-	 * @param char Padding character
+	 * @param c Padding character
 	 * @param len Target length of the returned string
 	 * @return Padded string
 	 * @since 1.2.0
 	 */
-	function rpad(str, char, len) {
-		if (! str || ! char || str.length >= len) {
+	function rpad(str, c, len) {
+		if (! str || ! c || str.length >= len) {
 			return str;
 		}
 		
 		var pstr = str;
-		var max = (len - str.length) / char.length;
+		var max = (len - str.length) / c.length;
 		for (var i = 0; i < max; i++) {
-			pstr += char;
+			pstr += c;
 		}		
 		return pstr;
 	}
@@ -181,20 +184,20 @@
 	 * Left pad a string.
 	 * 
 	 * @param str Original string
-	 * @param char Padding character
+	 * @param c Padding character
 	 * @param len Target length of the returned string
 	 * @return Padded string 
 	 * @since 1.2.0
 	 */
-	function lpad(str, char, len) {
-		if (! str || ! char || str.length >= len) {
+	function lpad(str, c, len) {
+		if (! str || ! c || str.length >= len) {
 			return str;
 		}
 		
 		var pstr = str;
-		var max = (len - str.length) / char.length;
+		var max = (len - str.length) / c.length;
 		for (var i = 0; i < max; i++) {
-			pstr = char + pstr;
+			pstr = c + pstr;
 		}
 		return pstr;
 	}
