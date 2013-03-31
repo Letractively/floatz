@@ -18,8 +18,9 @@
  * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
  * @lastmodified  2012-11-05
  */
-floatz.mobile = (function() {
-
+window.floatz.mobile = (function() {
+	"use strict";
+	
 	////////////////////////////////////////////////////
 	// Public interface
 
@@ -36,6 +37,7 @@ floatz.mobile = (function() {
 	////////////////////////////////////////////////////
 	// Private variables
 
+	var floatz = window.floatz;
 	var module = self.module;
 	
 	////////////////////////////////////////////////////
