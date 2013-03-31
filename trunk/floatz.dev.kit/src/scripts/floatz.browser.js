@@ -19,8 +19,9 @@
  * @lastmodified  2012-11-05
  */
 
-floatz.browser = (function() {
-
+window.floatz.browser = (function() {
+	"use strict";
+	
 	////////////////////////////////////////////////////
 	// Private variables
 
@@ -64,6 +65,7 @@ floatz.browser = (function() {
 	////////////////////////////////////////////////////
 	// Private variables
 
+	var floatz = window.floatz;
 	var module = self.module;
 	
 	////////////////////////////////////////////////////

@@ -19,7 +19,7 @@
  * @lastmodified  2012-11-05
  */
 
-var floatz = (function() {
+window.floatz = (function() {
 	"use strict";
 	
 	////////////////////////////////////////////////////
@@ -90,14 +90,14 @@ var floatz = (function() {
 		
 		// Find modules to start
 		log(LOGLEVEL.INFO, "Module " + module.name + " started", module.name);
-		for(i in loadedModules) {
+		for(i=0; i < loadedModules.length; i++) {
 			
 			// Start all loaded modules if nothing is configured
 			var canStart = config.modules === undefined;
 			if(! canStart) {
 
 				// Check if module is configured to be started
-				for(j in config.modules) {
+				for(j=0; j < config.modules.length; j++) {
 					if(loadedModules[i].name === config.modules[j]) {
 						canStart = true;
 						break;
@@ -112,9 +112,9 @@ var floatz = (function() {
 		}
 		
 		// Show all modules in config that could not be loaded
-		for(i in config.modules) {
+		for(i=0; i < config.modules.length; i++) {
 			var found = false;
-			for(j in loadedModules) {
+			for(j=0; j < loadedModules.length; j++) {
 				if(config.modules[i] === loadedModules[j].name) {
 					found = true;
 				}
