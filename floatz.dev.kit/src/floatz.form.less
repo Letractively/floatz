@@ -161,6 +161,9 @@ fieldset {
       border: 1px solid #000;
       display: block;
       width: 99.4%;
+      /* Fix overlap bug in iOS by removing horizontal spacing */
+      padding-left: 0;
+      padding-right: 0; 
    }
    
    /* Label, Selectbox */
