@@ -124,6 +124,11 @@ window.floatz = (function() {
 				log(LOGLEVEL.ERROR, "Module " + config.modules[i] + " is invalid or not loaded", module.name);
 			}
 		}		
+
+		// Execute function when floatz has been started
+		if(config.onStarted !== undefined) {
+			config.onStarted();
+		}	
 	}
 	
 	/**
