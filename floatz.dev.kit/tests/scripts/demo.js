@@ -5,14 +5,16 @@ $LAB.script("../src/scripts/jquery-1.8.2.min.js")
 	 // .script("../src/scripts/less-1.3.1.min.js")
 	 .script("../src/scripts/floatz.mobile.js")
 	 .script("../src/scripts/floatz.skiplink.js")
+	 .script("scripts/custom.js")
 	 .wait(function() {
 		$(document).ready(function() {
 			floatz.start({
 				debug : true,
 				logLevel : floatz.LOGLEVEL.DEBUG,
 				modules : ["floatz.browser", 
-							  "floatz.mobile", 
-							  "floatz.skiplink"]
+				           "floatz.mobile", 
+				           "floatz.skiplink",
+				           "custom"]
 			});
 		});
 	 });
