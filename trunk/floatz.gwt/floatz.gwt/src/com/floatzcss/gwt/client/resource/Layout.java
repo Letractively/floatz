@@ -21,6 +21,9 @@ public interface Layout extends CssResource {
 	@ClassName("flz_box")
 	String box();
 
+	@ClassName("flz_scrollbox")
+	String scrollBox();
+
 	@ClassName("flz_clear")
 	String clear();
 

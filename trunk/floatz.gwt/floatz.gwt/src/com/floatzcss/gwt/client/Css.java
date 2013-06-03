@@ -7,13 +7,13 @@ import com.google.gwt.core.client.EntryPoint;
 /**
  * Module entry point for resource bundle.
  * <p>
- * Copyright (c) 1998-2012 by :humml:design, http://design.humml.eu/toolbox/floatz 
+ * Copyright (c) 1998-2012 by :humml:design, http://design.humml.eu/toolbox/floatz
  * Licensed under Apache License 2.0, http://www.apache.org/licenses/LICENSE-2.0
  * </p>
  * <p>
  * See: http://code.google.com/p/floatz/
  * </p>
- * 
+ *
  * @author Harald Humml
  * @version 1.2.0
  */
