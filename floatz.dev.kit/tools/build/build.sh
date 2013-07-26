@@ -87,6 +87,7 @@ then
 	lessc --compress ../../src/floatz.layout.less >> floatz.fixed.css.tmp
 	lessc --compress ../../src/floatz.nav.less >> floatz.fixed.css.tmp
 	lessc --compress ../../src/floatz.form.less >> floatz.fixed.css.tmp
+   lessc --compress ../../src/floatz.print.less >> floatz.fixed.css.tmp
 	mv floatz.fixed.css.tmp ../../../floatz/floatz.fixed.css
 
 	echo "floatz.build | INFO  | Creating minified version of floatz.liquid.css"
@@ -97,6 +98,7 @@ then
 	lessc --compress ../../src/floatz.layout.liquid.less >> floatz.liquid.css.tmp
 	lessc --compress ../../src/floatz.nav.less >> floatz.liquid.css.tmp
 	lessc --compress ../../src/floatz.form.less >> floatz.liquid.css.tmp
+   lessc --compress ../../src/floatz.print.less >> floatz.liquid.css.tmp
 	mv floatz.liquid.css.tmp ../../../floatz/floatz.liquid.css
 
 	echo "floatz.build | INFO  | Creating minified version of floatz.center.css"
@@ -107,6 +109,7 @@ then
 	lessc --compress ../../src/floatz.layout.center.less >> floatz.center.css.tmp
 	lessc --compress ../../src/floatz.nav.less >> floatz.center.css.tmp
 	lessc --compress ../../src/floatz.form.less >> floatz.center.css.tmp
+   lessc --compress ../../src/floatz.print.less >> floatz.center.css.tmp
 	mv floatz.center.css.tmp ../../../floatz/floatz.center.css
 else
 	echo "floatz.build | ERROR | Less compiler could not be found. Please install less compiler before build."
