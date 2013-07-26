@@ -48,6 +48,9 @@ public interface Floatz extends ClientBundle {
 	@Source("com/floatzcss/gwt/client/resource/css/floatz.mobile.webkit.css")
 	MobileWebkit mobile();
 
+	@Source("com/floatzcss/gwt/client/resource/css/floatz.print.css")
+	Print print();
+
 	@Source("com/floatzcss/gwt/client/resource/image/htabmenu_bottom_active.gif")
 	DataResource htabmenu_bottom_active();
 

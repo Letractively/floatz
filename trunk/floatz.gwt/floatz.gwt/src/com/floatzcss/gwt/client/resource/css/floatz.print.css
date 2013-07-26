@@ -1,0 +1,29 @@
+/*****************************************************************************************
+ * floatz.print.css
+ * ---------------------------------------------------------------------------------------
+ * Print specific styles.
+ *
+ * @project       floatz CSS Framework
+ * @version       1.2.0
+ * @see           http://code.google.com/p/floatz/
+ * @author        Harald Humml
+ * @copyright     Copyright (c) 1998-2013 by :humml:design
+ * @link          http://www.floatzcss.com
+ * @license       Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
+ * @lastmodified  2013-07-26
+ * @since         1.2.0
+ */
+
+@external .flz_panel, .flz_scrollpanel;
+
+/**
+ * ---------------------------------------------------------------------------------------
+ * @section       Panel containers
+ *
+ * Fixes for panels regarding print
+ */
+
+.flz_panel, .flz_scrollpanel {
+   overflow: visible; /* Fix for print preview error in Chrome and for empty first page in IE 7 */
+   position: static;  /* Fix for IE9 that prints only data that is visible on the screen */
+}
