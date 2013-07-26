@@ -139,3 +139,4 @@ input[type="button"],input[type="submit"],input[type="reset"],button{padding:0.2
 * html .flz_button{padding:0.25em 0.35em;overflow:visible;padding:0.25em 0.5em;width:1;}
 *:first-child+html input[type=button],*:first-child+html input[type=submit],*:first-child+html input[type=reset],*:first-child+html button{overflow:visible;padding:0.25em 0.5em;width:1;}
 .flz_custombutton{background:transparent;border:0;}
+.flz_panel,.flz_scrollpanel{overflow:visible;position:static;}
