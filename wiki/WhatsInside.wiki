@@ -178,7 +178,7 @@ The easiest way to load the CSS modules into your project is by using the provid
 
 {{{ 
    /* Framework specific styles */
-   @import url(floatz-1.2.0/floatz.css)
+   @import url(floatz-1.2.0/floatz.less)
 
    /* Project specific styles */
 }}}
@@ -191,11 +191,11 @@ Of course, it is also possible to import the modules directly from your project 
 
 {{{ 
    /* Framework specific styles */
-   @import url(floatz-1.2.0/floatz.reset.meyer.css);
-   @import url(floatz-1.2.0/floatz.reset.css);
-   @import url(floatz-1.2.0/floatz.layout.css);
-   @import url(floatz-1.2.0/floatz.form.css);
-   @import url(floatz-1.2.0/floatz.nav.css);
+   @import url(floatz-1.2.0/floatz.reset.meyer.less);
+   @import url(floatz-1.2.0/floatz.reset.less);
+   @import url(floatz-1.2.0/floatz.layout.less);
+   @import url(floatz-1.2.0/floatz.form.less);
+   @import url(floatz-1.2.0/floatz.nav.less);
 
    /* Project specific styles */
 }}}
@@ -217,11 +217,11 @@ For getting a better understanding about how to layout pages with floatz, see [L
 Load order for fixed layout (default):
 {{{
    /* Framework specific styles */
-   @import url(floatz-1.2.0/floatz.reset.meyer.css);
-   @import url(floatz-1.2.0/floatz.reset.css);
-   @import url(floatz-1.2.0/floatz.layout.css);
-   @import url(floatz-1.2.0/floatz.form.css);
-   @import url(floatz-1.2.0/floatz.nav.css);
+   @import url(floatz-1.2.0/floatz.reset.meyer.less);
+   @import url(floatz-1.2.0/floatz.reset.less);
+   @import url(floatz-1.2.0/floatz.layout.less);
+   @import url(floatz-1.2.0/floatz.form.less);
+   @import url(floatz-1.2.0/floatz.nav.less);
 
    /* Project specific styles */
 }}}
@@ -229,12 +229,12 @@ Load order for fixed layout (default):
 Load order for liquid layout:
 {{{
    /* Framework specific styles */
-   @import url(floatz-1.2.0/floatz.reset.meyer.css);
-   @import url(floatz-1.2.0/floatz.reset.css);
-   @import url(floatz-1.2.0/floatz.layout.css);
-   @import url(floatz-1.2.0/floatz.layout.liquid.css);
-   @import url(floatz-1.2.0/floatz.form.css);
-   @import url(floatz-1.2.0/floatz.nav.css);
+   @import url(floatz-1.2.0/floatz.reset.meyer.less);
+   @import url(floatz-1.2.0/floatz.reset.less);
+   @import url(floatz-1.2.0/floatz.layout.less);
+   @import url(floatz-1.2.0/floatz.layout.liquid.less);
+   @import url(floatz-1.2.0/floatz.form.less);
+   @import url(floatz-1.2.0/floatz.nav.less);
 
    /* Project specific styles */
 }}}
@@ -242,12 +242,12 @@ Load order for liquid layout:
 Load order for center layout:
 {{{
    /* Framework specific styles */
-   @import url(floatz-1.2.0/floatz.reset.meyer.css);
-   @import url(floatz-1.2.0/floatz.reset.css);
-   @import url(floatz-1.2.0/floatz.layout.css);
-   @import url(floatz-1.2.0/floatz.layout.center.css);
-   @import url(floatz-1.2.0/floatz.form.css);
-   @import url(floatz-1.2.0/floatz.nav.css);
+   @import url(floatz-1.2.0/floatz.reset.meyer.less);
+   @import url(floatz-1.2.0/floatz.reset.less);
+   @import url(floatz-1.2.0/floatz.layout.less);
+   @import url(floatz-1.2.0/floatz.layout.center.less);
+   @import url(floatz-1.2.0/floatz.form.less);
+   @import url(floatz-1.2.0/floatz.nav.less);
 
    /* Project specific styles */
 }}}
