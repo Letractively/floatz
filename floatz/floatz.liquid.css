@@ -70,6 +70,7 @@ p,h1,h2,h3,h4,h5,h6,address,blockquote,ul,ol,dl,pre{clear:both;}
 .flz_panel,.flz_scrollpanel{bottom:0;left:0;position:absolute;right:0;top:0;}
 .flz_panel{overflow:hidden;}
 .flz_scrollpanel{overflow:auto;}
+@media print{.flz_panel,.flz_scrollpanel{overflow:visible;position:static;}}
 #flz_page{min-width:985px;width:100%;}
 * html #flz_minwidth{border-left:985px solid #fff;position:relative;float:left;}
 * html #flz_minwidthcontent{margin-left:-960px;position:relative;float:left;}
@@ -142,4 +143,3 @@ input[type="button"],input[type="submit"],input[type="reset"],button{padding:0.2
 * html .flz_button{padding:0.25em 0.35em;overflow:visible;padding:0.25em 0.5em;width:1;}
 *:first-child+html input[type=button],*:first-child+html input[type=submit],*:first-child+html input[type=reset],*:first-child+html button{overflow:visible;padding:0.25em 0.5em;width:1;}
 .flz_custombutton{background:transparent;border:0;}
-.flz_panel,.flz_scrollpanel{overflow:visible;position:static;}
