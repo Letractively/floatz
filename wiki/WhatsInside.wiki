@@ -23,7 +23,7 @@ Content of the production package:
 || *Folder* || *Short Description* || *Details* ||
 || floatz-1.2.0 || Root folder || Root folder of the framework for easy [GettingStarted#Step_2_-_Install installation]. Contains one floatz CSS module in shrinked form for each layout mode as well as a copyright note || 
 || floatz-1.2.0/images || Image folder || Contains background-images that are used e.g. for tabbed navigation ||
-|| floatz-1.2.0/scripts || Script folder || Contains shrinked version of javascript modules that are only necessary for cross browser skiplink navigation ||
+|| floatz-1.2.0/scripts || Script folder || Contains shrinked version of javascript modules ||
 
 ==Modules of production package==
 
@@ -57,7 +57,7 @@ Loading the CSS modules into your project is easy. It's only necessary to load o
 
 {{{ 
    /* Framework specific styles */
-   @import url(floatz-1.1.2/floatz.fixed.css)
+   @import url(floatz-1.2.0/floatz.fixed.css)
 
    /* Project specific styles */
 }}}
@@ -67,21 +67,33 @@ Loading the CSS modules into your project is easy. It's only necessary to load o
 To load the javascript modules, you have to add the following code to the head section of your HTML page:
 
 {{{
-      <script type="text/javascript" src="styles/floatz-1.1.2/scripts/jquery-1.7.2.min.js"></script>
-      <script type="text/javascript" src="styles/floatz-1.1.2/scripts/floatz.js"></script>
+      <script type="text/javascript" src="styles/floatz-1.2.0/scripts/less-1.3.3.min.js"></script>
+      <script type="text/javascript" src="styles/floatz-1.2.0/scripts/LAB-2.0.3.min.js"></script>
       <script type="text/javascript" src="scripts/MyProject.js"></script>
 }}}
 
 Then create a project specific script file (e.g. `C:\Projects\MyProject\scripts\MyProject.js`) and add the following lines of code:
 
 {{{
-   /**
-    * Initializes document
-    */
-    $(document).ready( function() {
-      // Initialize floatz
-      floatz.init();
-    });
+      // Load jquery, less and floatz in correct order
+      $LAB.script("./styles/floatz-1.2.0/scripts/jquery-1.8.2.min.js")
+         .script("./styles/floatz-1.2.0/scripts/floatz.js").wait()
+         .script("./styles/floatz-1.2.0/scripts/floatz.browser.js").wait()
+	 .script("./styles/floatz-1.2.0/scripts/floatz.mobile.js")
+	 .script("./styles/floatz-1.2.0/scripts/floatz.skiplink.js")
+	 .wait(function() {
+            $(document).ready(function() {
+
+               // Start floatz modules
+               floatz.start({
+                  debug : true,
+                  logLevel : floatz.LOGLEVEL.DEBUG,
+                  modules : ["floatz.browser", 
+                     "floatz.mobile", 
+                     "floatz.skiplink"]
+                  });
+               });
+            });
 }}}
 
 ==Affecting layouts in production mode==
