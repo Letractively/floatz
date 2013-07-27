@@ -473,3 +473,17 @@
 .flz_scrollpanel {
 	overflow: auto;
 }
+
+/**
+ * Prepare panels for print
+ * @workaround Print preview does not work
+ * @cssfor IE 7, IE9, Chrome
+ * @affected All
+ */
+
+@media print {
+   .flz_panel, .flz_scrollpanel {
+      overflow: visible; /* Fix for print preview error in Chrome and for empty first page in IE 7 */
+      position: static;  /* Fix for IE9 that prints only data that is visible on the screen (not outside scroll area) */
+   }
+}
