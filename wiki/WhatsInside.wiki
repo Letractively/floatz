@@ -145,7 +145,7 @@ Content of development kit package:
 || floatz.dev.kit-1.2.0/src || Source folder || Contains all floatz CSS modules ||
 || floatz.dev.kit-1.2.0/src/debug || Debug  folder || Contains special floatz CSS modules that can be used for debugging ||
 || floatz.dev.kit-1.2.0/src/images || Image folder || Contains background-images that are used e.g. for tabbed navigation ||
-|| floatz.dev.kit-1.2.0/src/scripts || Script folder || Contains javascript modules that are only necessary for cross browser skiplink navigation ||
+|| floatz.dev.kit-1.2.0/src/scripts || Script folder || Contains javascript modules||
 || floatz.dev.kit-1.2.0/templates || Template folder || Contains templates for most common layout scenarios that can be used for project startup or as reference. The [http://code.google.com/p/floatz/source/browse/#svn/trunk/floatz.dev.kit/templates Sourcecode Repository] shows a list of available layout templates ||
 || floatz.dev.kit-1.2.0/tests || Test folder || Contains test pages that are used for module and browser compatibility tests. Can also be used to test your own project CSS and as reference ||
 || floatz.dev.kit-1.2.0/tools || Tools folder || Contains some usefull utilities ||
