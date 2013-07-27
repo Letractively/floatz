@@ -29,7 +29,6 @@ public class Css implements EntryPoint {
 		Floatz.INSTANCE.layout().ensureInjected();
 		Floatz.INSTANCE.form().ensureInjected();
 		Floatz.INSTANCE.nav().ensureInjected();
-		Floatz.INSTANCE.print().ensureInjected();
 
 		// TODO Check if mobile webkit on iOS, if so inject css
 		// Floatz.INSTANCE.mobile().ensureInjected();
