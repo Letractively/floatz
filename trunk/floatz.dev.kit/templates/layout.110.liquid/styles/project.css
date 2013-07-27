@@ -28,3 +28,13 @@ body {
    height: 3em;
    text-align: center;
 }
+
+@media print {
+   .header, .menu, .submenu, .sidebar, .footer {
+      display: none;
+   }
+   
+   .content.flz_r80 {
+      width: 100%;
+   }
+}

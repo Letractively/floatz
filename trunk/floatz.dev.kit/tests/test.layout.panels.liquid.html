@@ -59,6 +59,12 @@
       	.myfooter {
       		height: 2em;
       		top: auto;
+      	}
+      	
+      	@media print {
+      	  .myheader, .mymenu, .mysidebar, .myfooter {
+      	     display: none;
+      	  }
       	}      	
       </style>
    </head>
