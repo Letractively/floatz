@@ -2,7 +2,7 @@
 Last Update: August 3rd, 2010
 
    ----
-   Note: this wiki page covers version 1.1.1.
+   Note: this wiki page covers version 1.2.0.
    ----
 
 *Table of content*
@@ -18,6 +18,8 @@ Last Update: August 3rd, 2010
 || flz_box      || Class  || DIV   || Basic layouting container || all || || || [BasicConcepts], [LayoutingPages] ||
 || flz_relative || Class  || *     || Marks a class as container for absolute positioned elements || all || || relative || [BasicConcepts] ||
 || flz_clear    || Class  || *     || Clears the float of an element (starts in next row on left edge) || all || || || [BasicConcepts] ||
+|| flz_panel    || Class  || *     || Panel layout container || all || || || [BasicConcepts], [LayoutingPages] ||
+|| flz_scrollpanel    || Class  || *     || Scrollable panel layout container || all || || || [BasicConcepts], [LayoutingPages] ||
 
 == Spacers ==
 === Basic spacers ===
