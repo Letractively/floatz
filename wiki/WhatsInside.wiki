@@ -2,9 +2,12 @@
 #labels Featured
 Last Update: July 27th, 2013
 
+*This page is currently under construction and thus not finished.*
+
    ----
    Note: this wiki page covers version 1.2.0.
    ----
+
 
 *Table of content*
 <wiki:toc max_depth="2" />
@@ -109,7 +112,7 @@ For getting a deep knowledge about how to layout pages with floatz, see [Layouti
 Load order for fixed layout (default):
 {{{ 
    /* Framework specific styles */
-   @import url(floatz-1.1.2/floatz.fixed.css)
+   @import url(floatz-1.2.0/floatz.fixed.css)
 
    /* Project specific styles */
 }}}
@@ -117,7 +120,7 @@ Load order for fixed layout (default):
 Load order for liquid layout:
 {{{ 
    /* Framework specific styles */
-   @import url(floatz-1.1.2/floatz.liquid.css)
+   @import url(floatz-1.2.0/floatz.liquid.css)
 
    /* Project specific styles */
 }}}
@@ -125,7 +128,7 @@ Load order for liquid layout:
 Load order for center layout:
 {{{ 
    /* Framework specific styles */
-   @import url(floatz-1.1.2/floatz.center.css)
+   @import url(floatz-1.2.0/floatz.center.css)
 
    /* Project specific styles */
 }}}
@@ -136,18 +139,18 @@ The [http://code.google.com/p/floatz/downloads/list development kit package] is 
 
 Content of development kit package:
 || *Folder* || *Short Description* || *Details* ||
-|| floatz.dev.kit-1.1.2 || Root folder || Contains a changelog as well as a copyright notice ||
-|| floatz.dev.kit-1.1.2/doc || Documentation folder || Contains floatz documentation files ||
-|| floatz.dev.kit-1.1.2/samples || Sample folder || Contains different samples that show the use of floatz ||
-|| floatz.dev.kit-1.1.2/src || Source folder || Contains all floatz CSS modules ||
-|| floatz.dev.kit-1.1.2/src/debug || Debug  folder || Contains special floatz CSS modules that can be used for debugging ||
-|| floatz.dev.kit-1.1.2/src/images || Image folder || Contains background-images that are used e.g. for tabbed navigation ||
-|| floatz.dev.kit-1.1.2/src/scripts || Script folder || Contains javascript modules that are only necessary for cross browser skiplink navigation ||
-|| floatz.dev.kit-1.1.2/templates || Template folder || Contains templates for most common layout scenarios that can be used for project startup or as reference. The [http://code.google.com/p/floatz/source/browse/#svn/trunk/floatz.dev.kit/templates Sourcecode Repository] shows a list of available layout templates ||
-|| floatz.dev.kit-1.1.2/tests || Test folder || Contains test pages that are used for module and browser compatibility tests. Can also be used to test your own project CSS and as reference ||
-|| floatz.dev.kit-1.1.2/tools || Tools folder || Contains some usefull utilities ||
-|| floatz.dev.kit-1.1.2/tools/build || Tools folder || Contains build tool to create CSS files in production folder and to update templates ||
-|| floatz.dev.kit-1.1.2/tools/shrink || Tools folder || Contains shrink tool for shrinking and merging CSS files ||
+|| floatz.dev.kit-1.2.0 || Root folder || Contains a changelog as well as a copyright notice ||
+|| floatz.dev.kit-1.2.0/doc || Documentation folder || Contains floatz documentation files ||
+|| floatz.dev.kit-1.2.0/samples || Sample folder || Contains different samples that show the use of floatz ||
+|| floatz.dev.kit-1.2.0/src || Source folder || Contains all floatz CSS modules ||
+|| floatz.dev.kit-1.2.0/src/debug || Debug  folder || Contains special floatz CSS modules that can be used for debugging ||
+|| floatz.dev.kit-1.2.0/src/images || Image folder || Contains background-images that are used e.g. for tabbed navigation ||
+|| floatz.dev.kit-1.2.0/src/scripts || Script folder || Contains javascript modules that are only necessary for cross browser skiplink navigation ||
+|| floatz.dev.kit-1.2.0/templates || Template folder || Contains templates for most common layout scenarios that can be used for project startup or as reference. The [http://code.google.com/p/floatz/source/browse/#svn/trunk/floatz.dev.kit/templates Sourcecode Repository] shows a list of available layout templates ||
+|| floatz.dev.kit-1.2.0/tests || Test folder || Contains test pages that are used for module and browser compatibility tests. Can also be used to test your own project CSS and as reference ||
+|| floatz.dev.kit-1.2.0/tools || Tools folder || Contains some usefull utilities ||
+|| floatz.dev.kit-1.2.0/tools/build || Tools folder || Contains build tool to create CSS files in production folder and to update templates ||
+|| floatz.dev.kit-1.2.0/tools/shrink || Tools folder || Contains shrink tool for shrinking and merging CSS files ||
 
 ==Modules of development kit package==
 ===CSS Modules of development kit package===
@@ -175,7 +178,7 @@ The easiest way to load the CSS modules into your project is by using the provid
 
 {{{ 
    /* Framework specific styles */
-   @import url(floatz-1.1.2/floatz.css)
+   @import url(floatz-1.2.0/floatz.css)
 
    /* Project specific styles */
 }}}
@@ -188,11 +191,11 @@ Of course, it is also possible to import the modules directly from your project 
 
 {{{ 
    /* Framework specific styles */
-   @import url(floatz-1.1.2/floatz.reset.meyer.css);
-   @import url(floatz-1.1.2/floatz.reset.css);
-   @import url(floatz-1.1.2/floatz.layout.css);
-   @import url(floatz-1.1.2/floatz.form.css);
-   @import url(floatz-1.1.2/floatz.nav.css);
+   @import url(floatz-1.2.0/floatz.reset.meyer.css);
+   @import url(floatz-1.2.0/floatz.reset.css);
+   @import url(floatz-1.2.0/floatz.layout.css);
+   @import url(floatz-1.2.0/floatz.form.css);
+   @import url(floatz-1.2.0/floatz.nav.css);
 
    /* Project specific styles */
 }}}
@@ -214,11 +217,11 @@ For getting a better understanding about how to layout pages with floatz, see [L
 Load order for fixed layout (default):
 {{{
    /* Framework specific styles */
-   @import url(floatz-1.1.2/floatz.reset.meyer.css);
-   @import url(floatz-1.1.2/floatz.reset.css);
-   @import url(floatz-1.1.2/floatz.layout.css);
-   @import url(floatz-1.1.2/floatz.form.css);
-   @import url(floatz-1.1.2/floatz.nav.css);
+   @import url(floatz-1.2.0/floatz.reset.meyer.css);
+   @import url(floatz-1.2.0/floatz.reset.css);
+   @import url(floatz-1.2.0/floatz.layout.css);
+   @import url(floatz-1.2.0/floatz.form.css);
+   @import url(floatz-1.2.0/floatz.nav.css);
 
    /* Project specific styles */
 }}}
@@ -226,12 +229,12 @@ Load order for fixed layout (default):
 Load order for liquid layout:
 {{{
    /* Framework specific styles */
-   @import url(floatz-1.1.2/floatz.reset.meyer.css);
-   @import url(floatz-1.1.2/floatz.reset.css);
-   @import url(floatz-1.1.2/floatz.layout.css);
-   @import url(floatz-1.1.2/floatz.layout.liquid.css);
-   @import url(floatz-1.1.2/floatz.form.css);
-   @import url(floatz-1.1.2/floatz.nav.css);
+   @import url(floatz-1.2.0/floatz.reset.meyer.css);
+   @import url(floatz-1.2.0/floatz.reset.css);
+   @import url(floatz-1.2.0/floatz.layout.css);
+   @import url(floatz-1.2.0/floatz.layout.liquid.css);
+   @import url(floatz-1.2.0/floatz.form.css);
+   @import url(floatz-1.2.0/floatz.nav.css);
 
    /* Project specific styles */
 }}}
@@ -239,12 +242,12 @@ Load order for liquid layout:
 Load order for center layout:
 {{{
    /* Framework specific styles */
-   @import url(floatz-1.1.2/floatz.reset.meyer.css);
-   @import url(floatz-1.1.2/floatz.reset.css);
-   @import url(floatz-1.1.2/floatz.layout.css);
-   @import url(floatz-1.1.2/floatz.layout.center.css);
-   @import url(floatz-1.1.2/floatz.form.css);
-   @import url(floatz-1.1.2/floatz.nav.css);
+   @import url(floatz-1.2.0/floatz.reset.meyer.css);
+   @import url(floatz-1.2.0/floatz.reset.css);
+   @import url(floatz-1.2.0/floatz.layout.css);
+   @import url(floatz-1.2.0/floatz.layout.center.css);
+   @import url(floatz-1.2.0/floatz.form.css);
+   @import url(floatz-1.2.0/floatz.nav.css);
 
    /* Project specific styles */
 }}}
