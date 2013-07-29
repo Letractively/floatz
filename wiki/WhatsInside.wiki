@@ -107,7 +107,7 @@ You can affect the kind of page layout that is used, by choosing one of the prov
    * Centered layout
    * Liquid / fluid layout
 
-For getting a deep knowledge about how to layout pages with floatz, see [LayoutingPages Layouting Pages]. The following examples are showing what kinds of modules are necessary for each of the supported layout modes.
+For getting a deep knowledge about how to layout pages with floatz, see [LayoutingPages Layouting Pages]. The following examples are showing what kind of modules are necessary for each of the supported layout modes.
 
 Load order for fixed layout (default):
 {{{ 
@@ -149,8 +149,8 @@ Content of development kit package:
 || floatz.dev.kit-1.2.0/templates || Template folder || Contains templates for most common layout scenarios that can be used for project startup or as reference. The [http://code.google.com/p/floatz/source/browse/#svn/trunk/floatz.dev.kit/templates Sourcecode Repository] shows a list of available layout templates ||
 || floatz.dev.kit-1.2.0/tests || Test folder || Contains test pages that are used for module and browser compatibility tests. Can also be used to test your own project CSS and as reference ||
 || floatz.dev.kit-1.2.0/tools || Tools folder || Contains some usefull utilities ||
-|| floatz.dev.kit-1.2.0/tools/build || Tools folder || Contains build tool to create CSS files in production folder and to update templates ||
-|| floatz.dev.kit-1.2.0/tools/shrink || Tools folder || Contains shrink tool for shrinking and merging CSS files ||
+|| floatz.dev.kit-1.2.0/tools/build || Tools folder || Contains a build script to create CSS files in production folder and to update templates ||
+|| floatz.dev.kit-1.2.0/tools/jsmin || Tools folder || Contains javascript minifier tool for shrinking javascript module files ||
 
 ==Modules of development kit package==
 ===CSS Modules of development kit package===
@@ -158,14 +158,14 @@ Content of development kit package:
 The *load order* column indicates the order in which each file has to be loaded. This sequence is very important, otherwise the CSS inheritance and thus the framework will not work properly. The *usage* column shows, what module is mandatory (must be used) or is optional (can be used). The last column indicates if the modules have to be used in combination or instead of each other.
 
 || *Load Order* || *Usage* || *Module* || *Description* || ||
-|| 0 || Optional || floatz.css || Loads all floatz modules in the correct order || AND ||
-|| 1 || Mandatory || floatz.reset.meyer.css || Basic reset styles to get a common baseline for all browsers || AND ||
-|| 2 || Mandatory || floatz.reset.css || Extends basic reset styles for floatz || AND ||
-|| 3 || Mandatory || floatz.layout.css || Basic styles for layouting pages, content and web forms || AND ||
-|| 4 || Optional || floatz.form.css || Styles for build web forms || AND ||
-|| 5 || Optional || floatz.nav.css || Styles for creating navigation elements || AND ||
-|| 6 || Optional || floatz.layout.center.css || Extends basic layout styles for centered layout || AND ||
-|| 6 || Optional || floatz.layout.liquid.css || Extends basic layout styles for liquid layout || ||
+|| 0 || Optional || floatz.less || Loads all floatz modules in the correct order || AND ||
+|| 1 || Mandatory || floatz.reset.meyer.less || Basic reset styles to get a common baseline for all browsers || AND ||
+|| 2 || Mandatory || floatz.reset.less || Extends basic reset styles for floatz || AND ||
+|| 3 || Mandatory || floatz.layout.less || Basic styles for layouting pages, content and web forms || AND ||
+|| 4 || Optional || floatz.form.less || Styles for build web forms || AND ||
+|| 5 || Optional || floatz.nav.less || Styles for creating navigation elements || AND ||
+|| 6 || Optional || floatz.layout.center.less || Extends basic layout styles for centered layout || AND ||
+|| 6 || Optional || floatz.layout.liquid.less || Extends basic layout styles for liquid layout || ||
 
 ===Javascript modules of development kit package===
 
