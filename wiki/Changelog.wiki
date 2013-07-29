@@ -29,7 +29,7 @@ The following items are new
 || floatz.layout.less || NEW || Issue 47 || Provide mechanism for layouting desktop applications  ||
 || floatz.reset.meyer.less || Issue 53 || Migrate to Meyer CSS reset 2.0
 || floatz.browser.js || NEW || Issue 50 || Add javascript solution for detecting browsers and platforms ||
-|| floatz.mobile.js, floatz.mobile.webkit.less || NEW || Add support for smooth scrolling on iOS devices ||
+|| floatz.mobile.js, floatz.mobile.webkit.less || NEW || Issue 54 || Add support for smooth scrolling on iOS devices ||
 
 
 ===Changed===
