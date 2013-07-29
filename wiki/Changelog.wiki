@@ -29,7 +29,7 @@ The following items are new
 || floatz.layout.less || NEW || Issue 47 || Provide mechanism for layouting desktop applications ||
 || floatz.reset.meyer.less || NEW || Issue 53 || Migrate to Meyer CSS reset 2.0 ||
 || floatz.reset.less || NEW || Issue 59 || Remove outline correction of anchors that was caused by old meyer reset
-|| floatz.**.js || NEW || Issue 55 |] Migrate to jQuery 1.8.2 ||
+|| floatz.**.js || NEW || Issue 55 || Migrate to jQuery 1.8.2 ||
 || floatz.**.js || NEW || Issue 56 || Add javascript module support to prepare for future releases ||
 || floatz.browser.js || NEW || Issue 50 || Add javascript solution for detecting browsers and platforms ||
 || floatz.mobile.js, floatz.mobile.webkit.less || NEW || Issue 54 || Add support for smooth scrolling on iOS devices ||
