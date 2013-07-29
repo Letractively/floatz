@@ -49,10 +49,10 @@ The floatz development kit ships with a set of ready-to-use templates for differ
    * Optional: Open the project stylesheet `C:\Projects\MyProject\styles\MyProject.css` and change the imported floatz CSS file from `floatz.liquid.css` to the desired layout stylesheet (e.g. `floatz.fixed.css` for fixed layout). The import should look like this:
 
 {{{
-@import url(floatz.1.1.2/floatz.fixed.css);
+@import url(floatz.1.2.0/floatz.fixed.css);
 }}}
 
-   * Delete the floatz stylesheets from `C:\Projects\MyProject\styles\floatz.1.1.2` you do not need (see `C:\Projects\MyProject\styles\MyProject.css` what is imported).
+   * Delete the floatz stylesheets from `C:\Projects\MyProject\styles\floatz.1.2.0` you do not need (see `C:\Projects\MyProject\styles\MyProject.css` what is imported).
 
 That's it. Now you can start to [LayoutingPages layout your pages].
 
@@ -62,12 +62,12 @@ If you want to setup your project manually, here's what you have to do:
 
    * Create a project folder (e.g. `C:\Projects\MyProject`) 
    * Create your projects CSS folder (e.g. `C:\Projects\MyProject\styles`)
-   * Copy floatz from its installation directory (see above) into your project CSS folder (e.g. `C:\Projects\MyProject\styles\floatz-1.1.2`)
+   * Copy floatz from its installation directory (see above) into your project CSS folder (e.g. `C:\Projects\MyProject\styles\floatz-1.2.0`)
    * Create your projects stylesheet within your projects CSS folder (e.g. `C:\Projects\MyProject\styles\MyProject.css`) and add the following lines to it
    
 {{{ 
 /* Framework specific styles */
-@import url(floatz-1.1.2/floatz.fixed.css)
+@import url(floatz-1.2.0/floatz.fixed.css)
 
 /* Project specific styles */
 }}}
