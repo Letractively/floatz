@@ -28,22 +28,29 @@ The following items are new
 || floatz.`*`.css || NEW || Issue 51 || Add less css support to floatz  (all css modules are using less and are thus renamed to `*`.less)||
 || floatz.layout.less || NEW || Issue 47 || Provide mechanism for layouting desktop applications ||
 || floatz.reset.meyer.less || NEW || Issue 53 || Migrate to Meyer CSS reset 2.0 ||
-|| floatz.reset.less || NEW || Issue 59 || Remove outline correction of anchors that was caused by old meyer reset ||
 || floatz.`*`.js || NEW || Issue 55 || Migrate to jQuery 1.8.2 ||
 || floatz.`*`.js || NEW || Issue 56 || Add javascript module support to prepare for future releases ||
 || floatz.browser.js || NEW || Issue 50 || Add javascript solution for detecting browsers and platforms ||
 || floatz.mobile.js, floatz.mobile.webkit.less || NEW || Issue 54 || Add support for smooth scrolling on iOS devices ||
 || floatz.dev.kit/templates || NEW || Issue 73 || Add print css to templates and examples as well as for use in panels ||
 
-
 ===Changed===
 The following items have been changed
+
+|| Module || Type || Issue || Description ||
+|| floatz.reset.less || CHANGED || Issue 48 ||  Scaling web pages with Strg+/- is not possible in Chrome and Safari ||
+|| floatz.form.less || CHANGED || Issue 49 ||  Input fields overlap spacers in mobile safari ||
+|| floatz.form.less || CHANGED || Issue 58 || Button tag must also have vertical-align: middle as input type button ||
+|| floatz.form.less || CHANGED || Issue 66 || flz_combobox does not work correctly in IE6 ||
+|| floatz.nav.less || CHANGED || Issue 68 || Disabled and selected items in flz_vmenu are not highlighted in IE6 ||
 
 ===Deprecated===
 None
 
 ===Removed===
-None
+The following items have been removed
+
+|| floatz.reset.less || REMOVED || Issue 59 || Remove outline correction of anchors that was caused by old meyer reset ||
 
 =Version 1.1.2=
 
