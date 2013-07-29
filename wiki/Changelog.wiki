@@ -13,12 +13,12 @@ Last Update: July 17th, 2012
 =Version 1.2.0=
 This version is a minor feature release as well as a larger maintenance release, that fixes some bugs. The highlights are:
 
-* Support for layouting desktop like web applications
-* Modulariziation of javascript functionality
-* Javascript module for browser detection
-* Integration of and reimplementation with Less CSS
-* Support for smooth scrolling on iOS devices
-* Migration to jQuery 1.8.2 and Meyer CSS 2.0
+   * Support for layouting desktop like web applications
+   * Modulariziation of javascript functionality
+   * Javascript module for browser detection
+   * Integration of and reimplementation with Less CSS
+   * Support for smooth scrolling on iOS devices
+   * Migration to jQuery 1.8.2 and Meyer CSS 2.0
 
 ==Summary of changes==
 ===New===
