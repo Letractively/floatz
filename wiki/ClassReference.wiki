@@ -18,8 +18,8 @@ Last Update: July 29th, 2013
 || flz_box      || Class  || DIV   || Basic layouting container || all || || || [BasicConcepts], [LayoutingPages] ||
 || flz_relative || Class  || *     || Marks a class as container for absolute positioned elements || all || || relative || [BasicConcepts] ||
 || flz_clear    || Class  || *     || Clears the float of an element (starts in next row on left edge) || all || || || [BasicConcepts] ||
-|| flz_panel`*)    || Class  || DIV || Panel layout container || all (but IE6) || IE7, 9 Chrome || absolute || [BasicConcepts], [LayoutingPages] ||
-|| flz_scrollpanel`*)    || Class  || DIV || Scrollable panel layout container || all (but IE6) || IE7, 9, Chrome || absolute || [BasicConcepts], [LayoutingPages] ||
+|| flz_panel`*`)    || Class  || DIV || Panel layout container || all (but IE6) || IE7, 9 Chrome || absolute || [BasicConcepts], [LayoutingPages] ||
+|| flz_scrollpanel`*`)    || Class  || DIV || Scrollable panel layout container || all (but IE6) || IE7, 9, Chrome || absolute || [BasicConcepts], [LayoutingPages] ||
 `*`) IE support only for version >=7
 
 == Spacers ==
