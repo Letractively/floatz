@@ -138,6 +138,8 @@ As you may have already noticed in the previous example, it is very comfortable 
 
          FLOATZ.layoutCenter().ensureInjected();
 
+         ModuleManager.start(false, LogLevel.INFO, "floatz.browser", "floatz.mobile");
+
          FlowPanel pageContainer = new FlowPanel();
          pageContainer.getElement().setId("flz_page");
 
@@ -192,6 +194,8 @@ To finish the example you have to change the previous code in the entry point mo
       public void onModuleLoad() {
 
          FLOATZ.layoutCenter().ensureInjected();		
+
+         ModuleManager.start(false, LogLevel.INFO, "floatz.browser", "floatz.mobile");
 	
          FlowPanel pageContainer = new FlowPanel();
          pageContainer.getElement().setId("flz_page");
