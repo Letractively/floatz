@@ -1,9 +1,11 @@
 #summary Describes how to install floatz and setup a project
 #labels Featured
-Last Update: July 17th, 2012
+Last Update: July 29th, 2013
+
+*This page is currently under construction and thus not finished.*
 
    ----
-   Note: this wiki page covers version 1.1.2.
+   Note: this wiki page covers version 1.2.0
    ----
 
 *Table of content*
@@ -15,13 +17,13 @@ First of all you have to download floatz from http://code.google.com/p/floatz/. 
 
 floatz is available in two separate download packages: 
 
-   * floatz-1.1.2.zip
-   * floatz.dev.kit-1.1.2.zip
+   * floatz-1.2.0.zip
+   * floatz.dev.kit-1.2.0.zip
 
 The first package is thought for use in production environment and contains only what is really necessary. The second package contains additional files that are only interesting during development phase. The current tutorial considers only the production package. See [WhatsInside What's inside] for more information about the content of each package.
 
 =Install=
-Installation is very easy. Only unzip the downloaded file into a desired folder on your computer (e.g. into `C:\Program Files\floatz`). During installation, a separate subfolder is created, that contains also the version number of floatz (e.g. `C:\Program Files\floatz\floatz-1.1.2`).
+Installation is very easy. Only unzip the downloaded file into a desired folder on your computer (e.g. into `C:\Program Files\floatz`). During installation, a separate subfolder is created, that contains also the version number of floatz (e.g. `C:\Program Files\floatz\floatz-1.2.0`).
 
 =Setup a project=
 Before you can start using floatz, you have to setup your project environment. The easiest way to achieve this, is by using one of the provided floatz templates or manually if you prefer starting with a blank file.
@@ -30,7 +32,7 @@ Before you can start using floatz, you have to setup your project environment. T
 The floatz development kit ships with a set of ready-to-use templates for different layouts as well as an empty layout template (see [WhatsInside What's inside] for an overview). The following instruction uses the empty layout template.
 
    * Create a project folder (e.g. `C:\Projects\MyProject`)
-   * Copy the whole content of the desired template folder (e.g. `C:\Program Files\floatz\floatz.dev.kit-1.1.2\templates\layout.empty\*.*`) into your project folder (e.g. `C:\Projects\MyProject`)
+   * Copy the whole content of the desired template folder (e.g. `C:\Program Files\floatz\floatz.dev.kit-1.2.0\templates\layout.empty\*.*`) into your project folder (e.g. `C:\Projects\MyProject`)
    * Rename the provided project stylesheet `C:\Projects\MyProject\styles\project.css` to `C:\Projects\MyProject\styles\MyProject.css`
    * Rename the provided project script file `C:\Projects\MyProject\scripts\project.js` to  `C:\Projects\MyProject\scripts\MyProject.js`
    * Change the stylesheet import in `C:\Projects\MyProject\index.html` from `styles/project.css` to `styles/MyProject.css`. The code should look like this
