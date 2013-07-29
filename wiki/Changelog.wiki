@@ -1,12 +1,45 @@
 #summary Informs about what has been changed in each version
 Last Update: July 17th, 2012
 
+*This page is currently under construction and thus not finished yet*
+
    ----
-   Note: this wiki page covers version 1.1.2.
+   Note: this wiki page covers version 1.2.0
    ----
 
 *Table of content*
 <wiki:toc max_depth="1" />
+
+=Version 1.2.0=
+This version is a minor feature release as well as a larger maintenance release, that fixes some bugs. The highlights are:
+
+* Support for layouting desktop like web applications
+* Modulariziation of javascript functionality
+* Javascript module for browser detection
+* Integration of and reimplementation with Less CSS
+* Support for smooth scrolling on iOS devices
+* Migration to jQuery 1.8.2 and Meyer CSS 2.0
+
+==Summary of changes==
+===New===
+The following items are new
+
+|| Module || Type || Issue || Description ||
+|| floatz.*.css || Add less css support to floatz  (all css modules are using less and are thus renamed to *.less)
+|| floatz.layout.less || NEW || Issue 47 || Provide mechanism for layouting desktop applications  ||
+|| floatz.reset.meyer.less || Issue 53 || Migrate to Meyer CSS reset 2.0
+|| floatz.browser.js || NEW || Issue 50 || Add javascript solution for detecting browsers and platforms ||
+|| floatz.mobile.js, floatz.mobile.webkit.less || NEW || Add support for smooth scrolling on iOS devices ||
+
+
+===Changed===
+The following items have been changed
+
+===Deprecated===
+None
+
+===Removed===
+None
 
 =Version 1.1.2=
 
