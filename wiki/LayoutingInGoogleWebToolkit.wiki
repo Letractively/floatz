@@ -102,6 +102,21 @@ By default floatz uses a fixed layout. If you want to change to another supporte
    }
 }}}
 
+== Loading Javascript modules ==
+
+To load javascript modules from within code, you must add the following to the entry point of your GWT application.
+
+{{{
+   public void onModuleLoad() {
+
+      ...
+
+      // Start floatz modules
+      ModuleManager.start(false, LogLevel.INFO, "floatz.browser", "floatz.mobile");
+      ...
+   }
+}}}
+
 =Layouting from code=
 
 As you may have already noticed in the previous example, it is very comfortable to access the floatz CSS classes via the central `Floatz CSS bundle`, especially when you are using an IDE with support for inline code suggestions. In the slightly changed example you use floatz directly from Java code.
