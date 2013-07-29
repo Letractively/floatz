@@ -108,7 +108,7 @@ If you want to setup your project manually, here's what you have to do:
 </html>
    }}}
 
-   * Optional: Create a project specific javascript file (e.g. `C:\Projects\MyProject\scripts\MyProject.js`), add a `document.ready()` event handler and call `floatz.init()`
+   * Create a project specific javascript file (e.g. `C:\Projects\MyProject\scripts\MyProject.js`), add the following code doe load the desired Javascript modules.
    
 {{{
 // Load jquery, less and floatz in correct order
@@ -132,10 +132,6 @@ $LAB.script("./styles/floatz-1.2.0/scripts/jquery-1.8.2.min.js")
          });
       });
 }}}
-
-   ----
-   Note: The javascript modules are optional and only necessary to manipulate the DOM for cross browser compatibility in conjunction with skiplinks. Future versions of floatz will utilize this kind of progressive enhancement much more then now.
-   ----
 
 Now your project environment is up and running and you can start to layout your web pages using floatz.
 
