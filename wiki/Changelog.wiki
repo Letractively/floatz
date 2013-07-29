@@ -25,7 +25,7 @@ This version is a minor feature release as well as a larger maintenance release,
 The following items are new
 
 || Module || Type || Issue || Description ||
-|| floatz.*.css || Add less css support to floatz  (all css modules are using less and are thus renamed to *.less)||
+|| floatz.**.css || NEW || Issue 51 || Add less css support to floatz  (all css modules are using less and are thus renamed to **.less)||
 || floatz.layout.less || NEW || Issue 47 || Provide mechanism for layouting desktop applications ||
 || floatz.reset.meyer.less || Issue 53 || Migrate to Meyer CSS reset 2.0 ||
 || floatz.browser.js || NEW || Issue 50 || Add javascript solution for detecting browsers and platforms ||
