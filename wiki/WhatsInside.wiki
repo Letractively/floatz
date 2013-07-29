@@ -254,7 +254,7 @@ Load order for center layout:
 
 =Module for Google Web Toolkit =
 
-floatz is also available as JAR file for use in Google Web Toolkit based web applications. This section describes how you can integrate it into project. More information about using floatz in GWT can be found under [LayoutingInGoogleWebToolkit Layouting in Google Web Toolkit].
+floatz is also available as JAR file for use in Google Web Toolkit based web applications. This section describes how you can integrate it into your project. More information about using floatz in GWT can be found under [LayoutingInGoogleWebToolkit Layouting in Google Web Toolkit].
 
 == Adding floatz to the class path ==
 
@@ -269,6 +269,11 @@ Next add a reference to floatz into your module descriptor by adding the followi
   <!-- Other module inherits                                      -->
   <inherits name='com.floatzcss.gwt.Css'/>
    ...
+  <script src="floatz-1.2.0/scripts/jquery-1.8.2.min.js"/>
+  <script src="floatz-1.2.0/scripts/floatz.js"/>
+  <script src="floatz-1.2.0/scripts/floatz.browser.js"/>
+  <script src="floatz-1.2.0/scripts/floatz.mobile.js"/>
+  <script src="floatz-1.2.0/scripts/floatz.skiplink.js"/>
 }}}
 
 == Affecting layouts ==
