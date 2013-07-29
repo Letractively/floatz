@@ -125,6 +125,7 @@ As you may have already noticed in the previous example, it is very comfortable 
    package com.floatzcss.demo.client;
 
    import com.floatzcss.gwt.client.resource.Floatz;
+   import com.floatzcss.gwt.client.module.ModuleManager;
    import com.google.gwt.core.client.EntryPoint;
    import com.google.gwt.user.client.ui.FlowPanel;
    import com.google.gwt.user.client.ui.HTMLPanel;
@@ -183,6 +184,7 @@ To finish the example you have to change the previous code in the entry point mo
    package com.floatzcss.demo.client;
 
    import com.floatzcss.gwt.client.resource.Floatz;
+   import com.floatzcss.gwt.client.module.ModuleManager;
    import com.google.gwt.core.client.EntryPoint;
    import com.google.gwt.user.client.ui.FlowPanel;
    import com.google.gwt.user.client.ui.RootPanel;
