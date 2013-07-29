@@ -2,7 +2,7 @@
 Last Update: July 20th, 2012
 
    ----
-   Note: this wiki page covers version 1.1.2.
+   Note: this wiki page covers version 1.2.0.
    ----
 
 *Supposed readings*
@@ -29,6 +29,11 @@ At last add a reference to floatz into your module descriptor by adding the foll
   <!-- Other module inherits                                      -->
   <inherits name='com.floatzcss.gwt.Css'/>
    ...
+  <script src="floatz-1.2.0/scripts/jquery-1.8.2.min.js"/>
+  <script src="floatz-1.2.0/scripts/floatz.js"/>
+  <script src="floatz-1.2.0/scripts/floatz.browser.js"/>
+  <script src="floatz-1.2.0/scripts/floatz.mobile.js"/>
+  <script src="floatz-1.2.0/scripts/floatz.skiplink.js"/>
 }}}
 
 Finished. Now you can style your application using floatz.
