@@ -276,6 +276,20 @@ Next add a reference to floatz into your module descriptor by adding the followi
   <script src="floatz-1.2.0/scripts/floatz.skiplink.js"/>
 }}}
 
+== Loading Javascript modules ==
+
+Now add the following code to your GWT entry point class to load the desired javascript modules.
+
+{{{
+   public void onModuleLoad() {
+
+      // Start floatz modules
+      ModuleManager.start(false, LogLevel.INFO, "floatz.browser", "floatz.mobile");
+
+      ...
+   }
+}}}
+
 == Affecting layouts ==
 
 You can affect the kind of page layout that is used, by choosing one of the provided CSS bundles depending on the desired layout mode. The following layout modes are supported. Each of them is represented by an according CSS bundle:
