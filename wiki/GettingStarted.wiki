@@ -73,34 +73,38 @@ If you want to setup your project manually, here's what you have to do:
 }}}
 
    ----
-   Note: floatz comes in three different layout modes, each represented by its own stylesheet. Change the import statement to the particular file if you want to use liquid or center layout. Delete the ones you do not need from `C:\Projects\MyProject\styles\floatz.1.1.2`
+   Note: floatz comes in three different layout modes, each represented by its own stylesheet. Change the import statement to the particular file if you want to use liquid or center layout. Delete the ones you do not need from `C:\Projects\MyProject\styles\floatz.1.2.0`
    ----
 
    * Create your project start page (e.g. `C:\Projects\MyProject\index.html` and link to your project stylesheet.
 
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" >
-   <head>
-      <title>MyProject</title>
-      <meta http-equiv="content-type" content="text/html; CHARSET=UTF-8" />
-      <meta http-equiv="content-script-type" content="text/javascript" />
-      <meta http-equiv="content-style-type" content="text/css" />
-      <meta http-equiv="content-language" content="en" />
-      <meta name="author" content="" />
-      <meta name="robots" content="index,follow" />
-      <meta name="description" content="" />
-      <link rel="stylesheet" type="text/css" href="styles/MyProject.css" />
-      <script type="text/javascript" src="styles/floatz-1.1.2/scripts/jquery-1.7.2.min.js"></script>
-      <script type="text/javascript" src="styles/floatz-1.1.2/scripts/floatz.js"></script>
-      <script type="text/javascript" src="scripts/MyProject.js"></script>
-   </head>
-   <body>
-      <!-- page container -->
-      <div id="flz_page">
-          Hello World!
-      </div>
-   </body>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>MyProject</title>
+<meta http-equiv="content-type" content="text/html; CHARSET=utf-8" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en" />
+<meta name="author" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="description" content="" />
+<!-- Load project CSS without less -->
+<!-- <link rel="stylesheet" type="text/css" href="styles/MyProject.css" /> -->
+<!-- Load project CSS with less -->
+<link rel="stylesheet/less" type="text/css" href="styles/MyProject.less" />
+<script type="text/javascript" src="styles/floatz-1.2.0/scripts/less-1.3.3.min.js"></script>
+<!-- -->
+<script type="text/javascript" src="styles/floatz-1.2.0/scripts/LAB-2.0.3.min.js"></script>
+<script type="text/javascript" src="scripts/MyProject.js"></script>
+</head>
+<body>
+   <!-- page -->
+   <div id="flz_page">
+      Hello World!
+   </div>
+</body>
 </html>
    }}}
 
