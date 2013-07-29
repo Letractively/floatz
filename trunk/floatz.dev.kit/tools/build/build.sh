@@ -72,7 +72,7 @@ trap "cleanup" INT TERM EXIT
 FLOATZ_VERSION=1.2.0
 JQUERY_VERSION=1.8.2
 LAB_VERSION=2.0.3
-LESS_VERSION=1.3.3
+LESS_VERSION=1.4.1
 
 LESSC=/usr/local/bin/lessc
 JSMIN="../jsmin/jsmin"
