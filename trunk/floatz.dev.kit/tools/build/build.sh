@@ -2,7 +2,6 @@
 
 # --------------------- Function definitions ---------------------
 cleanup() {
-	#Remove variables
 	if [ -f *.css.tmp ] 
 	then 
 		rm *.css.tmp
@@ -15,7 +14,7 @@ cleanup() {
 	then
 		rm -rf ../../../floatz.dev.kit-$FLOATZ_VERSION
 	fi
-	if [ -d ../../../floatz.dev.kit-$FLOATZ_VERSION ]
+	if [ -d ../../../floatz-$FLOATZ_VERSION ]
 	then
 		rm -rf ../../../floatz-$FLOATZ_VERSION
 	fi
@@ -167,18 +166,22 @@ updateTemplate "center" "110"
 updateTemplate "center" "111"
 
 #Create floatz distribution packages
+cd ../../../
 echo "floatz.build | INFO  | Creating floatz.dev.kit-$FLOATZ_VERSION.zip"
-mkdir ../../../floatz.dev.kit-$FLOATZ_VERSION
-cp -r ../../* ../../../floatz.dev.kit-$FLOATZ_VERSION/
-rm -rf ../../../floatz.dev.kit-$FLOATZ_VERSION/sandbox
-rm -rf "../../../floatz.dev.kit-$FLOATZ_VERSION/samples/Basic Concepts/images"
-rm -rf "../../../floatz.dev.kit-$FLOATZ_VERSION/samples/Layouting Content/images"
-rm -rf "../../../floatz.dev.kit-$FLOATZ_VERSION/samples/Layouting Forms/images"
-rm -rf "../../../floatz.dev.kit-$FLOATZ_VERSION/samples/Layouting Navigation/images"
-rm -rf "../../../floatz.dev.kit-$FLOATZ_VERSION/samples/Layouting Pages/images"
-zip -rmq ../../../floatz.dev.kit-$FLOATZ_VERSION.zip ../../../floatz.dev.kit-$FLOATZ_VERSION
+mkdir floatz.dev.kit-$FLOATZ_VERSION
+cp -r floatz.dev.kit/* floatz.dev.kit-$FLOATZ_VERSION/
+rm -rf floatz.dev.kit-$FLOATZ_VERSION/sandbox
+rm -rf "floatz.dev.kit-$FLOATZ_VERSION/samples/Basic Concepts/images"
+rm -rf "floatz.dev.kit-$FLOATZ_VERSION/samples/Layouting Content/images"
+rm -rf "floatz.dev.kit-$FLOATZ_VERSION/samples/Layouting Forms/images"
+rm -rf "floatz.dev.kit-$FLOATZ_VERSION/samples/Layouting Navigation/images"
+rm -rf "floatz.dev.kit-$FLOATZ_VERSION/samples/Layouting Pages/images"
+zip -rmq floatz.dev.kit-$FLOATZ_VERSION.zip floatz.dev.kit-$FLOATZ_VERSION
+zip -dq floatz.dev.kit-$FLOATZ_VERSION.zip "*.DS_Store"
 
 echo "floatz.build | INFO  | Creating floatz-$FLOATZ_VERSION.zip"
-mkdir ../../../floatz-$FLOATZ_VERSION
-cp -r ../../../floatz/* ../../../floatz-$FLOATZ_VERSION/
-zip -rmq ../../../floatz-$FLOATZ_VERSION.zip ../../../floatz-$FLOATZ_VERSION
+mkdir floatz-$FLOATZ_VERSION
+cp -r floatz/* floatz-$FLOATZ_VERSION/
+zip -rmq floatz-$FLOATZ_VERSION.zip floatz-$FLOATZ_VERSION
+zip -dq floatz-$FLOATZ_VERSION.zip "*.DS_Store"
+cd floatz.dev.kit/tools/build
