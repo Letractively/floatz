@@ -34,8 +34,8 @@ public class Css implements EntryPoint {
 
 		// Workaround for injecting media relevant styles (does not work when
 		// defined directly in css file because CSS bundles currently do not
-		// support @media
-		StyleInjector.inject("@media print { "
+		// support @media. MUST use inject at end, otherwise not working in IE9
+		StyleInjector.injectAtEnd("@media print { "
 				+ Floatz.INSTANCE.layoutPrint().getText() + " }");
 
 		// TODO Check if mobile webkit on iOS, if so inject css

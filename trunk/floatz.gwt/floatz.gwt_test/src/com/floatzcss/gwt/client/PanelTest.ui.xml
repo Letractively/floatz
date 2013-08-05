@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with type="com.floatzcss.gwt.client.resource.Floatz" field="FLOATZ" />
+	<ui:style>
+		.header {
+			background-color: #eeefff;
+			bottom: auto;
+			height: 2em;
+		}
+		.menu {
+			background-color: #dddfff;
+			right: auto;
+			width: 10em;
+			bottom: 2em;
+			top: 2em;
+		}
+		.content {
+			background-color: #cccfff;
+			left: 10em;
+			bottom: 2em;
+			top: 2em;
+		}
+		.footer {
+			background-color: #bbbfff;
+			height: 2em;
+			top: auto;
+		}
+	</ui:style>
+	<g:HTMLPanel styleName="{FLOATZ.layout.panel}">
+		<div class="{FLOATZ.layout.panel} {style.header}">Header</div>
+		<div class="{FLOATZ.layout.panel} {style.menu}">Menu</div>
+		<div class="{FLOATZ.layout.panel} {style.content}">Content</div>
+		<div class="{FLOATZ.layout.panel} {style.footer}">Footer</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

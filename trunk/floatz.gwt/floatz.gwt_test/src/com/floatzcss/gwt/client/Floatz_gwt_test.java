@@ -50,6 +50,8 @@ public class Floatz_gwt_test implements EntryPoint {
 		tabMenuBottom.add(ul2);
 		spacer.add(tabMenuBottom);
 
-		RootPanel.get().add(box);
+		// RootPanel.get().add(box);
+
+		RootPanel.get().add(new PanelTest());
 	}
 }
