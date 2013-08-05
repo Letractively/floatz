@@ -40,6 +40,7 @@ The following items have been changed
 || floatz.form.less || CHANGE || Issue 58 || Button tag must also have vertical-align: middle as input type button ||
 || floatz.form.less || FIX || Issue 66 || flz_combobox does not work correctly in IE6 ||
 || floatz.nav.less || FIX || Issue 68 || Disabled and selected items in flz_vmenu are not highlighted in IE6 ||
+|| floatz.nav.less || FIX || || Styling of menu items changed from {{{li a}}} to {{{ul li a}}} ||
 || floatz.`*`.js || NEW || Issue 55 || Migrate to jQuery 1.8.2 ||
 
 ===Deprecated===
