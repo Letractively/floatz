@@ -75,4 +75,6 @@
 .flz_panel,.flz_scrollpanel{bottom:0;left:0;position:absolute;right:0;top:0;}
 .flz_panel{overflow:hidden;}
 .flz_scrollpanel{overflow:auto;}
+/* See floatz.layout.print.css (only for GWT)
 @media print{.flz_panel,.flz_scrollpanel{overflow:visible;position:static;}}
+*/
