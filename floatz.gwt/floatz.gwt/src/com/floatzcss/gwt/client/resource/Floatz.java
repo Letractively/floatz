@@ -33,6 +33,9 @@ public interface Floatz extends ClientBundle {
 	@Source("com/floatzcss/gwt/client/resource/css/floatz.layout.css")
 	Layout layout();
 
+	@Source("com/floatzcss/gwt/client/resource/css/floatz.layout.print.css")
+	LayoutPrint layoutPrint();
+
 	@Source("com/floatzcss/gwt/client/resource/css/floatz.layout.center.css")
 	LayoutCenter layoutCenter();
 
