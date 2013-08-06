@@ -1,5 +1,6 @@
 package com.floatzcss.gwt.client;
 
+import com.floatzcss.gwt.client.browser.Browser;
 import com.floatzcss.gwt.client.resource.Floatz;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.dom.client.StyleInjector;
@@ -38,7 +39,9 @@ public class Css implements EntryPoint {
 		StyleInjector.injectAtEnd("@media print { "
 				+ Floatz.INSTANCE.layoutPrint().getText() + " }");
 
-		// TODO Check if mobile webkit on iOS, if so inject css
-		// Floatz.INSTANCE.mobile().ensureInjected();
+		// Load mobile styles only if user agent is mobile webkit
+		if(Browser.isMobileWebkit()) {
+			Floatz.INSTANCE.mobile().ensureInjected();
+		}
 	}
 }

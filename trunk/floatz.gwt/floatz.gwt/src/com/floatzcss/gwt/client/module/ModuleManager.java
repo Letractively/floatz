@@ -4,7 +4,7 @@ package com.floatzcss.gwt.client.module;
 /**
 * Module manager.
 * <p>
-* Is used to start floatz modules that are loaded within module descriptor of your GWT application using &lt;script&gt; tags. 
+* Is used to start floatz modules that are loaded within module descriptor of your GWT application using &lt;script&gt; tags.
 * Please take care that you load the jquery and the floatz.js module BEFORE any other floatz module.
 * </p>
 * <p>
@@ -15,7 +15,7 @@ package com.floatzcss.gwt.client.module;
 * <module rename-to='myapp'>
 *	...
 *	<inherits name='com.floatzcss.gwt.Css'/>
-*	...		
+*	...
 *	<script src="floatz-1.2.0/scripts/jquery-1.8.2.min.js"/>
 *	<script src="floatz-1.2.0/scripts/floatz.js"/>
 *	<script src="floatz-1.2.0/scripts/floatz.browser.js"/>
@@ -26,7 +26,7 @@ package com.floatzcss.gwt.client.module;
 * }
 * </pre>
 * <p>
-*	Example 2: Starting floatz modules in onModuleLoad of the entry point class.  
+*	Example 2: Starting floatz modules in onModuleLoad of the entry point class.
 * </p>
 * <pre>
 * {@code
@@ -38,22 +38,21 @@ package com.floatzcss.gwt.client.module;
 * Licensed under Apache License 2.0, http://www.apache.org/licenses/LICENSE-2.0<br />
 * </p>
 * <p>
-* @see http://code.google.com/p/floatz/
+* See http://code.google.com/p/floatz/
 * </p>
-* 
+*
 * @author Harald Humml
 * @version 1.2.0
 */
 // formatter:on
 public class ModuleManager {
-	
+
 	/**
 	 * Start floatz modules.
-	 * 
+	 *
 	 * @param debug true for debug mode, false for production mode
-	 * @param level Log level
+	 * @param logLevel Log level
 	 * @param modules Names of modules that should be started
-	 * @see TODO 
 	 */
 	public static native void start(boolean debug, LogLevel logLevel, String... modules) /*-{
 
