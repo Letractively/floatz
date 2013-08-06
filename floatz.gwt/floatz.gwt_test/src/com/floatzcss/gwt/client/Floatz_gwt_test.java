@@ -15,7 +15,7 @@ public class Floatz_gwt_test implements EntryPoint {
 	public void onModuleLoad() {
 
 		// Start floatz modules
-		ModuleManager.start(false, LogLevel.INFO, "floatz.browser",
+		ModuleManager.start(false, LogLevel.DEBUG, "floatz.browser",
 				"floatz.mobile");
 
 		FlowPanel box = new FlowPanel();
