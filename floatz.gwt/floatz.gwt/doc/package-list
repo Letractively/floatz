@@ -1,2 +1,5 @@
 com.floatzcss.gwt.client
+com.floatzcss.gwt.client.browser
+com.floatzcss.gwt.client.jsni
+com.floatzcss.gwt.client.module
 com.floatzcss.gwt.client.resource
