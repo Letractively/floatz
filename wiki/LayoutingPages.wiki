@@ -351,7 +351,9 @@ body {
 }
 }}}
 
-The [http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_10.html Live Demo] puts everything together: a centered design that combines fixed and liquid layout containers.
+The demo puts everything together: a centered design that combines fixed and liquid layout containers.
+
+*Example 10 - Combining fixed and liquid layout containers* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_10.html Live Demo])
 
 http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_10.jpg
 
@@ -364,7 +366,7 @@ Since version 1.2.0 floatz provides a new layout mechanism based on absolute pos
 
 Enough of the words, lets have a look how this works in practice.
 
-==Changing boxes to panels==
+==Switching from box to panel layout==
 Lets change the markup and css of example 7 we have created in the previous chapter "Changing the layout mode". First we change the markup as follows:
 
 {{{
@@ -385,12 +387,71 @@ Lets change the markup and css of example 7 we have created in the previous chap
 </body>
 }}}
 
-We removed the surrounding `flz_page` because it is not necessary anymore. Then we changed all containers from `flz_box` to `flz_panel` and removed the layouters `flz_l20`, `flz_r80` and `flz_r100` from the submenu, the content and the footer. This is all from the markup side. Now lets have a look at the preliminary result:
+We removed the surrounding `flz_page` container because it is not necessary anymore. Then we changed all containers from `flz_box` to `flz_panel` and removed the layouters `flz_l20`, `flz_r80` and `flz_r100` from the submenu, the content and the footer. This is all from the markup side. Now lets have a look at the preliminary result:
+
+*Example 11 - Changing the markup to panel layout* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_11.html Live Demo])
 
 http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_11.jpg
 
+Well this is not what you would have expected. But it shows the default behavior of panels. Each panel is an absolute positioned layout container starting at top:0, bottom:100%, left: 0, right: 100%. This is why all containers are sticking at the top of the page. Next we also have to change the according styles to show the panel containers at their desired positions.
 
-*Example 11 - Changing the markup to panel layout* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_11.html Live Demo])
+==Styling the panels==
+
+To acchieve that we do the following changes in our stylesheet of example 7:
+
+{{{
+  ...
+
+  /* Project specific styles */
+  body {
+    background: #eeeccc;
+  }
+
+  .header {
+    background: #aaaccc;
+    bottom: auto;
+    height: 5em;
+  }
+
+  .menu {
+    background: #bbbccc;
+    bottom: auto;
+    height: 2em;
+    top: 5em;
+  }
+
+  .submenu {
+    background: inherit;
+    bottom: 2em;
+    right: 20%;
+    top: 7em;
+  }
+
+  .content {
+    background: #cccccc;
+    bottom: 2em;
+    left: 20%;
+    top: 7em;
+  }
+
+  .footer {
+    background: #dddccc;
+    height: 2em;
+    top: auto;
+  }
+
+  ...
+}}}
+
+For the header panel we have to set the bottom position. Because we have a height set, we only have to set `bottom: auto`. The menu should be shown below the header. Because the header has a height of 2em we have to set the menus top position to the end position of the header, thus also 2em. The bottom position also has to be set to auto because of the existing height. The menu and submenu container should start below the menu, thus we set their top position to the sum of the header height (5em) and the menu height (2em), that is 7em. The bottom position of both containers must be set to the height of the footer panel: 2em. The footer container now gets `top: auto` because it should start at the bottom and it already has a height set.
+
+Instead of using layouters as in the box layout based example we now set the width of the submenu and content panel by setting their right (submenu) and their left (2em) position. The content container also gets the background color, that we have used in examples 7 page container.
+
+*Example 11b - Changing the markup to panel layout* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_11b.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_11b.jpg
+
+Now the results looks much better.
 
 =Summary=
 What you have learned in this wiki article:
