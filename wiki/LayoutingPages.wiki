@@ -465,9 +465,27 @@ Now the results looks much better. Our panel layout spans the whole screen regar
 
 The result is much better now and you see one of the benefits of the panel layout. The footer always stays visible only the content panel scrolls - all without the use of the webs enemy of the first days: iframes.
 
-*Example 11c - Changing the containt panel to flz_scrollpanel* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_11c.html Live Demo])
+*Example 11c - Changing the content panel to flz_scrollpanel* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_11c.html Live Demo])
 
 http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_11c.jpg
+
+==Using a fixed width for the submenu==
+
+You don´t want to have a fixed width for the submenu and only the content container should size in a liquid manner? No problem. Simply change the right and left positions of both containers to the same fixed value instead of percentages ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_11d.html Live Demo]):
+
+{{{
+  .submenu {
+    ...
+    right: 15em;
+    ...
+ }
+
+  .content {
+    ...
+    left: 15em;
+    ...
+  }
+}}}
 
 =Summary=
 What you have learned in this wiki article:
@@ -483,7 +501,9 @@ What you have learned in this wiki article:
    * Liquid layout mode sets a min-width of 985px for `flz_page` by default
    * Additional markup is necessary to support min-width in Internet Explorer 6
    * Centered, fixed and liquid layouts can be combined
-   * Layouting with absolute positioned panels
+   * Panel based layouts allow us to create desktop like layouts without iframes
+   * Panel layouts give us many new opportunities (e.g. for mobile devices)
+   * Panels are not supported in IE6 and below
 
 ====Further readings====
 The following wiki articles contain further information about how to add content to your basic page layout:
