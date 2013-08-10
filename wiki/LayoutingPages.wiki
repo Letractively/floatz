@@ -365,7 +365,7 @@ Since version 1.2.0 floatz provides a new layout mechanism based on absolute pos
    * Fixed positioned panels without the need for old-school iframes
 
    ----
-   Note: I´m not sure who invented this kind of layout, how ever the first time I got in touch with it was in [http://www.gwtproject.org/ Google Web Toolkit].
+   Note: I´m not sure who invented this kind of layout, how ever the first time I got in touch with it was in [http://www.gwtproject.org/ Google Web Toolkit]. Panel based layouts are supported for all major browsers as well as IE7 and above.
    ----
 
 Enough of the words, lets have a look how this works in practice.
@@ -462,7 +462,7 @@ Instead of using layouters as in the box layout based example we now set the wid
 
 http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_11b.jpg
 
-Now the results looks much better. Our panel layout spans the whole screen regardless how large or small we size the browser window. But there is one problem with the content panel when the window gets too small: The content gets cropped at the bottom but no scrollbar is available. Lets add `flz_scrollpanel` to the content panel to solve that.
+Now the results looks good. Our panel layout spans the whole screen regardless how large or small we size the browser window. But there is one problem with the content panel when the window gets too small: The content gets cropped at the bottom but no scrollbar is available. Lets add `flz_scrollpanel` to the content panel to solve that.
 
 {{{
   ...
@@ -474,7 +474,7 @@ Now the results looks much better. Our panel layout spans the whole screen regar
   ...
 }}}
 
-The result is much better now and you see one of the benefits of the panel layout: the footer always stays visible only the content panel scrolls - all without the use of the webs enemy of the first days: iframes. Panels can also be nested. So think about fixed button bars at the bottom for large input forms or web applications for mobile devices, ... The possibilities are infinite.
+This is much better now and you see one of the benefits of the panel layout: the footer always stays visible only the content panel scrolls - all without the use of the webs enemy of the first days: iframes. Panels can also be nested. So think about fixed button bars at the bottom for large input forms or web applications for mobile devices, ... The possibilities are infinite.
 
 *Example 11c - Changing the content panel to flz_scrollpanel* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_11c.html Live Demo])
 
@@ -498,6 +498,34 @@ You don´t want to have a fixed width for the submenu and only the content conta
   }
 }}}
 
+==Add print support==
+
+Floatz also comes with full print support for panels. The only thing we have to do is to tell the browser what panels we don´t want to see on our print output. We also correct the content panels left position to 0.
+
+{{{
+  @media print {
+    .header {
+      display: none;
+    }
+    .menu {
+      display: none;
+    }
+    .content {
+      left: 0;
+    }
+    .submenu {
+      display: none;
+    }
+    .footer {
+      display: none;
+    }
+  }
+}}}
+
+*Example 11e - Adding print support* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_11e.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_11e.jpg
+
 =Summary=
 What you have learned in this wiki article:
 
@@ -514,6 +542,7 @@ What you have learned in this wiki article:
    * Centered, fixed and liquid layouts can be combined
    * Panel based layouts allow us to create desktop like layouts without iframes
    * Panel layouts give us many new opportunities (e.g. for mobile devices)
+   * flz_panel and flz_scrollpanel are coming with full print support
    * Panels are not supported in IE6 and below
 
 ====Further readings====
