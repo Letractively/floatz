@@ -498,7 +498,7 @@ You don´t want to have a fixed width for the submenu and only the content conta
   }
 }}}
 
-==Add print support==
+==Adding print support==
 
 Floatz also comes with full print support for panels. The only thing we have to do is to tell the browser what panels we don´t want to see on our print output. We also correct the content panels left position to 0.
 
