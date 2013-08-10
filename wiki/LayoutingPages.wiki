@@ -462,7 +462,7 @@ Instead of using layouters as in the box layout based example we now set the wid
 
 http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_11b.jpg
 
-Now the results looks much better. Our panel layout spans the whole screen regardless of large or small we size the browser window. But there is one problem with the content panel when the window gets too small: The content gets cropped at the bottom but no scrollbar is available. Lets add `flz_scrollpanel`to the content panel to solve that.
+Now the results looks much better. Our panel layout spans the whole screen regardless how large or small we size the browser window. But there is one problem with the content panel when the window gets too small: The content gets cropped at the bottom but no scrollbar is available. Lets add `flz_scrollpanel`to the content panel to solve that.
 
 {{{
   ...
