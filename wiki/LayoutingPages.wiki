@@ -385,7 +385,8 @@ Lets change the markup and css of example 7 we have created in the previous chap
     <div class="flz_panel content">
       <div class="flz_spacer">
          ...
-      </div>
+      </div
+    </div>
     <!-- footer -->
     <div class="flz_panel footer">Footer</div>
 </body>
