@@ -358,7 +358,7 @@ The demo puts everything together: a centered design that combines fixed and liq
 http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_10.jpg
 
 =Layouting with panels=
-Since version 1.2.0 floatz provides a new layout mechanism based on absolute positioning called panels. In contrast to the traditional float based mechanism this gives you the possibility to create desktop like applications that always use most of the available screen. This kind of layout is a very powerful tool and it solves some of common problems in traditional layouting approaches:
+Since version 1.2.0 floatz provides a new layout mechanism based on absolute positioning called panels. In contrast to the traditional float based mechanism this gives you the possibility to create desktop like fluid web applications that always leverage the full available screen. This kind of layout is a very powerful tool and it solves some of common problems in traditional layouting approaches:
 
    * Full leverage of the available screen size
    * Equal heights of vertical panels
