@@ -387,7 +387,8 @@ Lets change the markup and css of example 7 we have created in the previous chap
 
 We removed the surrounding `flz_page` because it is not necessary anymore. Then we changed all containers from `flz_box` to `flz_panel` and removed the layouters `flz_l20`, `flz_r80` and `flz_r100` from the submenu, the content and the footer. This is all from the markup side. Now lets have a look at the preliminary result:
 
-TODO
+http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_11.jpg
+
 
 *Example 11 - Changing the markup to panel layout* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_11.html Live Demo])
 
