@@ -369,52 +369,19 @@ Lets change the markup and css of example 7 we have created in the previous chap
 
 {{{
 <body>
-	<!-- header -->
-	<div class="flz_panel header">Header</div>
-	<!-- menu -->
-	<div class="flz_panel menu">Menu</div>
-	<!-- submenu -->
-	<div class="flz_panel submenu">Submenu</div>
-	<!-- content -->
-	<div class="flz_panel content">
-		<div class="flz_spacer">
-			<h1>Header 1</h1>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-				diam nonumy eirmod tempor invidunt ut labore et dolore magna
-				aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-				duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-				sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-				consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-				ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-				eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-				gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-			</p>
-			<h2>Header 2</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-				diam nonumy eirmod tempor invidunt ut labore et dolore magna
-				aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-				duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-				sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-				consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-				ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-				eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-				gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-			</p>
-			<h2>Header 2</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-				diam nonumy eirmod tempor invidunt ut labore et dolore magna
-				aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-				duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-				sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-				consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-				ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-				eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-				gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-			</p>
-		</div>
-	</div>
-	<!-- footer -->
-	<div class="flz_panel footer">Footer</div>
+  <!-- header -->
+    <div class="flz_panel header">Header</div>
+    <!-- menu -->
+    <div class="flz_panel menu">Menu</div>
+    <!-- submenu -->
+    <div class="flz_panel submenu">Submenu</div>
+    <!-- content -->
+    <div class="flz_panel content">
+      <div class="flz_spacer">
+         ...
+      </div>
+    <!-- footer -->
+    <div class="flz_panel footer">Footer</div>
 </body>
 }}}
 
