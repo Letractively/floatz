@@ -447,11 +447,27 @@ For the header panel we have to set the bottom position. Because we have a heigh
 
 Instead of using layouters as in the box layout based example we now set the width of the submenu and content panel by setting their right (submenu) and their left (2em) position. The content container also gets the background color, that we have used in examples 7 page container.
 
-*Example 11b - Changing the markup to panel layout* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_11b.html Live Demo])
+*Example 11b - Styling the panels* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_11b.html Live Demo])
 
 http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_11b.jpg
 
-Now the results looks much better.
+Now the results looks much better. Our panel layout spans the whole screen regardless of large or small we size the browser window. But there is one problem with the content panel when the window gets too small: The content gets cropped at the bottom but no scrollbar is available. Lets add `flz_scrollpanel`to the content panel to solve that.
+
+{{{
+  ...
+  <div class="flz_scrollpanel content">
+    <div class="flz_spacer">
+      ...
+    </div>
+  </div>
+  ...
+}}}
+
+The result is much better now and you see one of the benefits of the panel layout. The footer always stays visible only the content panel scrolls - all without the use of the webs enemy of the first days: iframes.
+
+*Example 11c - Changing the containt panel to flz_scrollpanel* ([http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/LayoutingPages_11c.html Live Demo])
+
+http://design.humml.eu/toolbox/floatz/samples/LayoutingPages/images/Layouting_Pages_11c.jpg
 
 =Summary=
 What you have learned in this wiki article:
