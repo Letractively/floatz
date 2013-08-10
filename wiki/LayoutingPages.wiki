@@ -542,8 +542,8 @@ What you have learned in this wiki article:
    * Centered, fixed and liquid layouts can be combined
    * Panel based layouts allow us to create desktop like layouts without iframes
    * Panel layouts give us many new opportunities (e.g. for mobile devices)
-   * flz_panel and flz_scrollpanel are coming with full print support
    * Panels are not supported in IE6 and below
+   * `flz_panel` and `flz_scrollpanel` are coming with full print support
 
 ====Further readings====
 The following wiki articles contain further information about how to add content to your basic page layout:
