@@ -364,6 +364,10 @@ Since version 1.2.0 floatz provides a new layout mechanism based on absolute pos
    * Equal heights of vertical panels
    * Fixed positioned panels without the need for old-school iframes
 
+   ----
+   Note: I´m not sure who invented this kind of layout, how ever the first time I got in touch with it was in [http://www.gwtproject.org/ Google Web Toolkit].
+   ----
+
 Enough of the words, lets have a look how this works in practice.
 
 ==Switching from box to panel layout==
