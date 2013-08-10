@@ -448,7 +448,13 @@ To acchieve that we do the following changes in our stylesheet of example 7:
   ...
 }}}
 
-For the header panel we have to set the bottom position. Because we have a height set, we only have to set `bottom: auto`. The menu should be shown below the header. Because the header has a height of 2em we have to set the menus top position to the end position of the header, thus also 2em. The bottom position also has to be set to auto because of the existing height. The menu and submenu container should start below the menu, thus we set their top position to the sum of the header height (5em) and the menu height (2em), that is 7em. The bottom position of both containers must be set to the height of the footer panel: 2em. The footer container now gets `top: auto` because it should start at the bottom and it already has a height set.
+For the header panel we have to set the bottom position. Because we have a height set, we only have to set `bottom: auto`. 
+
+The menu should be shown below the header. Because the header has a height of 2em we have to set the menus top position to the end position of the header, thus also 2em. The bottom position also has to be set to auto because of the existing height. 
+
+The content and submenu container should start below the menu, thus we set their top position to the sum of the header height (5em) and the menu height (2em), that is 7em. The bottom position of both containers must be set to the height of the footer panel: 2em. 
+
+The footer container now gets `top: auto` because it should start at the bottom and it already has a height set.
 
 Instead of using layouters as in the box layout based example we now set the width of the submenu and content panel by setting their right (submenu) and their left (2em) position. The content container also gets the background color, that we have used in examples 7 page container.
 
