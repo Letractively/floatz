@@ -47,7 +47,18 @@
          .mytabmenu ul {
             float: right;
          }
-      </style>
+			
+			.myworkflow {
+				text-align: center;
+				padding-top: 1em;
+			}
+
+			.myworkflow2 {
+				text-align: right;
+				padding-top: 1em;
+			}
+
+		</style>
    </head>
    <body>
       <!-- page container -->
@@ -259,6 +270,34 @@
                      </ul>
                   </div>
                </div>
+					<h1>Workflow navigation</h1>
+					<div class="flz_box flz_workflow">
+						<ul>
+							<li><a href="#">First step</a><div class="flz_endrect"></div></li>
+							<li><div class="flz_startrect"></div><a href="#">Second step</a><div class="flz_endrect"></div></li>
+							<li class="flz_selected"><div class="flz_startrect"></div><a href="#">Three</a><div class="flz_endrect"></div></li>
+							<li class="flz_disabled"><div class="flz_startrect"></div><a>The fourth step</a><div class="flz_endrect"></div></li>
+							<li class="flz_disabled"><div class="flz_startrect"></div><a>The last step</a></li>
+						</ul>						
+					</div>
+					<div class="flz_box flz_workflow myworkflow">
+						<ul>
+							<li><a href="#">First step</a><div class="flz_endrect"></div></li>
+							<li><div class="flz_startrect"></div><a href="#">Second step</a><div class="flz_endrect"></div></li>
+							<li class="flz_selected"><div class="flz_startrect"></div><a href="#">Three</a><div class="flz_endrect"></div></li>
+							<li class="flz_disabled"><div class="flz_startrect"></div><a>The fourth step</a><div class="flz_endrect"></div></li>
+							<li class="flz_disabled"><div class="flz_startrect"></div><a>The last step</a></li>
+						</ul>
+					</div>					
+					<div class="flz_box flz_workflow myworkflow2">
+						<ul>
+							<li><a href="#">First step</a><div class="flz_endrect"></div></li>
+							<li><div class="flz_startrect"></div><a href="#">Second step</a><div class="flz_endrect"></div></li>
+							<li class="flz_selected"><div class="flz_startrect"></div><a href="#">Three</a><div class="flz_endrect"></div></li>
+							<li class="flz_disabled"><div class="flz_startrect"></div><a>The fourth step</a><div class="flz_endrect"></div></li>
+							<li class="flz_disabled"><div class="flz_startrect"></div><a>The last step</a></li>
+						</ul>
+					</div>					
             </div>
          </div>
       </div>
