@@ -567,63 +567,77 @@ a:focus.flz_skiplink {
  */
 
 .flz_workflow {
-	ul li {
-		display: inline-block;
-		list-style-type: none;
-		margin: 0;
+
+	ul {
 		padding: 0;
-		vertical-align: top;
-		margin-left: -0.85em;
-		
-		&:first-child {
-			margin-left: 0;
-		}
-		
-		a {
-			background-color: #eee;
-			display: inline-block;
-			padding: 1.025em;
-			text-decoration: none;
+
+		li {
+			float: left;
+			list-style-type: none;
+			margin: 0;
+			margin-left: -0.65em;
+			padding: 0;
 			vertical-align: top;
-			
-			&:hover {
+
+			&:first-child {
+				margin-left:0;
+			}
+		
+			a {
+				background-color:#eee;
+				color:#aaa;
+				cursor:default;
+				float: left;
+				height: 1.15em;
+				padding:1.025em;
+				text-decoration:none;
+				vertical-align:top;
+			}
+
+			/* Workarounds for IE 6-9 */
+			a {
+				height: 1.25em\9; /* IE 6-9 */
+			}
+
+			&.flz_selected a {
+				font-weight:bold;
+			}
+
+			&.flz_passed a,
+			&.flz_selected a {
+				color: #000;
+			}
+
+			&.flz_passed a:hover,
+			&.flz_selected a:hover {
 				text-decoration: underline;
 			}
-		}
+
+			/* Can´t use :first-child, :last-child because of IE8 */
+			div.flz_start,
+			div.flz_stop {
+				border-bottom:1.65em solid transparent;
+				border-left:1em solid #eee;
+				border-top:1.65em solid transparent;
+				float: left;
+				height:0;
+				margin:0;
+				padding:0;
+				width:0;
+			}
 				
-		.flz_endrect, .flz_startrect {
-			width: 0;
-			height: 0;
-			border-top: 1.65em solid transparent;
-			border-left: 1em solid #eee;
-			border-bottom: 1.65em solid transparent;
-			margin: 0;
-			padding: 0;
-			display: inline-block;
-		}
-		
-		.flz_endrect {
-			border-top-color: transparent;
-			border-left-color: #eee;
-			border-bottom-color: transparent;
-		}
+			/* Can´t use :last-child because of IE8 */
+			div.flz_stop {
+				border-bottom-color:transparent;
+				border-left-color: #eee;
+				border-top-color:transparent;
+			}
 
-		.flz_startrect {
-			border-top-color: #eee;
-			border-left-color: transparent;
-			border-bottom-color: #eee;
-		}
-
-		&.flz_selected a {
-			font-weight: bold;
-		}
-	
-		&.flz_disabled a {
-			color: #aaa;
-			cursor: default;
-
-			&:hover {
-				text-decoration: none;
+			/* Can´t use :first-child because of IE8 */
+			div.flz_start {
+				border-bottom-color:#eee;
+				border-left-color:transparent;
+				border-top-color:#eee;
 			}
 		}
 	}
