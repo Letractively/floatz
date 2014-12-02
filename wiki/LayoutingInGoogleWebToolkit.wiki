@@ -209,7 +209,7 @@ To finish the example you have to change the previous code in the entry point mo
 }}}
 
 =Changes for GWT 2.7.0=
-Since GWT 2.7.0 it is not possible anymore to load the javascript files from within the module descriptor using *script* tags. Instead of this the JavaScript files must be loaded manually in the onLoadModule method of the GWT application using ScriptInjector.
+Since GWT 2.7.0 it is not possible anymore to load the JavaScript files from within the module descriptor using *script* tags. Instead of this the JavaScript files must be loaded manually in the onLoadModule method of the GWT application using ScriptInjector.
 
 {{{
    public void onModuleLoad() {
@@ -273,7 +273,9 @@ Since GWT 2.7.0 it is not possible anymore to load the javascript files from wit
    }
 }}}
 
-Because now it is not guaranteed anymore that the JavaScript files are loaded before the floatz GWT module, it is not possible to access Javascript functionality with onModuleLoad of the floatz GWT module. To prevent any loading errors your must use the provided [https://github.com/floatzcss/floatz/blob/master/download/floatz.gwt-1.2.0hotfix01.jar hotfix] jar file.
+   ----
+   Note: Because now it is not guaranteed anymore that the JavaScript files are loaded before the floatz GWT module, it is not possible to access Javascript functionality with onModuleLoad of the floatz GWT module. To prevent any loading errors due to missing Javascript methods you must use the provided [https://github.com/floatzcss/floatz/blob/master/download/floatz.gwt-1.2.0hotfix01.jar hotfix].
+   ----
 
 =Summary=
 Now you know everything you need to use floatz within GWT. Read the recommended wiki articles to get more information about the great possibilities you get with floatz.
