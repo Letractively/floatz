@@ -2,9 +2,8 @@
 Last Update: December 2nd, 2014
 
    ----
-   Note: this wiki page covers version 1.2.0.
+   Note: this wiki page covers version 1.2.0hotfix01.
    ----
-
 
 *Supposed readings*
    * [GettingStarted Getting started]
@@ -209,7 +208,8 @@ To finish the example you have to change the previous code in the entry point mo
 }}}
 
 =Changes for GWT 2.7.0=
-Since GWT 2.7.0 it is not possible anymore to load the JavaScript files from within the module descriptor using *script* tags. Instead of this the JavaScript files must be loaded manually in the onLoadModule method of the GWT application using ScriptInjector.
+
+Since GWT 2.7.0 it is not possible anymore to load script files from within the module descriptor using script tags. Instead of this the script files must be loaded manually in the onLoadModule method of the GWT application using ScriptInjector.
 
 {{{
    public void onModuleLoad() {
