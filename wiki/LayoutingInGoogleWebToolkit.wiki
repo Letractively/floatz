@@ -212,69 +212,66 @@ To finish the example you have to change the previous code in the entry point mo
 Since GWT 2.7.0 it is not possible anymore to load the javascript files from within the module descriptor using *script* tags. Instead of this the JavaScript files must be loaded manually in the onLoadModule method of the GWT application using ScriptInjector.
 
 {{{
-public void onModuleLoad()
-{
-   ...
+   public void onModuleLoad() {
+      ...
 
-   // Load necessary floatz css & javascript resources
-   res.floatz().layoutLiquid().ensureInjected();
-   loadFloatzModules(new Callback<Void, Exception>() {
-      @Override
-      public void onSuccess(Void result)
-      {
-         boolean debug = !GWT.isProdMode();
-
-         // Start floatz javascript modules
-         ModuleManager.start(debug, debug ? LogLevel.DEBUG : LogLevel.INFO, "floatz.browser");
-
-         // Load mobile styles only if user agent is mobile webkit
-         if (Browser.isMobileWebkit()) {
-	    Floatz.INSTANCE.mobile().ensureInjected();
-         }
-      }
-
-      @Override
-      public void onFailure(Exception reason) {
-         throw new RuntimeException("Some script files can not be loaded. Please restart again.", reason);
-      }
-   });
-
-   ...
-}
-
-private void loadFloatzModules(final Callback<Void, Exception> finishCallback)
-{
-   // @formatter:off
-   ScriptInjector.fromUrl("webapp/floatz-1.2.0/scripts/jquery-1.8.2.min.js")
-      .setWindow(ScriptInjector.TOP_WINDOW)
-      .setCallback(new Callback<Void, Exception>() {
+      // Load necessary floatz css & javascript resources
+      res.floatz().layoutLiquid().ensureInjected();
+      loadFloatzModules(new Callback<Void, Exception>() {
          @Override
          public void onSuccess(Void result) {
-            ScriptInjector.fromUrl("webapp/floatz-1.2.0/scripts/floatz.js")					
-               .setWindow(ScriptInjector.TOP_WINDOW)
-               .setCallback(new Callback<Void, Exception>() {
-                  @Override
-                  public void onSuccess(Void result) {								
-                     ScriptInjector.fromUrl("webapp/floatz-1.2.0/scripts/floatz.browser.js")									  
-                       .setWindow(ScriptInjector.TOP_WINDOW)						 
-                       .setCallback(finishCallback).inject();
-                  }
+            boolean debug = !GWT.isProdMode();
 
-                  @Override
-                  public void onFailure(Exception reason) {								 
-                     finishCallback.onFailure(reason);
-                  }
-            }).inject();
+            // Start floatz javascript modules
+            ModuleManager.start(debug, debug ? LogLevel.DEBUG : LogLevel.INFO, "floatz.browser");
+
+            // Load mobile styles only if user agent is mobile webkit
+            if (Browser.isMobileWebkit()) {
+               Floatz.INSTANCE.mobile().ensureInjected();
+            }
          }
 
          @Override
-         public void onFailure(Exception reason) { 
-            finishCallback.onFailure(reason);
+         public void onFailure(Exception reason) {
+            throw new RuntimeException("Some script files can not be loaded. Please restart again.", reason);
          }
-      }).inject();
+      });
+
+      ...
+   }
+
+   private void loadFloatzModules(final Callback<Void, Exception> finishCallback) {
+      // @formatter:off
+      ScriptInjector.fromUrl("webapp/floatz-1.2.0/scripts/jquery-1.8.2.min.js")
+         .setWindow(ScriptInjector.TOP_WINDOW)
+         .setCallback(new Callback<Void, Exception>() {
+            @Override
+            public void onSuccess(Void result) {
+               ScriptInjector.fromUrl("webapp/floatz-1.2.0/scripts/floatz.js")					
+                  .setWindow(ScriptInjector.TOP_WINDOW)
+                  .setCallback(new Callback<Void, Exception>() {
+                     @Override
+                     public void onSuccess(Void result) {								
+                        ScriptInjector.fromUrl("webapp/floatz-1.2.0/scripts/floatz.browser.js")									  
+                          .setWindow(ScriptInjector.TOP_WINDOW)						 
+                          .setCallback(finishCallback).inject();
+                     }
+
+                     @Override
+                     public void onFailure(Exception reason) {								 
+                        finishCallback.onFailure(reason);
+                     }
+               }).inject();
+            }
+
+            @Override
+            public void onFailure(Exception reason) { 
+               finishCallback.onFailure(reason);
+            }
+         }).inject();
+      }
    }
 }}}
-
 
 Because now it is not guaranteed anymore that the JavaScript files are loaded before the floatz GWT module, it is not possible to access Javascript functionality with onModuleLoad of the floatz GWT module. To prevent any loading errors your must use the provided [https://github.com/floatzcss/floatz/blob/master/download/floatz.gwt-1.2.0hotfix01.jar hotfix] jar file.
 
