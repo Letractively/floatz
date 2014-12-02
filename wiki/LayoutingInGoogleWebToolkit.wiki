@@ -274,7 +274,7 @@ Since GWT 2.7.0 it is not possible anymore to load script files from within the 
 }}}
 
    ----
-   Note: Because now it is not guaranteed anymore that the JavaScript files are loaded before the floatz GWT module, it is not possible to access Javascript functionality with onModuleLoad of the floatz GWT module. To prevent any loading errors due to missing Javascript methods you must use the provided [https://github.com/floatzcss/floatz/blob/master/download/floatz.gwt-1.2.0hotfix01.jar hotfix].
+   Note: Because now it is not guaranteed anymore that the JavaScript files are loaded before the floatz GWT module, it is not possible to access Javascript functionality with onModuleLoad of the floatz GWT module. To prevent any loading errors due to missing Javascript methods you must use the provided [https://github.com/floatzcss/floatz/blob/master/download/floatz.gwt-1.2.0hotfix01.jar hotfix] and execute additional loading code your self.
    ----
 
 =Summary=
